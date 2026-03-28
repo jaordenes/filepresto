@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<meta name="description" content="Free online image converter. Convert JPG, PNG, WebP, HEIC and more. No registration required."/>
+<title>Image Converter Tools - FilePresto</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--primary:#2563EB;--primary-dark:#1D4ED8;--accent:#7C3AED;--accent-light:#EDE9FE;--bg:#F8FAFC;--white:#FFFFFF;--text:#0F172A;--text-muted:#64748B;--border:#E2E8F0;--radius:12px;--shadow:0 4px 24px rgba(37,99,235,.08);--shadow-hover:0 8px 32px rgba(37,99,235,.18)}
+html{scroll-behavior:smooth}
+body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+a{text-decoration:none;color:inherit}
+header{background:var(--white);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100;box-shadow:0 2px 8px rgba(0,0,0,.06)}
+.header-inner{max-width:1200px;margin:0 auto;padding:0 24px;height:64px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.4rem;color:var(--primary);letter-spacing:-.5px}
+.logo-icon{width:36px;height:36px;background:linear-gradient(135deg,var(--primary),var(--accent));border-radius:9px;display:flex;align-items:center;justify-content:center}
+.logo-icon svg{width:20px;height:20px;fill:white}
+.logo .presto{color:var(--accent)}
+nav{display:flex;align-items:center;gap:4px}
+nav a{padding:8px 14px;border-radius:8px;font-size:.9rem;font-weight:500;color:var(--text-muted);transition:background .2s,color .2s}
+nav a:hover,nav a.active{background:var(--bg);color:var(--primary)}
+.btn-primary{padding:8px 20px;background:var(--primary);color:white;border-radius:8px;font-size:.9rem;font-weight:600;border:none;cursor:pointer;transition:background .2s;display:inline-block}
+.btn-primary:hover{background:var(--primary-dark)}
+.page-hero{background:linear-gradient(135deg,#EFF6FF,#F5F3FF);padding:48px 24px 40px;text-align:center}
+.page-hero .badge{display:inline-flex;align-items:center;gap:6px;background:var(--accent-light);color:var(--accent);padding:5px 14px;border-radius:999px;font-size:.8rem;font-weight:700;margin-bottom:14px;text-transform:uppercase}
+.page-hero h1{font-size:clamp(1.6rem,4vw,2.4rem);font-weight:900;color:var(--text);margin-bottom:10px;letter-spacing:-.5px}
+.page-hero p{color:var(--text-muted);font-size:1rem;max-width:500px;margin:0 auto}
+.container{max-width:1200px;margin:0 auto;padding:48px 24px}
+.section-title{font-size:1.4rem;font-weight:800;color:var(--text);margin-bottom:6px}
+.section-sub{color:var(--text-muted);margin-bottom:28px;font-size:.95rem}
+.tools-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px}
+.tool-card{background:var(--white);border:1.5px solid var(--border);border-radius:var(--radius);padding:20px;display:flex;align-items:center;gap:14px;transition:all .2s;box-shadow:var(--shadow)}
+.tool-card:hover{border-color:var(--primary);box-shadow:var(--shadow-hover);transform:translateY(-2px)}
+.t-icon{width:44px;height:44px;flex-shrink:0;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:.7rem;font-weight:800;color:var(--primary);background:#EFF6FF}
+.tool-card h4{font-size:.9rem;font-weight:700;color:var(--text);margin-bottom:2px}
+.tool-card p{font-size:.78rem;color:var(--text-muted)}
+.tool-arrow{margin-left:auto;color:var(--text-muted);font-size:1.1rem;flex-shrink:0;transition:color .2s,transform .2s}
+.tool-card:hover .tool-arrow{color:var(--primary);transform:translateX(3px)}
+.breadcrumb{font-size:.85rem;color:var(--text-muted);margin-bottom:28px}
+.breadcrumb a{color:var(--primary)}
+.breadcrumb span{margin:0 6px}
+footer{background:#0F172A;color:#94A3B8;padding:40px 24px 24px;margin-top:80px}
+.footer-inner{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;font-size:.85rem}
+.footer-inner a{color:#94A3B8;transition:color .2s}
+.footer-inner a:hover{color:white}
+@media(max-width:768px){nav{display:none}}
+</style>
+</head>
+<body>
+<header>
+  <div class="header-inner">
+    <a href="../../index.html" class="logo">
+      <div class="logo-icon"><svg viewBox="0 0 24 24"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><polyline points="13 2 13 9 20 9" style="fill:rgba(255,255,255,.35)"/></svg></div>
+      File<span class="presto">Presto</span>
+    </a>
+    <nav>
+      <a href="index.html" class="active">Images</a>
+      <a href="../pdf/index.html">PDF</a>
+      <a href="../video/index.html">Video</a>
+      <a href="../audio/index.html">Audio</a>
+      <a href="../documents/index.html">Documents</a>
+      <a href="../../pricing.html">Pricing</a>
+    </nav>
+    <a href="../../pricing.html" class="btn-primary">Go Pro</a>
+  </div>
+</header>
+
+<div class="page-hero">
+  <div class="badge">&#128444; Image Tools</div>
+  <h1>Image Converter &amp; Editor Tools</h1>
+  <p>Convert, compress and edit images online for free. JPG, PNG, WebP, HEIC and more — no software needed.</p>
+</div>
+
+<div class="container">
+  <div class="breadcrumb">
+    <a href="../../index.html">Home</a><span>&#8250;</span> Image Tools
+  </div>
+  <h2 class="section-title">All Image Tools</h2>
+  <p class="section-sub">10 free tools available</p>
+  <div class="tools-grid">
+    <a href="jpg-to-png.html" class="tool-card"><div class="t-icon">JPG</div><div><h4>JPG to PNG</h4><p>Convert JPEG to PNG</p></div><span class="tool-arrow">&#8594;</span></a>
+    <a href="png-to-jpg.html" class="tool-card"><div class="t-icon">PNG</div><div><h4>PNG to JPG</h4><p>Convert PNG to JPEG</p></div><span class="tool-arrow">&#8594;</span></a>
+    <a href="jpg-to-webp.html" class="tool-card"><div class="t-icon">WEB</div><div><h4>JPG to WebP</h4><p>Optimize images for web</p></div><span class="tool-arrow">&#8594;</span></a>
+    <a href="png-to-webp.html" class="tool-card"><div class="t-icon">PNG</div><div><h4>PNG to WebP</h4><p>Modern WebP format</p></div><span class="tool-arrow">&#8594;</span></a>
+    <a href="webp-to-jpg.html" class="tool-card"><div class="t-icon">WEB</div><div><h4>WebP to JPG</h4><p>Convert WebP to JPEG</p></div><span class="tool-arrow">&#8594;</span></a>
+    <a href="heic-to-jpg.html" class="tool-card"><div class="t-icon">HIC</div><div><h4>HEIC to JPG</h4><p>Convert iPhone photos</p></div><span class="tool-arrow">&#8594;</span></a>
+    <a href="svg-to-png.html" class="tool-card"><div class="t-icon">SVG</div><div><h4>SVG to PNG</h4><p>Vector to raster image</p></div><span class="tool-arrow">&#8594;</span></a>
+    <a href="compress-image.html" class="tool-card"><div class="t-icon">ZIP</div><div><h4>Compress Image</h4><p>Reduce image file size</p></div><span class="tool-arrow">&#8594;</span></a>
+    <a href="resize-image.html" class="tool-card"><div class="t-icon">RSZ</div><div><h4>Resize Image</h4><p>Change image dimensions</p></div><span class="tool-arrow">&#8594;</span></a>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <span>&#169; 2026 FilePresto. All rights reserved.</span>
+    <div style="display:flex;gap:16px">
+      <a href="../../privacy.html">Privacy</a>
+      <a href="../../terms.html">Terms</a>
+      <a href="../../contact.html">Contact</a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
