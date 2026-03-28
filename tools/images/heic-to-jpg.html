@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HEIC a JPG - Convertir HEIC a JPG Gratis | FilePresto</title>
+<meta name="description" content="Convierte fotos HEIC/HEIF de iPhone a formato JPG compatible. Gratis, sin registro.">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--primary:#2563EB;--primary-dark:#1D4ED8;--accent:#7C3AED;--bg:#F8FAFC;--white:#FFFFFF;--text:#0F172A;--text-muted:#64748B;--border:#E2E8F0;--radius:12px}
+body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);min-height:100vh}
+header{background:var(--white);border-bottom:1px solid var(--border);padding:0 24px;height:64px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;box-shadow:0 1px 3px rgba(0,0,0,.06)}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--text)}
+.logo-icon{width:36px;height:36px;background:linear-gradient(135deg,var(--primary),var(--accent));border-radius:8px;display:flex;align-items:center;justify-content:center;color:white;font-size:18px}
+.logo-text{font-size:20px;font-weight:700}
+nav{display:flex;gap:24px;align-items:center}
+nav a{text-decoration:none;color:var(--text-muted);font-size:14px;font-weight:500}
+nav a:hover{color:var(--primary)}
+.btn-nav{background:var(--primary);color:white!important;padding:8px 18px;border-radius:8px;font-size:14px;font-weight:600;text-decoration:none}
+main{max-width:800px;margin:0 auto;padding:40px 24px}
+.breadcrumb{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--text-muted);margin-bottom:32px}
+.breadcrumb a{color:var(--text-muted);text-decoration:none}.breadcrumb a:hover{color:var(--primary)}.breadcrumb span{color:var(--text)}
+.page-title{font-size:36px;font-weight:800;margin-bottom:12px;background:linear-gradient(135deg,var(--primary),var(--accent));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.page-desc{font-size:16px;color:var(--text-muted);margin-bottom:40px}
+.info-banner{background:#EFF6FF;border:1px solid #BFDBFE;border-radius:var(--radius);padding:16px 20px;margin-bottom:32px;font-size:14px;color:var(--primary);display:flex;gap:12px;align-items:flex-start}
+.upload-zone{border:2px dashed var(--border);border-radius:var(--radius);padding:60px 40px;text-align:center;cursor:pointer;transition:all .3s;background:var(--white)}
+.upload-zone:hover,.upload-zone.dragover{border-color:var(--primary);background:#EFF6FF}
+.upload-icon{font-size:48px;margin-bottom:16px}
+.upload-title{font-size:18px;font-weight:600;margin-bottom:8px}
+.upload-subtitle{font-size:14px;color:var(--text-muted)}
+.upload-btn{display:inline-block;margin-top:20px;background:var(--primary);color:white;padding:12px 28px;border-radius:8px;font-weight:600;cursor:pointer}
+#fileInput{display:none}
+.status{margin-top:24px;padding:16px;border-radius:var(--radius);display:none;align-items:center;gap:12px}
+.status.loading{display:flex;background:#EFF6FF;color:var(--primary)}
+.status.error{display:flex;background:#FEF2F2;color:#DC2626}
+.spinner{width:20px;height:20px;border:2px solid currentColor;border-top-color:transparent;border-radius:50%;animation:spin .8s linear infinite;flex-shrink:0}
+@keyframes spin{to{transform:rotate(360deg)}}
+.result{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:32px;margin-top:24px;text-align:center;display:none}
+.result.show{display:block}
+.preview-wrap{margin-bottom:24px}
+.preview-wrap img{max-width:100%;max-height:300px;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,.1)}
+.download-btn{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,var(--primary),var(--accent));color:white;padding:14px 32px;border-radius:10px;font-size:16px;font-weight:700;text-decoration:none;border:none;cursor:pointer}
+.download-btn:hover{opacity:.9}
+.reset-btn{display:inline-block;margin-top:12px;color:var(--text-muted);font-size:14px;cursor:pointer;text-decoration:underline;background:none;border:none}
+.how-to{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:24px;margin-top:32px}
+.how-to h3{font-size:16px;font-weight:600;margin-bottom:16px}
+.how-to ol{padding-left:20px}
+.how-to li{font-size:14px;color:var(--text-muted);margin-bottom:8px;line-height:1.5}
+.how-to li strong{color:var(--text)}
+.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:16px;margin-top:32px}
+.feature-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:20px;text-align:center}
+.feature-icon{font-size:28px;margin-bottom:8px}
+.feature-title{font-size:14px;font-weight:600;margin-bottom:4px}
+.feature-desc{font-size:12px;color:var(--text-muted)}
+footer{background:var(--white);border-top:1px solid var(--border);padding:32px 24px;text-align:center;margin-top:80px}
+.footer-links{display:flex;justify-content:center;gap:24px;margin-bottom:12px;flex-wrap:wrap}
+.footer-links a{color:var(--text-muted);text-decoration:none;font-size:13px}.footer-links a:hover{color:var(--primary)}
+.footer-copy{font-size:12px;color:var(--text-muted)}
+</style>
+<script src="https://cdn.jsdelivr.net/npm/heic2any@0.0.4/dist/heic2any.min.js"></script>
+</head>
+<body>
+<header>
+<a href="../../index.html" class="logo">
+<div class="logo-icon">&#128206;</div>
+<span class="logo-text">FilePresto</span>
+</a>
+<nav>
+<a href="../../index.html">Inicio</a>
+<a href="index.html">Imágenes</a>
+<a href="../../pricing.html">Precios</a>
+<a href="../../about.html">Nosotros</a>
+<a href="../../contact.html" class="btn-nav">Contacto</a>
+</nav>
+</header>
+<main>
+<div class="breadcrumb">
+<a href="../../index.html">Inicio</a><span>&#8250;</span>
+<a href="index.html">Imágenes</a><span>&#8250;</span>
+<span>HEIC a JPG</span>
+</div>
+<h1 class="page-title">HEIC a JPG</h1>
+<p class="page-desc">Convierte fotos HEIC/HEIF de iPhone y dispositivos Apple al formato JPG compatible con todos los sistemas. Sin instalación de software.</p>
+<div class="info-banner">
+<span style="font-size:20px;flex-shrink:0">&#8505;</span>
+<div><strong>¿Qué es HEIC?</strong> Es el formato predeterminado de fotos en iPhone (iOS 11+). Ocupa menos espacio pero no es compatible con todos los programas. JPG es universal y funciona en cualquier dispositivo.</div>
+</div>
+<div class="upload-zone" id="uploadZone">
+<div class="upload-icon">&#128247;</div>
+<div class="upload-title">Arrastra tu foto HEIC aquí</div>
+<div class="upload-subtitle">o haz clic para seleccionar</div>
+<label class="upload-btn" for="fileInput">Seleccionar foto HEIC</label>
+<input type="file" id="fileInput" accept=".heic,.heif,image/heic,image/heif">
+</div>
+<div class="status" id="status"><div class="spinner"></div><span id="statusText">Convirtiendo...</span></div>
+<div class="result" id="result">
+<div class="preview-wrap"><img id="preview" src="" alt="Vista previa JPG"></div>
+<a class="download-btn" id="downloadBtn" href="#" download="">&#11123; Descargar JPG</a>
+<br><button class="reset-btn" onclick="resetTool()">&#8635; Convertir otra foto</button>
+</div>
+<div class="how-to">
+<h3>&#128247; Cómo exportar HEIC desde iPhone</h3>
+<ol>
+<li><strong>Abre Ajustes</strong> en tu iPhone y ve a Cámara</li>
+<li>En "Formatos" elige <strong>Más compatible</strong> para capturar en JPG en el futuro</li>
+<li>Para archivos existentes, compártelos por AirDrop o cable USB a tu ordenador</li>
+<li>O usa esta herramienta para <strong>convertir en segundos</strong></li>
+</ol>
+</div>
+<div class="features">
+<div class="feature-card"><div class="feature-icon">&#9889;</div><div class="feature-title">Rápido</div><div class="feature-desc">Conversión en segundos</div></div>
+<div class="feature-card"><div class="feature-icon">&#128274;</div><div class="feature-title">Privado</div><div class="feature-desc">Sin subida a servidores</div></div>
+<div class="feature-card"><div class="feature-icon">&#127873;</div><div class="feature-title">Gratis</div><div class="feature-desc">Sin límites ni registro</div></div>
+<div class="feature-card"><div class="feature-icon">&#128241;</div><div class="feature-title">iPhone Ready</div><div class="feature-desc">Optimizado para fotos Apple</div></div>
+</div>
+</main>
+<footer>
+<div class="footer-links">
+<a href="../../privacy.html">Privacidad</a><a href="../../terms.html">Términos</a>
+<a href="../../contact.html">Contacto</a><a href="../../about.html">Nosotros</a><a href="../../pricing.html">Precios</a>
+</div>
+<div class="footer-copy">&#169; 2026 FilePresto. Todos los derechos reservados.</div>
+</footer>
+<script>
+var uploadZone=document.getElementById('uploadZone');
+var fileInput=document.getElementById('fileInput');
+uploadZone.addEventListener('dragover',function(e){e.preventDefault();uploadZone.classList.add('dragover');});
+uploadZone.addEventListener('dragleave',function(){uploadZone.classList.remove('dragover');});
+uploadZone.addEventListener('drop',function(e){e.preventDefault();uploadZone.classList.remove('dragover');var f=e.dataTransfer.files[0];if(f)handleFile(f);});
+fileInput.addEventListener('change',function(){if(this.files[0])handleFile(this.files[0]);});
+function handleFile(file){
+  var name=file.name.toLowerCase();
+  if(!name.endsWith('.heic')&&!name.endsWith('.heif')&&!file.type.includes('heic')&&!file.type.includes('heif')){
+    showStatus('error','Por favor selecciona un archivo HEIC o HEIF.');return;
+  }
+  showStatus('loading','Convirtiendo HEIC a JPG... (puede tardar unos segundos)');
+  if(typeof heic2any==='undefined'){
+    showStatus('error','La librería de conversión no se pudo cargar. Verifica tu conexión a internet.');return;
+  }
+  heic2any({blob:file,toType:'image/jpeg',quality:0.92}).then(function(blob){
+    var url=URL.createObjectURL(blob);
+    var baseName=file.name.replace(/\.(heic|heif)$/i,'');
+    document.getElementById('preview').src=url;
+    var dlBtn=document.getElementById('downloadBtn');
+    dlBtn.href=url;dlBtn.download=baseName+'.jpg';
+    document.getElementById('status').style.display='none';
+    document.getElementById('result').classList.add('show');
+  }).catch(function(err){
+    showStatus('error','Error al convertir: '+err.message);
+  });
+}
+function showStatus(type,msg){
+  var s=document.getElementById('status');
+  s.className='status '+type;s.style.display='flex';
+  document.getElementById('statusText').textContent=msg;
+}
+function resetTool(){
+  document.getElementById('result').classList.remove('show');
+  document.getElementById('status').style.display='none';
+  document.getElementById('fileInput').value='';
+}
+</script>
+</body>
+</html>
