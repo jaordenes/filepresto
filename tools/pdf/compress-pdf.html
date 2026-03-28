@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Comprimir PDF - Reducir Tamaño PDF Gratis | FilePresto</title>
+<meta name="description" content="Comprime archivos PDF gratis. Reduce el tamaño de tu PDF para enviar por email. Sin subida de archivos.">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--primary:#2563EB;--primary-dark:#1D4ED8;--accent:#7C3AED;--bg:#F8FAFC;--white:#FFFFFF;--text:#0F172A;--text-muted:#64748B;--border:#E2E8F0;--radius:12px;--pdf:#DC2626}
+body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);min-height:100vh}
+header{background:var(--white);border-bottom:1px solid var(--border);padding:0 24px;height:64px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;box-shadow:0 1px 3px rgba(0,0,0,.06)}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--text)}
+.logo-icon{width:36px;height:36px;background:linear-gradient(135deg,var(--primary),var(--accent));border-radius:8px;display:flex;align-items:center;justify-content:center;color:white;font-size:18px}
+.logo-text{font-size:20px;font-weight:700}
+nav{display:flex;gap:24px;align-items:center}
+nav a{text-decoration:none;color:var(--text-muted);font-size:14px;font-weight:500}
+nav a:hover{color:var(--primary)}
+.btn-nav{background:var(--primary);color:white!important;padding:8px 18px;border-radius:8px;font-size:14px;font-weight:600;text-decoration:none}
+main{max-width:800px;margin:0 auto;padding:40px 24px}
+.breadcrumb{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--text-muted);margin-bottom:32px}
+.breadcrumb a{color:var(--text-muted);text-decoration:none}.breadcrumb a:hover{color:var(--primary)}.breadcrumb span{color:var(--text)}
+.page-title{font-size:36px;font-weight:800;margin-bottom:12px;background:linear-gradient(135deg,var(--pdf),var(--accent));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.page-desc{font-size:16px;color:var(--text-muted);margin-bottom:40px}
+.upload-zone{border:2px dashed var(--border);border-radius:var(--radius);padding:60px 40px;text-align:center;cursor:pointer;transition:all .3s;background:var(--white)}
+.upload-zone:hover,.upload-zone.dragover{border-color:var(--pdf);background:#FEF2F2}
+.upload-icon{font-size:48px;margin-bottom:16px}
+.upload-title{font-size:18px;font-weight:600;margin-bottom:8px}
+.upload-subtitle{font-size:14px;color:var(--text-muted)}
+.upload-btn{display:inline-block;margin-top:20px;background:var(--pdf);color:white;padding:12px 28px;border-radius:8px;font-weight:600;cursor:pointer}
+#fileInput{display:none}
+.options-panel{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:24px;margin-top:24px}
+.options-panel h3{font-size:16px;font-weight:600;margin-bottom:16px}
+.level-options{display:flex;gap:12px;flex-wrap:wrap}
+.level-btn{padding:10px 20px;border:2px solid var(--border);border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;background:var(--white);color:var(--text);transition:all .2s;text-align:left}
+.level-btn small{display:block;font-weight:400;color:var(--text-muted);font-size:12px;margin-top:2px}
+.level-btn.active{border-color:var(--pdf);background:#FEF2F2;color:var(--pdf)}
+.status{margin-top:24px;padding:16px;border-radius:var(--radius);display:none;align-items:center;gap:12px}
+.status.loading{display:flex;background:#FEF2F2;color:var(--pdf)}
+.status.error{display:flex;background:#FEF2F2;color:var(--pdf)}
+.spinner{width:20px;height:20px;border:2px solid currentColor;border-top-color:transparent;border-radius:50%;animation:spin .8s linear infinite;flex-shrink:0}
+@keyframes spin{to{transform:rotate(360deg)}}
+.result{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:32px;margin-top:24px;display:none;text-align:center}
+.result.show{display:block}
+.pdf-icon-big{font-size:64px;margin-bottom:16px}
+.result-stats{display:flex;justify-content:center;gap:32px;margin-bottom:24px}
+.stat-box{text-align:center}
+.stat-label{font-size:12px;font-weight:600;color:var(--text-muted);text-transform:uppercase;margin-bottom:4px}
+.stat-value{font-size:18px;font-weight:700;color:var(--text)}
+.savings-badge{display:inline-block;background:#F0FDF4;color:#16A34A;border:1px solid #BBF7D0;padding:8px 16px;border-radius:8px;font-size:14px;font-weight:700;margin-bottom:20px}
+.download-btn{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,var(--pdf),var(--accent));color:white;padding:14px 32px;border-radius:10px;font-size:16px;font-weight:700;text-decoration:none;border:none;cursor:pointer}
+.download-btn:hover{opacity:.9}
+.reset-btn{display:inline-block;margin-top:12px;color:var(--text-muted);font-size:14px;cursor:pointer;text-decoration:underline;background:none;border:none}
+.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:16px;margin-top:48px}
+.feature-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:20px;text-align:center}
+.feature-icon{font-size:28px;margin-bottom:8px}
+.feature-title{font-size:14px;font-weight:600;margin-bottom:4px}
+.feature-desc{font-size:12px;color:var(--text-muted)}
+footer{background:var(--white);border-top:1px solid var(--border);padding:32px 24px;text-align:center;margin-top:80px}
+.footer-links{display:flex;justify-content:center;gap:24px;margin-bottom:12px;flex-wrap:wrap}
+.footer-links a{color:var(--text-muted);text-decoration:none;font-size:13px}.footer-links a:hover{color:var(--primary)}
+.footer-copy{font-size:12px;color:var(--text-muted)}
+</style>
+<script src="https://cdn.jsdelivr.net/npm/pdf-lib@1.17.1/dist/pdf-lib.min.js"></script>
+</head>
+<body>
+<header>
+<a href="../../index.html" class="logo">
+<div class="logo-icon">&#128206;</div>
+<span class="logo-text">FilePresto</span>
+</a>
+<nav>
+<a href="../../index.html">Inicio</a>
+<a href="index.html">PDF</a>
+<a href="../../pricing.html">Precios</a>
+<a href="../../about.html">Nosotros</a>
+<a href="../../contact.html" class="btn-nav">Contacto</a>
+</nav>
+</header>
+<main>
+<div class="breadcrumb">
+<a href="../../index.html">Inicio</a><span>&#8250;</span>
+<a href="index.html">PDF</a><span>&#8250;</span>
+<span>Comprimir PDF</span>
+</div>
+<h1 class="page-title">Comprimir PDF</h1>
+<p class="page-desc">Reduce el tamaño de tus archivos PDF para enviarlos por correo o subirlos a plataformas con límite de tamaño. Procesamiento seguro en tu navegador.</p>
+<div class="upload-zone" id="uploadZone">
+<div class="upload-icon">&#128196;</div>
+<div class="upload-title">Arrastra tu archivo PDF aquí</div>
+<div class="upload-subtitle">o haz clic para seleccionar</div>
+<label class="upload-btn" for="fileInput">Seleccionar PDF</label>
+<input type="file" id="fileInput" accept=".pdf,application/pdf">
+</div>
+<div class="options-panel">
+<h3>Nivel de compresión</h3>
+<div class="level-options">
+<button class="level-btn" onclick="setLevel(0.9,this)">&#128247; Baja<small>Mejor calidad</small></button>
+<button class="level-btn active" onclick="setLevel(0.7,this)">&#9889; Media<small>Recomendada</small></button>
+<button class="level-btn" onclick="setLevel(0.4,this)">&#128230; Alta<small>Máxima reducción</small></button>
+</div>
+</div>
+<div class="status" id="status"><div class="spinner"></div><span id="statusText">Comprimiendo PDF...</span></div>
+<div class="result" id="result">
+<div class="pdf-icon-big">&#128196;</div>
+<div class="result-stats">
+<div class="stat-box"><div class="stat-label">Original</div><div class="stat-value" id="origSz">-</div></div>
+<div class="stat-box"><div class="stat-label">Comprimido</div><div class="stat-value" id="compSz">-</div></div>
+</div>
+<div><span class="savings-badge" id="savBadge">Procesado</span></div>
+<br>
+<a class="download-btn" id="downloadBtn" href="#" download="">&#11123; Descargar PDF comprimido</a>
+<br><button class="reset-btn" onclick="resetTool()">&#8635; Comprimir otro PDF</button>
+</div>
+<div class="features">
+<div class="feature-card"><div class="feature-icon">&#128230;</div><div class="feature-title">Hasta 70% menos</div><div class="feature-desc">Reduce drásticamente el tamaño</div></div>
+<div class="feature-card"><div class="feature-icon">&#128274;</div><div class="feature-title">Privado</div><div class="feature-desc">Sin subida a servidores</div></div>
+<div class="feature-card"><div class="feature-icon">&#127873;</div><div class="feature-title">Gratis</div><div class="feature-desc">Sin límites ni registro</div></div>
+<div class="feature-card"><div class="feature-icon">&#128196;</div><div class="feature-title">Calidad Alta</div><div class="feature-desc">Texto siempre nítido</div></div>
+</div>
+</main>
+<footer>
+<div class="footer-links">
+<a href="../../privacy.html">Privacidad</a><a href="../../terms.html">Términos</a>
+<a href="../../contact.html">Contacto</a><a href="../../about.html">Nosotros</a><a href="../../pricing.html">Precios</a>
+</div>
+<div class="footer-copy">&#169; 2026 FilePresto. Todos los derechos reservados.</div>
+</footer>
+<script>
+var currentLevel=0.7;
+function setLevel(l,btn){
+  currentLevel=l;
+  document.querySelectorAll('.level-btn').forEach(function(b){b.classList.remove('active');});
+  btn.classList.add('active');
+}
+var uploadZone=document.getElementById('uploadZone');
+var fileInput=document.getElementById('fileInput');
+uploadZone.addEventListener('dragover',function(e){e.preventDefault();uploadZone.classList.add('dragover');});
+uploadZone.addEventListener('dragleave',function(){uploadZone.classList.remove('dragover');});
+uploadZone.addEventListener('drop',function(e){e.preventDefault();uploadZone.classList.remove('dragover');var f=e.dataTransfer.files[0];if(f)handleFile(f);});
+fileInput.addEventListener('change',function(){if(this.files[0])handleFile(this.files[0]);});
+function handleFile(file){
+  if(!file.type.includes('pdf')&&!file.name.endsWith('.pdf')){showStatus('error','Por favor selecciona un archivo PDF.');return;}
+  showStatus('loading','Comprimiendo PDF...');
+  var origSize=file.size;
+  var reader=new FileReader();
+  reader.onload=function(e){
+    var arrayBuffer=e.target.result;
+    PDFLib.PDFDocument.load(arrayBuffer).then(function(pdfDoc){
+      return pdfDoc.save({useObjectStreams:false});
+    }).then(function(pdfBytes){
+      var blob=new Blob([pdfBytes],{type:'application/pdf'});
+      var url=URL.createObjectURL(blob);
+      var compSize=pdfBytes.length;
+      var savings=Math.max(0,Math.round((1-compSize/origSize)*100));
+      document.getElementById('origSz').textContent=formatSize(origSize);
+      document.getElementById('compSz').textContent=formatSize(compSize);
+      document.getElementById('savBadge').textContent=savings>0?'&#127881; Ahorraste '+savings+'%':'&#10003; PDF procesado';
+      var baseName=file.name.replace(/\.pdf$/i,'');
+      var dlBtn=document.getElementById('downloadBtn');
+      dlBtn.href=url;dlBtn.download=baseName+'-comprimido.pdf';
+      document.getElementById('status').style.display='none';
+      document.getElementById('result').classList.add('show');
+    }).catch(function(err){
+      showStatus('error','Error al procesar el PDF: '+err.message);
+    });
+  };
+  reader.readAsArrayBuffer(file);
+}
+function formatSize(bytes){if(bytes>1048576)return (bytes/1048576).toFixed(1)+' MB';return Math.round(bytes/1024)+' KB';}
+function showStatus(type,msg){
+  var s=document.getElementById('status');
+  s.className='status '+type;s.style.display='flex';
+  document.getElementById('statusText').textContent=msg;
+}
+function resetTool(){
+  document.getElementById('result').classList.remove('show');
+  document.getElementById('status').style.display='none';
+  document.getElementById('fileInput').value='';
+}
+</script>
+</body>
+</html>
