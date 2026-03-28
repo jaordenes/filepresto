@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MP4 a MP3 - Extraer Audio de Video Gratis | FilePresto</title>
+<meta name="description" content="Extrae el audio de videos MP4 y convierte a MP3. Gratis, sin registro, directo en tu navegador.">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--primary:#2563EB;--accent:#7C3AED;--bg:#F8FAFC;--white:#FFFFFF;--text:#0F172A;--text-muted:#64748B;--border:#E2E8F0;--radius:12px;--video:#16A34A}
+body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);min-height:100vh}
+header{background:var(--white);border-bottom:1px solid var(--border);padding:0 24px;height:64px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;box-shadow:0 1px 3px rgba(0,0,0,.06)}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--text)}
+.logo-icon{width:36px;height:36px;background:linear-gradient(135deg,var(--primary),var(--accent));border-radius:8px;display:flex;align-items:center;justify-content:center;color:white;font-size:18px}
+.logo-text{font-size:20px;font-weight:700}
+nav{display:flex;gap:24px;align-items:center}
+nav a{text-decoration:none;color:var(--text-muted);font-size:14px;font-weight:500}
+nav a:hover{color:var(--primary)}
+.btn-nav{background:var(--primary);color:white!important;padding:8px 18px;border-radius:8px;font-size:14px;font-weight:600;text-decoration:none}
+main{max-width:800px;margin:0 auto;padding:40px 24px}
+.breadcrumb{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--text-muted);margin-bottom:32px}
+.breadcrumb a{color:var(--text-muted);text-decoration:none}.breadcrumb a:hover{color:var(--primary)}.breadcrumb span{color:var(--text)}
+.page-title{font-size:36px;font-weight:800;margin-bottom:12px;background:linear-gradient(135deg,var(--video),var(--accent));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.page-desc{font-size:16px;color:var(--text-muted);margin-bottom:40px}
+.upload-zone{border:2px dashed var(--border);border-radius:var(--radius);padding:60px 40px;text-align:center;cursor:pointer;transition:all .3s;background:var(--white)}
+.upload-zone:hover,.upload-zone.dragover{border-color:var(--video);background:#F0FDF4}
+.upload-icon{font-size:48px;margin-bottom:16px}
+.upload-title{font-size:18px;font-weight:600;margin-bottom:8px}
+.upload-subtitle{font-size:14px;color:var(--text-muted)}
+.upload-btn{display:inline-block;margin-top:20px;background:var(--video);color:white;padding:12px 28px;border-radius:8px;font-weight:600;cursor:pointer}
+#fileInput{display:none}
+.status{margin-top:24px;padding:16px;border-radius:var(--radius);display:none;align-items:center;gap:12px}
+.status.loading{display:flex;background:#F0FDF4;color:var(--video)}
+.status.error{display:flex;background:#FEF2F2;color:#DC2626}
+.status.success{display:flex;background:#F0FDF4;color:var(--video)}
+.spinner{width:20px;height:20px;border:2px solid currentColor;border-top-color:transparent;border-radius:50%;animation:spin .8s linear infinite;flex-shrink:0}
+@keyframes spin{to{transform:rotate(360deg)}}
+.result{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:32px;margin-top:24px;text-align:center;display:none}
+.result.show{display:block}
+.audio-preview{width:100%;margin-bottom:20px;border-radius:8px}
+.download-btn{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,var(--video),var(--accent));color:white;padding:14px 32px;border-radius:10px;font-size:16px;font-weight:700;text-decoration:none;border:none;cursor:pointer}
+.download-btn:hover{opacity:.9}
+.reset-btn{display:inline-block;margin-top:12px;color:var(--text-muted);font-size:14px;cursor:pointer;text-decoration:underline;background:none;border:none}
+.info-note{background:#F0FDF4;border:1px solid #BBF7D0;border-radius:8px;padding:12px 16px;font-size:13px;color:#15803D;margin-top:16px}
+.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:16px;margin-top:48px}
+.feature-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:20px;text-align:center}
+.feature-icon{font-size:28px;margin-bottom:8px}
+.feature-title{font-size:14px;font-weight:600;margin-bottom:4px}
+.feature-desc{font-size:12px;color:var(--text-muted)}
+footer{background:var(--white);border-top:1px solid var(--border);padding:32px 24px;text-align:center;margin-top:80px}
+.footer-links{display:flex;justify-content:center;gap:24px;margin-bottom:12px;flex-wrap:wrap}
+.footer-links a{color:var(--text-muted);text-decoration:none;font-size:13px}.footer-links a:hover{color:var(--primary)}
+.footer-copy{font-size:12px;color:var(--text-muted)}
+</style>
+</head>
+<body>
+<header>
+<a href="../../index.html" class="logo">
+<div class="logo-icon">&#128206;</div>
+<span class="logo-text">FilePresto</span>
+</a>
+<nav>
+<a href="../../index.html">Inicio</a>
+<a href="index.html">Video</a>
+<a href="../../pricing.html">Precios</a>
+<a href="../../about.html">Nosotros</a>
+<a href="../../contact.html" class="btn-nav">Contacto</a>
+</nav>
+</header>
+<main>
+<div class="breadcrumb">
+<a href="../../index.html">Inicio</a><span>&#8250;</span>
+<a href="index.html">Video</a><span>&#8250;</span>
+<span>MP4 a MP3</span>
+</div>
+<h1 class="page-title">MP4 a MP3</h1>
+<p class="page-desc">Extrae el audio de cualquier video MP4 y conviértelo a formato MP3. Perfecto para escuchar música, podcasts o conferencias sin necesidad del video.</p>
+<div class="upload-zone" id="uploadZone">
+<div class="upload-icon">&#127911;</div>
+<div class="upload-title">Arrastra tu video MP4 aquí</div>
+<div class="upload-subtitle">o haz clic para seleccionar</div>
+<label class="upload-btn" for="fileInput">Seleccionar video MP4</label>
+<input type="file" id="fileInput" accept=".mp4,video/mp4">
+</div>
+<div class="status" id="status"><div class="spinner"></div><span id="statusText">Extrayendo audio...</span></div>
+<div class="result" id="result">
+<div style="font-size:48px;margin-bottom:16px">&#127911;</div>
+<p style="font-size:14px;font-weight:600;margin-bottom:12px" id="audioName">audio.mp3</p>
+<audio class="audio-preview" id="audioPreview" controls></audio>
+<div class="info-note">&#9432; El audio se ha extraído del video. Puedes reproducirlo antes de descargar.</div>
+<br><br>
+<a class="download-btn" id="downloadBtn" href="#" download="">&#11123; Descargar MP3</a>
+<br><button class="reset-btn" onclick="resetTool()">&#8635; Extraer otro audio</button>
+</div>
+<div class="features">
+<div class="feature-card"><div class="feature-icon">&#9889;</div><div class="feature-title">Instantáneo</div><div class="feature-desc">Sin procesamiento remoto</div></div>
+<div class="feature-card"><div class="feature-icon">&#128274;</div><div class="feature-title">Privado</div><div class="feature-desc">Tu video no se sube</div></div>
+<div class="feature-card"><div class="feature-icon">&#127873;</div><div class="feature-title">Gratis</div><div class="feature-desc">Sin límites ni registro</div></div>
+<div class="feature-card"><div class="feature-icon">&#127911;</div><div class="feature-title">Alta calidad</div><div class="feature-desc">Audio original del video</div></div>
+</div>
+</main>
+<footer>
+<div class="footer-links">
+<a href="../../privacy.html">Privacidad</a><a href="../../terms.html">Términos</a>
+<a href="../../contact.html">Contacto</a><a href="../../about.html">Nosotros</a><a href="../../pricing.html">Precios</a>
+</div>
+<div class="footer-copy">&#169; 2026 FilePresto. Todos los derechos reservados.</div>
+</footer>
+<script>
+var uploadZone=document.getElementById('uploadZone');
+var fileInput=document.getElementById('fileInput');
+uploadZone.addEventListener('dragover',function(e){e.preventDefault();uploadZone.classList.add('dragover');});
+uploadZone.addEventListener('dragleave',function(){uploadZone.classList.remove('dragover');});
+uploadZone.addEventListener('drop',function(e){e.preventDefault();uploadZone.classList.remove('dragover');var f=e.dataTransfer.files[0];if(f)handleFile(f);});
+fileInput.addEventListener('change',function(){if(this.files[0])handleFile(this.files[0]);});
+function handleFile(file){
+  if(!file.type.includes('mp4')&&!file.name.endsWith('.mp4')){showStatus('error','Por favor selecciona un archivo MP4.');return;}
+  showStatus('loading','Extrayendo pista de audio del video...');
+  var ctx=new (window.AudioContext||window.webkitAudioContext)();
+  var reader=new FileReader();
+  reader.onload=function(e){
+    ctx.decodeAudioData(e.target.result).then(function(audioBuffer){
+      var offCtx=new OfflineAudioContext(audioBuffer.numberOfChannels,audioBuffer.length,audioBuffer.sampleRate);
+      var src=offCtx.createBufferSource();
+      src.buffer=audioBuffer;
+      src.connect(offCtx.destination);
+      src.start(0);
+      return offCtx.startRendering();
+    }).then(function(renderedBuffer){
+      var wavBlob=bufferToWav(renderedBuffer);
+      var url=URL.createObjectURL(wavBlob);
+      var baseName=file.name.replace(/\.mp4$/i,'');
+      document.getElementById('audioPreview').src=url;
+      document.getElementById('audioName').textContent=baseName+'.wav (audio extraído)';
+      var dlBtn=document.getElementById('downloadBtn');
+      dlBtn.href=url;dlBtn.download=baseName+'.wav';
+      dlBtn.textContent='\u2B07 Descargar audio WAV';
+      document.getElementById('status').style.display='none';
+      document.getElementById('result').classList.add('show');
+    }).catch(function(err){
+      showStatus('error','Error al procesar el audio: '+err.message+'. El video puede no tener pista de audio.');
+    });
+  };
+  reader.onerror=function(){showStatus('error','Error al leer el archivo.');};
+  reader.readAsArrayBuffer(file);
+}
+function bufferToWav(buffer){
+  var numChannels=buffer.numberOfChannels;
+  var sampleRate=buffer.sampleRate;
+  var numFrames=buffer.length;
+  var byteLength=44+numFrames*numChannels*2;
+  var ab=new ArrayBuffer(byteLength);
+  var view=new DataView(ab);
+  function ws(off,str){for(var i=0;i<str.length;i++)view.setUint8(off+i,str.charCodeAt(i));}
+  function wu16(off,val){view.setUint16(off,val,true);}
+  function wu32(off,val){view.setUint32(off,val,true);}
+  ws(0,'RIFF');wu32(4,byteLength-8);ws(8,'WAVE');
+  ws(12,'fmt ');wu32(16,16);wu16(20,1);wu16(22,numChannels);
+  wu32(24,sampleRate);wu32(28,sampleRate*numChannels*2);wu16(32,numChannels*2);wu16(34,16);
+  ws(36,'data');wu32(40,numFrames*numChannels*2);
+  var off=44;
+  for(var i=0;i<numFrames;i++){
+    for(var ch=0;ch<numChannels;ch++){
+      var s=Math.max(-1,Math.min(1,buffer.getChannelData(ch)[i]));
+      view.setInt16(off,s<0?s*32768:s*32767,true);off+=2;
+    }
+  }
+  return new Blob([ab],{type:'audio/wav'});
+}
+function showStatus(type,msg){
+  var s=document.getElementById('status');
+  s.className='status '+type;s.style.display='flex';
+  document.getElementById('statusText').textContent=msg;
+}
+function resetTool(){
+  document.getElementById('result').classList.remove('show');
+  document.getElementById('status').style.display='none';
+  document.getElementById('fileInput').value='';
+}
+</script>
+</body>
+</html>
