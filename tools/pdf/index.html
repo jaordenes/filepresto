@@ -1,4 +1,129 @@
 <!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Herramientas PDF - Comprimir, Convertir, Unir y Dividir PDF | FilePresto</title>
+<meta name="description" content="Herramientas PDF online gratuitas: comprimir PDF, convertir a Word y Excel, unir PDFs, dividir páginas, JPG a PDF y más. Rápido y seguro.">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--primary:#DC2626;--primary-dark:#B91C1C;--primary-light:#FEF2F2;--bg:#FFF5F5;--white:#FFFFFF;--text:#0F172A;--text-muted:#64748B;--border:#E2E8F0;--radius:12px}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg);color:var(--text)}
+nav{background:var(--white);border-bottom:1px solid var(--border);padding:0 24px;position:sticky;top:0;z-index:100;box-shadow:0 1px 3px rgba(0,0,0,.06)}
+.nav-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:60px}
+.logo{font-size:1.3rem;font-weight:700;color:#2563EB;text-decoration:none;display:flex;align-items:center;gap:8px}
+.logo-icon{width:32px;height:32px;background:#2563EB;border-radius:8px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:1rem;font-weight:800}
+.nav-links{display:flex;gap:20px;list-style:none}
+.nav-links a{text-decoration:none;color:var(--text-muted);font-size:.9rem;font-weight:500;transition:color .2s}
+.nav-links a:hover,.nav-links a.active{color:var(--primary)}
+.btn-nav{background:#2563EB;color:#fff !important;padding:8px 18px;border-radius:8px;font-size:.85rem !important}
+.btn-nav:hover{background:#1D4ED8 !important}
+.hero{background:linear-gradient(135deg,#7F1D1D 0%,#DC2626 60%,#EF4444 100%);color:#fff;padding:56px 24px 48px;text-align:center}
+.hero-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.25);border-radius:20px;padding:6px 14px;font-size:.8rem;font-weight:600;margin-bottom:20px}
+.hero h1{font-size:2.5rem;font-weight:800;margin-bottom:14px;line-height:1.2}
+.hero p{font-size:1.1rem;opacity:.88;max-width:580px;margin:0 auto 28px;line-height:1.6}
+.hero-stats{display:flex;justify-content:center;gap:40px;flex-wrap:wrap}
+.hero-stats .stat .num{font-size:1.6rem;font-weight:800}
+.hero-stats .stat .lbl{font-size:.8rem;opacity:.75;margin-top:2px}
+.breadcrumb{max-width:1100px;margin:20px auto 0;padding:0 24px;display:flex;align-items:center;gap:8px;font-size:.85rem;color:var(--text-muted)}
+.breadcrumb a{color:#2563EB;text-decoration:none;font-weight:500}
+.breadcrumb a:hover{text-decoration:underline}
+.tools-section{max-width:1100px;margin:32px auto 48px;padding:0 24px}
+.section-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:24px}
+.section-title{font-size:1.4rem;font-weight:700}
+.section-count{background:var(--primary-light);color:var(--primary);font-size:.8rem;font-weight:600;padding:4px 12px;border-radius:20px}
+.tools-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px}
+.tool-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:24px;text-decoration:none;color:var(--text);transition:all .2s;position:relative;overflow:hidden}
+.tool-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--primary);transform:scaleX(0);transform-origin:left;transition:transform .25s}
+.tool-card:hover{border-color:var(--primary);box-shadow:0 4px 20px rgba(220,38,38,.12);transform:translateY(-2px)}
+.tool-card:hover::before{transform:scaleX(1)}
+.tool-icon{width:52px;height:52px;border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:14px;font-size:1.5rem;background:var(--primary-light);color:var(--primary)}
+.tool-card h3{font-size:1rem;font-weight:700;margin-bottom:6px}
+.tool-card p{font-size:.85rem;color:var(--text-muted);line-height:1.5}
+.tool-badge{display:inline-block;margin-top:10px;font-size:.72rem;font-weight:600;padding:3px 8px;border-radius:6px}
+.badge-free{background:#DCFCE7;color:#16A34A}
+.badge-pro{background:#FEF3C7;color:#D97706}
+.features-section{max-width:1100px;margin:0 auto 56px;padding:0 24px}
+.features-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.feature-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:22px;text-align:center}
+.feature-icon{font-size:1.8rem;margin-bottom:10px}
+.feature-card h4{font-size:.9rem;font-weight:700;margin-bottom:6px}
+.feature-card p{font-size:.8rem;color:var(--text-muted);line-height:1.45}
+footer{background:var(--text);color:rgba(255,255,255,.7);padding:40px 24px 24px}
+.footer-inner{max-width:1100px;margin:0 auto}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px;margin-bottom:32px}
+.footer-brand p{font-size:.85rem;line-height:1.6;margin-top:8px;max-width:260px}
+.footer-col h5{font-size:.85rem;font-weight:700;color:#fff;margin-bottom:12px}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:8px}
+.footer-col ul li a{color:rgba(255,255,255,.6);text-decoration:none;font-size:.82rem;transition:color .2s}
+.footer-col ul li a:hover{color:#fff}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:20px;display:flex;justify-content:space-between;align-items:center;font-size:.8rem}
+@media(max-width:768px){.hero h1{font-size:1.8rem}.tools-grid{grid-template-columns:1fr 1fr}.features-grid{grid-template-columns:1fr 1fr}.footer-grid{grid-template-columns:1fr 1fr}.nav-links{display:none}}
+@media(max-width:480px){.tools-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a href="../../index.html" class="logo"><span class="logo-icon">F</span>FilePresto</a>
+    <ul class="nav-links">
+      <li><a href="../../index.html">Inicio</a></li>
+      <li><a href="../images/index.html">Imágenes</a></li>
+      <li><a href="index.html" class="active">PDF</a></li>
+      <li><a href="../video/index.html">Video</a></li>
+      <li><a href="../audio/index.html">Audio</a></li>
+      <li><a href="../ebook/index.html">eBooks</a></li>
+      <li><a href="../../about.html">Nosotros</a></li>
+      <li><a href="../../pricing.html" class="btn-nav">Pro Plan</a></li>
+    </ul>
+  </div>
+</nav>
+<div class="breadcrumb"><a href="../../index.html">Inicio</a><span>›</span><span style="color:var(--primary);font-weight:600">PDF</span></div>
+<div class="hero">
+  <div class="hero-badge">📄 Herramientas PDF</div>
+  <h1>Todo lo que Necesitas para tus PDFs</h1>
+  <p>Comprime, convierte, une, divide y transforma tus archivos PDF online gratis. Herramientas rápidas, seguras y sin necesidad de instalación.</p>
+  <div class="hero-stats">
+    <div class="stat"><div class="num">9</div><div class="lbl">Herramientas PDF</div></div>
+    <div class="stat"><div class="num">5</div><div class="lbl">Herramientas gratuitas</div></div>
+    <div class="stat"><div class="num">0</div><div class="lbl">Instalaciones</div></div>
+  </div>
+</div>
+<div class="tools-section">
+  <div class="section-header"><h2 class="section-title">Herramientas PDF</h2><span class="section-count">9 herramientas</span></div>
+  <div class="tools-grid">
+    <a href="compress-pdf.html" class="tool-card"><div class="tool-icon">📦</div><h3>Comprimir PDF</h3><p>Reduce el tamaño de tus PDFs sin perder calidad. Ideal para enviar por email.</p><span class="tool-badge badge-free">✓ Gratis</span></a>
+    <a href="merge-pdf.html" class="tool-card"><div class="tool-icon">🔗</div><h3>Unir PDFs</h3><p>Combina múltiples archivos PDF en uno solo. Arrastra y ordena los archivos.</p><span class="tool-badge badge-free">✓ Gratis</span></a>
+    <a href="split-pdf.html" class="tool-card"><div class="tool-icon">✂️</div><h3>Dividir PDF</h3><p>Separa páginas de un PDF en archivos individuales o por rango de páginas.</p><span class="tool-badge badge-free">✓ Gratis</span></a>
+    <a href="jpg-to-pdf.html" class="tool-card"><div class="tool-icon">🖼→📄</div><h3>Imágenes a PDF</h3><p>Convierte una o varias imágenes JPG, PNG o WebP a un documento PDF.</p><span class="tool-badge badge-free">✓ Gratis</span></a>
+    <a href="pdf-to-jpg.html" class="tool-card"><div class="tool-icon">📄→🖼</div><h3>PDF a Imágenes</h3><p>Extrae cada página de un PDF como imagen JPG en alta resolución.</p><span class="tool-badge badge-free">✓ Gratis</span></a>
+    <a href="pdf-to-word.html" class="tool-card"><div class="tool-icon">📄→📝</div><h3>PDF a Word</h3><p>Convierte PDF a documento Word (DOCX) editable manteniendo el formato.</p><span class="tool-badge badge-pro">✨ Pro</span></a>
+    <a href="word-to-pdf.html" class="tool-card"><div class="tool-icon">📝→📄</div><h3>Word a PDF</h3><p>Convierte documentos Word (DOCX) a PDF con el formato perfectamente preservado.</p><span class="tool-badge badge-pro">✨ Pro</span></a>
+    <a href="pdf-to-excel.html" class="tool-card"><div class="tool-icon">📄→📊</div><h3>PDF a Excel</h3><p>Extrae tablas de PDF y conviértelas a hojas de cálculo Excel editables.</p><span class="tool-badge badge-pro">✨ Pro</span></a>
+    <a href="excel-to-pdf.html" class="tool-card"><div class="tool-icon">📊→📄</div><h3>Excel a PDF</h3><p>Convierte hojas de cálculo Excel (XLSX) a PDF con diseño y tablas intactos.</p><span class="tool-badge badge-pro">✨ Pro</span></a>
+  </div>
+</div>
+<div class="features-section">
+  <div class="features-grid">
+    <div class="feature-card"><div class="feature-icon">🔒</div><h4>Procesamiento Seguro</h4><p>Las herramientas gratuitas trabajan en tu navegador. Las Pro eliminan tus archivos inmediatamente.</p></div>
+    <div class="feature-card"><div class="feature-icon">⚡</div><h4>Rápido y Eficiente</h4><p>Compresión y conversión de PDFs en segundos usando tecnología pdf-lib.</p></div>
+    <div class="feature-card"><div class="feature-icon">🆓</div><h4>5 Herramientas Gratis</h4><p>Comprimir, unir, dividir, imágenes a PDF y PDF a imágenes son completamente gratuitas.</p></div>
+    <div class="feature-card"><div class="feature-icon">💻</div><h4>Sin Instalación</h4><p>Funciona en cualquier navegador moderno. No necesitas instalar Adobe ni nada.</p></div>
+  </div>
+</div>
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand"><div style="font-size:1.2rem;font-weight:700;color:#fff">📄 FilePresto — PDF</div><p>Todas las herramientas que necesitas para trabajar con archivos PDF, gratis y online.</p></div>
+      <div class="footer-col"><h5>Categorías</h5><ul><li><a href="../images/index.html">Imágenes</a></li><li><a href="index.html">PDF</a></li><li><a href="../video/index.html">Video</a></li><li><a href="../audio/index.html">Audio</a></li><li><a href="../ebook/index.html">eBooks</a></li></ul></div>
+      <div class="footer-col"><h5>Empresa</h5><ul><li><a href="../../pricing.html">Plan Pro</a></li><li><a href="../../about.html">Nosotros</a></li><li><a href="../../contact.html">Contacto</a></li></ul></div>
+      <div class="footer-col"><h5>Legal</h5><ul><li><a href="../../privacy.html">Privacidad</a></li><li><a href="../../terms.html">Términos</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 FilePresto. Todos los derechos reservados.</span><span>Hecho con ❤️ para trabajar con PDFs</span></div>
+  </div>
+</footer>
+</body>
+</html><!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8"/>
