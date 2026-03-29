@@ -2,6 +2,249 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>FilePresto – Free Online File Converter</title>
+<meta name="description" content="Convert images, PDFs, videos, audio and eBooks online for free. No installation required. Fast, secure and easy to use."/>
+<link rel="alternate" hreflang="en" href="https://jaordenes.github.io/filepresto/"/>
+<link rel="alternate" hreflang="es" href="https://jaordenes.github.io/filepresto/es/"/>
+<link rel="alternate" hreflang="pt" href="https://jaordenes.github.io/filepresto/pt/"/>
+<link rel="alternate" hreflang="x-default" href="https://jaordenes.github.io/filepresto/"/>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',sans-serif;background:#F8FAFC;color:#0F172A}
+a{text-decoration:none;color:inherit}
+nav{background:#fff;border-bottom:1px solid #E2E8F0;padding:0 24px;height:64px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}
+.nav-logo{font-size:1.4rem;font-weight:800;color:#2563EB}
+.nav-links{display:flex;gap:24px;align-items:center;font-size:.95rem}
+.nav-links a{color:#64748B;font-weight:500}
+.nav-links a:hover{color:#2563EB}
+.lang-switcher{display:flex;gap:6px;align-items:center;font-size:.85rem;border-left:1px solid #E2E8F0;padding-left:16px;margin-left:8px}
+.lang-switcher a{color:#64748B;font-weight:600;padding:2px 6px;border-radius:4px}
+.lang-switcher a.active{background:#2563EB;color:#fff}
+.lang-switcher a:hover{background:#F1F5F9}
+.btn-pro{background:#2563EB;color:#fff!important;padding:8px 18px;border-radius:8px;font-weight:600;font-size:.9rem}
+.btn-pro:hover{background:#1D4ED8!important}
+.hero{text-align:center;padding:80px 24px 60px;background:linear-gradient(135deg,#EFF6FF 0%,#F8FAFC 100%)}
+.hero h1{font-size:2.8rem;font-weight:800;color:#0F172A;margin-bottom:16px;line-height:1.2}
+.hero h1 span{color:#2563EB}
+.hero p{font-size:1.15rem;color:#64748B;max-width:600px;margin:0 auto 36px}
+.search-bar{max-width:520px;margin:0 auto;display:flex;gap:0;background:#fff;border:2px solid #E2E8F0;border-radius:12px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,.06)}
+.search-bar input{flex:1;padding:14px 18px;border:none;outline:none;font-size:1rem;color:#0F172A}
+.search-bar button{background:#2563EB;color:#fff;border:none;padding:14px 24px;cursor:pointer;font-weight:600;font-size:.95rem}
+.search-bar button:hover{background:#1D4ED8}
+.stats{display:flex;justify-content:center;gap:40px;margin-top:40px;flex-wrap:wrap}
+.stat{text-align:center}
+.stat-num{font-size:1.8rem;font-weight:800;color:#2563EB}
+.stat-label{font-size:.85rem;color:#64748B;margin-top:4px}
+.section{padding:60px 24px}
+.section-title{font-size:1.8rem;font-weight:700;text-align:center;margin-bottom:8px}
+.section-sub{color:#64748B;text-align:center;margin-bottom:40px;font-size:1rem}
+.categories{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;max-width:1100px;margin:0 auto}
+.cat-card{background:#fff;border:1px solid #E2E8F0;border-radius:16px;padding:28px;transition:.2s;cursor:pointer}
+.cat-card:hover{transform:translateY(-4px);box-shadow:0 8px 32px rgba(0,0,0,.08);border-color:var(--c)}
+.cat-icon{width:52px;height:52px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.6rem;margin-bottom:16px;background:var(--bg)}
+.cat-card h3{font-size:1.15rem;font-weight:700;margin-bottom:8px}
+.cat-card p{color:#64748B;font-size:.9rem;line-height:1.5;margin-bottom:16px}
+.cat-tools{display:flex;flex-wrap:wrap;gap:6px}
+.cat-tool{background:#F1F5F9;color:#475569;padding:4px 10px;border-radius:6px;font-size:.8rem;font-weight:500}
+.features{background:#fff;padding:60px 24px}
+.feat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px;max-width:960px;margin:0 auto}
+.feat{text-align:center;padding:24px}
+.feat-icon{font-size:2.4rem;margin-bottom:12px}
+.feat h4{font-size:1rem;font-weight:700;margin-bottom:8px}
+.feat p{color:#64748B;font-size:.88rem;line-height:1.5}
+.cta{background:linear-gradient(135deg,#2563EB,#7C3AED);color:#fff;text-align:center;padding:70px 24px}
+.cta h2{font-size:2rem;font-weight:800;margin-bottom:12px}
+.cta p{font-size:1.05rem;opacity:.9;margin-bottom:32px}
+.cta-btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.btn-white{background:#fff;color:#2563EB;padding:14px 32px;border-radius:10px;font-weight:700;font-size:1rem}
+.btn-outline{border:2px solid rgba(255,255,255,.6);color:#fff;padding:14px 32px;border-radius:10px;font-weight:700;font-size:1rem}
+footer{background:#0F172A;color:#94A3B8;padding:48px 24px 24px}
+.footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:32px;max-width:1100px;margin:0 auto 32px}
+.footer-col h4{color:#F1F5F9;font-weight:700;margin-bottom:12px;font-size:.95rem}
+.footer-col a{display:block;margin-bottom:8px;color:#94A3B8;font-size:.88rem}
+.footer-col a:hover{color:#fff}
+.footer-bottom{text-align:center;border-top:1px solid #1E293B;padding-top:20px;font-size:.82rem}
+</style>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-logo">⚡ FilePresto</a>
+  <div class="nav-links">
+    <a href="tools/images/index.html">Images</a>
+    <a href="tools/pdf/index.html">PDF</a>
+    <a href="tools/video/index.html">Video</a>
+    <a href="tools/audio/index.html">Audio</a>
+    <a href="tools/ebook/index.html">eBooks</a>
+    <a href="tools/documents/index.html">Documents</a>
+    <a href="pricing.html">Pricing</a>
+    <div class="lang-switcher">
+      <a href="index.html" class="active">EN</a>
+      <a href="es/index.html">ES</a>
+      <a href="pt/index.html">PT</a>
+    </div>
+    <a href="pricing.html" class="btn-pro">Pro</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <h1>Convert Any File,<br/><span>Instantly & Free</span></h1>
+  <p>Images, PDFs, videos, audio, eBooks and documents. No sign-up required. Works in your browser.</p>
+  <div class="search-bar">
+    <input type="text" placeholder="Search converter, e.g. JPG to PNG..."/>
+    <button>Search</button>
+  </div>
+  <div class="stats">
+    <div class="stat"><div class="stat-num">50+</div><div class="stat-label">Free Tools</div></div>
+    <div class="stat"><div class="stat-num">6</div><div class="stat-label">Categories</div></div>
+    <div class="stat"><div class="stat-num">100%</div><div class="stat-label">Free & Secure</div></div>
+    <div class="stat"><div class="stat-num">0</div><div class="stat-label">Sign-up Required</div></div>
+  </div>
+</section>
+
+<section class="section">
+  <h2 class="section-title">Choose a Category</h2>
+  <p class="section-sub">Select the type of file you want to convert</p>
+  <div class="categories">
+    <a href="tools/images/index.html" class="cat-card" style="--c:#2563EB;--bg:#EFF6FF">
+      <div class="cat-icon" style="--bg:#EFF6FF">🖼️</div>
+      <h3>Image Converter</h3>
+      <p>Convert between JPG, PNG, WebP, HEIC, SVG and more formats quickly.</p>
+      <div class="cat-tools">
+        <span class="cat-tool">JPG to PNG</span>
+        <span class="cat-tool">PNG to WebP</span>
+        <span class="cat-tool">HEIC to JPG</span>
+        <span class="cat-tool">+6 more</span>
+      </div>
+    </a>
+    <a href="tools/pdf/index.html" class="cat-card" style="--c:#DC2626;--bg:#FEF2F2">
+      <div class="cat-icon" style="--bg:#FEF2F2">📄</div>
+      <h3>PDF Tools</h3>
+      <p>Convert, compress and manipulate PDF files with ease.</p>
+      <div class="cat-tools">
+        <span class="cat-tool">PDF to Word</span>
+        <span class="cat-tool">Image to PDF</span>
+        <span class="cat-tool">Compress PDF</span>
+        <span class="cat-tool">+6 more</span>
+      </div>
+    </a>
+    <a href="tools/video/index.html" class="cat-card" style="--c:#16A34A;--bg:#F0FDF4">
+      <div class="cat-icon" style="--bg:#F0FDF4">🎬</div>
+      <h3>Video Converter</h3>
+      <p>Convert video files between MP4, AVI, MOV, MKV and other formats.</p>
+      <div class="cat-tools">
+        <span class="cat-tool">MP4 to AVI</span>
+        <span class="cat-tool">MOV to MP4</span>
+        <span class="cat-tool">MKV to MP4</span>
+        <span class="cat-tool">+3 more</span>
+      </div>
+    </a>
+    <a href="tools/audio/index.html" class="cat-card" style="--c:#C2410C;--bg:#FFF7ED">
+      <div class="cat-icon" style="--bg:#FFF7ED">🎵</div>
+      <h3>Audio Converter</h3>
+      <p>Convert audio between MP3, WAV, OGG, FLAC and AAC formats.</p>
+      <div class="cat-tools">
+        <span class="cat-tool">MP3 to WAV</span>
+        <span class="cat-tool">OGG to MP3</span>
+        <span class="cat-tool">WAV to FLAC</span>
+        <span class="cat-tool">+2 more</span>
+      </div>
+    </a>
+    <a href="tools/ebook/index.html" class="cat-card" style="--c:#6D28D9;--bg:#F5F3FF">
+      <div class="cat-icon" style="--bg:#F5F3FF">📚</div>
+      <h3>eBook Converter</h3>
+      <p>Convert eBooks between EPUB, MOBI, AZW3, PDF and other formats.</p>
+      <div class="cat-tools">
+        <span class="cat-tool">PDF to EPUB</span>
+        <span class="cat-tool">EPUB to MOBI</span>
+        <span class="cat-tool">AZW3 to EPUB</span>
+        <span class="cat-tool">+7 more</span>
+      </div>
+    </a>
+    <a href="tools/documents/index.html" class="cat-card" style="--c:#6D28D9;--bg:#F5F3FF">
+      <div class="cat-icon" style="--bg:#F5F3FF">📝</div>
+      <h3>Document Converter</h3>
+      <p>Convert Word, Excel, PowerPoint and other document formats.</p>
+      <div class="cat-tools">
+        <span class="cat-tool">DOCX to PDF</span>
+        <span class="cat-tool">XLSX to CSV</span>
+        <span class="cat-tool">PPTX to PDF</span>
+        <span class="cat-tool">+more</span>
+      </div>
+    </a>
+  </div>
+</section>
+
+<section class="features">
+  <h2 class="section-title">Why FilePresto?</h2>
+  <p class="section-sub">The fastest and most secure way to convert your files</p>
+  <div class="feat-grid">
+    <div class="feat">
+      <div class="feat-icon">⚡</div>
+      <h4>Lightning Fast</h4>
+      <p>Conversions done in seconds directly in your browser. No waiting, no queues.</p>
+    </div>
+    <div class="feat">
+      <div class="feat-icon">🔒</div>
+      <h4>100% Secure</h4>
+      <p>Your files never leave your device. All processing happens locally in your browser.</p>
+    </div>
+    <div class="feat">
+      <div class="feat-icon">🆓</div>
+      <h4>Always Free</h4>
+      <p>No sign-up, no credit card, no limits on basic conversions. Free forever.</p>
+    </div>
+    <div class="feat">
+      <div class="feat-icon">📱</div>
+      <h4>Works Everywhere</h4>
+      <p>Compatible with desktop, tablet and mobile. Any browser, any operating system.</p>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <h2>Ready to Convert?</h2>
+  <p>Join thousands of users who trust FilePresto every day</p>
+  <div class="cta-btns">
+    <a href="tools/images/index.html" class="btn-white">Start Converting Free</a>
+    <a href="pricing.html" class="btn-outline">View Pro Plan</a>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-col">
+      <h4>⚡ FilePresto</h4>
+      <p style="font-size:.85rem;line-height:1.5">Free online file converter. Fast, secure and no sign-up required.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Tools</h4>
+      <a href="tools/images/index.html">Image Converter</a>
+      <a href="tools/pdf/index.html">PDF Tools</a>
+      <a href="tools/video/index.html">Video Converter</a>
+      <a href="tools/audio/index.html">Audio Converter</a>
+      <a href="tools/ebook/index.html">eBook Converter</a>
+      <a href="tools/documents/index.html">Document Converter</a>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <a href="about.html">About</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="footer-col">
+      <h4>Legal</h4>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2025 FilePresto. All rights reserved.</div>
+</footer>
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 <meta name="description" content="FilePresto - Free online file converter. Convert images, PDFs, videos, audio and documents in seconds. Fast, free and secure."/>
 <meta name="keywords" content="file converter, convert jpg to png, compress pdf, convert video, free online converter"/>
