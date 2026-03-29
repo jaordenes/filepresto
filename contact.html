@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contacto - FilePresto</title>
+<meta name="description" content="Contáctanos para soporte, sugerencias o preguntas sobre FilePresto. Estamos aquí para ayudarte.">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--primary:#2563EB;--primary-dark:#1D4ED8;--bg:#F8FAFC;--white:#FFFFFF;--text:#0F172A;--text-muted:#64748B;--border:#E2E8F0;--radius:12px}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg);color:var(--text)}
+nav{background:var(--white);border-bottom:1px solid var(--border);padding:0 24px;position:sticky;top:0;z-index:100;box-shadow:0 1px 3px rgba(0,0,0,.06)}
+.nav-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:60px}
+.logo{font-size:1.3rem;font-weight:700;color:var(--primary);text-decoration:none;display:flex;align-items:center;gap:8px}
+.logo-icon{width:32px;height:32px;background:var(--primary);border-radius:8px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:1rem;font-weight:800}
+.nav-links{display:flex;gap:20px;list-style:none}
+.nav-links a{text-decoration:none;color:var(--text-muted);font-size:.9rem;font-weight:500;transition:color .2s}
+.nav-links a:hover{color:var(--primary)}
+.btn-nav{background:var(--primary);color:#fff !important;padding:8px 18px;border-radius:8px;font-size:.85rem !important}
+.btn-nav:hover{background:var(--primary-dark) !important}
+.hero{background:linear-gradient(135deg,#1E3A5F 0%,#2563EB 100%);color:#fff;padding:56px 24px 48px;text-align:center}
+.hero h1{font-size:2.2rem;font-weight:800;margin-bottom:12px}
+.hero p{font-size:1rem;opacity:.85;max-width:520px;margin:0 auto}
+.breadcrumb{max-width:1100px;margin:20px auto 0;padding:0 24px;display:flex;align-items:center;gap:8px;font-size:.85rem;color:var(--text-muted)}
+.breadcrumb a{color:var(--primary);text-decoration:none;font-weight:500}
+.breadcrumb a:hover{text-decoration:underline}
+.content{max-width:1100px;margin:40px auto 60px;padding:0 24px;display:grid;grid-template-columns:1fr 1fr;gap:32px}
+.contact-form{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:32px}
+.contact-form h2{font-size:1.2rem;font-weight:700;margin-bottom:6px}
+.contact-form p{font-size:.88rem;color:var(--text-muted);margin-bottom:24px}
+.form-group{margin-bottom:18px}
+.form-group label{display:block;font-size:.85rem;font-weight:600;color:var(--text);margin-bottom:6px}
+.form-group input,.form-group select,.form-group textarea{width:100%;padding:10px 14px;border:1.5px solid var(--border);border-radius:8px;font-size:.9rem;color:var(--text);font-family:inherit;transition:border-color .2s;background:var(--bg)}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{outline:none;border-color:var(--primary);background:var(--white)}
+.form-group textarea{resize:vertical;min-height:140px}
+.btn-submit{width:100%;background:var(--primary);color:#fff;border:none;border-radius:8px;padding:12px 24px;font-size:.95rem;font-weight:600;cursor:pointer;transition:background .2s}
+.btn-submit:hover{background:var(--primary-dark)}
+.success-msg{display:none;background:#DCFCE7;border:1px solid #BBF7D0;border-radius:8px;padding:14px 18px;color:#16A34A;font-size:.9rem;margin-top:16px;text-align:center}
+.contact-info{display:flex;flex-direction:column;gap:20px}
+.info-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:24px}
+.info-card .icon{font-size:2rem;margin-bottom:12px}
+.info-card h3{font-size:1rem;font-weight:700;margin-bottom:6px}
+.info-card p{font-size:.88rem;color:var(--text-muted);line-height:1.6}
+.info-card a{color:var(--primary);text-decoration:none;font-weight:600}
+.info-card a:hover{text-decoration:underline}
+.faq-section{max-width:1100px;margin:0 auto 60px;padding:0 24px}
+.faq-section h2{font-size:1.3rem;font-weight:700;margin-bottom:20px}
+.faq-item{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:20px 24px;margin-bottom:12px}
+.faq-item h4{font-size:.95rem;font-weight:700;margin-bottom:8px;color:var(--text)}
+.faq-item p{font-size:.88rem;color:var(--text-muted);line-height:1.6}
+footer{background:var(--text);color:rgba(255,255,255,.7);padding:40px 24px 24px}
+.footer-inner{max-width:1100px;margin:0 auto}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px;margin-bottom:32px}
+.footer-brand p{font-size:.85rem;line-height:1.6;margin-top:8px;max-width:260px}
+.footer-col h5{font-size:.85rem;font-weight:700;color:#fff;margin-bottom:12px}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:8px}
+.footer-col ul li a{color:rgba(255,255,255,.6);text-decoration:none;font-size:.82rem;transition:color .2s}
+.footer-col ul li a:hover{color:#fff}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:20px;display:flex;justify-content:space-between;align-items:center;font-size:.8rem}
+@media(max-width:768px){.content{grid-template-columns:1fr}.footer-grid{grid-template-columns:1fr 1fr}.nav-links{display:none}.hero h1{font-size:1.6rem}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="logo"><span class="logo-icon">F</span>FilePresto</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="tools/images/index.html">Imágenes</a></li>
+      <li><a href="tools/pdf/index.html">PDF</a></li>
+      <li><a href="tools/video/index.html">Video</a></li>
+      <li><a href="tools/audio/index.html">Audio</a></li>
+      <li><a href="tools/ebook/index.html">eBooks</a></li>
+      <li><a href="about.html">Nosotros</a></li>
+      <li><a href="pricing.html" class="btn-nav">Pro Plan</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="breadcrumb">
+  <a href="index.html">Inicio</a>
+  <span>›</span>
+  <span style="color:var(--text);font-weight:600">Contacto</span>
+</div>
+
+<div class="hero">
+  <h1>Contáctanos</h1>
+  <p>¿Tienes dudas, sugerencias o necesitas ayuda? Nuestro equipo está listo para atenderte.</p>
+</div>
+
+<div class="content">
+  <div class="contact-form">
+    <h2>Envíanos un mensaje</h2>
+    <p>Completa el formulario y te responderemos en menos de 24 horas.</p>
+    <div class="form-group">
+      <label for="nombre">Nombre completo</label>
+      <input type="text" id="nombre" placeholder="Tu nombre">
+    </div>
+    <div class="form-group">
+      <label for="email">Correo electrónico</label>
+      <input type="email" id="email" placeholder="tu@email.com">
+    </div>
+    <div class="form-group">
+      <label for="asunto">Asunto</label>
+      <select id="asunto">
+        <option value="">Selecciona un asunto...</option>
+        <option value="soporte">Soporte técnico</option>
+        <option value="pro">Preguntas sobre el Plan Pro</option>
+        <option value="sugerencia">Sugerencia de mejora</option>
+        <option value="bug">Reportar un error</option>
+        <option value="otro">Otro</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="mensaje">Mensaje</label>
+      <textarea id="mensaje" placeholder="Describe tu consulta con el mayor detalle posible..."></textarea>
+    </div>
+    <button class="btn-submit" onclick="enviarFormulario()">Enviar mensaje →</button>
+    <div class="success-msg" id="successMsg">
+      ✅ ¡Mensaje enviado! Te responderemos en menos de 24 horas.
+    </div>
+  </div>
+
+  <div class="contact-info">
+    <div class="info-card">
+      <div class="icon">✉️</div>
+      <h3>Email de Soporte</h3>
+      <p>Para consultas técnicas y soporte general:<br><a href="mailto:soporte@filepresto.com">soporte@filepresto.com</a></p>
+    </div>
+    <div class="info-card">
+      <div class="icon">⚡</div>
+      <h3>Tiempo de Respuesta</h3>
+      <p>Respondemos todos los mensajes en un plazo máximo de <strong>24 horas hábiles</strong>. Los usuarios del Plan Pro reciben soporte prioritario.</p>
+    </div>
+    <div class="info-card">
+      <div class="icon">💡</div>
+      <h3>Sugerencias y Mejoras</h3>
+      <p>¿Hay alguna herramienta que necesitas y no encontraste? Cuéntanos y la consideramos para las próximas versiones de FilePresto.</p>
+    </div>
+    <div class="info-card">
+      <div class="icon">🔒</div>
+      <h3>Privacidad</h3>
+      <p>Tu información de contacto solo se usa para responderte. Nunca la compartimos con terceros. Ver nuestra <a href="privacy.html">política de privacidad</a>.</p>
+    </div>
+  </div>
+</div>
+
+<div class="faq-section">
+  <h2>Preguntas Frecuentes</h2>
+  <div class="faq-item">
+    <h4>¿Por qué mis archivos no se convierten correctamente?</h4>
+    <p>Las herramientas gratuitas trabajan directamente en tu navegador usando tecnología web estándar. Asegúrate de usar un navegador actualizado (Chrome, Firefox, Edge o Safari reciente). Si el problema persiste, contáctanos indicando el tipo de archivo y el navegador que usas.</p>
+  </div>
+  <div class="faq-item">
+    <h4>¿Cómo cancelo mi suscripción al Plan Pro?</h4>
+    <p>Puedes cancelar tu suscripción en cualquier momento desde tu panel de cuenta. La cancelación es efectiva al final del período de facturación actual. Si necesitas ayuda, escríbenos a soporte@filepresto.com.</p>
+  </div>
+  <div class="faq-item">
+    <h4>¿Son seguros mis archivos al procesarlos en FilePresto?</h4>
+    <p>Las herramientas gratuitas procesan todo directamente en tu navegador, sin subir nada a ningún servidor. Las herramientas Pro procesan en servidores seguros y eliminan los archivos inmediatamente tras la conversión.</p>
+  </div>
+  <div class="faq-item">
+    <h4>¿Puedo solicitar una herramienta de conversión específica?</h4>
+    <p>¡Por supuesto! Usa el formulario de contacto seleccionando "Sugerencia de mejora" y cuéntanos qué conversión necesitas. Evaluamos todas las sugerencias para futuras actualizaciones.</p>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div style="font-size:1.2rem;font-weight:700;color:#fff">⚡ FilePresto</div>
+        <p>Herramientas online gratuitas para convertir y transformar cualquier tipo de archivo. Rápido, seguro y sin instalaciones.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Herramientas</h5>
+        <ul>
+          <li><a href="tools/images/index.html">Imágenes</a></li>
+          <li><a href="tools/pdf/index.html">PDF</a></li>
+          <li><a href="tools/video/index.html">Video</a></li>
+          <li><a href="tools/audio/index.html">Audio</a></li>
+          <li><a href="tools/ebook/index.html">eBooks</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Empresa</h5>
+        <ul>
+          <li><a href="about.html">Nosotros</a></li>
+          <li><a href="pricing.html">Precios</a></li>
+          <li><a href="contact.html" style="color:#fff;font-weight:600">Contacto</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Legal</h5>
+        <ul>
+          <li><a href="privacy.html">Privacidad</a></li>
+          <li><a href="terms.html">Términos</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 FilePresto. Todos los derechos reservados.</span>
+      <span>Hecho con ❤️ para convertir archivos</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+function enviarFormulario(){
+  var nombre = document.getElementById('nombre').value.trim();
+  var email = document.getElementById('email').value.trim();
+  var asunto = document.getElementById('asunto').value;
+  var mensaje = document.getElementById('mensaje').value.trim();
+  if(!nombre || !email || !asunto || !mensaje){
+    alert('Por favor completa todos los campos antes de enviar.');
+    return;
+  }
+  document.getElementById('successMsg').style.display = 'block';
+  document.querySelector('.btn-submit').disabled = true;
+  document.querySelector('.btn-submit').textContent = '✅ Enviado';
+}
+</script>
+</body>
+</html>
