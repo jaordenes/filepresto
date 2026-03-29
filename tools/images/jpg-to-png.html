@@ -1,4 +1,217 @@
 <!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JPG a PNG - Convertir JPG a PNG Online Gratis | FilePresto</title>
+<meta name="description" content="Convierte imágenes JPG a PNG online gratis. Sin pérdida de calidad, fondo transparente, directo en tu navegador. Sin subir archivos a servidores.">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--primary:#2563EB;--primary-dark:#1D4ED8;--primary-light:#EFF6FF;--bg:#F8FAFC;--white:#FFFFFF;--text:#0F172A;--text-muted:#64748B;--border:#E2E8F0;--radius:12px}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg);color:var(--text)}
+nav{background:var(--white);border-bottom:1px solid var(--border);padding:0 24px;position:sticky;top:0;z-index:100;box-shadow:0 1px 3px rgba(0,0,0,.06)}
+.nav-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:60px}
+.logo{font-size:1.3rem;font-weight:700;color:var(--primary);text-decoration:none;display:flex;align-items:center;gap:8px}
+.logo-icon{width:32px;height:32px;background:var(--primary);border-radius:8px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:1rem;font-weight:800}
+.nav-links{display:flex;gap:20px;list-style:none}
+.nav-links a{text-decoration:none;color:var(--text-muted);font-size:.9rem;font-weight:500;transition:color .2s}
+.nav-links a:hover{color:var(--primary)}
+.btn-nav{background:var(--primary);color:#fff !important;padding:8px 18px;border-radius:8px;font-size:.85rem !important}
+.btn-nav:hover{background:var(--primary-dark) !important}
+.breadcrumb{max-width:900px;margin:20px auto 0;padding:0 24px;display:flex;align-items:center;gap:8px;font-size:.85rem;color:var(--text-muted)}
+.breadcrumb a{color:var(--primary);text-decoration:none;font-weight:500}
+.breadcrumb a:hover{text-decoration:underline}
+.page-hero{max-width:900px;margin:24px auto 0;padding:0 24px}
+.page-hero h1{font-size:2rem;font-weight:800;color:var(--text);margin-bottom:8px}
+.page-hero p{font-size:1rem;color:var(--text-muted);max-width:580px;line-height:1.6}
+.main{max-width:900px;margin:28px auto 0;padding:0 24px}
+.upload-zone{background:var(--white);border:2.5px dashed #BFDBFE;border-radius:16px;padding:48px 32px;text-align:center;cursor:pointer;transition:all .2s}
+.upload-zone:hover{border-color:var(--primary);background:var(--primary-light)}
+.upload-zone.dragover{border-color:var(--primary);background:var(--primary-light)}
+.upload-icon{font-size:3rem;margin-bottom:14px}
+.upload-zone h3{font-size:1.1rem;font-weight:700;margin-bottom:6px;color:var(--text)}
+.upload-zone p{font-size:.88rem;color:var(--text-muted)}
+.btn-upload{display:inline-flex;align-items:center;gap:8px;background:var(--primary);color:#fff;border:none;border-radius:8px;padding:10px 24px;font-size:.9rem;font-weight:600;cursor:pointer;margin-top:16px;font-family:inherit;transition:background .2s}
+.btn-upload:hover{background:var(--primary-dark)}
+input[type=file]{display:none}
+.status{display:none;background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:20px 24px;margin-top:20px;text-align:center}
+.status.visible{display:block}
+.spinner{display:inline-block;width:24px;height:24px;border:3px solid var(--border);border-top-color:var(--primary);border-radius:50%;animation:spin .8s linear infinite;margin-bottom:8px}
+@keyframes spin{to{transform:rotate(360deg)}}
+.result{display:none;background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:24px;margin-top:20px}
+.result.visible{display:block}
+.result-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}
+.result-header h3{font-size:1rem;font-weight:700;color:#16A34A}
+.result-img{max-width:100%;max-height:300px;border-radius:8px;border:1px solid var(--border);display:block;margin:0 auto 16px}
+.btn-download{display:inline-flex;align-items:center;gap:8px;background:#16A34A;color:#fff;border:none;border-radius:8px;padding:10px 24px;font-size:.9rem;font-weight:600;cursor:pointer;font-family:inherit;text-decoration:none;transition:background .2s}
+.btn-download:hover{background:#15803D}
+.btn-new{display:inline-flex;align-items:center;gap:8px;background:var(--white);color:var(--text);border:1.5px solid var(--border);border-radius:8px;padding:10px 20px;font-size:.88rem;font-weight:600;cursor:pointer;font-family:inherit;margin-left:10px;transition:all .2s}
+.btn-new:hover{border-color:var(--primary);color:var(--primary)}
+.features{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:28px}
+.feat{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:20px;text-align:center}
+.feat .fi{font-size:1.6rem;margin-bottom:8px}
+.feat h4{font-size:.88rem;font-weight:700;color:var(--text);margin-bottom:4px}
+.feat p{font-size:.8rem;color:var(--text-muted);line-height:1.4}
+footer{background:var(--text);color:rgba(255,255,255,.7);padding:40px 24px 24px;margin-top:48px}
+.footer-inner{max-width:1100px;margin:0 auto}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px;margin-bottom:32px}
+.footer-brand p{font-size:.85rem;line-height:1.6;margin-top:8px;max-width:260px}
+.footer-col h5{font-size:.85rem;font-weight:700;color:#fff;margin-bottom:12px}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:8px}
+.footer-col ul li a{color:rgba(255,255,255,.6);text-decoration:none;font-size:.82rem;transition:color .2s}
+.footer-col ul li a:hover{color:#fff}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:20px;display:flex;justify-content:space-between;align-items:center;font-size:.8rem}
+@media(max-width:768px){.features{grid-template-columns:1fr 1fr}.footer-grid{grid-template-columns:1fr 1fr}.nav-links{display:none}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a href="../../index.html" class="logo"><span class="logo-icon">F</span>FilePresto</a>
+    <ul class="nav-links">
+      <li><a href="../../index.html">Inicio</a></li>
+      <li><a href="index.html">Imágenes</a></li>
+      <li><a href="../pdf/index.html">PDF</a></li>
+      <li><a href="../video/index.html">Video</a></li>
+      <li><a href="../audio/index.html">Audio</a></li>
+      <li><a href="../ebook/index.html">eBooks</a></li>
+      <li><a href="../../about.html">Nosotros</a></li>
+      <li><a href="../../pricing.html" class="btn-nav">Pro Plan</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="breadcrumb">
+  <a href="../../index.html">Inicio</a>
+  <span>›</span>
+  <a href="index.html">Imágenes</a>
+  <span>›</span>
+  <span style="color:var(--text);font-weight:600">JPG a PNG</span>
+</div>
+
+<div class="page-hero">
+  <h1>🔄 JPG a PNG</h1>
+  <p>Convierte imágenes JPG al formato PNG. Soporte para fondo transparente. Todo se procesa en tu navegador, sin subir nada a ningún servidor.</p>
+</div>
+
+<div class="main">
+  <div class="upload-zone" id="dropZone" onclick="document.getElementById('fileInput').click()" ondragover="ev(event,'dragover')" ondragleave="ev(event,'dragleave')" ondrop="ev(event,'drop')">
+    <div class="upload-icon">🖼️</div>
+    <h3>Arrastra tu imagen JPG aquí</h3>
+    <p>Acepta archivos .jpg y .jpeg</p>
+    <button class="btn-upload" onclick="event.stopPropagation();document.getElementById('fileInput').click()">Seleccionar imagen</button>
+  </div>
+  <input type="file" id="fileInput" accept=".jpg,.jpeg,image/jpeg" onchange="handleFile(this.files[0])">
+
+  <div class="status" id="status">
+    <div class="spinner"></div>
+    <div id="statusMsg">Convirtiendo imagen...</div>
+  </div>
+
+  <div class="result" id="result">
+    <div class="result-header">
+      <h3>✅ ¡Conversión completada!</h3>
+      <span id="fileInfo" style="font-size:.82rem;color:var(--text-muted)"></span>
+    </div>
+    <img id="resultImg" class="result-img" alt="Imagen PNG convertida">
+    <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">
+      <a id="downloadBtn" class="btn-download" download="imagen.png">⬇ Descargar PNG</a>
+      <button class="btn-new" onclick="nueva()">+ Convertir otra</button>
+    </div>
+  </div>
+
+  <div class="features">
+    <div class="feat"><div class="fi">⚡</div><h4>Instantáneo</h4><p>Conversión en milisegundos usando Canvas API del navegador.</p></div>
+    <div class="feat"><div class="fi">🔒</div><h4>100% Privado</h4><p>Tu imagen nunca sale de tu dispositivo. Cero servidores.</p></div>
+    <div class="feat"><div class="fi">🆓</div><h4>Completamente Gratis</h4><p>Sin límites, sin registro, sin marcas de agua.</p></div>
+    <div class="feat"><div class="fi">🎨</div><h4>Transparencia</h4><p>El formato PNG soporta fondo transparente y mejor calidad.</p></div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div style="font-size:1.2rem;font-weight:700;color:#fff">🖼 FilePresto — Imágenes</div>
+        <p>Convierte, comprime y edita tus imágenes online gratis. JPG, PNG, WebP, HEIC, SVG y más.</p>
+      </div>
+      <div class="footer-col"><h5>Herramientas</h5><ul>
+        <li><a href="jpg-to-png.html">JPG a PNG</a></li>
+        <li><a href="png-to-jpg.html">PNG a JPG</a></li>
+        <li><a href="compress-image.html">Comprimir Imagen</a></li>
+        <li><a href="resize-image.html">Redimensionar</a></li>
+      </ul></div>
+      <div class="footer-col"><h5>Empresa</h5><ul>
+        <li><a href="../../pricing.html">Plan Pro</a></li>
+        <li><a href="../../about.html">Nosotros</a></li>
+        <li><a href="../../contact.html">Contacto</a></li>
+      </ul></div>
+      <div class="footer-col"><h5>Legal</h5><ul>
+        <li><a href="../../privacy.html">Privacidad</a></li>
+        <li><a href="../../terms.html">Términos</a></li>
+      </ul></div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 FilePresto. Todos los derechos reservados.</span>
+      <span>Hecho con ❤️ para creativos digitales</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+function ev(e, type) {
+  e.preventDefault();
+  var zone = document.getElementById('dropZone');
+  if (type === 'dragover') zone.classList.add('dragover');
+  else if (type === 'dragleave') zone.classList.remove('dragover');
+  else if (type === 'drop') {
+    zone.classList.remove('dragover');
+    var file = e.dataTransfer.files[0];
+    if (file && file.type.startsWith('image/')) handleFile(file);
+  }
+}
+
+function handleFile(file) {
+  if (!file) return;
+  var status = document.getElementById('status');
+  var result = document.getElementById('result');
+  status.classList.add('visible');
+  result.classList.remove('visible');
+  document.getElementById('statusMsg').textContent = 'Convirtiendo ' + file.name + '...';
+
+  var reader = new FileReader();
+  reader.onload = function(e) {
+    var img = new Image();
+    img.onload = function() {
+      var canvas = document.createElement('canvas');
+      canvas.width = img.width;
+      canvas.height = img.height;
+      var ctx = canvas.getContext('2d');
+      ctx.drawImage(img, 0, 0);
+      var pngUrl = canvas.toDataURL('image/png');
+      var resultImg = document.getElementById('resultImg');
+      var downloadBtn = document.getElementById('downloadBtn');
+      var baseName = file.name.replace(/.[^.]+$/, '');
+      resultImg.src = pngUrl;
+      downloadBtn.href = pngUrl;
+      downloadBtn.download = baseName + '.png';
+      document.getElementById('fileInfo').textContent = img.width + ' × ' + img.height + ' px';
+      status.classList.remove('visible');
+      result.classList.add('visible');
+    };
+    img.src = e.target.result;
+  };
+  reader.readAsDataURL(file);
+}
+
+function nueva() {
+  document.getElementById('result').classList.remove('visible');
+  document.getElementById('status').classList.remove('visible');
+  document.getElementById('fileInput').value = '';
+}
+</script>
+</body>
+</html><!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
