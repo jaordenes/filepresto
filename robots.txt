@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://jaordenes.github.io/filepresto/sitemap.xml
