@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FilePresto - Conversor de Archivos Online Gratis | Imágenes, PDF, Video, Audio</title>
+<meta name="description" content="FilePresto: convierte imágenes, PDF, video, audio y eBooks online gratis. JPG a PNG, PDF a Word, MP4 a MP3 y más de 50 herramientas de conversión. Sin instalación.">
+<link rel="canonical" href="https://jaordenes.github.io/filepresto/es/">
+<link rel="alternate" hreflang="en" href="https://jaordenes.github.io/filepresto/">
+<link rel="alternate" hreflang="es" href="https://jaordenes.github.io/filepresto/es/">
+<link rel="alternate" hreflang="pt" href="https://jaordenes.github.io/filepresto/pt/">
+<link rel="alternate" hreflang="x-default" href="https://jaordenes.github.io/filepresto/">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--primary:#2563EB;--primary-dark:#1D4ED8;--primary-light:#EFF6FF;--text:#1F2937;--text-light:#6B7280;--bg:#F9FAFB;--white:#FFFFFF;--border:#E5E7EB;--radius:12px}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;color:var(--text);background:var(--bg);line-height:1.6}
+a{color:inherit;text-decoration:none}
+nav{background:var(--white);border-bottom:1px solid var(--border);padding:0 24px;position:sticky;top:0;z-index:100;box-shadow:0 1px 3px rgba(0,0,0,.06)}
+.nav-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-size:1.5rem;font-weight:800;color:var(--primary)}
+.logo span{color:var(--text)}
+.nav-links{display:flex;gap:28px;align-items:center;font-size:.95rem;font-weight:500}
+.nav-links a:hover{color:var(--primary)}
+.lang-switcher{display:flex;gap:8px;font-size:.85rem}
+.lang-switcher a{padding:4px 10px;border-radius:6px;border:1px solid var(--border);color:var(--text-light);transition:.2s}
+.lang-switcher a.active,.lang-switcher a:hover{background:var(--primary);color:#fff;border-color:var(--primary)}
+.hero{background:linear-gradient(135deg,#1E3A8A 0%,#2563EB 50%,#3B82F6 100%);color:#fff;padding:80px 24px;text-align:center;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.3);padding:8px 20px;border-radius:999px;font-size:.875rem;margin-bottom:24px;backdrop-filter:blur(8px)}
+.hero h1{font-size:3rem;font-weight:900;margin-bottom:16px;letter-spacing:-.02em;line-height:1.1}
+.hero h1 span{background:linear-gradient(135deg,#93C5FD,#BFDBFE);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.hero p{font-size:1.2rem;opacity:.9;max-width:600px;margin:0 auto 36px}
+.hero-cta{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.btn-white{background:#fff;color:var(--primary);padding:14px 32px;border-radius:10px;font-weight:700;font-size:1rem;transition:.2s;box-shadow:0 4px 14px rgba(0,0,0,.15)}
+.btn-white:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(0,0,0,.2)}
+.btn-outline{border:2px solid rgba(255,255,255,.6);color:#fff;padding:12px 28px;border-radius:10px;font-weight:600;font-size:.95rem;transition:.2s}
+.btn-outline:hover{background:rgba(255,255,255,.1);border-color:#fff}
+.stats{display:flex;gap:40px;justify-content:center;margin-top:48px;flex-wrap:wrap}
+.stat{text-align:center}
+.stat strong{display:block;font-size:2rem;font-weight:800}
+.stat span{font-size:.875rem;opacity:.8}
+.container{max-width:1200px;margin:0 auto;padding:64px 24px}
+.section-header{text-align:center;margin-bottom:48px}
+.section-header h2{font-size:2rem;font-weight:800;margin-bottom:12px}
+.section-header p{color:var(--text-light);font-size:1.05rem;max-width:540px;margin:0 auto}
+.categories{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
+.cat-card{background:var(--white);border-radius:var(--radius);padding:32px;border:2px solid transparent;transition:.3s;box-shadow:0 2px 12px rgba(0,0,0,.06);cursor:pointer}
+.cat-card:hover{border-color:var(--cat-color);transform:translateY(-4px);box-shadow:0 8px 32px rgba(0,0,0,.12)}
+.cat-icon{width:56px;height:56px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:1.6rem;margin-bottom:20px}
+.cat-card h3{font-size:1.2rem;font-weight:700;margin-bottom:8px}
+.cat-card p{color:var(--text-light);font-size:.9rem;margin-bottom:20px}
+.cat-tools{display:flex;flex-wrap:wrap;gap:6px}
+.cat-tool{font-size:.75rem;padding:4px 10px;border-radius:999px;font-weight:500}
+.features{background:var(--white);padding:80px 24px}
+.features-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:32px}
+.feature{text-align:center;padding:24px}
+.feature-icon{width:64px;height:64px;background:var(--primary-light);border-radius:16px;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;font-size:1.8rem}
+.feature h3{font-size:1.1rem;font-weight:700;margin-bottom:8px}
+.feature p{color:var(--text-light);font-size:.9rem}
+.tools-preview{padding:80px 24px;background:var(--bg)}
+.tools-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
+.tool-chip{background:var(--white);border:1px solid var(--border);border-radius:10px;padding:16px 20px;display:flex;align-items:center;gap:12px;transition:.2s;font-size:.9rem;font-weight:500}
+.tool-chip:hover{border-color:var(--primary);color:var(--primary);box-shadow:0 4px 12px rgba(37,99,235,.1)}
+.tool-chip span{font-size:1.2rem}
+.cta-section{background:linear-gradient(135deg,#1E3A8A,#2563EB);color:#fff;padding:80px 24px;text-align:center}
+.cta-section h2{font-size:2.2rem;font-weight:800;margin-bottom:16px}
+.cta-section p{opacity:.9;margin-bottom:32px;font-size:1.05rem;max-width:500px;margin-left:auto;margin-right:auto}
+footer{background:#111827;color:#9CA3AF;padding:48px 24px}
+.footer-inner{max-width:1200px;margin:0 auto}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:40px}
+.footer-brand .logo{font-size:1.3rem;margin-bottom:12px;display:block}
+.footer-brand p{font-size:.875rem;line-height:1.7}
+.footer-col h4{font-size:.875rem;font-weight:700;color:#fff;margin-bottom:16px;text-transform:uppercase;letter-spacing:.05em}
+.footer-col a{display:block;font-size:.875rem;margin-bottom:8px;transition:.2s}
+.footer-col a:hover{color:#fff}
+.footer-bottom{border-top:1px solid #374151;padding-top:24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;font-size:.8rem}
+@media(max-width:768px){.hero h1{font-size:2rem}.footer-grid{grid-template-columns:1fr 1fr}.nav-links{gap:12px}.stats{gap:24px}}
+@media(max-width:480px){.footer-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a href="../index.html" class="logo">File<span>Presto</span></a>
+    <div class="nav-links">
+      <a href="tools/images/index.html">Imágenes</a>
+      <a href="tools/pdf/index.html">PDF</a>
+      <a href="tools/video/index.html">Video</a>
+      <a href="tools/audio/index.html">Audio</a>
+      <a href="tools/ebook/index.html">eBooks</a>
+      <a href="pricing.html">Precios</a>
+    </div>
+    <div class="lang-switcher">
+      <a href="../index.html">EN</a>
+      <a href="index.html" class="active">ES</a>
+      <a href="../pt/index.html">PT</a>
+    </div>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-badge">&#9889; Más de 50 herramientas gratuitas de conversión</div>
+  <h1>Convierte cualquier archivo<br><span>online y gratis</span></h1>
+  <p>Imágenes, PDF, video, audio y eBooks. Sin instalaciones. Sin registro. Resultados instantáneos directamente en tu navegador.</p>
+  <div class="hero-cta">
+    <a href="tools/images/index.html" class="btn-white">&#128247; Convertir Imágenes</a>
+    <a href="tools/pdf/index.html" class="btn-outline">&#128196; Herramientas PDF</a>
+  </div>
+  <div class="stats">
+    <div class="stat"><strong>50+</strong><span>Herramientas</span></div>
+    <div class="stat"><strong>100%</strong><span>Gratis</span></div>
+    <div class="stat"><strong>0</strong><span>Instalaciones</span></div>
+    <div class="stat"><strong>&#128274;</strong><span>Privado y Seguro</span></div>
+  </div>
+</section>
+
+<div class="container">
+  <div class="section-header">
+    <h2>Elige tu categoría</h2>
+    <p>Convierte cualquier tipo de archivo con nuestras herramientas especializadas</p>
+  </div>
+  <div class="categories">
+    <a href="tools/images/index.html" class="cat-card" style="--cat-color:#2563EB">
+      <div class="cat-icon" style="background:#EFF6FF">&#128247;</div>
+      <h3>Imágenes</h3>
+      <p>Convierte, comprime y redimensiona imágenes en cualquier formato</p>
+      <div class="cat-tools">
+        <span class="cat-tool" style="background:#EFF6FF;color:#2563EB">JPG&#8594;PNG</span>
+        <span class="cat-tool" style="background:#EFF6FF;color:#2563EB">PNG&#8594;WebP</span>
+        <span class="cat-tool" style="background:#EFF6FF;color:#2563EB">Comprimir</span>
+        <span class="cat-tool" style="background:#EFF6FF;color:#2563EB">+6 más</span>
+      </div>
+    </a>
+    <a href="tools/pdf/index.html" class="cat-card" style="--cat-color:#DC2626">
+      <div class="cat-icon" style="background:#FEF2F2">&#128196;</div>
+      <h3>PDF</h3>
+      <p>Convierte, comprime, une y divide archivos PDF fácilmente</p>
+      <div class="cat-tools">
+        <span class="cat-tool" style="background:#FEF2F2;color:#DC2626">PDF&#8594;Word</span>
+        <span class="cat-tool" style="background:#FEF2F2;color:#DC2626">JPG&#8594;PDF</span>
+        <span class="cat-tool" style="background:#FEF2F2;color:#DC2626">Comprimir</span>
+        <span class="cat-tool" style="background:#FEF2F2;color:#DC2626">+10 más</span>
+      </div>
+    </a>
+    <a href="tools/video/index.html" class="cat-card" style="--cat-color:#16A34A">
+      <div class="cat-icon" style="background:#F0FDF4">&#127909;</div>
+      <h3>Video</h3>
+      <p>Convierte y comprime videos entre todos los formatos populares</p>
+      <div class="cat-tools">
+        <span class="cat-tool" style="background:#F0FDF4;color:#16A34A">MP4&#8594;AVI</span>
+        <span class="cat-tool" style="background:#F0FDF4;color:#16A34A">MOV&#8594;MP4</span>
+        <span class="cat-tool" style="background:#F0FDF4;color:#16A34A">&#8594;MP3</span>
+        <span class="cat-tool" style="background:#F0FDF4;color:#16A34A">+5 más</span>
+      </div>
+    </a>
+    <a href="tools/audio/index.html" class="cat-card" style="--cat-color:#C2410C">
+      <div class="cat-icon" style="background:#FFF7ED">&#127925;</div>
+      <h3>Audio</h3>
+      <p>Convierte archivos de audio entre MP3, WAV, FLAC, AAC y más</p>
+      <div class="cat-tools">
+        <span class="cat-tool" style="background:#FFF7ED;color:#C2410C">MP3&#8594;WAV</span>
+        <span class="cat-tool" style="background:#FFF7ED;color:#C2410C">FLAC&#8594;MP3</span>
+        <span class="cat-tool" style="background:#FFF7ED;color:#C2410C">OGG&#8594;MP3</span>
+        <span class="cat-tool" style="background:#FFF7ED;color:#C2410C">+3 más</span>
+      </div>
+    </a>
+    <a href="tools/ebook/index.html" class="cat-card" style="--cat-color:#6D28D9">
+      <div class="cat-icon" style="background:#F5F3FF">&#128218;</div>
+      <h3>eBooks</h3>
+      <p>Convierte entre EPUB, MOBI, AZW3, PDF y más formatos de libros</p>
+      <div class="cat-tools">
+        <span class="cat-tool" style="background:#F5F3FF;color:#6D28D9">PDF&#8594;EPUB</span>
+        <span class="cat-tool" style="background:#F5F3FF;color:#6D28D9">MOBI&#8594;EPUB</span>
+        <span class="cat-tool" style="background:#F5F3FF;color:#6D28D9">DOCX&#8594;EPUB</span>
+        <span class="cat-tool" style="background:#F5F3FF;color:#6D28D9">+7 más</span>
+      </div>
+    </a>
+    <a href="tools/documents/index.html" class="cat-card" style="--cat-color:#6D28D9">
+      <div class="cat-icon" style="background:#F5F3FF">&#128196;</div>
+      <h3>Documentos</h3>
+      <p>Convierte documentos de Office y otros formatos de texto</p>
+      <div class="cat-tools">
+        <span class="cat-tool" style="background:#F5F3FF;color:#6D28D9">Word&#8594;PDF</span>
+        <span class="cat-tool" style="background:#F5F3FF;color:#6D28D9">Excel&#8594;PDF</span>
+        <span class="cat-tool" style="background:#F5F3FF;color:#6D28D9">Próximamente</span>
+      </div>
+    </a>
+  </div>
+</div>
+
+<section class="features">
+  <div class="section-header">
+    <h2>¿Por qué FilePresto?</h2>
+    <p>La forma más rápida y segura de convertir tus archivos</p>
+  </div>
+  <div class="features-grid">
+    <div class="feature">
+      <div class="feature-icon">&#9889;</div>
+      <h3>Ultrarrápido</h3>
+      <p>Conversiones en segundos. Sin esperas, sin colas. Tu archivo listo al instante.</p>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">&#128274;</div>
+      <h3>100% Privado</h3>
+      <p>Muchas herramientas funcionan directamente en tu navegador. Tus archivos nunca salen de tu dispositivo.</p>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">&#127760;</div>
+      <h3>Sin Instalación</h3>
+      <p>Funciona en cualquier navegador, en cualquier dispositivo. Sin descargas ni plugins.</p>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">&#127775;</div>
+      <h3>Gratis Siempre</h3>
+      <p>Las herramientas básicas son gratuitas para siempre. Sin límites ocultos en la versión gratis.</p>
+    </div>
+  </div>
+</section>
+
+<section class="tools-preview">
+  <div class="section-header">
+    <h2>Todas nuestras herramientas</h2>
+    <p>Más de 50 conversores disponibles, con más en desarrollo</p>
+  </div>
+  <div class="tools-grid">
+    <a href="tools/images/jpg-to-png.html" class="tool-chip"><span>&#128247;</span> JPG a PNG</a>
+    <a href="tools/images/png-to-jpg.html" class="tool-chip"><span>&#128247;</span> PNG a JPG</a>
+    <a href="tools/images/jpg-to-webp.html" class="tool-chip"><span>&#128247;</span> JPG a WebP</a>
+    <a href="tools/images/webp-to-jpg.html" class="tool-chip"><span>&#128247;</span> WebP a JPG</a>
+    <a href="tools/images/heic-to-jpg.html" class="tool-chip"><span>&#128247;</span> HEIC a JPG</a>
+    <a href="tools/images/compress-image.html" class="tool-chip"><span>&#128247;</span> Comprimir Imagen</a>
+    <a href="tools/images/resize-image.html" class="tool-chip"><span>&#128247;</span> Redimensionar</a>
+    <a href="tools/images/svg-to-png.html" class="tool-chip"><span>&#128247;</span> SVG a PNG</a>
+    <a href="tools/pdf/pdf-to-word.html" class="tool-chip"><span>&#128196;</span> PDF a Word</a>
+    <a href="tools/pdf/word-to-pdf.html" class="tool-chip"><span>&#128196;</span> Word a PDF</a>
+    <a href="tools/pdf/jpg-to-pdf.html" class="tool-chip"><span>&#128196;</span> JPG a PDF</a>
+    <a href="tools/pdf/pdf-to-jpg.html" class="tool-chip"><span>&#128196;</span> PDF a JPG</a>
+    <a href="tools/pdf/compress-pdf.html" class="tool-chip"><span>&#128196;</span> Comprimir PDF</a>
+    <a href="tools/pdf/merge-pdf.html" class="tool-chip"><span>&#128196;</span> Unir PDF</a>
+    <a href="tools/pdf/split-pdf.html" class="tool-chip"><span>&#128196;</span> Dividir PDF</a>
+    <a href="tools/video/mp4-to-avi.html" class="tool-chip"><span>&#127909;</span> MP4 a AVI</a>
+    <a href="tools/video/mov-to-mp4.html" class="tool-chip"><span>&#127909;</span> MOV a MP4</a>
+    <a href="tools/video/mp4-to-mp3.html" class="tool-chip"><span>&#127909;</span> MP4 a MP3</a>
+    <a href="tools/video/compress-video.html" class="tool-chip"><span>&#127909;</span> Comprimir Video</a>
+    <a href="tools/audio/mp3-to-wav.html" class="tool-chip"><span>&#127925;</span> MP3 a WAV</a>
+    <a href="tools/audio/flac-to-mp3.html" class="tool-chip"><span>&#127925;</span> FLAC a MP3</a>
+    <a href="tools/audio/ogg-to-mp3.html" class="tool-chip"><span>&#127925;</span> OGG a MP3</a>
+    <a href="tools/ebook/pdf-to-epub.html" class="tool-chip"><span>&#128218;</span> PDF a EPUB</a>
+    <a href="tools/ebook/epub-to-pdf.html" class="tool-chip"><span>&#128218;</span> EPUB a PDF</a>
+    <a href="tools/ebook/docx-to-epub.html" class="tool-chip"><span>&#128218;</span> DOCX a EPUB</a>
+  </div>
+</section>
+
+<section class="cta-section">
+  <h2>¿Listo para convertir?</h2>
+  <p>Únete a miles de usuarios que confían en FilePresto para sus conversiones diarias</p>
+  <a href="tools/images/index.html" class="btn-white">Empezar gratis &#8594;</a>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <span class="logo" style="color:#3B82F6">File<span style="color:#9CA3AF">Presto</span></span>
+        <p>La forma más rápida de convertir tus archivos online. Gratis, seguro y sin instalaciones.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Herramientas</h4>
+        <a href="tools/images/index.html">Imágenes</a>
+        <a href="tools/pdf/index.html">PDF</a>
+        <a href="tools/video/index.html">Video</a>
+        <a href="tools/audio/index.html">Audio</a>
+        <a href="tools/ebook/index.html">eBooks</a>
+      </div>
+      <div class="footer-col">
+        <h4>Empresa</h4>
+        <a href="about.html">Nosotros</a>
+        <a href="pricing.html">Precios</a>
+        <a href="contact.html">Contacto</a>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <a href="privacy.html">Privacidad</a>
+        <a href="terms.html">Términos</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2025 FilePresto. Todos los derechos reservados.</span>
+      <div class="lang-switcher" style="display:flex;gap:8px;font-size:.8rem">
+        <a href="../index.html" style="padding:4px 10px;border-radius:6px;border:1px solid #374151;color:#9CA3AF">EN</a>
+        <a href="index.html" style="padding:4px 10px;border-radius:6px;background:#2563EB;color:#fff;border:1px solid #2563EB">ES</a>
+        <a href="../pt/index.html" style="padding:4px 10px;border-radius:6px;border:1px solid #374151;color:#9CA3AF">PT</a>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
