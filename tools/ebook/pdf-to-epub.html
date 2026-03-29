@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PDF a ePub - FilePresto</title>
+<meta name="description" content="Convierte tu PDF a ePub y léelo en cualquier e-reader. Gratis, rápido y seguro con el Plan Pro de FilePresto.">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--primary:#6D28D9;--primary-dark:#5B21B6;--primary-light:#EDE9FE;--bg:#F5F3FF;--white:#FFFFFF;--text:#0F172A;--text-muted:#64748B;--border:#E2E8F0;--radius:12px}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg);color:var(--text)}
+nav{background:var(--white);border-bottom:1px solid var(--border);padding:0 24px;position:sticky;top:0;z-index:100;box-shadow:0 1px 3px rgba(0,0,0,.06)}
+.nav-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:60px}
+.logo{font-size:1.3rem;font-weight:700;color:var(--primary);text-decoration:none;display:flex;align-items:center;gap:8px}
+.logo-icon{width:32px;height:32px;background:var(--primary);border-radius:8px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:1rem;font-weight:800}
+.nav-links{display:flex;gap:20px;list-style:none}
+.nav-links a{text-decoration:none;color:var(--text-muted);font-size:.9rem;font-weight:500;transition:color .2s}
+.nav-links a:hover{color:var(--primary)}
+.btn-nav{background:var(--primary);color:#fff !important;padding:8px 18px;border-radius:8px;font-size:.85rem !important}
+.btn-nav:hover{background:var(--primary-dark) !important}
+.breadcrumb{max-width:900px;margin:20px auto 0;padding:0 24px;display:flex;align-items:center;gap:8px;font-size:.85rem;color:var(--text-muted)}
+.breadcrumb a{color:var(--primary);text-decoration:none;font-weight:500}
+.breadcrumb a:hover{text-decoration:underline}
+.page-hero{max-width:900px;margin:24px auto 0;padding:0 24px}
+.page-hero h1{font-size:2rem;font-weight:800;color:var(--text);margin-bottom:8px}
+.page-hero p{font-size:1rem;color:var(--text-muted);max-width:580px;line-height:1.6}
+.main{max-width:900px;margin:28px auto 0;padding:0 24px}
+.upload-zone{background:var(--white);border:2.5px dashed #C4B5FD;border-radius:16px;padding:48px 32px;text-align:center;cursor:pointer;transition:all .2s}
+.upload-zone:hover{border-color:var(--primary);background:var(--primary-light)}
+.upload-icon{font-size:3rem;margin-bottom:14px}
+.upload-zone h3{font-size:1.1rem;font-weight:700;margin-bottom:6px;color:var(--text)}
+.upload-zone p{font-size:.88rem;color:var(--text-muted)}
+.pro-badge{display:inline-flex;align-items:center;gap:6px;background:linear-gradient(135deg,#F59E0B,#D97706);color:#fff;padding:6px 14px;border-radius:20px;font-size:.82rem;font-weight:700;margin-top:14px}
+.info-box{background:linear-gradient(135deg,#EDE9FE,#F5F3FF);border:1px solid #DDD6FE;border-radius:14px;padding:28px 32px;margin-top:24px}
+.info-box h2{font-size:1.1rem;font-weight:700;color:#4C1D95;margin-bottom:10px}
+.info-box p{font-size:.9rem;color:#6D28D9;line-height:1.6;margin-bottom:8px}
+.info-box p:last-child{margin-bottom:0}
+.why-list{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px}
+.why-item{background:var(--white);border:1px solid #DDD6FE;border-radius:10px;padding:14px 16px;display:flex;align-items:flex-start;gap:10px}
+.why-item .wi{font-size:1.3rem}
+.why-item p{font-size:.84rem;color:var(--text-muted);line-height:1.5}
+.why-item strong{display:block;font-size:.88rem;color:var(--text);margin-bottom:3px}
+.features{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:28px}
+.feat{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:20px;text-align:center}
+.feat .fi{font-size:1.6rem;margin-bottom:8px}
+.feat h4{font-size:.88rem;font-weight:700;color:var(--text);margin-bottom:4px}
+.feat p{font-size:.8rem;color:var(--text-muted);line-height:1.4}
+footer{background:var(--text);color:rgba(255,255,255,.7);padding:40px 24px 24px;margin-top:48px}
+.footer-inner{max-width:1100px;margin:0 auto}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px;margin-bottom:32px}
+.footer-brand p{font-size:.85rem;line-height:1.6;margin-top:8px;max-width:260px}
+.footer-col h5{font-size:.85rem;font-weight:700;color:#fff;margin-bottom:12px}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:8px}
+.footer-col ul li a{color:rgba(255,255,255,.6);text-decoration:none;font-size:.82rem;transition:color .2s}
+.footer-col ul li a:hover{color:#fff}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:20px;display:flex;justify-content:space-between;align-items:center;font-size:.8rem}
+@media(max-width:768px){.features{grid-template-columns:1fr 1fr}.why-list{grid-template-columns:1fr}.footer-grid{grid-template-columns:1fr 1fr}.nav-links{display:none}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a href="../../index.html" class="logo"><span class="logo-icon">F</span>FilePresto</a>
+    <ul class="nav-links">
+      <li><a href="../../index.html">Inicio</a></li>
+      <li><a href="../images/index.html">Imágenes</a></li>
+      <li><a href="../pdf/index.html">PDF</a></li>
+      <li><a href="../video/index.html">Video</a></li>
+      <li><a href="../audio/index.html">Audio</a></li>
+      <li><a href="index.html" style="color:var(--primary);font-weight:700">eBooks</a></li>
+      <li><a href="../../pricing.html" class="btn-nav">Pro Plan</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="breadcrumb">
+  <a href="../../index.html">Inicio</a>
+  <span>›</span>
+  <a href="index.html">eBooks</a>
+  <span>›</span>
+  <span style="color:var(--text);font-weight:600">PDF a ePub</span>
+</div>
+
+<div class="page-hero">
+  <h1>📄→📚 PDF a ePub</h1>
+  <p>Convierte documentos PDF al formato ePub para leer en cualquier e-reader: Kindle, Kobo, Apple Books y más.</p>
+</div>
+
+<div class="main">
+  <div class="upload-zone" onclick="mostrarInfo()">
+    <div class="upload-icon">📄→📚</div>
+    <h3>Arrastra tu archivo PDF aquí</h3>
+    <p>Acepta archivos .pdf de hasta 50 MB</p>
+    <div class="pro-badge">✨ Función Pro — Disponible próximamente</div>
+  </div>
+
+  <div class="info-box" id="infoBox">
+    <h2>🚀 Esta herramienta estará disponible en el Plan Pro</h2>
+    <p>La conversión de <strong>PDF a ePub</strong> requiere procesamiento avanzado en servidor para preservar el formato, fuentes, imágenes y estructura del libro digital.</p>
+    <p>Con el <strong>Plan Pro de FilePresto</strong> tendrás acceso a todas las conversiones de eBook, sin límite de tamaño y con la máxima calidad.</p>
+    <div class="why-list">
+      <div class="why-item"><div class="wi">📖</div><div><strong>Formato preservado</strong><p>Mantiene fuentes, imágenes y estructura del libro durante la conversión.</p></div></div>
+      <div class="why-item"><div class="wi">🔒</div><div><strong>100% seguro</strong><p>Tu libro se procesa y se elimina inmediatamente. Nadie más tiene acceso.</p></div></div>
+      <div class="why-item"><div class="wi">⚡</div><div><strong>Conversión rápida</strong><p>Nuestros servidores convierten tu libro en pocos segundos sin importar el tamaño.</p></div></div>
+      <div class="why-item"><div class="wi">📱</div><div><strong>Compatible</strong><p>El ePub resultante es compatible con Kindle, Kobo, Apple Books, Google Play Books y más.</p></div></div>
+    </div>
+    <p style="margin-top:16px;font-size:.88rem">👉 <a href="../../pricing.html" style="color:#6D28D9;font-weight:700;text-decoration:none">Ver Plan Pro →</a></p>
+  </div>
+
+  <div class="features">
+    <div class="feat"><div class="fi">⚡</div><h4>Sin esperas</h4><p>Conversión en segundos en nuestros servidores optimizados.</p></div>
+    <div class="feat"><div class="fi">🔒</div><h4>Privado</h4><p>Tu libro se elimina automáticamente tras la conversión.</p></div>
+    <div class="feat"><div class="fi">📚</div><h4>Alta calidad</h4><p>Preserva imágenes, fuentes, portada y estructura del libro.</p></div>
+    <div class="feat"><div class="fi">♾️</div><h4>Sin límites</h4><p>Archivos de hasta 500 MB con el Plan Pro.</p></div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div style="font-size:1.2rem;font-weight:700;color:#fff">📚 FilePresto — eBooks</div>
+        <p>Convierte entre todos los formatos de libros digitales: ePub, PDF, MOBI, AZW3 y más.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Categorías</h5>
+        <ul>
+          <li><a href="../images/index.html">Imágenes</a></li>
+          <li><a href="../pdf/index.html">PDF</a></li>
+          <li><a href="../video/index.html">Video</a></li>
+          <li><a href="../audio/index.html">Audio</a></li>
+          <li><a href="index.html">eBooks</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Empresa</h5>
+        <ul>
+          <li><a href="../../pricing.html">Plan Pro</a></li>
+          <li><a href="../../about.html">Nosotros</a></li>
+          <li><a href="../../contact.html">Contacto</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Legal</h5>
+        <ul>
+          <li><a href="../../privacy.html">Privacidad</a></li>
+          <li><a href="../../terms.html">Términos</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 FilePresto. Todos los derechos reservados.</span>
+      <span>Hecho con ❤️ para lectores digitales</span>
+    </div>
+  </div>
+</footer>
+<script>
+function mostrarInfo(){
+  document.getElementById('infoBox').scrollIntoView({behavior:'smooth',block:'center'});
+}
+</script>
+</body>
+</html>
