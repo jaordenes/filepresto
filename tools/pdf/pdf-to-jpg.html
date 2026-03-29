@@ -1,4 +1,168 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PDF to JPG Converter - Convert PDF Pages to JPEG Images Online | FilePresto</title>
+<meta name="description" content="Convert PDF pages to high-quality JPG images online for free. Extract all pages or specific pages as JPEG. Fast PDF to JPG converter. No installation required.">
+<link rel="canonical" href="https://jaordenes.github.io/filepresto/tools/pdf/pdf-to-jpg.html">
+<link rel="alternate" hreflang="en" href="https://jaordenes.github.io/filepresto/tools/pdf/pdf-to-jpg.html">
+<link rel="alternate" hreflang="es" href="https://jaordenes.github.io/filepresto/es/tools/pdf/pdf-to-jpg.html">
+<link rel="alternate" hreflang="pt" href="https://jaordenes.github.io/filepresto/pt/tools/pdf/pdf-to-jpg.html">
+<link rel="alternate" hreflang="x-default" href="https://jaordenes.github.io/filepresto/tools/pdf/pdf-to-jpg.html">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--primary:#DC2626;--primary-dark:#B91C1C;--primary-light:#FEE2E2;--text:#1F2937;--text-light:#6B7280;--bg:#F9FAFB;--white:#FFFFFF;--border:#E5E7EB;--radius:12px;--shadow:0 4px 24px rgba(220,38,38,0.08)}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;color:var(--text);background:var(--bg);line-height:1.6}
+a{color:inherit;text-decoration:none}
+nav{background:var(--white);border-bottom:1px solid var(--border);padding:0 24px;position:sticky;top:0;z-index:100}
+.nav-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-size:1.4rem;font-weight:800;color:var(--primary)}
+.logo span{color:var(--text)}
+.nav-links{display:flex;gap:28px;align-items:center;font-size:.95rem;font-weight:500}
+.nav-links a:hover{color:var(--primary)}
+.lang-switcher{display:flex;gap:8px;font-size:.85rem}
+.lang-switcher a{padding:4px 10px;border-radius:6px;border:1px solid var(--border);color:var(--text-light);transition:.2s}
+.lang-switcher a.active,.lang-switcher a:hover{background:var(--primary);color:#fff;border-color:var(--primary)}
+.breadcrumb{max-width:1200px;margin:0 auto;padding:16px 24px;font-size:.875rem;color:var(--text-light);display:flex;gap:8px;align-items:center}
+.breadcrumb a:hover{color:var(--primary)}
+.breadcrumb span{color:var(--border)}
+.hero{background:linear-gradient(135deg,var(--primary) 0%,#7F1D1D 100%);color:#fff;padding:56px 24px;text-align:center}
+.hero h1{font-size:2.4rem;font-weight:800;margin-bottom:16px}
+.hero p{font-size:1.1rem;opacity:.9;max-width:600px;margin:0 auto 24px}
+.badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.3);padding:8px 20px;border-radius:999px;font-size:.9rem;backdrop-filter:blur(8px)}
+.container{max-width:1200px;margin:0 auto;padding:48px 24px}
+.tool-card{background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden;margin-bottom:32px}
+.tool-header{background:linear-gradient(135deg,var(--primary-light),#FECACA);padding:24px 32px;border-bottom:1px solid var(--border)}
+.tool-header h2{font-size:1.4rem;color:var(--primary);margin-bottom:4px}
+.tool-header p{color:var(--text-light);font-size:.95rem}
+.tool-body{padding:32px}
+.coming-soon{text-align:center;padding:48px 32px}
+.cs-icon{width:80px;height:80px;background:var(--primary-light);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 24px;font-size:2.5rem}
+.coming-soon h3{font-size:1.6rem;color:var(--text);margin-bottom:12px}
+.coming-soon p{color:var(--text-light);max-width:520px;margin:0 auto 32px;font-size:1rem}
+.feature-pills{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-bottom:32px}
+.pill{background:var(--primary-light);color:var(--primary);padding:8px 18px;border-radius:999px;font-size:.875rem;font-weight:500;display:flex;align-items:center;gap:6px}
+.btn-primary{display:inline-flex;align-items:center;gap:8px;background:var(--primary);color:#fff;padding:14px 32px;border-radius:10px;font-size:1rem;font-weight:600;transition:.2s}
+.btn-primary:hover{background:var(--primary-dark);transform:translateY(-1px)}
+.btn-secondary{display:inline-flex;align-items:center;gap:8px;background:transparent;color:var(--primary);padding:12px 28px;border-radius:10px;font-size:.95rem;font-weight:600;border:2px solid var(--primary);margin-left:12px;transition:.2s}
+.btn-secondary:hover{background:var(--primary-light)}
+.how-it-works{background:var(--white);border-radius:var(--radius);padding:40px;box-shadow:var(--shadow);margin-bottom:32px}
+.how-it-works h2{font-size:1.5rem;margin-bottom:28px;text-align:center}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:24px}
+.step{text-align:center}
+.step-num{width:48px;height:48px;background:var(--primary);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.2rem;font-weight:700;margin:0 auto 12px}
+.step h4{font-size:1rem;margin-bottom:6px}
+.step p{font-size:.875rem;color:var(--text-light)}
+.faq{background:var(--white);border-radius:var(--radius);padding:40px;box-shadow:var(--shadow);margin-bottom:32px}
+.faq h2{font-size:1.5rem;margin-bottom:28px}
+.faq-item{border-bottom:1px solid var(--border);padding:20px 0}
+.faq-item:last-child{border-bottom:none}
+.faq-item h4{font-size:1rem;margin-bottom:8px;color:var(--text)}
+.faq-item p{font-size:.9rem;color:var(--text-light)}
+footer{background:#1F2937;color:#9CA3AF;padding:40px 24px;text-align:center;font-size:.875rem}
+.footer-inner{max-width:1200px;margin:0 auto}
+.footer-links{display:flex;justify-content:center;flex-wrap:wrap;gap:16px;margin-bottom:16px}
+.footer-links a:hover{color:#fff}
+@media(max-width:768px){.hero h1{font-size:1.7rem}.nav-links{gap:12px}.btn-secondary{margin-left:0;margin-top:12px}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a href="../../index.html" class="logo">File<span>Presto</span></a>
+    <div class="nav-links">
+      <a href="../../tools/images/index.html">Images</a>
+      <a href="index.html" style="color:var(--primary)">PDF</a>
+      <a href="../../tools/video/index.html">Video</a>
+      <a href="../../tools/audio/index.html">Audio</a>
+      <a href="../../tools/ebook/index.html">eBooks</a>
+      <a href="../../pricing.html">Pricing</a>
+    </div>
+    <div class="lang-switcher">
+      <a href="pdf-to-jpg.html" class="active">EN</a>
+      <a href="../../es/tools/pdf/pdf-to-jpg.html">ES</a>
+      <a href="../../pt/tools/pdf/pdf-to-jpg.html">PT</a>
+    </div>
+  </div>
+</nav>
+<div class="breadcrumb">
+  <a href="../../index.html">Home</a><span>/</span>
+  <a href="index.html">PDF</a><span>/</span>
+  <span>PDF to JPG</span>
+</div>
+<section class="hero">
+  <h1>PDF to JPG Converter</h1>
+  <p>Convert PDF pages to high-quality JPG images instantly. Extract all pages or specific pages as individual JPEG files.</p>
+  <div class="badge">&#128196; Free PDF Tool</div>
+</section>
+<div class="container">
+  <div class="tool-card">
+    <div class="tool-header">
+      <h2>Convert PDF to JPG</h2>
+      <p>Extract PDF pages as high-resolution JPG images with adjustable quality settings</p>
+    </div>
+    <div class="tool-body">
+      <div class="coming-soon">
+        <div class="cs-icon">&#128196;</div>
+        <h3>Coming Soon</h3>
+        <p>Our PDF to JPG converter will let you extract all pages or specific pages from any PDF as high-quality JPEG images, perfect for presentations, social media, and web use.</p>
+        <div class="feature-pills">
+          <div class="pill">&#10003; All Pages or Specific Range</div>
+          <div class="pill">&#10003; Adjustable DPI Resolution</div>
+          <div class="pill">&#10003; JPEG Quality Control</div>
+          <div class="pill">&#10003; ZIP Download</div>
+          <div class="pill">&#10003; Fast Processing</div>
+          <div class="pill">&#10003; No File Size Limit</div>
+        </div>
+        <a href="../../pricing.html" class="btn-primary">&#9889; Get Early Access</a>
+        <a href="index.html" class="btn-secondary">&#8592; Browse PDF Tools</a>
+      </div>
+    </div>
+  </div>
+  <div class="how-it-works">
+    <h2>How PDF to JPG Conversion Works</h2>
+    <div class="steps">
+      <div class="step"><div class="step-num">1</div><h4>Upload PDF</h4><p>Select your PDF file from your device or drag and drop it onto the tool.</p></div>
+      <div class="step"><div class="step-num">2</div><h4>Select Pages</h4><p>Choose all pages or enter a specific page range to convert.</p></div>
+      <div class="step"><div class="step-num">3</div><h4>Set Quality</h4><p>Choose output resolution (72, 150, 300 DPI) and JPEG quality level.</p></div>
+      <div class="step"><div class="step-num">4</div><h4>Download Images</h4><p>Download individual JPG files or a ZIP archive with all pages.</p></div>
+    </div>
+  </div>
+  <div class="faq">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <h4>What resolution will the output images be?</h4>
+      <p>You can choose from 72 DPI (web quality), 150 DPI (standard quality), or 300 DPI (print quality). Higher DPI produces sharper images but larger file sizes.</p>
+    </div>
+    <div class="faq-item">
+      <h4>Can I convert specific pages only?</h4>
+      <p>Yes, you can specify a page range (e.g., pages 1-5) or select individual pages to convert instead of processing the entire document.</p>
+    </div>
+    <div class="faq-item">
+      <h4>Will text in the PDF remain readable?</h4>
+      <p>At 150 DPI or higher, text remains clear and readable in the output JPG images. For documents with small text, we recommend using 300 DPI.</p>
+    </div>
+    <div class="faq-item">
+      <h4>How do I download multiple pages?</h4>
+      <p>When converting multiple pages, all images are automatically packaged in a ZIP file for easy download. You can also download individual pages separately.</p>
+    </div>
+  </div>
+</div>
+<footer>
+  <div class="footer-inner">
+    <div class="footer-links">
+      <a href="../../about.html">About</a>
+      <a href="../../pricing.html">Pricing</a>
+      <a href="../../contact.html">Contact</a>
+      <a href="../../privacy.html">Privacy Policy</a>
+      <a href="../../terms.html">Terms of Service</a>
+    </div>
+    <p>&copy; 2025 FilePresto. All rights reserved.</p>
+  </div>
+</footer>
+</body>
+</html><!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
