@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TXT to EPUB Converter - Convert Plain Text to eBook | FilePresto</title>
+<meta name="description" content="Convert TXT plain text files to EPUB eBook format online. Free TXT to EPUB converter with formatting options. No installation required.">
+<link rel="canonical" href="https://jaordenes.github.io/filepresto/tools/ebook/txt-to-epub.html">
+<link rel="alternate" hreflang="en" href="https://jaordenes.github.io/filepresto/tools/ebook/txt-to-epub.html">
+<link rel="alternate" hreflang="es" href="https://jaordenes.github.io/filepresto/es/tools/ebook/txt-to-epub.html">
+<link rel="alternate" hreflang="pt" href="https://jaordenes.github.io/filepresto/pt/tools/ebook/txt-to-epub.html">
+<link rel="alternate" hreflang="x-default" href="https://jaordenes.github.io/filepresto/tools/ebook/txt-to-epub.html">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--primary:#6D28D9;--primary-dark:#5B21B6;--primary-light:#EDE9FE;--text:#1F2937;--text-light:#6B7280;--bg:#F9FAFB;--white:#FFFFFF;--border:#E5E7EB;--radius:12px;--shadow:0 4px 24px rgba(109,40,217,0.08)}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;color:var(--text);background:var(--bg);line-height:1.6}
+a{color:inherit;text-decoration:none}
+nav{background:var(--white);border-bottom:1px solid var(--border);padding:0 24px;position:sticky;top:0;z-index:100}
+.nav-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-size:1.4rem;font-weight:800;color:var(--primary)}
+.logo span{color:var(--text)}
+.nav-links{display:flex;gap:28px;align-items:center;font-size:.95rem;font-weight:500}
+.nav-links a:hover{color:var(--primary)}
+.lang-switcher{display:flex;gap:8px;font-size:.85rem}
+.lang-switcher a{padding:4px 10px;border-radius:6px;border:1px solid var(--border);color:var(--text-light);transition:.2s}
+.lang-switcher a.active,.lang-switcher a:hover{background:var(--primary);color:#fff;border-color:var(--primary)}
+.breadcrumb{max-width:1200px;margin:0 auto;padding:16px 24px;font-size:.875rem;color:var(--text-light);display:flex;gap:8px;align-items:center}
+.breadcrumb a:hover{color:var(--primary)}
+.breadcrumb span{color:var(--border)}
+.hero{background:linear-gradient(135deg,var(--primary) 0%,#4C1D95 100%);color:#fff;padding:56px 24px;text-align:center}
+.hero h1{font-size:2.4rem;font-weight:800;margin-bottom:16px}
+.hero p{font-size:1.1rem;opacity:.9;max-width:600px;margin:0 auto 24px}
+.badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.3);padding:8px 20px;border-radius:999px;font-size:.9rem;backdrop-filter:blur(8px)}
+.container{max-width:1200px;margin:0 auto;padding:48px 24px}
+.tool-card{background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden;margin-bottom:32px}
+.tool-header{background:linear-gradient(135deg,var(--primary-light),#DDD6FE);padding:24px 32px;border-bottom:1px solid var(--border)}
+.tool-header h2{font-size:1.4rem;color:var(--primary);margin-bottom:4px}
+.tool-header p{color:var(--text-light);font-size:.95rem}
+.tool-body{padding:32px}
+.pro-feature{text-align:center;padding:48px 32px}
+.pro-icon{width:80px;height:80px;background:var(--primary-light);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 24px;font-size:2.5rem}
+.pro-feature h3{font-size:1.6rem;color:var(--text);margin-bottom:12px}
+.pro-feature p{color:var(--text-light);max-width:520px;margin:0 auto 32px;font-size:1rem}
+.feature-pills{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-bottom:32px}
+.pill{background:var(--primary-light);color:var(--primary);padding:8px 18px;border-radius:999px;font-size:.875rem;font-weight:500;display:flex;align-items:center;gap:6px}
+.btn-primary{display:inline-flex;align-items:center;gap:8px;background:var(--primary);color:#fff;padding:14px 32px;border-radius:10px;font-size:1rem;font-weight:600;transition:.2s;border:none;cursor:pointer}
+.btn-primary:hover{background:var(--primary-dark);transform:translateY(-1px)}
+.btn-secondary{display:inline-flex;align-items:center;gap:8px;background:transparent;color:var(--primary);padding:12px 28px;border-radius:10px;font-size:.95rem;font-weight:600;border:2px solid var(--primary);margin-left:12px;transition:.2s}
+.btn-secondary:hover{background:var(--primary-light)}
+.how-it-works{background:var(--white);border-radius:var(--radius);padding:40px;box-shadow:var(--shadow);margin-bottom:32px}
+.how-it-works h2{font-size:1.5rem;margin-bottom:28px;text-align:center}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:24px}
+.step{text-align:center}
+.step-num{width:48px;height:48px;background:var(--primary);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.2rem;font-weight:700;margin:0 auto 12px}
+.step h4{font-size:1rem;margin-bottom:6px}
+.step p{font-size:.875rem;color:var(--text-light)}
+.faq{background:var(--white);border-radius:var(--radius);padding:40px;box-shadow:var(--shadow);margin-bottom:32px}
+.faq h2{font-size:1.5rem;margin-bottom:28px}
+.faq-item{border-bottom:1px solid var(--border);padding:20px 0}
+.faq-item:last-child{border-bottom:none}
+.faq-item h4{font-size:1rem;margin-bottom:8px;color:var(--text)}
+.faq-item p{font-size:.9rem;color:var(--text-light)}
+footer{background:#1F2937;color:#9CA3AF;padding:40px 24px;text-align:center;font-size:.875rem}
+.footer-inner{max-width:1200px;margin:0 auto}
+.footer-links{display:flex;justify-content:center;flex-wrap:wrap;gap:16px;margin-bottom:16px}
+.footer-links a:hover{color:#fff}
+@media(max-width:768px){.hero h1{font-size:1.7rem}.nav-links{gap:12px}.btn-secondary{margin-left:0;margin-top:12px}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a href="../../index.html" class="logo">File<span>Presto</span></a>
+    <div class="nav-links">
+      <a href="../../tools/images/index.html">Images</a>
+      <a href="../../tools/pdf/index.html">PDF</a>
+      <a href="../../tools/video/index.html">Video</a>
+      <a href="../../tools/audio/index.html">Audio</a>
+      <a href="index.html" style="color:var(--primary)">eBooks</a>
+      <a href="../../pricing.html">Pricing</a>
+    </div>
+    <div class="lang-switcher">
+      <a href="txt-to-epub.html" class="active">EN</a>
+      <a href="../../es/tools/ebook/txt-to-epub.html">ES</a>
+      <a href="../../pt/tools/ebook/txt-to-epub.html">PT</a>
+    </div>
+  </div>
+</nav>
+<div class="breadcrumb">
+  <a href="../../index.html">Home</a><span>/</span>
+  <a href="index.html">eBooks</a><span>/</span>
+  <span>TXT to EPUB</span>
+</div>
+<section class="hero">
+  <h1>TXT to EPUB Converter</h1>
+  <p>Convert plain text files into beautifully formatted EPUB eBooks. Preserve your content and make it readable on any e-reader.</p>
+  <div class="badge">&#128218; Pro Feature &mdash; High-Quality eBook Conversion</div>
+</section>
+<div class="container">
+  <div class="tool-card">
+    <div class="tool-header">
+      <h2>Convert TXT to EPUB</h2>
+      <p>Transform plain text into professional EPUB eBooks with chapter detection and formatting</p>
+    </div>
+    <div class="tool-body">
+      <div class="pro-feature">
+        <div class="pro-icon">&#128218;</div>
+        <h3>Pro Feature &mdash; Coming Soon</h3>
+        <p>Our TXT to EPUB converter will intelligently detect chapters, apply proper formatting, and generate a complete EPUB file ready for any e-reader or publishing platform.</p>
+        <div class="feature-pills">
+          <div class="pill">&#10003; Chapter Detection</div>
+          <div class="pill">&#10003; Custom Metadata</div>
+          <div class="pill">&#10003; Cover Image Support</div>
+          <div class="pill">&#10003; Table of Contents</div>
+          <div class="pill">&#10003; Font &amp; Style Options</div>
+          <div class="pill">&#10003; Batch Conversion</div>
+        </div>
+        <a href="../../pricing.html" class="btn-primary">&#9889; Get Early Access</a>
+        <a href="index.html" class="btn-secondary">&#8592; Browse eBook Tools</a>
+      </div>
+    </div>
+  </div>
+  <div class="how-it-works">
+    <h2>How TXT to EPUB Conversion Works</h2>
+    <div class="steps">
+      <div class="step"><div class="step-num">1</div><h4>Upload TXT File</h4><p>Select your plain text file from your device or drag and drop it.</p></div>
+      <div class="step"><div class="step-num">2</div><h4>Configure Options</h4><p>Set title, author, cover image, and chapter detection preferences.</p></div>
+      <div class="step"><div class="step-num">3</div><h4>Convert</h4><p>Our engine processes your text and generates a properly formatted EPUB.</p></div>
+      <div class="step"><div class="step-num">4</div><h4>Download</h4><p>Get your EPUB file ready for Kindle, Kobo, Apple Books, and more.</p></div>
+    </div>
+  </div>
+  <div class="faq">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <h4>What is an EPUB file?</h4>
+      <p>EPUB (Electronic Publication) is the most widely used open standard for eBooks. It is supported by most e-readers including Kobo, Apple Books, Google Play Books, and many others.</p>
+    </div>
+    <div class="faq-item">
+      <h4>Will my TXT formatting be preserved?</h4>
+      <p>Plain text files have minimal formatting, but our converter intelligently detects paragraph breaks, chapter headings, and structure to create a well-formatted eBook.</p>
+    </div>
+    <div class="faq-item">
+      <h4>Can I add a cover image?</h4>
+      <p>Yes, the Pro version allows you to upload a custom cover image that will be embedded in the EPUB file for a professional look.</p>
+    </div>
+    <div class="faq-item">
+      <h4>Is there a file size limit?</h4>
+      <p>The Pro plan supports TXT files up to 50 MB, suitable for even the longest manuscripts and novels.</p>
+    </div>
+  </div>
+</div>
+<footer>
+  <div class="footer-inner">
+    <div class="footer-links">
+      <a href="../../about.html">About</a>
+      <a href="../../pricing.html">Pricing</a>
+      <a href="../../contact.html">Contact</a>
+      <a href="../../privacy.html">Privacy Policy</a>
+      <a href="../../terms.html">Terms of Service</a>
+    </div>
+    <p>&copy; 2025 FilePresto. All rights reserved.</p>
+  </div>
+</footer>
+</body>
+</html>
