@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Converter GIF para PNG Online Grátis – FilePresto</title>
+<meta name="description" content="Extraia o primeiro frame do seu GIF como imagem PNG. Gratuito.">
+<link rel="alternate" hreflang="en" href="https://jaordenes.github.io/filepresto/tools/images/gif-to-png.html">
+<link rel="alternate" hreflang="es" href="https://jaordenes.github.io/filepresto/es/tools/images/gif-to-png.html">
+<link rel="alternate" hreflang="pt" href="https://jaordenes.github.io/filepresto/pt/tools/images/gif-to-png.html">
+<link rel="alternate" hreflang="x-default" href="https://jaordenes.github.io/filepresto/tools/images/gif-to-png.html">
+<style>
+:root{--primary:#2563EB;--primary-light:#EFF6FF}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',sans-serif;background:#f8fafc;color:#1e293b}
+header{background:#fff;border-bottom:1px solid #e2e8f0;padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}
+.logo{font-size:1.5rem;font-weight:700;color:var(--primary);text-decoration:none}
+nav a{margin-left:1.5rem;color:#64748b;text-decoration:none;font-size:.95rem}
+.lang-switcher{display:flex;gap:.5rem;margin-left:2rem}
+.lang-switcher a{padding:.25rem .6rem;border-radius:.375rem;font-size:.8rem;font-weight:600;text-decoration:none;color:#64748b;border:1px solid #e2e8f0}
+.lang-switcher a.active{background:var(--primary);color:#fff;border-color:var(--primary)}
+.hero{background:linear-gradient(135deg,#1e40af,var(--primary));color:#fff;padding:3rem 2rem;text-align:center}
+.hero h1{font-size:2rem;font-weight:800;margin-bottom:.5rem}
+.hero p{opacity:.9;font-size:1rem;max-width:500px;margin:0 auto}
+.tool-container{max-width:700px;margin:2.5rem auto;padding:0 1.5rem}
+.drop-zone{border:2px dashed #cbd5e1;border-radius:1rem;padding:3rem 2rem;text-align:center;background:#fff;cursor:pointer;transition:.2s}
+.drop-zone:hover,.drop-zone.dragover{border-color:var(--primary);background:var(--primary-light)}
+.drop-zone .icon{font-size:3rem;margin-bottom:1rem}
+.drop-zone h3{font-size:1.1rem;font-weight:600;color:#334155;margin-bottom:.5rem}
+.drop-zone p{color:#94a3b8;font-size:.875rem}
+#fileInput{display:none}
+.btn{background:var(--primary);color:#fff;border:none;padding:.875rem 2rem;border-radius:.5rem;font-size:1rem;font-weight:600;cursor:pointer;width:100%;margin-top:1.5rem;transition:.2s}
+#preview-section{display:none;margin-top:2rem;background:#fff;border-radius:1rem;padding:1.5rem;box-shadow:0 2px 8px rgba(0,0,0,.07)}
+#preview-img{max-width:100%;max-height:300px;border-radius:.5rem;display:block;margin:0 auto}
+.file-info{background:var(--primary-light);border-radius:.5rem;padding:.75rem 1rem;margin:.75rem 0;font-size:.875rem;color:#1e40af}
+.progress{background:#e2e8f0;border-radius:1rem;height:8px;margin:1rem 0;display:none}
+.progress-bar{background:var(--primary);height:8px;border-radius:1rem;width:0;transition:width .3s}
+#download-btn{display:none;background:#16A34A;color:#fff;border:none;padding:.875rem 2rem;border-radius:.5rem;font-size:1rem;font-weight:600;cursor:pointer;width:100%;margin-top:1rem}
+footer{background:#1e293b;color:#94a3b8;padding:2rem;text-align:center}
+footer a{color:#94a3b8;text-decoration:none;margin:0 .75rem}
+.footer-links{margin-bottom:1rem}
+</style>
+</head>
+<body>
+<header>
+  <a href="../../../../" class="logo">⚡ FilePresto</a>
+  <nav><a href="index.html">← Imagens</a></nav>
+  <div class="lang-switcher">
+    <a href="../../../../tools/images/gif-to-png.html">EN</a>
+    <a href="../../../../es/tools/images/gif-to-png.html">ES</a>
+    <a href="gif-to-png.html" class="active">PT</a>
+  </div>
+</header>
+<section class="hero">
+  <h1>🔄 Converter GIF para PNG</h1>
+  <p>Extraia o primeiro frame do seu GIF como imagem PNG. Gratuito.</p>
+</section>
+<div class="tool-container">
+  <div class="drop-zone" id="dropZone">
+    <div class="icon">🔄</div>
+    <h3>Arraste e solte sua imagem aqui</h3>
+    <p>ou clique para selecionar o arquivo</p>
+    <input type="file" id="fileInput" accept=".gif,image/gif">
+  </div>
+  <div class="progress" id="progress"><div class="progress-bar" id="progressBar"></div></div>
+  <div id="preview-section">
+    <img id="preview-img" alt="Prévia">
+    <div class="file-info" id="fileInfo"></div>
+    <canvas id="canvas" style="display:none"></canvas>
+    <button class="btn" id="convertBtn">Converter</button>
+    <button id="download-btn">⬇️ Baixar PNG</button>
+  </div>
+</div>
+<footer>
+  <div class="footer-links">
+    <a href="../../../../pt/about.html">Sobre</a>
+    <a href="../../../../pt/privacy.html">Privacidade</a>
+    <a href="../../../../pt/terms.html">Termos</a>
+  </div>
+  <p>© 2025 FilePresto. Todos os direitos reservados.</p>
+</footer>
+<script>
+const dropZone=document.getElementById('dropZone'),fileInput=document.getElementById('fileInput'),previewSection=document.getElementById('preview-section'),previewImg=document.getElementById('preview-img'),fileInfo=document.getElementById('fileInfo'),canvas=document.getElementById('canvas'),convertBtn=document.getElementById('convertBtn'),downloadBtn=document.getElementById('download-btn'),progress=document.getElementById('progress'),progressBar=document.getElementById('progressBar');
+let currentFile=null;
+dropZone.addEventListener('click',()=>fileInput.click());
+dropZone.addEventListener('dragover',e=>{e.preventDefault();dropZone.classList.add('dragover')});
+dropZone.addEventListener('dragleave',()=>dropZone.classList.remove('dragover'));
+dropZone.addEventListener('drop',e=>{e.preventDefault();dropZone.classList.remove('dragover');if(e.dataTransfer.files[0])loadFile(e.dataTransfer.files[0])});
+fileInput.addEventListener('change',e=>{if(e.target.files[0])loadFile(e.target.files[0])});
+function loadFile(f){currentFile=f;const r=new FileReader();r.onload=e=>{previewImg.src=e.target.result;fileInfo.textContent='Arquivo: '+f.name+' ('+Math.round(f.size/1024)+' KB)';previewSection.style.display='block';downloadBtn.style.display='none';convertBtn.style.display='block';};r.readAsDataURL(f);}
+convertBtn.addEventListener('click',()=>{
+  if(!currentFile)return;
+  progress.style.display='block';progressBar.style.width='30%';
+  const img=new Image();
+  img.onload=()=>{
+    progressBar.style.width='70%';canvas.width=img.naturalWidth;canvas.height=img.naturalHeight;
+    const ctx=canvas.getContext('2d');
+    
+    ctx.drawImage(img,0,0);progressBar.style.width='100%';
+    setTimeout(()=>{progress.style.display='none';progressBar.style.width='0';convertBtn.style.display='none';downloadBtn.style.display='block';
+      downloadBtn.onclick=()=>{const a=document.createElement('a');a.download=currentFile.name.replace(/\.[^.]+$/,'.png');a.href=canvas.toDataURL('image/png',0.92);a.click();};
+    },300);
+  };
+  img.src=URL.createObjectURL(currentFile);
+});
+</script>
+</body>
+</html>
