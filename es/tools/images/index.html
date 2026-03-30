@@ -2,157 +2,128 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Herramientas de Imagen Online Gratis - Convierte y Edita Imágenes | FilePresto</title>
-<meta name="description" content="Herramientas de imagen gratuitas: convierte JPG, PNG, WebP, HEIC, SVG. Comprime y redimensiona imágenes online sin instalación.">
-<link rel="canonical" href="https://jaordenes.github.io/filepresto/es/tools/images/">
-<link rel="alternate" hreflang="en" href="https://jaordenes.github.io/filepresto/tools/images/index.html">
-<link rel="alternate" hreflang="es" href="https://jaordenes.github.io/filepresto/es/tools/images/index.html">
-<link rel="alternate" hreflang="pt" href="https://jaordenes.github.io/filepresto/pt/tools/images/index.html">
-<link rel="alternate" hreflang="x-default" href="https://jaordenes.github.io/filepresto/tools/images/index.html">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Conversor de Imágenes Online Gratis | FilePristo</title>
+<meta name="description" content="Convierte imágenes online gratis: JPG, PNG, WebP, HEIC, SVG. Comprime y redimensiona imágenes sin instalar nada.">
+<link rel="canonical" href="https://filepresto.com/es/tools/images/">
+<link rel="alternate" hreflang="en" href="https://filepresto.com/tools/images/">
+<link rel="alternate" hreflang="es" href="https://filepresto.com/es/tools/images/">
+<link rel="alternate" hreflang="pt" href="https://filepresto.com/pt/tools/images/">
+<link rel="alternate" hreflang="x-default" href="https://filepresto.com/tools/images/">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-:root{--primary:#2563EB;--primary-dark:#1D4ED8;--primary-light:#EFF6FF;--text:#1F2937;--text-light:#6B7280;--bg:#F9FAFB;--white:#FFFFFF;--border:#E5E7EB;--radius:12px;--shadow:0 4px 24px rgba(37,99,235,.08)}
-body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;color:var(--text);background:var(--bg);line-height:1.6}
-a{color:inherit;text-decoration:none}
-nav{background:var(--white);border-bottom:1px solid var(--border);padding:0 24px;position:sticky;top:0;z-index:100}
-.nav-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:64px}
-.logo{font-size:1.4rem;font-weight:800;color:var(--primary)}
-.logo span{color:var(--text)}
-.nav-links{display:flex;gap:28px;align-items:center;font-size:.95rem;font-weight:500}
-.nav-links a:hover{color:var(--primary)}
-.lang-switcher{display:flex;gap:8px;font-size:.85rem}
-.lang-switcher a{padding:4px 10px;border-radius:6px;border:1px solid var(--border);color:var(--text-light);transition:.2s}
-.lang-switcher a.active,.lang-switcher a:hover{background:var(--primary);color:#fff;border-color:var(--primary)}
-.breadcrumb{max-width:1200px;margin:0 auto;padding:16px 24px;font-size:.875rem;color:var(--text-light);display:flex;gap:8px;align-items:center}
-.breadcrumb a:hover{color:var(--primary)}
-.breadcrumb span{color:var(--border)}
-.hero{background:linear-gradient(135deg,var(--primary) 0%,#1E3A8A 100%);color:#fff;padding:56px 24px;text-align:center}
-.hero h1{font-size:2.4rem;font-weight:800;margin-bottom:12px}
-.hero p{font-size:1.1rem;opacity:.9;max-width:560px;margin:0 auto}
-.container{max-width:1200px;margin:0 auto;padding:48px 24px}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#f8fafc;color:#1e293b}
+header{background:#fff;border-bottom:1px solid #e2e8f0;padding:16px 24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
+.logo{font-size:24px;font-weight:800;color:#2563EB;text-decoration:none}
+nav{display:flex;gap:16px;align-items:center}
+nav a{color:#64748b;text-decoration:none;font-size:14px;font-weight:500}
+nav a:hover{color:#2563EB}
+.lang-switch{display:flex;gap:8px}
+.lang-switch a{padding:4px 10px;border-radius:6px;font-size:12px;font-weight:600;text-decoration:none;color:#64748b;border:1px solid #e2e8f0}
+.lang-switch a.active{background:#2563EB;color:#fff;border-color:#2563EB}
+.hero{background:linear-gradient(135deg,#2563EB 0%,#1d4ed8 100%);color:#fff;padding:48px 24px;text-align:center}
+.hero h1{font-size:36px;font-weight:800;margin-bottom:12px}
+.hero p{font-size:18px;opacity:0.9;max-width:600px;margin:0 auto}
+.container{max-width:1100px;margin:0 auto;padding:40px 24px}
 .tools-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px}
-.tool-card{background:var(--white);border-radius:var(--radius);padding:28px;box-shadow:var(--shadow);border:2px solid transparent;transition:.3s;display:flex;flex-direction:column}
-.tool-card:hover{border-color:var(--primary);transform:translateY(-3px)}
-.tool-icon{font-size:2rem;margin-bottom:12px}
-.tool-card h3{font-size:1.05rem;font-weight:700;margin-bottom:6px}
-.tool-card p{color:var(--text-light);font-size:.875rem;flex:1;margin-bottom:16px}
-.tool-badge{display:inline-block;padding:3px 10px;border-radius:999px;font-size:.75rem;font-weight:600;margin-bottom:16px}
-.badge-free{background:#DCFCE7;color:#16A34A}
-.btn-tool{display:block;text-align:center;background:var(--primary);color:#fff;padding:10px 16px;border-radius:8px;font-size:.875rem;font-weight:600;transition:.2s}
-.btn-tool:hover{background:var(--primary-dark)}
-footer{background:#1F2937;color:#9CA3AF;padding:40px 24px;text-align:center;font-size:.875rem}
-.footer-inner{max-width:1200px;margin:0 auto}
-.footer-links{display:flex;justify-content:center;flex-wrap:wrap;gap:16px;margin-bottom:16px}
-.footer-links a:hover{color:#fff}
-@media(max-width:768px){.hero h1{font-size:1.7rem}}
+.tool-card{background:#fff;border-radius:12px;padding:24px;box-shadow:0 1px 3px rgba(0,0,0,0.08);border:1px solid #e2e8f0;text-decoration:none;color:inherit;transition:all 0.2s;display:block}
+.tool-card:hover{transform:translateY(-2px);box-shadow:0 8px 25px rgba(37,99,235,0.12);border-color:#2563EB}
+.tool-icon{font-size:32px;margin-bottom:12px}
+.tool-title{font-size:18px;font-weight:700;color:#1e293b;margin-bottom:6px}
+.tool-desc{font-size:14px;color:#64748b;line-height:1.5}
+.badge{display:inline-block;padding:2px 8px;border-radius:4px;font-size:11px;font-weight:700;margin-top:8px;background:#dbeafe;color:#2563EB}
+footer{background:#1e293b;color:#94a3b8;padding:32px 24px;text-align:center;margin-top:60px}
+footer a{color:#94a3b8;text-decoration:none}
+footer a:hover{color:#fff}
+.footer-links{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-bottom:12px}
 </style>
 </head>
 <body>
+<header>
+<a href="../../../../es/index.html" class="logo">FilePristo</a>
+<div style="display:flex;align-items:center;gap:16px">
 <nav>
-  <div class="nav-inner">
-    <a href="../../index.html" class="logo">File<span>Presto</span></a>
-    <div class="nav-links">
-      <a href="index.html" style="color:var(--primary)">Imágenes</a>
-      <a href="../pdf/index.html">PDF</a>
-      <a href="../video/index.html">Video</a>
-      <a href="../audio/index.html">Audio</a>
-      <a href="../ebook/index.html">eBooks</a>
-      <a href="../../pricing.html">Precios</a>
-    </div>
-    <div class="lang-switcher">
-      <a href="../../../tools/images/index.html">EN</a>
-      <a href="index.html" class="active">ES</a>
-      <a href="../../../pt/tools/images/index.html">PT</a>
-    </div>
-  </div>
+<a href="../../../../es/index.html">Inicio</a>
+<a href="../../../../es/about.html">Nosotros</a>
+<a href="../../../../es/contact.html">Contacto</a>
 </nav>
-<div class="breadcrumb">
-  <a href="../../index.html">Inicio</a><span>/</span>
-  <span>Imágenes</span>
+<div class="lang-switch">
+<a href="../../../../tools/images/index.html">EN</a>
+<a href="index.html" class="active">ES</a>
+<a href="../../../../pt/tools/images/index.html">PT</a>
 </div>
-<section class="hero">
-  <h1>&#128247; Herramientas de Imagen</h1>
-  <p>Convierte, comprime y edita tus imágenes online. Gratis, rápido y sin instalaciones.</p>
-</section>
+</div>
+</header>
+<div class="hero">
+<h1>🖼️ Herramientas de Imágenes</h1>
+<p>Convierte, comprime y edita imágenes online gratis. Sin instalación necesaria.</p>
+</div>
 <div class="container">
-  <div class="tools-grid">
-    <a href="jpg-to-png.html" class="tool-card">
-      <div class="tool-icon">&#128247;</div>
-      <h3>JPG a PNG</h3>
-      <p>Convierte imágenes JPEG a formato PNG con fondo transparente o sólido.</p>
-      <span class="tool-badge badge-free">&#10003; Gratis</span>
-      <span class="btn-tool">Convertir ahora</span>
-    </a>
-    <a href="png-to-jpg.html" class="tool-card">
-      <div class="tool-icon">&#128247;</div>
-      <h3>PNG a JPG</h3>
-      <p>Convierte archivos PNG a JPEG para reducir el tamaño y compatibilidad universal.</p>
-      <span class="tool-badge badge-free">&#10003; Gratis</span>
-      <span class="btn-tool">Convertir ahora</span>
-    </a>
-    <a href="jpg-to-webp.html" class="tool-card">
-      <div class="tool-icon">&#128247;</div>
-      <h3>JPG a WebP</h3>
-      <p>Convierte JPG a WebP para webs más rápidas y archivos más pequeños.</p>
-      <span class="tool-badge badge-free">&#10003; Gratis</span>
-      <span class="btn-tool">Convertir ahora</span>
-    </a>
-    <a href="png-to-webp.html" class="tool-card">
-      <div class="tool-icon">&#128247;</div>
-      <h3>PNG a WebP</h3>
-      <p>Convierte PNG a WebP manteniendo la transparencia y reduciendo el tamaño.</p>
-      <span class="tool-badge badge-free">&#10003; Gratis</span>
-      <span class="btn-tool">Convertir ahora</span>
-    </a>
-    <a href="webp-to-jpg.html" class="tool-card">
-      <div class="tool-icon">&#128247;</div>
-      <h3>WebP a JPG</h3>
-      <p>Convierte imágenes WebP a JPEG para mayor compatibilidad con aplicaciones.</p>
-      <span class="tool-badge badge-free">&#10003; Gratis</span>
-      <span class="btn-tool">Convertir ahora</span>
-    </a>
-    <a href="heic-to-jpg.html" class="tool-card">
-      <div class="tool-icon">&#128247;</div>
-      <h3>HEIC a JPG</h3>
-      <p>Convierte fotos HEIC del iPhone a formato JPG compatible con todos los dispositivos.</p>
-      <span class="tool-badge badge-free">&#10003; Gratis</span>
-      <span class="btn-tool">Convertir ahora</span>
-    </a>
-    <a href="svg-to-png.html" class="tool-card">
-      <div class="tool-icon">&#128247;</div>
-      <h3>SVG a PNG</h3>
-      <p>Exporta gráficos vectoriales SVG a imágenes PNG de alta resolución.</p>
-      <span class="tool-badge badge-free">&#10003; Gratis</span>
-      <span class="btn-tool">Convertir ahora</span>
-    </a>
-    <a href="compress-image.html" class="tool-card">
-      <div class="tool-icon">&#128247;</div>
-      <h3>Comprimir Imagen</h3>
-      <p>Reduce el tamaño de tus imágenes JPG y PNG sin pérdida visual apreciable.</p>
-      <span class="tool-badge badge-free">&#10003; Gratis</span>
-      <span class="btn-tool">Comprimir ahora</span>
-    </a>
-    <a href="resize-image.html" class="tool-card">
-      <div class="tool-icon">&#128247;</div>
-      <h3>Redimensionar Imagen</h3>
-      <p>Cambia las dimensiones exactas de cualquier imagen en píxeles o porcentaje.</p>
-      <span class="tool-badge badge-free">&#10003; Gratis</span>
-      <span class="btn-tool">Redimensionar</span>
-    </a>
-  </div>
+<div class="tools-grid">
+<a href="jpg-to-png.html" class="tool-card">
+<div class="tool-icon">🖼️</div>
+<div class="tool-title">JPG a PNG</div>
+<div class="tool-desc">Convierte imágenes JPG a PNG con transparencia.</div>
+<span class="badge">GRATIS</span>
+</a>
+<a href="png-to-jpg.html" class="tool-card">
+<div class="tool-icon">📷</div>
+<div class="tool-title">PNG a JPG</div>
+<div class="tool-desc">Convierte archivos PNG a JPG y reduce el tamaño.</div>
+<span class="badge">GRATIS</span>
+</a>
+<a href="webp-to-jpg.html" class="tool-card">
+<div class="tool-icon">🌐</div>
+<div class="tool-title">WebP a JPG</div>
+<div class="tool-desc">Convierte imágenes WebP a formato JPG compatible.</div>
+<span class="badge">GRATIS</span>
+</a>
+<a href="jpg-to-webp.html" class="tool-card">
+<div class="tool-icon">⚡</div>
+<div class="tool-title">JPG a WebP</div>
+<div class="tool-desc">Convierte JPG a WebP y optimiza para la web.</div>
+<span class="badge">GRATIS</span>
+</a>
+<a href="png-to-webp.html" class="tool-card">
+<div class="tool-icon">🔄</div>
+<div class="tool-title">PNG a WebP</div>
+<div class="tool-desc">Convierte PNG a WebP con mejor compresión.</div>
+<span class="badge">GRATIS</span>
+</a>
+<a href="heic-to-jpg.html" class="tool-card">
+<div class="tool-icon">📱</div>
+<div class="tool-title">HEIC a JPG</div>
+<div class="tool-desc">Convierte fotos HEIC del iPhone a formato JPG.</div>
+<span class="badge">GRATIS</span>
+</a>
+<a href="svg-to-png.html" class="tool-card">
+<div class="tool-icon">✏️</div>
+<div class="tool-title">SVG a PNG</div>
+<div class="tool-desc">Convierte vectores SVG a imágenes PNG rasterizadas.</div>
+<span class="badge">GRATIS</span>
+</a>
+<a href="resize-image.html" class="tool-card">
+<div class="tool-icon">📐</div>
+<div class="tool-title">Redimensionar Imagen</div>
+<div class="tool-desc">Cambia el tamaño de imágenes a las dimensiones que necesitas.</div>
+<span class="badge">GRATIS</span>
+</a>
+<a href="compress-image.html" class="tool-card">
+<div class="tool-icon">🗜️</div>
+<div class="tool-title">Comprimir Imagen</div>
+<div class="tool-desc">Reduce el tamaño de imágenes manteniendo la calidad visual.</div>
+<span class="badge">GRATIS</span>
+</a>
+</div>
 </div>
 <footer>
-  <div class="footer-inner">
-    <div class="footer-links">
-      <a href="../../about.html">Nosotros</a>
-      <a href="../../pricing.html">Precios</a>
-      <a href="../../contact.html">Contacto</a>
-      <a href="../../privacy.html">Privacidad</a>
-      <a href="../../terms.html">Términos</a>
-    </div>
-    <p>&copy; 2025 FilePresto. Todos los derechos reservados.</p>
-  </div>
+<div class="footer-links">
+<a href="../../../../es/privacy.html">Privacidad</a>
+<a href="../../../../es/terms.html">Términos</a>
+<a href="../../../../es/about.html">Nosotros</a>
+<a href="../../../../es/contact.html">Contacto</a>
+</div>
+<div class="footer-bottom">&copy; 2026 FilePristo. Todos los derechos reservados.</div>
 </footer>
 </body>
 </html>
