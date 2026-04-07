@@ -3,219 +3,137 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Excel to PDF Converter - Convert XLS/XLSX to PDF Online | FilePresto</title>
-<meta name="description" content="Convert Excel spreadsheets (XLS, XLSX) to PDF format online for free. Preserve formatting, charts, and tables. Fast Excel to PDF converter.">
-<link rel="canonical" href="https://jaordenes.github.io/filepresto/tools/pdf/excel-to-pdf.html">
-<link rel="alternate" hreflang="en" href="https://jaordenes.github.io/filepresto/tools/pdf/excel-to-pdf.html">
-<link rel="alternate" hreflang="es" href="https://jaordenes.github.io/filepresto/es/tools/pdf/excel-to-pdf.html">
-<link rel="alternate" hreflang="pt" href="https://jaordenes.github.io/filepresto/pt/tools/pdf/excel-to-pdf.html">
-<link rel="alternate" hreflang="x-default" href="https://jaordenes.github.io/filepresto/tools/pdf/excel-to-pdf.html">
+<title>Excel to PDF - FilePresto</title>
+<meta name="description" content="Convert Excel spreadsheets to PDF. Free, no registration required.">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-:root{--primary:#DC2626;--primary-dark:#B91C1C;--primary-light:#FEE2E2;--text:#1F2937;--text-light:#6B7280;--bg:#F9FAFB;--white:#FFFFFF;--border:#E5E7EB;--radius:12px;--shadow:0 4px 24px rgba(220,38,38,0.08)}
-body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;color:var(--text);background:var(--bg);line-height:1.6}
-a{color:inherit;text-decoration:none}
-nav{background:var(--white);border-bottom:1px solid var(--border);padding:0 24px;position:sticky;top:0;z-index:100}
-.nav-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:64px}
-.logo{font-size:1.4rem;font-weight:800;color:var(--primary)}
-.logo span{color:var(--text)}
-.nav-links{display:flex;gap:28px;align-items:center;font-size:.95rem;font-weight:500}
+:root{--primary:#DC2626;--primary-dark:#B91C1C;--bg:#f8f9fa;--text:#333}
+body{font-family:'Segoe UI',sans-serif;background:var(--bg);color:var(--text)}
+nav{background:#fff;box-shadow:0 2px 8px rgba(0,0,0,.1);padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between}
+.logo{font-size:1.5rem;font-weight:700;color:var(--primary);text-decoration:none}
+.nav-links a{margin-left:1rem;text-decoration:none;color:#555;font-size:.9rem}
 .nav-links a:hover{color:var(--primary)}
-.lang-switcher{display:flex;gap:8px;font-size:.85rem}
-.lang-switcher a{padding:4px 10px;border-radius:6px;border:1px solid var(--border);color:var(--text-light);transition:.2s}
-.lang-switcher a.active,.lang-switcher a:hover{background:var(--primary);color:#fff;border-color:var(--primary)}
-.breadcrumb{max-width:1200px;margin:0 auto;padding:16px 24px;font-size:.875rem;color:var(--text-light);display:flex;gap:8px;align-items:center}
-.breadcrumb a:hover{color:var(--primary)}
-.breadcrumb span{color:var(--border)}
-.hero{background:linear-gradient(135deg,var(--primary) 0%,#7F1D1D 100%);color:#fff;padding:56px 24px;text-align:center}
-.hero h1{font-size:2.4rem;font-weight:800;margin-bottom:16px}
-.hero p{font-size:1.1rem;opacity:.9;max-width:600px;margin:0 auto 24px}
-.badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.3);padding:8px 20px;border-radius:999px;font-size:.9rem;backdrop-filter:blur(8px)}
-.container{max-width:1200px;margin:0 auto;padding:48px 24px}
-.tool-card{background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden;margin-bottom:32px}
-.tool-header{background:linear-gradient(135deg,var(--primary-light),#FECACA);padding:24px 32px;border-bottom:1px solid var(--border)}
-.tool-header h2{font-size:1.4rem;color:var(--primary);margin-bottom:4px}
-.tool-header p{color:var(--text-light);font-size:.95rem}
-.tool-body{padding:32px}
-.coming-soon{text-align:center;padding:48px 32px}
-.cs-icon{width:80px;height:80px;background:var(--primary-light);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 24px;font-size:2.5rem}
-.coming-soon h3{font-size:1.6rem;color:var(--text);margin-bottom:12px}
-.coming-soon p{color:var(--text-light);max-width:520px;margin:0 auto 32px;font-size:1rem}
-.feature-pills{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-bottom:32px}
-.pill{background:var(--primary-light);color:var(--primary);padding:8px 18px;border-radius:999px;font-size:.875rem;font-weight:500;display:flex;align-items:center;gap:6px}
-.btn-primary{display:inline-flex;align-items:center;gap:8px;background:var(--primary);color:#fff;padding:14px 32px;border-radius:10px;font-size:1rem;font-weight:600;transition:.2s}
-.btn-primary:hover{background:var(--primary-dark);transform:translateY(-1px)}
-.btn-secondary{display:inline-flex;align-items:center;gap:8px;background:transparent;color:var(--primary);padding:12px 28px;border-radius:10px;font-size:.95rem;font-weight:600;border:2px solid var(--primary);margin-left:12px;transition:.2s}
-.btn-secondary:hover{background:var(--primary-light)}
-.how-it-works{background:var(--white);border-radius:var(--radius);padding:40px;box-shadow:var(--shadow);margin-bottom:32px}
-.how-it-works h2{font-size:1.5rem;margin-bottom:28px;text-align:center}
-.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:24px}
-.step{text-align:center}
-.step-num{width:48px;height:48px;background:var(--primary);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.2rem;font-weight:700;margin:0 auto 12px}
-.step h4{font-size:1rem;margin-bottom:6px}
-.step p{font-size:.875rem;color:var(--text-light)}
-.faq{background:var(--white);border-radius:var(--radius);padding:40px;box-shadow:var(--shadow);margin-bottom:32px}
-.faq h2{font-size:1.5rem;margin-bottom:28px}
-.faq-item{border-bottom:1px solid var(--border);padding:20px 0}
-.faq-item:last-child{border-bottom:none}
-.faq-item h4{font-size:1rem;margin-bottom:8px;color:var(--text)}
-.faq-item p{font-size:.9rem;color:var(--text-light)}
-footer{background:#1F2937;color:#9CA3AF;padding:40px 24px;text-align:center;font-size:.875rem}
-.footer-inner{max-width:1200px;margin:0 auto}
-.footer-links{display:flex;justify-content:center;flex-wrap:wrap;gap:16px;margin-bottom:16px}
-.footer-links a:hover{color:#fff}
-@media(max-width:768px){.hero h1{font-size:1.7rem}.nav-links{gap:12px}.btn-secondary{margin-left:0;margin-top:12px}}
+.hero{background:linear-gradient(135deg,var(--primary),var(--primary-dark));color:#fff;padding:3rem 2rem;text-align:center}
+.hero h1{font-size:2.2rem;margin-bottom:.5rem}
+.hero p{font-size:1.1rem;opacity:.9}
+.container{max-width:800px;margin:2rem auto;padding:0 1rem}
+.card{background:#fff;border-radius:12px;box-shadow:0 4px 15px rgba(0,0,0,.08);padding:2rem;margin-bottom:1.5rem}
+.upload-area{border:2px dashed #ddd;border-radius:8px;padding:3rem 2rem;text-align:center;cursor:pointer;transition:all .3s}
+.upload-area:hover,.upload-area.dragover{border-color:var(--primary);background:#fff5f5}
+.upload-area input{display:none}
+.upload-icon{font-size:3rem;margin-bottom:1rem}
+.convert-btn{background:var(--primary);color:#fff;border:none;padding:1rem 2rem;border-radius:8px;font-size:1.1rem;cursor:pointer;width:100%;margin-top:1rem;transition:background .3s}
+.convert-btn:hover:not(:disabled){background:var(--primary-dark)}
+.convert-btn:disabled{opacity:.5;cursor:not-allowed}
+.progress-wrap{margin:1rem 0;display:none}
+.progress-bar{height:8px;background:#e2e8f0;border-radius:4px;overflow:hidden}
+.progress-fill{height:100%;background:var(--primary);width:0;transition:width .3s}
+.progress-text{text-align:center;margin-top:.5rem;font-size:.9rem;color:#666}
+.download-btn{background:#27ae60;color:#fff;border:none;padding:1rem 2rem;border-radius:8px;font-size:1.1rem;cursor:pointer;width:100%;margin-top:1rem;display:none;text-decoration:none;text-align:center;transition:background .3s}
+.download-btn:hover{background:#219a52}
+.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem}
+.feature{text-align:center;padding:1.5rem}
+.feature-icon{font-size:2rem;margin-bottom:.5rem}
+footer{background:#333;color:#ccc;text-align:center;padding:2rem;margin-top:3rem}
+footer a{color:#ccc;text-decoration:none}
 </style>
 </head>
 <body>
 <nav>
-  <div class="nav-inner">
-    <a href="../../index.html" class="logo">File<span>Presto</span></a>
-    <div class="nav-links">
-      <a href="../../tools/images/index.html">Images</a>
-      <a href="index.html" style="color:var(--primary)">PDF</a>
-      <a href="../../tools/video/index.html">Video</a>
-      <a href="../../tools/audio/index.html">Audio</a>
-      <a href="../../tools/ebook/index.html">eBooks</a>
-      <a href="../../pricing.html">Pricing</a>
-    </div>
-    <div class="lang-switcher">
-      <a href="excel-to-pdf.html" class="active">EN</a>
-      <a href="../../es/tools/pdf/excel-to-pdf.html">ES</a>
-      <a href="../../pt/tools/pdf/excel-to-pdf.html">PT</a>
-    </div>
+  <a href="/filepresto/" class="logo">FilePresto</a>
+  <div class="nav-links">
+    <a href="/filepresto/tools/pdf/excel-to-pdf.html">EN</a>
+    <a href="/filepresto/es/tools/pdf/excel-to-pdf.html">ES</a>
+    <a href="/filepresto/pt/tools/pdf/excel-to-pdf.html">PT</a>
   </div>
 </nav>
-<div class="breadcrumb">
-  <a href="../../index.html">Home</a><span>/</span>
-  <a href="index.html">PDF</a><span>/</span>
-  <span>Excel to PDF</span>
+<div class="hero">
+  <h1>Excel to PDF</h1>
+  <p>Convert Excel spreadsheets to PDF. Free, private, no upload needed.</p>
 </div>
-<section class="hero">
-  <h1>Excel to PDF Converter</h1>
-  <p>Convert Excel spreadsheets to PDF format while preserving all formatting, charts, and tables. Share your data in a universally readable format.</p>
-  <div class="badge">&#128196; Free PDF Tool</div>
-</section>
 <div class="container">
-  <div class="tool-card">
-    <div class="tool-header">
-      <h2>Convert Excel to PDF</h2>
-      <p>Accurately convert XLS and XLSX spreadsheets to PDF with full formatting preservation</p>
+  <div class="card">
+    <div class="upload-area" id="dropZone">
+      <input type="file" id="fileInput" accept=".xlsx,.xls,.csv">
+      <div class="upload-icon">📊</div>
+      <p><strong>Drop your Excel file here</strong></p>
+      <p style="color:#888;margin-top:.5rem">or click to select (XLSX, XLS, CSV)</p>
     </div>
-    <div class="tool-body">
-      <div class="coming-soon">
-        <div class="cs-icon">&#128196;</div>
-        <h3>Coming Soon</h3>
-        <p>Our Excel to PDF converter will accurately render spreadsheets with all formatting, formulas (as values), charts, and multi-sheet support into a professional PDF document.</p>
-        <div class="feature-pills">
-          <div class="pill">&#10003; Preserve Formatting</div>
-          <div class="pill">&#10003; Charts &amp; Graphs</div>
-          <div class="pill">&#10003; Multiple Sheets</div>
-          <div class="pill">&#10003; Fit to Page Options</div>
-          <div class="pill">&#10003; Header &amp; Footer</div>
-          <div class="pill">&#10003; Password Protection</div>
-        </div>
-        <a href="../../pricing.html" class="btn-primary">&#9889; Get Early Access</a>
-        <a href="index.html" class="btn-secondary">&#8592; Browse PDF Tools</a>
-      </div>
+    <p id="fileName" style="margin-top:.5rem;color:#555;text-align:center"></p>
+    <button class="convert-btn" id="convertBtn" disabled>Convert to PDF</button>
+    <div class="progress-wrap" id="progressWrap">
+      <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+      <div class="progress-text" id="progressText">Processing...</div>
     </div>
+    <a class="download-btn" id="downloadBtn">⬇️ Download PDF</a>
   </div>
-  <div class="how-it-works">
-    <h2>How Excel to PDF Conversion Works</h2>
-    <div class="steps">
-      <div class="step"><div class="step-num">1</div><h4>Upload Excel File</h4><p>Select your XLS or XLSX spreadsheet from your device.</p></div>
-      <div class="step"><div class="step-num">2</div><h4>Configure Options</h4><p>Choose page orientation, which sheets to include, and fit-to-page settings.</p></div>
-      <div class="step"><div class="step-num">3</div><h4>Convert</h4><p>Our engine renders the spreadsheet to PDF with pixel-perfect accuracy.</p></div>
-      <div class="step"><div class="step-num">4</div><h4>Download PDF</h4><p>Get your PDF ready to share, print, or archive professionally.</p></div>
-    </div>
-  </div>
-  <div class="faq">
-    <h2>Frequently Asked Questions</h2>
-    <div class="faq-item">
-      <h4>Does it support XLS and XLSX files?</h4>
-      <p>Yes, our converter supports both the legacy XLS format (Excel 97-2003) and the modern XLSX format (Excel 2007 and later), as well as ODS files.</p>
-    </div>
-    <div class="faq-item">
-      <h4>Will my charts and graphs be included?</h4>
-      <p>Yes, all charts, graphs, images, and visual elements in your spreadsheet will be accurately rendered in the PDF output.</p>
-    </div>
-    <div class="faq-item">
-      <h4>Can I convert multiple sheets?</h4>
-      <p>Pro users can choose to convert all sheets or specific sheets from a workbook, with each sheet appearing as a separate section in the PDF.</p>
-    </div>
-    <div class="faq-item">
-      <h4>What if my spreadsheet is very wide?</h4>
-      <p>You can use the fit-to-page option to automatically scale the content to fit within standard page widths, or choose landscape orientation for wider spreadsheets.</p>
+  <div class="card">
+    <h2 style="margin-bottom:1rem">Features</h2>
+    <div class="features">
+      <div class="feature"><div class="feature-icon">🔒</div><h3>100% Private</h3><p>Everything processed in your browser</p></div>
+      <div class="feature"><div class="feature-icon">📊</div><h3>XLSX, XLS, CSV</h3><p>All major spreadsheet formats</p></div>
+      <div class="feature"><div class="feature-icon">⚡</div><h3>Fast</h3><p>Instant conversion</p></div>
     </div>
   </div>
 </div>
 <footer>
-  <div class="footer-inner">
-    <div class="footer-links">
-      <a href="../../about.html">About</a>
-      <a href="../../pricing.html">Pricing</a>
-      <a href="../../contact.html">Contact</a>
-      <a href="../../privacy.html">Privacy Policy</a>
-      <a href="../../terms.html">Terms of Service</a>
-    </div>
-    <p>&copy; 2025 FilePresto. All rights reserved.</p>
-  </div>
+  <p><a href="/filepresto/">FilePresto</a> &copy; 2024</p>
 </footer>
-</body>
-</html><!DOCTYPE html>
-<html lang="es">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Excel a PDF - Convertir Excel a PDF Gratis | FilePresto</title>
-<meta name="description" content="Convierte hojas de cálculo Excel a PDF. Gratis, sin registro, sin subida de archivos.">
-<style>*{margin:0;padding:0;box-sizing:border-box}:root{--primary:#2563EB;--accent:#7C3AED;--bg:#F8FAFC;--white:#FFFFFF;--text:#0F172A;--text-muted:#64748B;--border:#E2E8F0;--radius:12px;--pdf:#DC2626}body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);min-height:100vh}header{background:var(--white);border-bottom:1px solid var(--border);padding:0 24px;height:64px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}
-.logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--text)}.logo-icon{width:36px;height:36px;background:linear-gradient(135deg,var(--primary),var(--accent));border-radius:8px;display:flex;align-items:center;justify-content:center;color:white;font-size:18px}.logo-text{font-size:20px;font-weight:700}nav{display:flex;gap:24px;align-items:center}nav a{text-decoration:none;color:var(--text-muted);font-size:14px;font-weight:500}nav a:hover{color:var(--primary)}.btn-nav{background:var(--primary);color:white!important;padding:8px 18px;border-radius:8px;font-size:14px;font-weight:600;text-decoration:none}
-main{max-width:800px;margin:0 auto;padding:40px 24px}.breadcrumb{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--text-muted);margin-bottom:32px}.breadcrumb a{color:var(--text-muted);text-decoration:none}.breadcrumb span{color:var(--text)}
-.page-title{font-size:36px;font-weight:800;margin-bottom:12px;background:linear-gradient(135deg,var(--pdf),var(--accent));-webkit-background-clip:text;-webkit-text-fill-color:transparent}.page-desc{font-size:16px;color:var(--text-muted);margin-bottom:40px}
-.upload-zone{border:2px dashed var(--border);border-radius:var(--radius);padding:60px 40px;text-align:center;cursor:pointer;transition:all .3s;background:var(--white)}.upload-zone:hover,.upload-zone.dragover{border-color:var(--pdf);background:#FEF2F2}.upload-icon{font-size:48px;margin-bottom:16px}.upload-title{font-size:18px;font-weight:600;margin-bottom:8px}.upload-subtitle{font-size:14px;color:var(--text-muted)}.upload-btn{display:inline-block;margin-top:20px;background:var(--pdf);color:white;padding:12px 28px;border-radius:8px;font-weight:600;cursor:pointer}#fileInput{display:none}
-.status{margin-top:24px;padding:16px;border-radius:var(--radius);display:none;align-items:center;gap:12px}.status.loading{display:flex;background:#FEF2F2;color:var(--pdf)}.status.error{display:flex;background:#FEF2F2;color:var(--pdf)}.spinner{width:20px;height:20px;border:2px solid currentColor;border-top-color:transparent;border-radius:50%;animation:spin .8s linear infinite;flex-shrink:0}@keyframes spin{to{transform:rotate(360deg)}}
-.info-box{background:#EFF6FF;border:1px solid #BFDBFE;border-radius:var(--radius);padding:20px;margin-top:24px}.info-box h3{font-size:14px;font-weight:600;color:var(--primary);margin-bottom:8px}.info-box p{font-size:13px;color:#1D4ED8;line-height:1.6}
-.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:16px;margin-top:48px}.feature-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:20px;text-align:center}.feature-icon{font-size:28px;margin-bottom:8px}.feature-title{font-size:14px;font-weight:600;margin-bottom:4px}.feature-desc{font-size:12px;color:var(--text-muted)}
-footer{background:var(--white);border-top:1px solid var(--border);padding:32px 24px;text-align:center;margin-top:80px}.footer-links{display:flex;justify-content:center;gap:24px;margin-bottom:12px;flex-wrap:wrap}.footer-links a{color:var(--text-muted);text-decoration:none;font-size:13px}.footer-copy{font-size:12px;color:var(--text-muted)}</style>
-</head>
-<body>
-<header><a href="../../index.html" class="logo"><div class="logo-icon">&#128206;</div><span class="logo-text">FilePresto</span></a><nav><a href="../../index.html">Inicio</a><a href="index.html">PDF</a><a href="../../pricing.html">Precios</a><a href="../../about.html">Nosotros</a><a href="../../contact.html" class="btn-nav">Contacto</a></nav></header>
-<main>
-<div class="breadcrumb"><a href="../../index.html">Inicio</a><span>&#8250;</span><a href="index.html">PDF</a><span>&#8250;</span><span>Excel a PDF</span></div>
-<h1 class="page-title">Excel a PDF</h1>
-<p class="page-desc">Convierte tus hojas de cálculo Excel (.xlsx, .xls) a PDF de forma profesional. Preserva tablas, gráficos y formatos numéricos. Sin registro requerido.</p>
-<div class="upload-zone" id="uploadZone">
-<div class="upload-icon">&#128200;</div>
-<div class="upload-title">Arrastra tu archivo Excel aquí</div>
-<div class="upload-subtitle">Acepta .xlsx y .xls</div>
-<label class="upload-btn" for="fileInput">Seleccionar Excel</label>
-<input type="file" id="fileInput" accept=".xlsx,.xls,application/vnd.ms-excel,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet">
-</div>
-<div class="status" id="status"><div class="spinner"></div><span id="statusText">Procesando...</span></div>
-<div class="info-box">
-<h3>&#8505; Conversión en desarrollo</h3>
-<p>La conversión precisa de Excel a PDF manteniendo gráficos y formatos requiere procesamiento especializado. Esta funcionalidad estará disponible en el plan <strong>Pro de FilePresto</strong> próximamente. Como alternativa: <strong>Microsoft Excel</strong> (Archivo &#8594; Exportar como PDF), <strong>Google Sheets</strong> (Archivo &#8594; Descargar &#8594; PDF) o <strong>LibreOffice Calc</strong>.</p>
-</div>
-<div class="features">
-<div class="feature-card"><div class="feature-icon">&#128200;</div><div class="feature-title">Excel &#8594; PDF</div><div class="feature-desc">Tablas y gráficos</div></div>
-<div class="feature-card"><div class="feature-icon">&#128274;</div><div class="feature-title">Privado</div><div class="feature-desc">Sin subida a servidores</div></div>
-<div class="feature-card"><div class="feature-icon">&#127873;</div><div class="feature-title">Gratis</div><div class="feature-desc">Sin límites ni registro</div></div>
-<div class="feature-card"><div class="feature-icon">&#9889;</div><div class="feature-title">Preciso</div><div class="feature-desc">Alta fidelidad de formato</div></div>
-</div>
-</main>
-<footer><div class="footer-links"><a href="../../privacy.html">Privacidad</a><a href="../../terms.html">Términos</a><a href="../../contact.html">Contacto</a><a href="../../about.html">Nosotros</a><a href="../../pricing.html">Precios</a></div><div class="footer-copy">&#169; 2026 FilePresto. Todos los derechos reservados.</div></footer>
+<script src="https://unpkg.com/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+<script src="https://unpkg.com/pdf-lib@1.17.1/dist/pdf-lib.min.js"></script>
 <script>
-var uploadZone=document.getElementById('uploadZone');
-uploadZone.addEventListener('dragover',function(e){e.preventDefault();uploadZone.classList.add('dragover');});
-uploadZone.addEventListener('dragleave',function(){uploadZone.classList.remove('dragover');});
-uploadZone.addEventListener('drop',function(e){e.preventDefault();uploadZone.classList.remove('dragover');var f=e.dataTransfer.files[0];if(f)handleFile(f);});
-document.getElementById('fileInput').addEventListener('change',function(){if(this.files[0])handleFile(this.files[0]);});
-function handleFile(file){
-  var s=document.getElementById('status');s.className='status loading';s.style.display='flex';
-  document.getElementById('statusText').textContent='Procesando...';
-  setTimeout(function(){s.className='status error';document.getElementById('statusText').textContent='Conversión Excel a PDF: próximamente en el plan Pro.';},2000);
-}
+const dropZone=document.getElementById('dropZone');
+const fileInput=document.getElementById('fileInput');
+const fileNameEl=document.getElementById('fileName');
+const convertBtn=document.getElementById('convertBtn');
+const progressWrap=document.getElementById('progressWrap');
+const progressFill=document.getElementById('progressFill');
+const progressText=document.getElementById('progressText');
+const downloadBtn=document.getElementById('downloadBtn');
+let xlFile=null;
+dropZone.addEventListener('click',()=>fileInput.click());
+dropZone.addEventListener('dragover',e=>{e.preventDefault();dropZone.classList.add('dragover')});
+dropZone.addEventListener('dragleave',()=>dropZone.classList.remove('dragover'));
+dropZone.addEventListener('drop',e=>{e.preventDefault();dropZone.classList.remove('dragover');if(e.dataTransfer.files[0])setFile(e.dataTransfer.files[0])});
+fileInput.addEventListener('change',()=>{if(fileInput.files[0])setFile(fileInput.files[0])});
+function setFile(f){xlFile=f;fileNameEl.textContent=f.name+' ('+(f.size/1024).toFixed(1)+' KB)';convertBtn.disabled=false}
+convertBtn.addEventListener('click',async()=>{
+  if(!xlFile)return;
+  convertBtn.disabled=true;progressWrap.style.display='block';downloadBtn.style.display='none';
+  try{
+    progressText.textContent='Reading Excel file...';progressFill.style.width='20%';
+    const ab=await xlFile.arrayBuffer();
+    const wb=XLSX.read(ab,{type:'array'});
+    const ws=wb.Sheets[wb.SheetNames[0]];
+    const data=XLSX.utils.sheet_to_json(ws,{header:1,defval:''});
+    progressFill.style.width='40%';progressText.textContent='Generating PDF...';
+    const pdfDoc=await PDFLib.PDFDocument.create();
+    const font=await pdfDoc.embedFont(PDFLib.StandardFonts.Helvetica);
+    const boldFont=await pdfDoc.embedFont(PDFLib.StandardFonts.HelveticaBold);
+    const rowH=16,colW=90,margin=30,fontSize=8,pageW=595,pageH=842;
+    const usableCols=Math.floor((pageW-margin*2)/colW);
+    let page=pdfDoc.addPage([pageW,pageH]);let y=pageH-margin;
+    for(let r=0;r<data.length;r++){
+      if(y<margin+rowH){page=pdfDoc.addPage([pageW,pageH]);y=pageH-margin}
+      const row=data[r];const isHeader=r===0;
+      if(isHeader)page.drawRectangle({x:margin,y:y-rowH,width:pageW-margin*2,height:rowH,color:PDFLib.rgb(0.86,0.15,0.15)});
+      for(let c=0;c<Math.min(row.length,usableCols);c++){
+        const x=margin+c*colW;
+        page.drawText(String(row[c]||'').substring(0,12),{x:x+2,y:y-rowH+4,size:fontSize,font:isHeader?boldFont:font,color:isHeader?PDFLib.rgb(1,1,1):PDFLib.rgb(0,0,0),maxWidth:colW-4});
+        page.drawRectangle({x,y:y-rowH,width:colW,height:rowH,borderColor:PDFLib.rgb(0.8,0.8,0.8),borderWidth:0.5});
+      }
+      y-=rowH;
+    }
+    progressFill.style.width='90%';
+    const pdfBytes=await pdfDoc.save();
+    const blob=new Blob([pdfBytes],{type:'application/pdf'});
+    downloadBtn.href=URL.createObjectURL(blob);
+    downloadBtn.download=xlFile.name.replace(/\.xlsx?$|\.csv$/,'')+'.pdf';
+    downloadBtn.style.display='block';
+    progressFill.style.width='100%';progressText.textContent='PDF generated successfully';
+  }catch(e){progressText.textContent='Error: '+e.message;console.error(e)}
+  convertBtn.disabled=false;
+});
 </script>
 </body>
 </html>
