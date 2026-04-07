@@ -3,163 +3,170 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TXT to EPUB Converter - Convert Plain Text to eBook | FilePresto</title>
-<meta name="description" content="Convert TXT plain text files to EPUB eBook format online. Free TXT to EPUB converter with formatting options. No installation required.">
-<link rel="canonical" href="https://jaordenes.github.io/filepresto/tools/ebook/txt-to-epub.html">
-<link rel="alternate" hreflang="en" href="https://jaordenes.github.io/filepresto/tools/ebook/txt-to-epub.html">
-<link rel="alternate" hreflang="es" href="https://jaordenes.github.io/filepresto/es/tools/ebook/txt-to-epub.html">
-<link rel="alternate" hreflang="pt" href="https://jaordenes.github.io/filepresto/pt/tools/ebook/txt-to-epub.html">
-<link rel="alternate" hreflang="x-default" href="https://jaordenes.github.io/filepresto/tools/ebook/txt-to-epub.html">
+<title>TXT to EPUB - FilePresto</title>
+<meta name="description" content="Convert plain text TXT files to EPUB ebook format. Free, no registration.">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-:root{--primary:#6D28D9;--primary-dark:#5B21B6;--primary-light:#EDE9FE;--text:#1F2937;--text-light:#6B7280;--bg:#F9FAFB;--white:#FFFFFF;--border:#E5E7EB;--radius:12px;--shadow:0 4px 24px rgba(109,40,217,0.08)}
-body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;color:var(--text);background:var(--bg);line-height:1.6}
-a{color:inherit;text-decoration:none}
-nav{background:var(--white);border-bottom:1px solid var(--border);padding:0 24px;position:sticky;top:0;z-index:100}
-.nav-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:64px}
-.logo{font-size:1.4rem;font-weight:800;color:var(--primary)}
-.logo span{color:var(--text)}
-.nav-links{display:flex;gap:28px;align-items:center;font-size:.95rem;font-weight:500}
+:root{--primary:#8B5CF6;--primary-dark:#7C3AED;--bg:#f8f9fa;--text:#333}
+body{font-family:'Segoe UI',sans-serif;background:var(--bg);color:var(--text)}
+nav{background:#fff;box-shadow:0 2px 8px rgba(0,0,0,.1);padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between}
+.logo{font-size:1.5rem;font-weight:700;color:var(--primary);text-decoration:none}
+.nav-links a{margin-left:1rem;text-decoration:none;color:#555;font-size:.9rem}
 .nav-links a:hover{color:var(--primary)}
-.lang-switcher{display:flex;gap:8px;font-size:.85rem}
-.lang-switcher a{padding:4px 10px;border-radius:6px;border:1px solid var(--border);color:var(--text-light);transition:.2s}
-.lang-switcher a.active,.lang-switcher a:hover{background:var(--primary);color:#fff;border-color:var(--primary)}
-.breadcrumb{max-width:1200px;margin:0 auto;padding:16px 24px;font-size:.875rem;color:var(--text-light);display:flex;gap:8px;align-items:center}
-.breadcrumb a:hover{color:var(--primary)}
-.breadcrumb span{color:var(--border)}
-.hero{background:linear-gradient(135deg,var(--primary) 0%,#4C1D95 100%);color:#fff;padding:56px 24px;text-align:center}
-.hero h1{font-size:2.4rem;font-weight:800;margin-bottom:16px}
-.hero p{font-size:1.1rem;opacity:.9;max-width:600px;margin:0 auto 24px}
-.badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.3);padding:8px 20px;border-radius:999px;font-size:.9rem;backdrop-filter:blur(8px)}
-.container{max-width:1200px;margin:0 auto;padding:48px 24px}
-.tool-card{background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden;margin-bottom:32px}
-.tool-header{background:linear-gradient(135deg,var(--primary-light),#DDD6FE);padding:24px 32px;border-bottom:1px solid var(--border)}
-.tool-header h2{font-size:1.4rem;color:var(--primary);margin-bottom:4px}
-.tool-header p{color:var(--text-light);font-size:.95rem}
-.tool-body{padding:32px}
-.pro-feature{text-align:center;padding:48px 32px}
-.pro-icon{width:80px;height:80px;background:var(--primary-light);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 24px;font-size:2.5rem}
-.pro-feature h3{font-size:1.6rem;color:var(--text);margin-bottom:12px}
-.pro-feature p{color:var(--text-light);max-width:520px;margin:0 auto 32px;font-size:1rem}
-.feature-pills{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-bottom:32px}
-.pill{background:var(--primary-light);color:var(--primary);padding:8px 18px;border-radius:999px;font-size:.875rem;font-weight:500;display:flex;align-items:center;gap:6px}
-.btn-primary{display:inline-flex;align-items:center;gap:8px;background:var(--primary);color:#fff;padding:14px 32px;border-radius:10px;font-size:1rem;font-weight:600;transition:.2s;border:none;cursor:pointer}
-.btn-primary:hover{background:var(--primary-dark);transform:translateY(-1px)}
-.btn-secondary{display:inline-flex;align-items:center;gap:8px;background:transparent;color:var(--primary);padding:12px 28px;border-radius:10px;font-size:.95rem;font-weight:600;border:2px solid var(--primary);margin-left:12px;transition:.2s}
-.btn-secondary:hover{background:var(--primary-light)}
-.how-it-works{background:var(--white);border-radius:var(--radius);padding:40px;box-shadow:var(--shadow);margin-bottom:32px}
-.how-it-works h2{font-size:1.5rem;margin-bottom:28px;text-align:center}
-.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:24px}
-.step{text-align:center}
-.step-num{width:48px;height:48px;background:var(--primary);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.2rem;font-weight:700;margin:0 auto 12px}
-.step h4{font-size:1rem;margin-bottom:6px}
-.step p{font-size:.875rem;color:var(--text-light)}
-.faq{background:var(--white);border-radius:var(--radius);padding:40px;box-shadow:var(--shadow);margin-bottom:32px}
-.faq h2{font-size:1.5rem;margin-bottom:28px}
-.faq-item{border-bottom:1px solid var(--border);padding:20px 0}
-.faq-item:last-child{border-bottom:none}
-.faq-item h4{font-size:1rem;margin-bottom:8px;color:var(--text)}
-.faq-item p{font-size:.9rem;color:var(--text-light)}
-footer{background:#1F2937;color:#9CA3AF;padding:40px 24px;text-align:center;font-size:.875rem}
-.footer-inner{max-width:1200px;margin:0 auto}
-.footer-links{display:flex;justify-content:center;flex-wrap:wrap;gap:16px;margin-bottom:16px}
-.footer-links a:hover{color:#fff}
-@media(max-width:768px){.hero h1{font-size:1.7rem}.nav-links{gap:12px}.btn-secondary{margin-left:0;margin-top:12px}}
+.hero{background:linear-gradient(135deg,var(--primary),var(--primary-dark));color:#fff;padding:3rem 2rem;text-align:center}
+.hero h1{font-size:2.2rem;margin-bottom:.5rem}
+.hero p{font-size:1.1rem;opacity:.9}
+.container{max-width:800px;margin:2rem auto;padding:0 1rem}
+.card{background:#fff;border-radius:12px;box-shadow:0 4px 15px rgba(0,0,0,.08);padding:2rem;margin-bottom:1.5rem}
+.upload-area{border:2px dashed #ddd;border-radius:8px;padding:3rem 2rem;text-align:center;cursor:pointer;transition:all .3s}
+.upload-area:hover,.upload-area.dragover{border-color:var(--primary);background:#f5f3ff}
+.upload-area input{display:none}
+.upload-icon{font-size:3rem;margin-bottom:1rem}
+.options{margin:1rem 0}
+.options label{display:block;margin-bottom:.4rem;font-weight:600;font-size:.9rem}
+.options input{width:100%;padding:.6rem;border:1px solid #ddd;border-radius:6px}
+.convert-btn{background:var(--primary);color:#fff;border:none;padding:1rem 2rem;border-radius:8px;font-size:1.1rem;cursor:pointer;width:100%;margin-top:1rem;transition:background .3s}
+.convert-btn:hover:not(:disabled){background:var(--primary-dark)}
+.convert-btn:disabled{opacity:.5;cursor:not-allowed}
+.progress-wrap{margin:1rem 0;display:none}
+.progress-bar{height:8px;background:#e2e8f0;border-radius:4px;overflow:hidden}
+.progress-fill{height:100%;background:var(--primary);width:0;transition:width .3s}
+.progress-text{text-align:center;margin-top:.5rem;font-size:.9rem;color:#666}
+.download-btn{background:#27ae60;color:#fff;border:none;padding:1rem 2rem;border-radius:8px;font-size:1.1rem;cursor:pointer;width:100%;margin-top:1rem;display:none;text-decoration:none;text-align:center;transition:background .3s}
+.download-btn:hover{background:#219a52}
+.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem}
+.feature{text-align:center;padding:1.5rem}
+.feature-icon{font-size:2rem;margin-bottom:.5rem}
+footer{background:#333;color:#ccc;text-align:center;padding:2rem;margin-top:3rem}
+footer a{color:#ccc;text-decoration:none}
 </style>
 </head>
 <body>
 <nav>
-  <div class="nav-inner">
-    <a href="../../index.html" class="logo">File<span>Presto</span></a>
-    <div class="nav-links">
-      <a href="../../tools/images/index.html">Images</a>
-      <a href="../../tools/pdf/index.html">PDF</a>
-      <a href="../../tools/video/index.html">Video</a>
-      <a href="../../tools/audio/index.html">Audio</a>
-      <a href="index.html" style="color:var(--primary)">eBooks</a>
-      <a href="../../pricing.html">Pricing</a>
-    </div>
-    <div class="lang-switcher">
-      <a href="txt-to-epub.html" class="active">EN</a>
-      <a href="../../es/tools/ebook/txt-to-epub.html">ES</a>
-      <a href="../../pt/tools/ebook/txt-to-epub.html">PT</a>
-    </div>
+  <a href="/filepresto/" class="logo">FilePresto</a>
+  <div class="nav-links">
+    <a href="/filepresto/tools/ebook/txt-to-epub.html">EN</a>
+    <a href="/filepresto/es/tools/ebook/txt-to-epub.html">ES</a>
+    <a href="/filepresto/pt/tools/ebook/txt-to-epub.html">PT</a>
   </div>
 </nav>
-<div class="breadcrumb">
-  <a href="../../index.html">Home</a><span>/</span>
-  <a href="index.html">eBooks</a><span>/</span>
-  <span>TXT to EPUB</span>
+<div class="hero">
+  <h1>TXT to EPUB</h1>
+  <p>Convert plain text files to EPUB ebook format. Free and instant.</p>
 </div>
-<section class="hero">
-  <h1>TXT to EPUB Converter</h1>
-  <p>Convert plain text files into beautifully formatted EPUB eBooks. Preserve your content and make it readable on any e-reader.</p>
-  <div class="badge">&#128218; Pro Feature &mdash; High-Quality eBook Conversion</div>
-</section>
 <div class="container">
-  <div class="tool-card">
-    <div class="tool-header">
-      <h2>Convert TXT to EPUB</h2>
-      <p>Transform plain text into professional EPUB eBooks with chapter detection and formatting</p>
+  <div class="card">
+    <div class="upload-area" id="dropZone">
+      <input type="file" id="fileInput" accept=".txt">
+      <div class="upload-icon">📃</div>
+      <p><strong>Drop your TXT file here</strong></p>
+      <p style="color:#888;margin-top:.5rem">or click to select</p>
     </div>
-    <div class="tool-body">
-      <div class="pro-feature">
-        <div class="pro-icon">&#128218;</div>
-        <h3>Pro Feature &mdash; Coming Soon</h3>
-        <p>Our TXT to EPUB converter will intelligently detect chapters, apply proper formatting, and generate a complete EPUB file ready for any e-reader or publishing platform.</p>
-        <div class="feature-pills">
-          <div class="pill">&#10003; Chapter Detection</div>
-          <div class="pill">&#10003; Custom Metadata</div>
-          <div class="pill">&#10003; Cover Image Support</div>
-          <div class="pill">&#10003; Table of Contents</div>
-          <div class="pill">&#10003; Font &amp; Style Options</div>
-          <div class="pill">&#10003; Batch Conversion</div>
-        </div>
-        <a href="../../pricing.html" class="btn-primary">&#9889; Get Early Access</a>
-        <a href="index.html" class="btn-secondary">&#8592; Browse eBook Tools</a>
-      </div>
+    <p id="fileName" style="margin-top:.5rem;color:#555;text-align:center"></p>
+    <div class="options">
+      <label>Book Title</label>
+      <input type="text" id="bookTitle" placeholder="Enter book title">
     </div>
+    <div class="options">
+      <label>Author</label>
+      <input type="text" id="bookAuthor" placeholder="Enter author name">
+    </div>
+    <button class="convert-btn" id="convertBtn" disabled>Convert to EPUB</button>
+    <div class="progress-wrap" id="progressWrap">
+      <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+      <div class="progress-text" id="progressText">Processing...</div>
+    </div>
+    <a class="download-btn" id="downloadBtn">⬇️ Download EPUB</a>
   </div>
-  <div class="how-it-works">
-    <h2>How TXT to EPUB Conversion Works</h2>
-    <div class="steps">
-      <div class="step"><div class="step-num">1</div><h4>Upload TXT File</h4><p>Select your plain text file from your device or drag and drop it.</p></div>
-      <div class="step"><div class="step-num">2</div><h4>Configure Options</h4><p>Set title, author, cover image, and chapter detection preferences.</p></div>
-      <div class="step"><div class="step-num">3</div><h4>Convert</h4><p>Our engine processes your text and generates a properly formatted EPUB.</p></div>
-      <div class="step"><div class="step-num">4</div><h4>Download</h4><p>Get your EPUB file ready for Kindle, Kobo, Apple Books, and more.</p></div>
-    </div>
-  </div>
-  <div class="faq">
-    <h2>Frequently Asked Questions</h2>
-    <div class="faq-item">
-      <h4>What is an EPUB file?</h4>
-      <p>EPUB (Electronic Publication) is the most widely used open standard for eBooks. It is supported by most e-readers including Kobo, Apple Books, Google Play Books, and many others.</p>
-    </div>
-    <div class="faq-item">
-      <h4>Will my TXT formatting be preserved?</h4>
-      <p>Plain text files have minimal formatting, but our converter intelligently detects paragraph breaks, chapter headings, and structure to create a well-formatted eBook.</p>
-    </div>
-    <div class="faq-item">
-      <h4>Can I add a cover image?</h4>
-      <p>Yes, the Pro version allows you to upload a custom cover image that will be embedded in the EPUB file for a professional look.</p>
-    </div>
-    <div class="faq-item">
-      <h4>Is there a file size limit?</h4>
-      <p>The Pro plan supports TXT files up to 50 MB, suitable for even the longest manuscripts and novels.</p>
+  <div class="card">
+    <h2 style="margin-bottom:1rem">Features</h2>
+    <div class="features">
+      <div class="feature"><div class="feature-icon">🔒</div><h3>100% Private</h3><p>Everything processed in your browser</p></div>
+      <div class="feature"><div class="feature-icon">📚</div><h3>Customizable</h3><p>Add title and author metadata</p></div>
+      <div class="feature"><div class="feature-icon">⚡</div><h3>Fast</h3><p>Instant conversion</p></div>
     </div>
   </div>
 </div>
 <footer>
-  <div class="footer-inner">
-    <div class="footer-links">
-      <a href="../../about.html">About</a>
-      <a href="../../pricing.html">Pricing</a>
-      <a href="../../contact.html">Contact</a>
-      <a href="../../privacy.html">Privacy Policy</a>
-      <a href="../../terms.html">Terms of Service</a>
-    </div>
-    <p>&copy; 2025 FilePresto. All rights reserved.</p>
-  </div>
+  <p><a href="/filepresto/">FilePresto</a> &copy; 2024</p>
 </footer>
+<script>
+const dropZone=document.getElementById('dropZone');
+const fileInput=document.getElementById('fileInput');
+const fileNameEl=document.getElementById('fileName');
+const convertBtn=document.getElementById('convertBtn');
+const progressWrap=document.getElementById('progressWrap');
+const progressFill=document.getElementById('progressFill');
+const progressText=document.getElementById('progressText');
+const downloadBtn=document.getElementById('downloadBtn');
+let txtFile=null;
+dropZone.addEventListener('click',()=>fileInput.click());
+dropZone.addEventListener('dragover',e=>{e.preventDefault();dropZone.classList.add('dragover')});
+dropZone.addEventListener('dragleave',()=>dropZone.classList.remove('dragover'));
+dropZone.addEventListener('drop',e=>{e.preventDefault();dropZone.classList.remove('dragover');if(e.dataTransfer.files[0])setFile(e.dataTransfer.files[0])});
+fileInput.addEventListener('change',()=>{if(fileInput.files[0])setFile(fileInput.files[0])});
+function setFile(f){txtFile=f;fileNameEl.textContent=f.name+' ('+(f.size/1024).toFixed(1)+' KB)';convertBtn.disabled=false;const t=document.getElementById('bookTitle');if(!t.value)t.value=f.name.replace('.txt','')}
+function escXml(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')}
+function str2u8(s){return new TextEncoder().encode(s)}
+function crc32(buf){let c=0xFFFFFFFF;const t=new Uint32Array(256);for(let i=0;i<256;i++){let v=i;for(let j=0;j<8;j++)v=v&1?(v>>>1)^0xEDB88320:(v>>>1);t[i]=v}for(const b of buf)c=t[(c^b)&0xFF]^(c>>>8);return(c^0xFFFFFFFF)>>>0}
+function createZip(files){
+  const entries=[];let off=0;
+  for(const f of files){
+    const name=str2u8(f.name);const data=typeof f.content==='string'?str2u8(f.content):f.content;
+    const crc=crc32(data);const lh=new Uint8Array(30+name.length);const lv=new DataView(lh.buffer);
+    lv.setUint32(0,0x04034b50,true);lv.setUint16(4,20,true);for(let i=6;i<=12;i+=2)lv.setUint16(i,0,true);
+    lv.setUint32(14,crc,true);lv.setUint32(18,data.length,true);lv.setUint32(22,data.length,true);
+    lv.setUint16(26,name.length,true);lv.setUint16(28,0,true);lh.set(name,30);
+    entries.push({name,data,crc,lh,off});off+=lh.length+data.length;
+  }
+  const cds=[];let cdSz=0;
+  for(const e of entries){
+    const cd=new Uint8Array(46+e.name.length);const dv=new DataView(cd.buffer);
+    dv.setUint32(0,0x02014b50,true);dv.setUint16(4,20,true);dv.setUint16(6,20,true);
+    for(let i=8;i<=14;i+=2)dv.setUint16(i,0,true);dv.setUint32(16,e.crc,true);
+    dv.setUint32(20,e.data.length,true);dv.setUint32(24,e.data.length,true);
+    dv.setUint16(28,e.name.length,true);for(let i=30;i<=40;i+=2)dv.setUint16(i,0,true);
+    dv.setUint32(42,e.off,true);cd.set(e.name,46);cds.push(cd);cdSz+=cd.length;
+  }
+  const eocd=new Uint8Array(22);const ev=new DataView(eocd.buffer);
+  ev.setUint32(0,0x06054b50,true);ev.setUint16(8,entries.length,true);ev.setUint16(10,entries.length,true);
+  ev.setUint32(12,cdSz,true);ev.setUint32(16,off,true);
+  const parts=[...entries.flatMap(e=>[e.lh,e.data]),...cds,eocd];
+  const tot=parts.reduce((s,p)=>s+p.length,0);const out=new Uint8Array(tot);let pos=0;
+  for(const p of parts){out.set(p,pos);pos+=p.length}return out;
+}
+convertBtn.addEventListener('click',async()=>{
+  if(!txtFile)return;
+  convertBtn.disabled=true;progressWrap.style.display='block';downloadBtn.style.display='none';
+  try{
+    progressFill.style.width='25%';progressText.textContent='Reading TXT...';
+    const text=await txtFile.text();
+    const title=document.getElementById('bookTitle').value||txtFile.name.replace('.txt','');
+    const author=document.getElementById('bookAuthor').value||'Unknown Author';
+    progressFill.style.width='55%';progressText.textContent='Creating EPUB...';
+    const paragraphs=text.split(/
+{2,}/).filter(p=>p.trim());
+    let bodyHtml=paragraphs.map(p=>'<p>'+escXml(p.replace(/
+/g,' ').trim())+'</p>').join('
+');
+    const contentHtml='<?xml version="1.0" encoding="utf-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>'+escXml(title)+'</title><style>body{font-family:serif;line-height:1.8;margin:2em 3em}p{margin-bottom:1em;text-indent:1.5em}h1{text-align:center;margin-bottom:1.5em}</style></head><body><h1>'+escXml(title)+'</h1>'+bodyHtml+'</body></html>';
+    const contentOpf='<?xml version="1.0" encoding="utf-8"?><package xmlns="http://www.idpf.org/2007/opf" version="2.0" unique-identifier="uid"><metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf"><dc:title>'+escXml(title)+'</dc:title><dc:creator opf:role="aut">'+escXml(author)+'</dc:creator><dc:language>en</dc:language><dc:identifier id="uid">filepresto-epub</dc:identifier></metadata><manifest><item id="content" href="content.html" media-type="application/xhtml+xml"/><item id="ncx" href="toc.ncx" media-type="application/x-dtbncx+xml"/></manifest><spine toc="ncx"><itemref idref="content"/></spine></package>';
+    const tocNcx='<?xml version="1.0" encoding="utf-8"?><!DOCTYPE ncx PUBLIC "-//NISO//DTD ncx 2005-1//EN" "http://www.daisy.org/z3986/2005/ncx-2005-1.dtd"><ncx xmlns="http://www.daisy.org/z3986/2005/ncx/" version="2005-1"><head><meta name="dtb:uid" content="filepresto-epub"/></head><docTitle><text>'+escXml(title)+'</text></docTitle><navMap><navPoint id="np1" playOrder="1"><navLabel><text>Start</text></navLabel><content src="content.html"/></navPoint></navMap></ncx>';
+    const epub=createZip([
+      {name:'mimetype',content:'application/epub+zip'},
+      {name:'META-INF/container.xml',content:'<?xml version="1.0"?><container version="1.0" xmlns="urn:oasis:names:tc:opendocument:xmlns:container"><rootfiles><rootfile full-path="OEBPS/content.opf" media-type="application/oebps-package+xml"/></rootfiles></container>'},
+      {name:'OEBPS/content.opf',content:contentOpf},
+      {name:'OEBPS/content.html',content:contentHtml},
+      {name:'OEBPS/toc.ncx',content:tocNcx}
+    ]);
+    const blob=new Blob([epub],{type:'application/epub+zip'});
+    downloadBtn.href=URL.createObjectURL(blob);
+    downloadBtn.download=title+'.epub';
+    downloadBtn.style.display='block';
+    progressFill.style.width='100%';progressText.textContent='EPUB created successfully';
+  }catch(e){progressText.textContent='Error: '+e.message;console.error(e)}
+  convertBtn.disabled=false;
+});
+</script>
 </body>
 </html>
