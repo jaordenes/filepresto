@@ -1,362 +1,219 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PDF to JPG Converter - Convert PDF Pages to JPEG Images Online | FilePresto</title>
-<meta name="description" content="Convert PDF pages to high-quality JPG images online for free. Extract all pages or specific pages as JPEG. Fast PDF to JPG converter. No installation required.">
-<link rel="canonical" href="https://jaordenes.github.io/filepresto/tools/pdf/pdf-to-jpg.html">
-<link rel="alternate" hreflang="en" href="https://jaordenes.github.io/filepresto/tools/pdf/pdf-to-jpg.html">
-<link rel="alternate" hreflang="es" href="https://jaordenes.github.io/filepresto/es/tools/pdf/pdf-to-jpg.html">
-<link rel="alternate" hreflang="pt" href="https://jaordenes.github.io/filepresto/pt/tools/pdf/pdf-to-jpg.html">
-<link rel="alternate" hreflang="x-default" href="https://jaordenes.github.io/filepresto/tools/pdf/pdf-to-jpg.html">
-<style>
-*{margin:0;padding:0;box-sizing:border-box}
-:root{--primary:#DC2626;--primary-dark:#B91C1C;--primary-light:#FEE2E2;--text:#1F2937;--text-light:#6B7280;--bg:#F9FAFB;--white:#FFFFFF;--border:#E5E7EB;--radius:12px;--shadow:0 4px 24px rgba(220,38,38,0.08)}
-body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;color:var(--text);background:var(--bg);line-height:1.6}
-a{color:inherit;text-decoration:none}
-nav{background:var(--white);border-bottom:1px solid var(--border);padding:0 24px;position:sticky;top:0;z-index:100}
-.nav-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:64px}
-.logo{font-size:1.4rem;font-weight:800;color:var(--primary)}
-.logo span{color:var(--text)}
-.nav-links{display:flex;gap:28px;align-items:center;font-size:.95rem;font-weight:500}
-.nav-links a:hover{color:var(--primary)}
-.lang-switcher{display:flex;gap:8px;font-size:.85rem}
-.lang-switcher a{padding:4px 10px;border-radius:6px;border:1px solid var(--border);color:var(--text-light);transition:.2s}
-.lang-switcher a.active,.lang-switcher a:hover{background:var(--primary);color:#fff;border-color:var(--primary)}
-.breadcrumb{max-width:1200px;margin:0 auto;padding:16px 24px;font-size:.875rem;color:var(--text-light);display:flex;gap:8px;align-items:center}
-.breadcrumb a:hover{color:var(--primary)}
-.breadcrumb span{color:var(--border)}
-.hero{background:linear-gradient(135deg,var(--primary) 0%,#7F1D1D 100%);color:#fff;padding:56px 24px;text-align:center}
-.hero h1{font-size:2.4rem;font-weight:800;margin-bottom:16px}
-.hero p{font-size:1.1rem;opacity:.9;max-width:600px;margin:0 auto 24px}
-.badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.3);padding:8px 20px;border-radius:999px;font-size:.9rem;backdrop-filter:blur(8px)}
-.container{max-width:1200px;margin:0 auto;padding:48px 24px}
-.tool-card{background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden;margin-bottom:32px}
-.tool-header{background:linear-gradient(135deg,var(--primary-light),#FECACA);padding:24px 32px;border-bottom:1px solid var(--border)}
-.tool-header h2{font-size:1.4rem;color:var(--primary);margin-bottom:4px}
-.tool-header p{color:var(--text-light);font-size:.95rem}
-.tool-body{padding:32px}
-.coming-soon{text-align:center;padding:48px 32px}
-.cs-icon{width:80px;height:80px;background:var(--primary-light);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 24px;font-size:2.5rem}
-.coming-soon h3{font-size:1.6rem;color:var(--text);margin-bottom:12px}
-.coming-soon p{color:var(--text-light);max-width:520px;margin:0 auto 32px;font-size:1rem}
-.feature-pills{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-bottom:32px}
-.pill{background:var(--primary-light);color:var(--primary);padding:8px 18px;border-radius:999px;font-size:.875rem;font-weight:500;display:flex;align-items:center;gap:6px}
-.btn-primary{display:inline-flex;align-items:center;gap:8px;background:var(--primary);color:#fff;padding:14px 32px;border-radius:10px;font-size:1rem;font-weight:600;transition:.2s}
-.btn-primary:hover{background:var(--primary-dark);transform:translateY(-1px)}
-.btn-secondary{display:inline-flex;align-items:center;gap:8px;background:transparent;color:var(--primary);padding:12px 28px;border-radius:10px;font-size:.95rem;font-weight:600;border:2px solid var(--primary);margin-left:12px;transition:.2s}
-.btn-secondary:hover{background:var(--primary-light)}
-.how-it-works{background:var(--white);border-radius:var(--radius);padding:40px;box-shadow:var(--shadow);margin-bottom:32px}
-.how-it-works h2{font-size:1.5rem;margin-bottom:28px;text-align:center}
-.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:24px}
-.step{text-align:center}
-.step-num{width:48px;height:48px;background:var(--primary);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.2rem;font-weight:700;margin:0 auto 12px}
-.step h4{font-size:1rem;margin-bottom:6px}
-.step p{font-size:.875rem;color:var(--text-light)}
-.faq{background:var(--white);border-radius:var(--radius);padding:40px;box-shadow:var(--shadow);margin-bottom:32px}
-.faq h2{font-size:1.5rem;margin-bottom:28px}
-.faq-item{border-bottom:1px solid var(--border);padding:20px 0}
-.faq-item:last-child{border-bottom:none}
-.faq-item h4{font-size:1rem;margin-bottom:8px;color:var(--text)}
-.faq-item p{font-size:.9rem;color:var(--text-light)}
-footer{background:#1F2937;color:#9CA3AF;padding:40px 24px;text-align:center;font-size:.875rem}
-.footer-inner{max-width:1200px;margin:0 auto}
-.footer-links{display:flex;justify-content:center;flex-wrap:wrap;gap:16px;margin-bottom:16px}
-.footer-links a:hover{color:#fff}
-@media(max-width:768px){.hero h1{font-size:1.7rem}.nav-links{gap:12px}.btn-secondary{margin-left:0;margin-top:12px}}
-</style>
-</head>
-<body>
-<nav>
-  <div class="nav-inner">
-    <a href="../../index.html" class="logo">File<span>Presto</span></a>
-    <div class="nav-links">
-      <a href="../../tools/images/index.html">Images</a>
-      <a href="index.html" style="color:var(--primary)">PDF</a>
-      <a href="../../tools/video/index.html">Video</a>
-      <a href="../../tools/audio/index.html">Audio</a>
-      <a href="../../tools/ebook/index.html">eBooks</a>
-      <a href="../../pricing.html">Pricing</a>
-    </div>
-    <div class="lang-switcher">
-      <a href="pdf-to-jpg.html" class="active">EN</a>
-      <a href="../../es/tools/pdf/pdf-to-jpg.html">ES</a>
-      <a href="../../pt/tools/pdf/pdf-to-jpg.html">PT</a>
-    </div>
-  </div>
-</nav>
-<div class="breadcrumb">
-  <a href="../../index.html">Home</a><span>/</span>
-  <a href="index.html">PDF</a><span>/</span>
-  <span>PDF to JPG</span>
-</div>
-<section class="hero">
-  <h1>PDF to JPG Converter</h1>
-  <p>Convert PDF pages to high-quality JPG images instantly. Extract all pages or specific pages as individual JPEG files.</p>
-  <div class="badge">&#128196; Free PDF Tool</div>
-</section>
-<div class="container">
-  <div class="tool-card">
-    <div class="tool-header">
-      <h2>Convert PDF to JPG</h2>
-      <p>Extract PDF pages as high-resolution JPG images with adjustable quality settings</p>
-    </div>
-    <div class="tool-body">
-      <div class="coming-soon">
-        <div class="cs-icon">&#128196;</div>
-        <h3>Coming Soon</h3>
-        <p>Our PDF to JPG converter will let you extract all pages or specific pages from any PDF as high-quality JPEG images, perfect for presentations, social media, and web use.</p>
-        <div class="feature-pills">
-          <div class="pill">&#10003; All Pages or Specific Range</div>
-          <div class="pill">&#10003; Adjustable DPI Resolution</div>
-          <div class="pill">&#10003; JPEG Quality Control</div>
-          <div class="pill">&#10003; ZIP Download</div>
-          <div class="pill">&#10003; Fast Processing</div>
-          <div class="pill">&#10003; No File Size Limit</div>
-        </div>
-        <a href="../../pricing.html" class="btn-primary">&#9889; Get Early Access</a>
-        <a href="index.html" class="btn-secondary">&#8592; Browse PDF Tools</a>
-      </div>
-    </div>
-  </div>
-  <div class="how-it-works">
-    <h2>How PDF to JPG Conversion Works</h2>
-    <div class="steps">
-      <div class="step"><div class="step-num">1</div><h4>Upload PDF</h4><p>Select your PDF file from your device or drag and drop it onto the tool.</p></div>
-      <div class="step"><div class="step-num">2</div><h4>Select Pages</h4><p>Choose all pages or enter a specific page range to convert.</p></div>
-      <div class="step"><div class="step-num">3</div><h4>Set Quality</h4><p>Choose output resolution (72, 150, 300 DPI) and JPEG quality level.</p></div>
-      <div class="step"><div class="step-num">4</div><h4>Download Images</h4><p>Download individual JPG files or a ZIP archive with all pages.</p></div>
-    </div>
-  </div>
-  <div class="faq">
-    <h2>Frequently Asked Questions</h2>
-    <div class="faq-item">
-      <h4>What resolution will the output images be?</h4>
-      <p>You can choose from 72 DPI (web quality), 150 DPI (standard quality), or 300 DPI (print quality). Higher DPI produces sharper images but larger file sizes.</p>
-    </div>
-    <div class="faq-item">
-      <h4>Can I convert specific pages only?</h4>
-      <p>Yes, you can specify a page range (e.g., pages 1-5) or select individual pages to convert instead of processing the entire document.</p>
-    </div>
-    <div class="faq-item">
-      <h4>Will text in the PDF remain readable?</h4>
-      <p>At 150 DPI or higher, text remains clear and readable in the output JPG images. For documents with small text, we recommend using 300 DPI.</p>
-    </div>
-    <div class="faq-item">
-      <h4>How do I download multiple pages?</h4>
-      <p>When converting multiple pages, all images are automatically packaged in a ZIP file for easy download. You can also download individual pages separately.</p>
-    </div>
-  </div>
-</div>
-<footer>
-  <div class="footer-inner">
-    <div class="footer-links">
-      <a href="../../about.html">About</a>
-      <a href="../../pricing.html">Pricing</a>
-      <a href="../../contact.html">Contact</a>
-      <a href="../../privacy.html">Privacy Policy</a>
-      <a href="../../terms.html">Terms of Service</a>
-    </div>
-    <p>&copy; 2025 FilePresto. All rights reserved.</p>
-  </div>
-</footer>
-</body>
-</html><!DOCTYPE html>
-<html lang="es">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PDF a JPG - Convertir PDF a Imagen Gratis | FilePresto</title>
-<meta name="description" content="Convierte páginas de un PDF a imágenes JPG gratis. Sin registro, directo en tu navegador.">
-<style>
-*{margin:0;padding:0;box-sizing:border-box}
-:root{--primary:#2563EB;--accent:#7C3AED;--bg:#F8FAFC;--white:#FFFFFF;--text:#0F172A;--text-muted:#64748B;--border:#E2E8F0;--radius:12px;--pdf:#DC2626}
-body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);min-height:100vh}
-header{background:var(--white);border-bottom:1px solid var(--border);padding:0 24px;height:64px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;box-shadow:0 1px 3px rgba(0,0,0,.06)}
-.logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--text)}
-.logo-icon{width:36px;height:36px;background:linear-gradient(135deg,var(--primary),var(--accent));border-radius:8px;display:flex;align-items:center;justify-content:center;color:white;font-size:18px}
-.logo-text{font-size:20px;font-weight:700}
-nav{display:flex;gap:24px;align-items:center}
-nav a{text-decoration:none;color:var(--text-muted);font-size:14px;font-weight:500}
-nav a:hover{color:var(--primary)}
-.btn-nav{background:var(--primary);color:white!important;padding:8px 18px;border-radius:8px;font-size:14px;font-weight:600;text-decoration:none}
-main{max-width:800px;margin:0 auto;padding:40px 24px}
-.breadcrumb{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--text-muted);margin-bottom:32px}
-.breadcrumb a{color:var(--text-muted);text-decoration:none}.breadcrumb a:hover{color:var(--primary)}.breadcrumb span{color:var(--text)}
-.page-title{font-size:36px;font-weight:800;margin-bottom:12px;background:linear-gradient(135deg,var(--pdf),var(--accent));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.page-desc{font-size:16px;color:var(--text-muted);margin-bottom:40px}
-.upload-zone{border:2px dashed var(--border);border-radius:var(--radius);padding:60px 40px;text-align:center;cursor:pointer;transition:all .3s;background:var(--white)}
-.upload-zone:hover,.upload-zone.dragover{border-color:var(--pdf);background:#FEF2F2}
-.upload-icon{font-size:48px;margin-bottom:16px}
-.upload-title{font-size:18px;font-weight:600;margin-bottom:8px}
-.upload-subtitle{font-size:14px;color:var(--text-muted)}
-.upload-btn{display:inline-block;margin-top:20px;background:var(--pdf);color:white;padding:12px 28px;border-radius:8px;font-weight:600;cursor:pointer}
-#fileInput{display:none}
-.options-panel{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:24px;margin-top:24px;display:none}
-.options-panel.show{display:block}
-.options-panel h3{font-size:16px;font-weight:600;margin-bottom:16px}
-.pdf-info{background:#FEF2F2;border-radius:8px;padding:12px 16px;font-size:13px;color:var(--pdf);margin-bottom:20px}
-.scale-options{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:16px}
-.scale-btn{padding:10px 20px;border:2px solid var(--border);border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;background:var(--white);color:var(--text)}
-.scale-btn.active{border-color:var(--pdf);background:#FEF2F2;color:var(--pdf)}
-.convert-btn{width:100%;background:var(--pdf);color:white;border:none;padding:14px;border-radius:10px;font-size:16px;font-weight:700;cursor:pointer}
-.status{margin-top:24px;padding:16px;border-radius:var(--radius);display:none;align-items:center;gap:12px}
-.status.loading{display:flex;background:#FEF2F2;color:var(--pdf)}
-.status.error{display:flex;background:#FEF2F2;color:var(--pdf)}
-.spinner{width:20px;height:20px;border:2px solid currentColor;border-top-color:transparent;border-radius:50%;animation:spin .8s linear infinite;flex-shrink:0}
-@keyframes spin{to{transform:rotate(360deg)}}
-.result{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:32px;margin-top:24px;display:none}
-.result.show{display:block}
-.pages-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:16px;margin-bottom:20px}
-.page-card{text-align:center;background:var(--bg);border-radius:8px;padding:12px;border:1px solid var(--border)}
-.page-card img{max-width:100%;border-radius:4px;box-shadow:0 2px 8px rgba(0,0,0,.1);margin-bottom:8px}
-.page-card a{display:inline-block;background:var(--pdf);color:white;padding:6px 14px;border-radius:6px;font-size:12px;font-weight:600;text-decoration:none}
-.reset-btn{display:inline-block;margin-top:12px;color:var(--text-muted);font-size:14px;cursor:pointer;text-decoration:underline;background:none;border:none}
-.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:16px;margin-top:48px}
-.feature-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:20px;text-align:center}
-.feature-icon{font-size:28px;margin-bottom:8px}
-.feature-title{font-size:14px;font-weight:600;margin-bottom:4px}
-.feature-desc{font-size:12px;color:var(--text-muted)}
-footer{background:var(--white);border-top:1px solid var(--border);padding:32px 24px;text-align:center;margin-top:80px}
-.footer-links{display:flex;justify-content:center;gap:24px;margin-bottom:12px;flex-wrap:wrap}
-.footer-links a{color:var(--text-muted);text-decoration:none;font-size:13px}.footer-links a:hover{color:var(--primary)}
-.footer-copy{font-size:12px;color:var(--text-muted)}
-</style>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
-</head>
-<body>
-<header>
-<a href="../../index.html" class="logo">
-<div class="logo-icon">&#128206;</div>
-<span class="logo-text">FilePresto</span>
-</a>
-<nav>
-<a href="../../index.html">Inicio</a>
-<a href="index.html">PDF</a>
-<a href="../../pricing.html">Precios</a>
-<a href="../../about.html">Nosotros</a>
-<a href="../../contact.html" class="btn-nav">Contacto</a>
-</nav>
-</header>
-<main>
-<div class="breadcrumb">
-<a href="../../index.html">Inicio</a><span>&#8250;</span>
-<a href="index.html">PDF</a><span>&#8250;</span>
-<span>PDF a JPG</span>
-</div>
-<h1 class="page-title">PDF a JPG</h1>
-<p class="page-desc">Convierte cada página de tu PDF en una imagen JPG de alta calidad. Descarga todas las páginas como imágenes individuales. Procesamiento 100% local.</p>
-<div class="upload-zone" id="uploadZone">
-<div class="upload-icon">&#128196;</div>
-<div class="upload-title">Arrastra tu PDF aquí</div>
-<div class="upload-subtitle">o haz clic para seleccionar</div>
-<label class="upload-btn" for="fileInput">Seleccionar PDF</label>
-<input type="file" id="fileInput" accept=".pdf,application/pdf">
-</div>
-<div class="options-panel" id="optionsPanel">
-<h3>Opciones de conversión</h3>
-<div class="pdf-info" id="pdfInfo">PDF cargado</div>
-<div style="font-size:13px;font-weight:600;color:var(--text-muted);margin-bottom:8px">Calidad / escala:</div>
-<div class="scale-options">
-<button class="scale-btn" onclick="setScale(1,this)">Normal (1x)</button>
-<button class="scale-btn active" onclick="setScale(2,this)">HD (2x)</button>
-<button class="scale-btn" onclick="setScale(3,this)">Full HD (3x)</button>
-</div>
-<button class="convert-btn" onclick="convertToJPG()">&#128247; Convertir a JPG</button>
-</div>
-<div class="status" id="status"><div class="spinner"></div><span id="statusText">Convirtiendo páginas...</span></div>
-<div class="result" id="result">
-<h3 style="font-size:16px;font-weight:600;margin-bottom:16px">Páginas convertidas:</h3>
-<div class="pages-grid" id="pagesGrid"></div>
-<button class="reset-btn" onclick="resetTool()">&#8635; Convertir otro PDF</button>
-</div>
-<div class="features">
-<div class="feature-card"><div class="feature-icon">&#128196;</div><div class="feature-title">Cada página</div><div class="feature-desc">Una imagen por página</div></div>
-<div class="feature-card"><div class="feature-icon">&#128274;</div><div class="feature-title">Privado</div><div class="feature-desc">Sin subida a servidores</div></div>
-<div class="feature-card"><div class="feature-icon">&#127873;</div><div class="feature-title">Gratis</div><div class="feature-desc">Sin límites ni registro</div></div>
-<div class="feature-card"><div class="feature-icon">&#9889;</div><div class="feature-title">Alta Calidad</div><div class="feature-desc">Resolución hasta 3x</div></div>
-</div>
-</main>
-<footer>
-<div class="footer-links">
-<a href="../../privacy.html">Privacidad</a><a href="../../terms.html">Términos</a>
-<a href="../../contact.html">Contacto</a><a href="../../about.html">Nosotros</a><a href="../../pricing.html">Precios</a>
-</div>
-<div class="footer-copy">&#169; 2026 FilePresto. Todos los derechos reservados.</div>
-</footer>
-<script>
-pdfjsLib.GlobalWorkerOptions.workerSrc='https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
-var currentScale=2;var loadedFile=null;
-function setScale(s,btn){
-  currentScale=s;
-  document.querySelectorAll('.scale-btn').forEach(function(b){b.classList.remove('active');});
-  btn.classList.add('active');
-}
-var uploadZone=document.getElementById('uploadZone');
-var fileInput=document.getElementById('fileInput');
-uploadZone.addEventListener('dragover',function(e){e.preventDefault();uploadZone.classList.add('dragover');});
-uploadZone.addEventListener('dragleave',function(){uploadZone.classList.remove('dragover');});
-uploadZone.addEventListener('drop',function(e){e.preventDefault();uploadZone.classList.remove('dragover');var f=e.dataTransfer.files[0];if(f)loadPDF(f);});
-fileInput.addEventListener('change',function(){if(this.files[0])loadPDF(this.files[0]);});
-function loadPDF(file){
-  if(!file.type.includes('pdf')&&!file.name.endsWith('.pdf'))return;
-  loadedFile=file;
-  var reader=new FileReader();
-  reader.onload=function(e){
-    pdfjsLib.getDocument({data:e.target.result}).promise.then(function(pdf){
-      document.getElementById('pdfInfo').textContent=file.name+' — '+pdf.numPages+' página(s)';
-      document.getElementById('optionsPanel').classList.add('show');
-      loadedFile._pdfData=e.target.result;
-    });
-  };
-  reader.readAsArrayBuffer(file);
-}
-function convertToJPG(){
-  if(!loadedFile||!loadedFile._pdfData)return;
-  showStatus('loading','Convirtiendo páginas del PDF...');
-  pdfjsLib.getDocument({data:loadedFile._pdfData}).promise.then(function(pdf){
-    var baseName=loadedFile.name.replace(/\.pdf$/i,'');
-    var promises=[];
-    for(var i=1;i<=pdf.numPages;i++){
-      promises.push((function(pageNum){
-        return pdf.getPage(pageNum).then(function(page){
-          var vp=page.getViewport({scale:currentScale});
-          var canvas=document.createElement('canvas');
-          canvas.width=vp.width;canvas.height=vp.height;
-          var ctx=canvas.getContext('2d');
-          ctx.fillStyle='#FFFFFF';ctx.fillRect(0,0,vp.width,vp.height);
-          return page.render({canvasContext:ctx,viewport:vp}).promise.then(function(){
-            return {dataURL:canvas.toDataURL('image/jpeg',0.92),name:baseName+'-pagina-'+pageNum+'.jpg'};
-          });
-        });
-      })(i));
-    }
-    return Promise.all(promises);
-  }).then(function(pages){
-    var grid=document.getElementById('pagesGrid');
-    grid.innerHTML='';
-    pages.forEach(function(p){
-      var div=document.createElement('div');div.className='page-card';
-      div.innerHTML='<img src="'+p.dataURL+'" alt="'+p.name+'"><br><a href="'+p.dataURL+'" download="'+p.name+'">&#11123; Descargar</a>';
-      grid.appendChild(div);
-    });
-    document.getElementById('status').style.display='none';
-    document.getElementById('result').classList.add('show');
-  }).catch(function(err){showStatus('error','Error: '+err.message);});
-}
-function showStatus(type,msg){
-  var s=document.getElementById('status');
-  s.className='status '+type;s.style.display='flex';
-  document.getElementById('statusText').textContent=msg;
-}
-function resetTool(){
-  loadedFile=null;
-  document.getElementById('result').classList.remove('show');
-  document.getElementById('optionsPanel').classList.remove('show');
-  document.getElementById('status').style.display='none';
-  document.getElementById('fileInput').value='';
-}
-</script>
-</body>
-</html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF to JPG – Free Online Converter | FilePresto</title>
+  <meta name="description" content="Convert PDF pages to JPG images online for free. Download each page as a high-quality JPEG instantly in your browser.">
+  <link rel="canonical" href="https://jaordenes.github.io/filepresto/tools/pdf/pdf-to-jpg.html">
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    :root{--primary:#16A34A;--primary-dark:#15803D;--primary-light:#DCFCE7;--text:#1F2937;--text-light:#6B7280;--bg:#F9FAFB;--white:#FFFFFF;--border:#E5E7EB}
+    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;color:var(--text);background:var(--bg);line-height:1.6}
+    a{color:inherit;text-decoration:none}
+    nav{background:var(--white);border-bottom:1px solid var(--border);padding:0 24px;position:sticky;top:0;z-index:100}
+    .nav-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:64px}
+    .logo{font-size:1.4rem;font-weight:800;color:var(--primary)}
+    .logo span{color:var(--text)}
+    .nav-links{display:flex;gap:28px;align-items:center;font-size:.95rem;font-weight:500}
+    .nav-links a:hover{color:var(--primary)}
+    .lang-switcher{display:flex;gap:8px;font-size:.85rem}
+    .lang-switcher a{padding:4px 10px;border-radius:6px;border:1px solid var(--border);color:var(--text-light);transition:.2s}
+    .lang-switcher a.active,.lang-switcher a:hover{background:var(--primary);color:#fff;border-color:var(--primary)}
+    .breadcrumb{max-width:1200px;margin:0 auto;padding:16px 24px;font-size:.875rem;color:var(--text-light);display:flex;gap:8px;align-items:center}
+    .breadcrumb a:hover{color:var(--primary)}
+    .breadcrumb span{color:var(--border)}
+    .hero{background:linear-gradient(135deg,var(--primary) 0%,#14532D 100%);color:#fff;padding:56px 24px;text-align:center}
+    .hero h1{font-size:2.5rem;font-weight:800;margin-bottom:16px}
+    .hero h1 em{font-style:normal;color:#86EFAC}
+    .hero p{font-size:1.1rem;opacity:.9;max-width:600px;margin:0 auto}
+    .converter-section{max-width:760px;margin:0 auto;padding:48px 24px}
+    .converter-box{background:var(--white);border-radius:16px;padding:40px;box-shadow:0 4px 24px rgba(0,0,0,.08)}
+    .upload-area{border:2px dashed var(--border);border-radius:12px;padding:48px 24px;text-align:center;cursor:pointer;transition:.2s;margin-bottom:24px}
+    .upload-area:hover,.upload-area.dragover{border-color:var(--primary);background:var(--primary-light)}
+    .upload-icon{font-size:3rem;margin-bottom:12px}
+    .upload-area h3{font-size:1.1rem;font-weight:600;margin-bottom:8px}
+    .upload-area p{color:var(--text-light);font-size:.9rem}
+    #fileInput{display:none}
+    .file-info{background:var(--bg);border-radius:8px;padding:12px 16px;margin-bottom:20px;font-size:.9rem;display:none}
+    .file-info strong{color:var(--primary)}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:14px 32px;border-radius:10px;font-size:1rem;font-weight:600;cursor:pointer;border:none;transition:.2s}
+    .btn-primary{background:var(--primary);color:#fff;width:100%;justify-content:center}
+    .btn-primary:hover:not(:disabled){background:var(--primary-dark)}
+    .btn-primary:disabled{opacity:.5;cursor:not-allowed}
+    .progress-wrap{margin:20px 0;display:none}
+    .progress-bar{height:8px;background:var(--border);border-radius:4px;overflow:hidden}
+    .progress-fill{height:100%;background:var(--primary);border-radius:4px;transition:width .3s;width:0%}
+    .status{margin-top:10px;font-size:.9rem;color:var(--text-light);text-align:center}
+    .results{margin-top:24px;display:none}
+    .results-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}
+    .results-title{font-size:1rem;font-weight:600}
+    .btn-zip{background:var(--primary);color:#fff;border:none;padding:8px 18px;border-radius:8px;cursor:pointer;font-size:.9rem;font-weight:600}
+    .pages-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:16px}
+    .page-card{background:var(--bg);border-radius:10px;overflow:hidden;border:1px solid var(--border)}
+    .page-card img{width:100%;display:block}
+    .page-card-footer{padding:10px;display:flex;align-items:center;justify-content:space-between;font-size:.8rem;color:var(--text-light)}
+    .btn-dl-page{background:var(--primary);color:#fff;border:none;padding:4px 10px;border-radius:6px;cursor:pointer;font-size:.8rem;font-weight:600}
+    .features{max-width:1200px;margin:0 auto;padding:48px 24px}
+    .features h2{font-size:1.75rem;font-weight:700;text-align:center;margin-bottom:32px}
+    .features-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px}
+    .feature-card{background:var(--white);border-radius:12px;padding:28px;box-shadow:0 2px 12px rgba(0,0,0,.05)}
+    .feature-icon{font-size:2rem;margin-bottom:12px}
+    .feature-card h3{font-weight:600;margin-bottom:8px}
+    .feature-card p{color:var(--text-light);font-size:.9rem}
+    footer{background:var(--text);color:#9CA3AF;padding:48px 24px 24px}
+    .footer-inner{max-width:1200px;margin:0 auto}
+    .footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:32px;margin-bottom:32px}
+    .footer-col h4{color:#fff;font-weight:600;margin-bottom:12px}
+    .footer-col a{display:block;margin-bottom:8px;font-size:.9rem;transition:.2s}
+    .footer-col a:hover{color:#fff}
+    .footer-bottom{border-top:1px solid #374151;padding-top:24px;text-align:center;font-size:.85rem}
+    </style>
+  </head>
+  <body>
+    <nav>
+        <div class="nav-inner">
+              <a href="../../index.html" class="logo">⚡ File<span>Presto</span></a>a>
+            <div class="nav-links">
+                  <a href="index.html" style="color:var(--primary)">PDF</a>a>
+                  <a href="../images/index.html">Images</a>a>
+                  <a href="../audio/index.html">Audio</a>a>
+                  <a href="../video/index.html">Video</a>a>
+                  <a href="../documents/index.html">Documents</a>a>
+            </div>div>
+            <div class="lang-switcher">
+                  <a href="pdf-to-jpg.html" class="active">EN</a>a>
+                  <a href="../../es/tools/pdf/pdf-to-jpg.html">ES</a>a>
+                  <a href="../../pt/tools/pdf/pdf-to-jpg.html">PT</a>a>
+            </div>div>
+        </div>div>
+    </nav>
+  <div class="breadcrumb">
+    <a href="../../index.html">Home</a>a><span>›</span>
+    <a href="index.html">PDF Tools</a>a><span>›</span>
+    <span>PDF to JPG</span>
+  </div>div>
+  <section class="hero">
+    <h1>PDF to <em>JPG</em> Converter</h1>
+    <p>Convert each PDF page to a high-quality JPG image instantly in your browser. Download individually or all at once as a ZIP.</p>
+  </section>section>
+  <section class="converter-section">
+    <div class="converter-box">
+        <div class="upload-area" id="uploadArea">
+              <div class="upload-icon">📄</div>div>
+              <h3>Drop your PDF file here</h3>
+              <p>or click to browse</p>
+              <input type="file" id="fileInput" accept=".pdf,application/pdf">
+        </div>div>
+        <div class="file-info" id="fileInfo">Selected: <strong id="fileName"></strong>strong></div>div>
+        <button class="btn btn-primary" id="convertBtn" disabled>Convert to JPG</button>button>
+        <div class="progress-wrap" id="progressWrap">
+              <div class="progress-bar"><div class="progress-fill" id="progressFill"></div>div></div>div>
+              <div class="status" id="statusMsg">Converting…</div>div>
+        </div>div>
+        <div class="results" id="results">
+              <div class="results-header">
+                      <span class="results-title" id="resultsTitle"></span>
+                      <button class="btn-zip" id="zipBtn">⬇ Download All as ZIP</button>button>
+              </div>div>
+              <div class="pages-grid" id="pagesGrid"></div>div>
+        </div>div>
+    </div>div>
+  </section>section>
+  <section class="features">
+    <h2>Why Use FilePresto?</h2>
+    <div class="features-grid">
+        <div class="feature-card"><div class="feature-icon">🔒</div>div><h3>100% Private</h3><p>Your files never leave your device. All conversion happens locally in your browser.</p></div>div>
+        <div class="feature-card"><div class="feature-icon">🖼️</div>div><h3>High Quality</h3><p>Each PDF page is rendered at 150 DPI as a high-quality JPEG image.</p></div>div>
+        <div class="feature-card"><div class="feature-icon">⚡</div>div><h3>Instant Results</h3><p>Powered by pdf.js, conversion happens directly in your browser.</p></div>div>
+        <div class="feature-card"><div class="feature-icon">🆓</div>div><h3>Always Free</h3><p>No subscriptions, no sign-up, no limits. Convert as many PDFs as you need.</p></div>div>
+    </div>div>
+  </section>section>
+  <footer>
+      <div class="footer-inner">
+            <div class="footer-grid">
+                    <div class="footer-col"><h4>⚡ FilePresto</h4><p style="font-size:.9rem">Free online file conversion tools. Fast, private, no sign-up required.</p></div>div>
+                    <div class="footer-col"><h4>PDF Tools</h4><a href="index.html">All PDF Tools</a>a><a href="pdf-to-image.html">PDF to Image</a>a><a href="jpg-to-pdf.html">JPG to PDF</a>a></div>div>
+                    <div class="footer-col"><h4>Video Tools</h4><a href="../video/index.html">All Video Tools</a>a><a href="../video/mp4-to-mp3.html">MP4 to MP3</a>a></div>div>
+                    <div class="footer-col"><h4>Company</h4><a href="../../about.html">About</a>a><a href="../../privacy.html">Privacy Policy</a>a><a href="../../terms.html">Terms</a>a></div>div>
+            </div>div>
+            <div class="footer-bottom">© 2025 FilePresto. All rights reserved.</div>div>
+      </div>div>
+  </footer>
+    <script src="https://unpkg.com/pdfjs-dist@3.11.174/build/pdf.min.js"></script>
+    <script src="https://unpkg.com/jszip@3.10.1/dist/jszip.min.js"></script>
+    <script>
+      pdfjsLib.GlobalWorkerOptions.workerSrc='https://unpkg.com/pdfjs-dist@3.11.174/build/pdf.worker.min.js';
+      const uploadArea=document.getElementById('uploadArea');
+      const fileInput=document.getElementById('fileInput');
+      const fileInfo=document.getElementById('fileInfo');
+      const fileNameEl=document.getElementById('fileName');
+      const convertBtn=document.getElementById('convertBtn');
+      const progressWrap=document.getElementById('progressWrap');
+      const progressFill=document.getElementById('progressFill');
+      const statusMsg=document.getElementById('statusMsg');
+      const results=document.getElementById('results');
+      const resultsTitle=document.getElementById('resultsTitle');
+      const pagesGrid=document.getElementById('pagesGrid');
+      const zipBtn=document.getElementById('zipBtn');
+      let selectedFile=null,pageBlobs=[];
+      uploadArea.addEventListener('click',()=>fileInput.click());
+      uploadArea.addEventListener('dragover',e=>{e.preventDefault();uploadArea.classList.add('dragover')});
+      uploadArea.addEventListener('dragleave',()=>uploadArea.classList.remove('dragover'));
+      uploadArea.addEventListener('drop',e=>{e.preventDefault();uploadArea.classList.remove('dragover');const f=e.dataTransfer.files[0];if(f&&f.type==='application/pdf')setFile(f)});
+      fileInput.addEventListener('change',()=>{if(fileInput.files[0])setFile(fileInput.files[0])});
+      function setFile(f){selectedFile=f;fileNameEl.textContent=f.name;fileInfo.style.display='block';convertBtn.disabled=false;results.style.display='none';pageBlobs=[]}
+      convertBtn.addEventListener('click',async()=>{
+          if(!selectedFile)return;
+          convertBtn.disabled=true;
+          progressWrap.style.display='block';
+          results.style.display='none';
+          pagesGrid.innerHTML='';
+          pageBlobs=[];
+          setProgress(5,'Loading PDF…');
+          try{
+                const arrayBuffer=await selectedFile.arrayBuffer();
+                const pdf=await pdfjsLib.getDocument({data:arrayBuffer}).promise;
+                const total=pdf.numPages;
+                for(let i=1;i<=total;i++){
+                        setProgress(Math.round((i/total)*90),'Rendering page '+i+' of '+total+'…');
+                        const page=await pdf.getPage(i);
+                        const viewport=page.getViewport({scale:1.5});
+                        const canvas=document.createElement('canvas');
+                        canvas.width=viewport.width;canvas.height=viewport.height;
+                        const ctx=canvas.getContext('2d');
+                        await page.render({canvasContext:ctx,viewport}).promise;
+                        const blob=await new Promise(res=>canvas.toBlob(res,'image/jpeg',0.92));
+                        const url=URL.createObjectURL(blob);
+                        pageBlobs.push({name:'page_'+i+'.jpg',blob,url});
+                        const card=document.createElement('div');
+                        card.className='page-card';
+                        card.innerHTML='<img src="'+url+'" alt="Page '+i+'"><div class="page-card-footer"><span>Page '+i+'</span><a class="btn-dl-page" href="'+url+'" download="page_'+i+'.jpg">JPG</a></div>';
+                        pagesGrid.appendChild(card);
+                }
+                setProgress(100,'Done! '+total+' JPG image'+(total!==1?'s':'')+' ready.');
+                resultsTitle.textContent=total+' page'+(total!==1?'s':'')+' converted:';
+                results.style.display='block';
+                convertBtn.disabled=false;
+          }catch(e){setProgress(0,'Error: '+e.message);convertBtn.disabled=false}
+      });
+      zipBtn.addEventListener('click',async()=>{
+          if(pageBlobs.length===0)return;
+          zipBtn.textContent='Creating ZIP…';
+          const zip=new JSZip();
+          for(const p of pageBlobs){const ab=await p.blob.arrayBuffer();zip.file(p.name,ab)}
+          const content=await zip.generateAsync({type:'blob'});
+          const url=URL.createObjectURL(content);
+          const a=document.createElement('a');a.href=url;a.download='pdf_pages.zip';a.click();
+          zipBtn.textContent='⬇ Download All as ZIP';
+      });
+      function setProgress(pct,msg){progressFill.style.width=pct+'%';statusMsg.textContent=msg}
+    </script>
+  </body>
+</html>html>
+    </script>
+  </footer></p></p></em></h1></span></span>
+    </nav>
+  </body>
+  </style></title>
+  </head>
