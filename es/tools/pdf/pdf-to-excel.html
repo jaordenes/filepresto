@@ -56,25 +56,25 @@ footer a{color:#ccc;text-decoration:none}
   <div class="card">
     <div class="upload-area" id="dropZone">
       <input type="file" id="fileInput" accept="application/pdf">
-      <div class="upload-icon">📑</div>
-      <p><strong>Arrastra tu PDF aquí</strong></p>
+      <div class="upload-icon">ð</div>
+      <p><strong>Arrastra tu PDF aquÃ­</strong></p>
       <p style="color:#888;margin-top:.5rem">o haz clic para seleccionar</p>
     </div>
     <p id="fileName" style="margin-top:.5rem;color:#555;text-align:center"></p>
-    <div class="info-box">💡 Esta herramienta extrae el texto del PDF organizado por líneas y lo exporta en formato CSV, compatible con Excel, LibreOffice y Google Sheets.</div>
+    <div class="info-box">ð¡ Esta herramienta extrae el texto del PDF organizado por lÃ­neas y lo exporta en formato CSV, compatible con Excel, LibreOffice y Google Sheets.</div>
     <button class="convert-btn" id="convertBtn" disabled>Extraer a CSV</button>
     <div class="progress-wrap" id="progressWrap">
       <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
       <div class="progress-text" id="progressText">Procesando...</div>
     </div>
-    <a class="download-btn" id="downloadBtn">⬇️ Descargar CSV (Excel)</a>
+    <a class="download-btn" id="downloadBtn">â¬ï¸ Descargar CSV (Excel)</a>
   </div>
   <div class="card">
-    <h2 style="margin-bottom:1rem">Características</h2>
+    <h2 style="margin-bottom:1rem">CaracterÃ­sticas</h2>
     <div class="features">
-      <div class="feature"><div class="feature-icon">🔒</div><h3>100% Privado</h3><p>Todo se procesa en tu navegador</p></div>
-      <div class="feature"><div class="feature-icon">📊</div><h3>Compatible Excel</h3><p>Abre el CSV en Excel directamente</p></div>
-      <div class="feature"><div class="feature-icon">⚡</div><h3>Rápido</h3><p>Extracción instantánea</p></div>
+      <div class="feature"><div class="feature-icon">ð</div><h3>100% Privado</h3><p>Todo se procesa en tu navegador</p></div>
+      <div class="feature"><div class="feature-icon">ð</div><h3>Compatible Excel</h3><p>Abre el CSV en Excel directamente</p></div>
+      <div class="feature"><div class="feature-icon">â¡</div><h3>RÃ¡pido</h3><p>ExtracciÃ³n instantÃ¡nea</p></div>
     </div>
   </div>
 </div>
@@ -111,10 +111,10 @@ convertBtn.addEventListener('click',async()=>{
     const pdf=await pdfjsLib.getDocument({data:ab}).promise;
     const total=pdf.numPages;
     const rows=[];
-    rows.push(['Página','Línea','Texto']);
+    rows.push(['PÃ¡gina','LÃ­nea','Texto']);
     for(let i=1;i<=total;i++){
       progressFill.style.width=((i/total)*90)+'%';
-      progressText.textContent=`Procesando página ${i} de ${total}...`;
+      progressText.textContent=`Procesando pÃ¡gina ${i} de ${total}...`;
       const page=await pdf.getPage(i);
       const tc=await page.getTextContent();
       let lineNum=1;
@@ -134,12 +134,12 @@ convertBtn.addEventListener('click',async()=>{
     }
     const csv=rows.map(r=>r.map(escCsv).join(',')).join('
 ');
-    const blob=new Blob(['﻿'+csv],{type:'text/csv;charset=utf-8'});
+    const blob=new Blob(['ï»¿'+csv],{type:'text/csv;charset=utf-8'});
     downloadBtn.href=URL.createObjectURL(blob);
     downloadBtn.download=pdfFile.name.replace('.pdf','.csv');
     downloadBtn.style.display='block';
     progressFill.style.width='100%';
-    progressText.textContent=`Exportado: ${rows.length-1} líneas de texto`;
+    progressText.textContent=`Exportado: ${rows.length-1} lÃ­neas de texto`;
   }catch(e){progressText.textContent='Error: '+e.message;console.error(e)}
   convertBtn.disabled=false;
 });
