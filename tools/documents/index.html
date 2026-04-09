@@ -1,227 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Document Converter – Free Online Tools | FilePresto</title>
-<meta name="description" content="Free online document converter. Convert Word, Excel, PowerPoint and more. No sign-up required. Fast and secure."/>
-<link rel="alternate" hreflang="en" href="https://jaordenes.github.io/filepresto/tools/documents/index.html"/>
-<link rel="alternate" hreflang="es" href="https://jaordenes.github.io/filepresto/es/tools/documents/index.html"/>
-<link rel="alternate" hreflang="pt" href="https://jaordenes.github.io/filepresto/pt/tools/documents/index.html"/>
-<style>
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:'Segoe UI',sans-serif;background:#F8FAFC;color:#0F172A}
-a{text-decoration:none;color:inherit}
-nav{background:#fff;border-bottom:1px solid #E2E8F0;padding:0 24px;height:64px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}
-.nav-logo{font-size:1.4rem;font-weight:800;color:#2563EB}
+<meta name="description" content="Free online document converters. Convert Word, Excel, PowerPoint and other formats instantly. No installation required.">
+<style>nav{background:#fff;border-bottom:1px solid #E2E8F0;padding:0 24px;height:64px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}
+.nav-logo{font-size:1.4rem;font-weight:800;color:#2563EB;text-decoration:none}
 .nav-links{display:flex;gap:24px;align-items:center;font-size:.95rem}
-.nav-links a{color:#64748B;font-weight:500}
-.nav-links a:hover{color:#6D28D9}
-.nav-links a.active{color:#6D28D9;font-weight:700}
+.nav-links a{color:#64748B;font-weight:500;text-decoration:none}
+.nav-links a:hover,.nav-links a.active{color:#2563EB}
 .lang-switcher{display:flex;gap:6px;align-items:center;font-size:.85rem;border-left:1px solid #E2E8F0;padding-left:16px;margin-left:8px}
-.lang-switcher a{color:#64748B;font-weight:600;padding:2px 6px;border-radius:4px}
-.lang-switcher a.active{background:#6D28D9;color:#fff}
-.btn-pro{background:#2563EB;color:#fff!important;padding:8px 18px;border-radius:8px;font-weight:600;font-size:.9rem}
-.hero{background:linear-gradient(135deg,#F5F3FF,#F8FAFC);padding:56px 24px 40px;text-align:center}
-.hero-icon{font-size:3rem;margin-bottom:16px}
-.hero h1{font-size:2.2rem;font-weight:800;margin-bottom:12px}
-.hero h1 span{color:#6D28D9}
-.hero p{color:#64748B;font-size:1rem;max-width:540px;margin:0 auto}
-.breadcrumb{padding:14px 24px;font-size:.85rem;color:#64748B;max-width:1100px;margin:0 auto}
-.breadcrumb a{color:#6D28D9}
-.tools-section{padding:40px 24px 60px;max-width:1100px;margin:0 auto}
-.tools-section h2{font-size:1.4rem;font-weight:700;margin-bottom:24px}
-.tools-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px}
-.tool-card{background:#fff;border:1px solid #E2E8F0;border-radius:14px;padding:24px;transition:.2s;display:flex;flex-direction:column;gap:10px}
-.tool-card:hover{transform:translateY(-3px);box-shadow:0 6px 24px rgba(109,40,217,.1);border-color:#DDD6FE}
-.tool-icon{font-size:1.8rem}
-.tool-card h3{font-size:1rem;font-weight:700}
-.tool-card p{font-size:.85rem;color:#64748B;line-height:1.5;flex:1}
-.tool-badge{display:inline-block;background:#F5F3FF;color:#6D28D9;padding:3px 10px;border-radius:6px;font-size:.75rem;font-weight:700;align-self:flex-start}
-.tool-badge.soon{background:#F1F5F9;color:#64748B}
-.coming-soon{background:#F8FAFC;border:2px dashed #E2E8F0;border-radius:16px;padding:40px;text-align:center;margin-top:32px}
-.coming-soon h3{font-size:1.2rem;font-weight:700;margin-bottom:8px;color:#475569}
-.coming-soon p{color:#64748B;font-size:.9rem}
-.info-box{background:#F5F3FF;border-radius:16px;padding:32px;margin-top:40px;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:20px}
-.info-item{text-align:center}
-.info-num{font-size:1.8rem;font-weight:800;color:#6D28D9}
-.info-label{font-size:.85rem;color:#475569;margin-top:4px}
-footer{background:#0F172A;color:#94A3B8;padding:48px 24px 24px;margin-top:40px}
-.footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:32px;max-width:1100px;margin:0 auto 32px}
-.footer-col h4{color:#F1F5F9;font-weight:700;margin-bottom:12px;font-size:.95rem}
-.footer-col a{display:block;margin-bottom:8px;color:#94A3B8;font-size:.88rem}
-.footer-col a:hover{color:#fff}
-.footer-bottom{text-align:center;border-top:1px solid #1E293B;padding-top:20px;font-size:.82rem}
-</style>
-</head>
-<body>
-<nav>
-  <a href="../../index.html" class="nav-logo">⚡ FilePresto</a>
-  <div class="nav-links">
-    <a href="../images/index.html">Images</a>
-    <a href="../pdf/index.html">PDF</a>
-    <a href="../video/index.html">Video</a>
-    <a href="../audio/index.html">Audio</a>
-    <a href="../ebook/index.html">eBooks</a>
-    <a href="index.html" class="active">Documents</a>
-    <a href="../../pricing.html">Pricing</a>
-    <div class="lang-switcher">
-      <a href="index.html" class="active">EN</a>
-      <a href="../../es/tools/documents/index.html">ES</a>
-      <a href="../../pt/tools/documents/index.html">PT</a>
-    </div>
-    <a href="../../pricing.html" class="btn-pro">Pro</a>
-  </div>
-</nav>
-
-<div class="breadcrumb"><a href="../../index.html">Home</a> › Document Converter</div>
-
-<section class="hero">
-  <div class="hero-icon">📝</div>
-  <h1>Free <span>Document Converter</span></h1>
-  <p>Convert Word, Excel, PowerPoint and other document formats. No installation or sign-up required.</p>
-</section>
-
-<div class="tools-section">
-  <h2>Available Tools</h2>
-  <div class="tools-grid">
-    <a href="../pdf/word-to-pdf.html" class="tool-card">
-      <div class="tool-icon">📄</div>
-      <h3>Word to PDF</h3>
-      <p>Convert Word DOCX documents to PDF format easily.</p>
-      <span class="tool-badge">FREE</span>
-    </a>
-    <a href="../pdf/pdf-to-word.html" class="tool-card">
-      <div class="tool-icon">📝</div>
-      <h3>PDF to Word</h3>
-      <p>Convert PDF documents to editable Word DOCX files.</p>
-      <span class="tool-badge">FREE</span>
-    </a>
-    <a href="../ebook/docx-to-epub.html" class="tool-card">
-      <div class="tool-icon">📚</div>
-      <h3>DOCX to EPUB</h3>
-      <p>Convert Word documents to EPUB eBook format.</p>
-      <span class="tool-badge">FREE</span>
-    </a>
-  </div>
-
-  <div class="coming-soon">
-    <h3>🚀 More Tools Coming Soon</h3>
-    <p>We're working on XLSX to CSV, PPTX to PDF, ODT to DOCX and many more document converters. <a href="../../contact.html" style="color:#6D28D9;font-weight:600">Let us know</a> which format you need most!</p>
-  </div>
-
-  <div class="info-box">
-    <div class="info-item"><div class="info-num">3+</div><div class="info-label">Document Tools</div></div>
-    <div class="info-item"><div class="info-num">100%</div><div class="info-label">Free & No Sign-up</div></div>
-    <div class="info-item"><div class="info-num">🔒</div><div class="info-label">Files stay on device</div></div>
-    <div class="info-item"><div class="info-num">🚀</div><div class="info-label">More Coming Soon</div></div>
-  </div>
-</div>
-
-<footer>
-  <div class="footer-grid">
-    <div class="footer-col">
-      <h4>⚡ FilePresto</h4>
-      <p style="font-size:.85rem;line-height:1.5">Free online file converter. Fast, secure and no sign-up required.</p>
-    </div>
-    <div class="footer-col">
-      <h4>Tools</h4>
-      <a href="../images/index.html">Image Converter</a>
-      <a href="../pdf/index.html">PDF Tools</a>
-      <a href="../video/index.html">Video Converter</a>
-      <a href="../audio/index.html">Audio Converter</a>
-      <a href="../ebook/index.html">eBook Converter</a>
-      <a href="index.html">Document Converter</a>
-    </div>
-    <div class="footer-col">
-      <h4>Company</h4>
-      <a href="../../about.html">About</a>
-      <a href="../../pricing.html">Pricing</a>
-      <a href="../../contact.html">Contact</a>
-    </div>
-    <div class="footer-col">
-      <h4>Legal</h4>
-      <a href="../../privacy.html">Privacy Policy</a>
-      <a href="../../terms.html">Terms of Service</a>
-    </div>
-  </div>
-  <div class="footer-bottom">© 2025 FilePresto. All rights reserved.</div>
-</footer>
-</body>
-</html><!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Herramientas de Documentos - Word, Excel a PDF y más | FilePresto</title><meta name="description" content="Convierte documentos Word, Excel y PowerPoint a PDF y viceversa. Herramientas de documentos online gratis y seguras."><style>*{margin:0;padding:0;box-sizing:border-box}:root{--primary:#6D28D9;--primary-dark:#5B21B6;--primary-light:#EDE9FE;--bg:#F5F3FF;--white:#FFFFFF;--text:#0F172A;--text-muted:#64748B;--border:#E2E8F0;--radius:12px}body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg);color:var(--text)}nav{background:var(--white);border-bottom:1px solid var(--border);padding:0 24px;position:sticky;top:0;z-index:100;box-shadow:0 1px 3px rgba(0,0,0,.06)}.nav-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:60px}.nav-links{display:flex;gap:20px;list-style:none}.nav-links a{text-decoration:none;color:var(--text-muted);font-size:.9rem;font-weight:500}.nav-links a:hover,.nav-links a.active{color:var(--primary)}.btn-nav{background:#2563EB;color:#fff !important;padding:8px 18px;border-radius:8px;font-size:.85rem !important}.hero{background:linear-gradient(135deg,#4C1D95 0%,#6D28D9 60%,#7C3AED 100%);color:#fff;padding:56px 24px 48px;text-align:center}.hero-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.25);border-radius:20px;padding:6px 14px;font-size:.8rem;font-weight:600;margin-bottom:20px}.hero h1{font-size:2.5rem;font-weight:800;margin-bottom:14px;line-height:1.2}.hero p{font-size:1.1rem;opacity:.88;max-width:580px;margin:0 auto 28px;line-height:1.6}.hero-stats{display:flex;justify-content:center;gap:40px;flex-wrap:wrap}.hero-stats .stat .num{font-size:1.6rem;font-weight:800}.hero-stats .stat .lbl{font-size:.8rem;opacity:.75;margin-top:2px}.breadcrumb{max-width:1100px;margin:20px auto 0;padding:0 24px;display:flex;align-items:center;gap:8px;font-size:.85rem;color:var(--text-muted)}.breadcrumb a{color:#2563EB;text-decoration:none;font-weight:500}.tools-section{max-width:1100px;margin:32px auto 48px;padding:0 24px}.section-.section-title{font-size:1.4rem;font-weight:700}.section-count{background:var(--primary-light);color:var(--primary);font-size:.8rem;font-weight:600;padding:4px 12px;border-radius:20px}.tools-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px}.tool-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:24px;text-decoration:none;color:var(--text);transition:all .2s;position:relative;overflow:hidden}.tool-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--primary);transform:scaleX(0);transform-origin:left;transition:transform .25s}.tool-card:hover{border-color:var(--primary);box-shadow:0 4px 20px rgba(109,40,217,.12);transform:translateY(-2px)}.tool-card:hover::before{transform:scaleX(1)}.tool-icon{width:52px;height:52px;border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:14px;font-size:1.5rem;background:var(--primary-light);color:var(--primary)}.tool-card h3{font-size:1rem;font-weight:700;margin-bottom:6px}.tool-card p{font-size:.85rem;color:var(--text-muted);line-height:1.5}.tool-badge{display:inline-block;margin-top:10px;font-size:.72rem;font-weight:600;padding:3px 8px;border-radius:6px}.badge-pro{background:#FEF3C7;color:#D97706}.features-section{max-width:1100px;margin:0 auto 56px;padding:0 24px}.features-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}.feature-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:22px;text-align:center}.feature-icon{font-size:1.8rem;margin-bottom:10px}.feature-card h4{font-size:.9rem;font-weight:700;margin-bottom:6px}.feature-card p{font-size:.8rem;color:var(--text-muted);line-height:1.45}footer{background:var(--text);color:rgba(255,255,255,.7);padding:40px 24px 24px}.footer-inner{max-width:1100px;margin:0 auto}.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px;margin-bottom:32px}.footer-brand p{font-size:.85rem;line-height:1.6;margin-top:8px;max-width:260px}.footer-col h5{font-size:.85rem;font-weight:700;color:#fff;margin-bottom:12px}.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:8px}.footer-col ul li a{color:rgba(255,255,255,.6);text-decoration:none;font-size:.82rem}.footer-col ul li a:hover{color:#fff}.footer-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:20px;display:flex;justify-content:space-between;align-items:center;font-size:.8rem}@media(max-width:768px){.hero h1{font-size:1.8rem}.tools-grid{grid-template-columns:1fr 1fr}.features-grid{grid-template-columns:1fr 1fr}.footer-grid{grid-template-columns:1fr 1fr}.nav-links{display:none}}</style></head><body>
-<nav><div class="nav-inner"><a href="../../index.html" class="logo"><span class="logo-icon">F</span>FilePresto</a><ul class="nav-links"><li><a href="../../index.html">Inicio</a></li><li><a href="../images/index.html">Imágenes</a></li><li><a href="../pdf/index.html">PDF</a></li><li><a href="../video/index.html">Video</a></li><li><a href="../audio/index.html">Audio</a></li><li><a href="../ebook/index.html">eBooks</a></li><li><a href="index.html" class="active">Documentos</a></li><li><a href="../../pricing.html" class="btn-nav">Pro Plan</a></li></ul></div></nav>
-<div class="breadcrumb"><a href="../../index.html">Inicio</a><span>›</span><span style="color:var(--primary);font-weight:600">Documentos</span></div>
-<div class="hero"><div class="hero-badge">📑 Herramientas de Documentos</div><h1>Convierte Word, Excel y más a PDF</h1><p>Transforma documentos de Office a PDF y viceversa. Word, Excel, PowerPoint: convierte entre los formatos más usados del mundo.</p><div class="hero-stats"><div class="stat"><div class="num">4</div><div class="lbl">Herramientas</div></div><div class="stat"><div class="num">Pro</div><div class="lbl">Plan requerido</div></div><div class="stat"><div class="num">0</div><div class="lbl">Instalaciones</div></div></div></div>
-<div class="tools-section">
-  <div class="section-header"><h2 class="section-title">Conversores de Documentos</h2><span class="section-count">4 herramientas</span></div>
-  <div class="tools-grid">
-    <a href="../pdf/word-to-pdf.html" class="tool-card"><div class="tool-icon">📝→📄</div><h3>Word a PDF</h3><p>Convierte documentos Word (DOCX) a PDF con el formato, fuentes e imágenes perfectamente preservados.</p><span class="tool-badge badge-pro">✨ Pro</span></a>
-    <a href="../pdf/pdf-to-word.html" class="tool-card"><div class="tool-icon">📄→📝</div><h3>PDF a Word</h3><p>Convierte PDF a documento Word (DOCX) editable manteniendo el diseño y estructura.</p><span class="tool-badge badge-pro">✨ Pro</span></a>
-    <a href="../pdf/excel-to-pdf.html" class="tool-card"><div class="tool-icon">📊→📄</div><h3>Excel a PDF</h3><p>Convierte hojas de cálculo Excel (XLSX) a PDF con tablas y fórmulas intactas.</p><span class="tool-badge badge-pro">✨ Pro</span></a>
-    <a href="../pdf/pdf-to-excel.html" class="tool-card"><div class="tool-icon">📄→📊</div><h3>PDF a Excel</h3><p>Extrae tablas de archivos PDF y conviértelas en hojas de cálculo Excel editables.</p><span class="tool-badge badge-pro">✨ Pro</span></a>
-  </div>
-</div>
-<div class="features-section"><div class="features-grid"><div class="feature-card"><div class="feature-icon">🔒</div><h4>Procesamiento Seguro</h4><p>Tus documentos se procesan en servidores seguros y se eliminan inmediatamente tras la conversión.</p></div><div class="feature-card"><div class="feature-icon">🎨</div><h4>Formato Preservado</h4><p>Fuentes, imágenes, tablas y estilos se mantienen durante la conversión.</p></div><div class="feature-card"><div class="feature-icon">⚡</div><h4>Conversión Rápida</h4><p>Documentos de hasta 100 páginas convertidos en pocos segundos.</p></div><div class="feature-card"><div class="feature-icon">💻</div><h4>Sin Instalación</h4><p>No necesitas Microsoft Office ni ningún software de documentos instalado.</p></div></div></div>
-<footer><div class="footer-inner"><div class="footer-grid"><div class="footer-brand"><div style="font-size:1.2rem;font-weight:700;color:#fff">📑 FilePresto — Documentos</div><p>Convierte entre Word, Excel, PDF y todos los formatos de documento más usados.</p></div><div class="footer-col"><h5>Categorías</h5><ul><li><a href="../images/index.html">Imágenes</a></li><li><a href="../pdf/index.html">PDF</a></li><li><a href="../video/index.html">Video</a></li><li><a href="../audio/index.html">Audio</a></li><li><a href="../ebook/index.html">eBooks</a></li></ul></div><div class="footer-col"><h5>Empresa</h5><ul><li><a href="../../pricing.html">Plan Pro</a></li><li><a href="../../about.html">Nosotros</a></li><li><a href="../../contact.html">Contacto</a></li></ul></div><div class="footer-col"><h5>Legal</h5><ul><li><a href="../../privacy.html">Privacidad</a></li><li><a href="../../terms.html">Términos</a></li></ul></div></div><div class="footer-bottom"><span>© 2026 FilePresto. Todos los derechos reservados.</span><span>Hecho con ❤️ para trabajadores de oficina</span></div></div></footer>
-</body></html><!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<meta name="description" content="Free online document converter. Convert Word, Excel, PowerPoint to PDF and more."/>
-<title>Document Converter Tools - FilePresto</title>
-<style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{--primary:#2563EB;--accent:#7C3AED;--bg:#F8FAFC;--white:#FFFFFF;--text:#0F172A;--text-muted:#64748B;--border:#E2E8F0;--radius:12px;--shadow:0 4px 24px rgba(37,99,235,.08);--shadow-hover:0 8px 32px rgba(37,99,235,.18)}
-body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}a{text-decoration:none;color:inherit}
-
-
-
-
-.logo 
-nav{display:flex;gap:4px}nav a{padding:8px 14px;border-radius:8px;font-size:.9rem;font-weight:500;color:var(--text-muted);transition:all .2s}nav a:hover,nav a.active{background:var(--bg);color:var(--primary)}
-
-.page-hero{background:linear-gradient(135deg,#F5F3FF,#EDE9FE);padding:48px 24px 40px;text-align:center}
-.badge{display:inline-flex;background:#DDD6FE;color:#6D28D9;padding:5px 14px;border-radius:999px;font-size:.8rem;font-weight:700;margin-bottom:14px;text-transform:uppercase}
-.page-hero h1{font-size:clamp(1.6rem,4vw,2.4rem);font-weight:900;color:var(--text);margin-bottom:10px}
-.page-hero p{color:var(--text-muted);max-width:500px;margin:0 auto}
-.container{max-width:1200px;margin:0 auto;padding:48px 24px}
-.section-title{font-size:1.4rem;font-weight:800;color:var(--text);margin-bottom:6px}.section-sub{color:var(--text-muted);margin-bottom:28px}
-.tools-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px}
-.tool-card{background:var(--white);border:1.5px solid var(--border);border-radius:var(--radius);padding:20px;display:flex;align-items:center;gap:14px;transition:all .2s;box-shadow:var(--shadow)}
-.tool-card:hover{border-color:var(--primary);box-shadow:var(--shadow-hover);transform:translateY(-2px)}
-.t-icon{width:44px;height:44px;flex-shrink:0;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:.7rem;font-weight:800;color:#6D28D9;background:#F5F3FF}
-.tool-card h4{font-size:.9rem;font-weight:700;margin-bottom:2px}.tool-card p{font-size:.78rem;color:var(--text-muted)}
-.tool-arrow{margin-left:auto;color:var(--text-muted);transition:all .2s}.tool-card:hover .tool-arrow{color:var(--primary);transform:translateX(3px)}
-.breadcrumb{font-size:.85rem;color:var(--text-muted);margin-bottom:28px}.breadcrumb a{color:var(--primary)}.breadcrumb span{margin:0 6px}
-footer{background:#0F172A;color:#94A3B8;padding:40px 24px 24px;margin-top:80px}
-.footer-inner{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;font-size:.85rem}
-.footer-inner a{color:#94A3B8}.footer-inner a:hover{color:white}
-@media(max-width:768px){nav{display:none}}
+.lang-switcher a{color:#64748B;font-weight:600;padding:2px 6px;border-radius:4px;text-decoration:none}
+.lang-switcher a.active{background:#2563EB;color:#fff}
+.lang-switcher a:hover{background:#F1F5F9}
+.btn-pro{background:#2563EB;color:#fff!important;padding:8px 18px;border-radius:8px;font-weight:600;font-size:.9rem;text-decoration:none}
+.btn-pro:hover{background:#1D4ED8!important}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#F8FAFC;color:#1E293B}
+.hero{background:linear-gradient(135deg,#4C1D95 0%,#6D28D9 60%,#7C3AED 100%);color:#fff;padding:56px 24px 48px;text-align:center}
+.hero h1{font-size:2.2rem;font-weight:800;margin-bottom:12px;color:#fff}
+.hero p{font-size:1rem;color:rgba(255,255,255,.88);max-width:540px;margin:0 auto}
+.container{max-width:1100px;margin:0 auto;padding:48px 24px}
+.tools-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px}
+.tool-card{background:#fff;border-radius:12px;padding:24px;text-decoration:none;color:inherit;border:1px solid #E2E8F0;transition:box-shadow .2s,transform .2s;display:flex;flex-direction:column;gap:10px}
+.tool-card:hover{box-shadow:0 8px 24px rgba(0,0,0,.1);transform:translateY(-2px)}
+.tool-icon{font-size:2rem}
+.tool-title{font-size:1.05rem;font-weight:700;color:#1E293B}
+.tool-desc{font-size:.9rem;color:#64748B;line-height:1.5}
+.badge{display:inline-block;background:#DCFCE7;color:#166534;font-size:.75rem;font-weight:600;padding:2px 8px;border-radius:99px}
 </style>
 </head>
 <body>
 <nav><a href="../../index.html" class="nav-logo">⚡ FilePresto</a><div class="nav-links"><a href="../images/index.html">Images</a><a href="../pdf/index.html">PDF</a><a href="../video/index.html">Video</a><a href="../audio/index.html">Audio</a><a href="../ebook/index.html">eBooks</a><a href="index.html" class="active">Documents</a><a href="../../pricing.html">Pricing</a><div class="lang-switcher"><a href="index.html" class="active">EN</a><a href="../../es/tools/documents/index.html">ES</a><a href="../../pt/tools/documents/index.html">PT</a></div><a href="../../pricing.html" class="btn-pro">Pro</a></div></nav>
-<div class="page-hero">
-  <div class="badge">&#128209; Document Tools</div>
-  <h1>Document Converter Tools</h1>
-  <p>Convert Word, Excel, PowerPoint to PDF and more. Fast, free and secure — no software needed.</p>
+<div class="hero">
+<h1>📝 Document Tools</h1>
+<p>Convert Word, Excel, PowerPoint and other document formats. No installation or sign-up required.</p>
 </div>
 <div class="container">
-  <div class="breadcrumb"><a href="../../index.html">Home</a><span>&#8250;</span> Document Tools</div>
-  <h2 class="section-title">All Document Tools</h2>
-  <p class="section-sub">4 free tools available</p>
-  <div class="tools-grid">
-    <a href="../pdf/word-to-pdf.html" class="tool-card"><div class="t-icon">DOC</div><div><h4>Word to PDF</h4><p>Convert DOCX to PDF</p></div><span class="tool-arrow">&#8594;</span></a>
-    <a href="../pdf/excel-to-pdf.html" class="tool-card"><div class="t-icon">XLS</div><div><h4>Excel to PDF</h4><p>Convert spreadsheet to PDF</p></div><span class="tool-arrow">&#8594;</span></a>
-    <a href="../pdf/pdf-to-word.html" class="tool-card"><div class="t-icon">PDF</div><div><h4>PDF to Word</h4><p>Convert PDF to DOCX</p></div><span class="tool-arrow">&#8594;</span></a>
-    <a href="../pdf/pdf-to-excel.html" class="tool-card"><div class="t-icon">PDF</div><div><h4>PDF to Excel</h4><p>Convert PDF to spreadsheet</p></div><span class="tool-arrow">&#8594;</span></a>
-  </div>
+<div class="tools-grid">
+<a href="../pdf/word-to-pdf.html" class="tool-card">
+<div class="tool-icon">📄</div>
+<div class="tool-title">Word to PDF</div>
+<div class="tool-desc">Convert Word DOCX documents to PDF format easily.</div>
+<span class="badge">FREE</span>
+</a>
+<a href="../pdf/pdf-to-word.html" class="tool-card">
+<div class="tool-icon">📝</div>
+<div class="tool-title">PDF to Word</div>
+<div class="tool-desc">Convert PDF files to editable Word DOCX files.</div>
+<span class="badge">FREE</span>
+</a>
+<a href="../ebook/docx-to-epub.html" class="tool-card">
+<div class="tool-icon">📚</div>
+<div class="tool-title">DOCX to EPUB</div>
+<div class="tool-desc">Convert Word documents to EPUB format for eReaders.</div>
+<span class="badge">FREE</span>
+</a>
+<a href="../pdf/excel-to-pdf.html" class="tool-card">
+<div class="tool-icon">📊</div>
+<div class="tool-title">Excel to PDF</div>
+<div class="tool-desc">Convert Excel spreadsheets to PDF format.</div>
+<span class="badge">FREE</span>
+</a>
+<a href="../pdf/pdf-to-excel.html" class="tool-card">
+<div class="tool-icon">📋</div>
+<div class="tool-title">PDF to Excel</div>
+<div class="tool-desc">Extract tables from PDF files to Excel spreadsheets.</div>
+<span class="badge">FREE</span>
+</a>
 </div>
-<footer>
-  <div class="footer-inner">
-    <span>&#169; 2026 FilePresto. All rights reserved.</span>
-    <div style="display:flex;gap:16px"><a href="../../privacy.html">Privacy</a><a href="../../terms.html">Terms</a><a href="../../contact.html">Contact</a></div>
-  </div>
-</footer>
+</div>
 </body>
 </html>
