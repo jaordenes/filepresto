@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>JPG a PDF - FilePresto</title>
-<meta name="description" content="Convierte imágenes JPG a PDF gratis. Sin registro, sin marcas de agua.">
+<meta name="description" content="Convierte imÃ¡genes JPG a PDF gratis. Sin registro, sin marcas de agua.">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{--primary:#DC2626;--primary-dark:#B91C1C;--bg:#f8f9fa;--text:#333}
@@ -57,19 +57,19 @@ footer a:hover{color:#fff}
 </nav>
 <div class="hero">
   <h1>JPG a PDF</h1>
-  <p>Combina tus imágenes JPG en un PDF. Gratis, sin registro.</p>
+  <p>Combina tus imÃ¡genes JPG en un PDF. Gratis, sin registro.</p>
 </div>
 <div class="container">
   <div class="card">
     <div class="upload-area" id="dropZone">
       <input type="file" id="fileInput" accept="image/jpeg,image/jpg,image/png" multiple>
-      <div class="upload-icon">🖼️</div>
-      <p><strong>Arrastra imágenes JPG aquí</strong></p>
+      <div class="upload-icon">ð¼ï¸</div>
+      <p><strong>Arrastra imÃ¡genes JPG aquÃ­</strong></p>
       <p style="color:#888;margin-top:.5rem">o haz clic para seleccionar</p>
     </div>
     <div class="file-list" id="fileList"></div>
     <div class="options">
-      <label>Tamaño de página</label>
+      <label>TamaÃ±o de pÃ¡gina</label>
       <select id="pageSize">
         <option value="A4">A4</option>
         <option value="LETTER">Carta (Letter)</option>
@@ -81,14 +81,14 @@ footer a:hover{color:#fff}
       <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
       <div class="progress-text" id="progressText">Procesando...</div>
     </div>
-    <a class="download-btn" id="downloadBtn">⬇️ Descargar PDF</a>
+    <a class="download-btn" id="downloadBtn">â¬ï¸ Descargar PDF</a>
   </div>
   <div class="card">
-    <h2 style="margin-bottom:1rem">Características</h2>
+    <h2 style="margin-bottom:1rem">CaracterÃ­sticas</h2>
     <div class="features">
-      <div class="feature"><div class="feature-icon">🔒</div><h3>100% Privado</h3><p>Todo se procesa en tu navegador</p></div>
-      <div class="feature"><div class="feature-icon">⚡</div><h3>Rápido</h3><p>Conversión instantánea sin esperas</p></div>
-      <div class="feature"><div class="feature-icon">📄</div><h3>Sin límites</h3><p>Múltiples imágenes a la vez</p></div>
+      <div class="feature"><div class="feature-icon">ð</div><h3>100% Privado</h3><p>Todo se procesa en tu navegador</p></div>
+      <div class="feature"><div class="feature-icon">â¡</div><h3>RÃ¡pido</h3><p>ConversiÃ³n instantÃ¡nea sin esperas</p></div>
+      <div class="feature"><div class="feature-icon">ð</div><h3>Sin lÃ­mites</h3><p>MÃºltiples imÃ¡genes a la vez</p></div>
     </div>
   </div>
 </div>
@@ -122,7 +122,7 @@ function renderList(){
   files.forEach((f,i)=>{
     const div=document.createElement('div');
     div.className='file-item';
-    div.innerHTML=`<span>${f.name} (${(f.size/1024).toFixed(1)} KB)</span><button onclick="removeFile(${i})">✕</button>`;
+    div.innerHTML=`<span>${f.name} (${(f.size/1024).toFixed(1)} KB)</span><button onclick="removeFile(${i})">â</button>`;
     fileListEl.appendChild(div);
   });
   convertBtn.disabled=files.length===0;
@@ -161,7 +161,7 @@ convertBtn.addEventListener('click',async()=>{
     downloadBtn.href=url;
     downloadBtn.download='imagenes.pdf';
     downloadBtn.style.display='block';
-    progressText.textContent='¡PDF listo!';
+    progressText.textContent='Â¡PDF listo!';
   }catch(e){progressText.textContent='Error: '+e.message;console.error(e)}
   convertBtn.disabled=false;
 });
