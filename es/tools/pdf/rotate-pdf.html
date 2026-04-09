@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Rotar PDF - FilePresto</title>
-<meta name="description" content="Rota las páginas de tu PDF. Gratis, sin registro.">
+<meta name="description" content="Rota las pÃ¡ginas de tu PDF. Gratis, sin registro.">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{--primary:#DC2626;--primary-dark:#B91C1C;--bg:#f8f9fa;--text:#333}
@@ -52,30 +52,30 @@ footer a{color:#ccc;text-decoration:none}
 </nav>
 <div class="hero">
   <h1>Rotar PDF</h1>
-  <p>Rota las páginas de tu PDF. Fácil, gratis y sin registro.</p>
+  <p>Rota las pÃ¡ginas de tu PDF. FÃ¡cil, gratis y sin registro.</p>
 </div>
 <div class="container">
   <div class="card">
     <div class="upload-area" id="dropZone">
       <input type="file" id="fileInput" accept="application/pdf">
-      <div class="upload-icon">🔄</div>
-      <p><strong>Arrastra tu PDF aquí</strong></p>
+      <div class="upload-icon">ð</div>
+      <p><strong>Arrastra tu PDF aquÃ­</strong></p>
       <p style="color:#888;margin-top:.5rem">o haz clic para seleccionar</p>
     </div>
     <p id="fileName" style="margin-top:.5rem;color:#555;text-align:center"></p>
     <div class="options">
       <div>
-        <label>Ángulo de rotación</label>
+        <label>Ãngulo de rotaciÃ³n</label>
         <select id="angle">
-          <option value="90">90° derecha</option>
-          <option value="180">180° (voltear)</option>
-          <option value="270">90° izquierda</option>
+          <option value="90">90Â° derecha</option>
+          <option value="180">180Â° (voltear)</option>
+          <option value="270">90Â° izquierda</option>
         </select>
       </div>
       <div>
-        <label>Páginas a rotar</label>
+        <label>PÃ¡ginas a rotar</label>
         <select id="pages">
-          <option value="all">Todas las páginas</option>
+          <option value="all">Todas las pÃ¡ginas</option>
           <option value="odd">Solo impares</option>
           <option value="even">Solo pares</option>
         </select>
@@ -86,14 +86,14 @@ footer a{color:#ccc;text-decoration:none}
       <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
       <div class="progress-text" id="progressText">Procesando...</div>
     </div>
-    <a class="download-btn" id="downloadBtn">⬇️ Descargar PDF rotado</a>
+    <a class="download-btn" id="downloadBtn">â¬ï¸ Descargar PDF rotado</a>
   </div>
   <div class="card">
-    <h2 style="margin-bottom:1rem">Características</h2>
+    <h2 style="margin-bottom:1rem">CaracterÃ­sticas</h2>
     <div class="features">
-      <div class="feature"><div class="feature-icon">🔒</div><h3>100% Privado</h3><p>Todo se procesa en tu navegador</p></div>
-      <div class="feature"><div class="feature-icon">🔄</div><h3>Múltiples ángulos</h3><p>90°, 180° o 270°</p></div>
-      <div class="feature"><div class="feature-icon">📄</div><h3>Sin pérdida</h3><p>El contenido no se modifica</p></div>
+      <div class="feature"><div class="feature-icon">ð</div><h3>100% Privado</h3><p>Todo se procesa en tu navegador</p></div>
+      <div class="feature"><div class="feature-icon">ð</div><h3>MÃºltiples Ã¡ngulos</h3><p>90Â°, 180Â° o 270Â°</p></div>
+      <div class="feature"><div class="feature-icon">ð</div><h3>Sin pÃ©rdida</h3><p>El contenido no se modifica</p></div>
     </div>
   </div>
 </div>
@@ -147,7 +147,7 @@ convertBtn.addEventListener('click',async()=>{
     downloadBtn.download='rotado.pdf';
     downloadBtn.style.display='block';
     progressFill.style.width='100%';
-    progressText.textContent=`PDF rotado (${total} páginas procesadas)`;
+    progressText.textContent=`PDF rotado (${total} pÃ¡ginas procesadas)`;
   }catch(e){progressText.textContent='Error: '+e.message;console.error(e)}
   convertBtn.disabled=false;
 });
