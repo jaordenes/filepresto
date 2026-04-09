@@ -57,8 +57,8 @@ footer a{color:#ccc;text-decoration:none}
   <div class="card">
     <div class="upload-area" id="dropZone">
       <input type="file" id="fileInput" accept="application/pdf">
-      <div class="upload-icon">📄</div>
-      <p><strong>Arrastra tu PDF aquí</strong></p>
+      <div class="upload-icon">ð</div>
+      <p><strong>Arrastra tu PDF aquÃ­</strong></p>
       <p style="color:#888;margin-top:.5rem">o haz clic para seleccionar</p>
     </div>
     <p id="fileName" style="margin-top:.5rem;color:#555;text-align:center"></p>
@@ -68,16 +68,16 @@ footer a{color:#ccc;text-decoration:none}
       <div class="progress-text" id="progressText">Procesando...</div>
     </div>
     <div class="text-output" id="textOutput">
-      <textarea id="textArea" readonly placeholder="El texto extraído aparecerá aquí..."></textarea>
-      <button class="download-btn" id="downloadBtn">⬇️ Descargar TXT</button>
+      <textarea id="textArea" readonly placeholder="El texto extraÃ­do aparecerÃ¡ aquÃ­..."></textarea>
+      <button class="download-btn" id="downloadBtn">â¬ï¸ Descargar TXT</button>
     </div>
   </div>
   <div class="card">
-    <h2 style="margin-bottom:1rem">Características</h2>
+    <h2 style="margin-bottom:1rem">CaracterÃ­sticas</h2>
     <div class="features">
-      <div class="feature"><div class="feature-icon">🔒</div><h3>100% Privado</h3><p>Todo se procesa en tu navegador</p></div>
-      <div class="feature"><div class="feature-icon">📝</div><h3>Texto plano</h3><p>Compatible con cualquier editor</p></div>
-      <div class="feature"><div class="feature-icon">⚡</div><h3>Rápido</h3><p>Extracción instantánea</p></div>
+      <div class="feature"><div class="feature-icon">ð</div><h3>100% Privado</h3><p>Todo se procesa en tu navegador</p></div>
+      <div class="feature"><div class="feature-icon">ð</div><h3>Texto plano</h3><p>Compatible con cualquier editor</p></div>
+      <div class="feature"><div class="feature-icon">â¡</div><h3>RÃ¡pido</h3><p>ExtracciÃ³n instantÃ¡nea</p></div>
     </div>
   </div>
 </div>
@@ -116,17 +116,17 @@ convertBtn.addEventListener('click',async()=>{
     let fullText='';
     for(let i=1;i<=total;i++){
       progressFill.style.width=((i/total)*100)+'%';
-      progressText.textContent=`Procesando página ${i} de ${total}...`;
+      progressText.textContent=`Procesando pÃ¡gina ${i} de ${total}...`;
       const page=await pdf.getPage(i);
       const tc=await page.getTextContent();
       const pageText=tc.items.map(item=>item.str).join(' ');
-      fullText+=`--- Página ${i} ---
+      fullText+=`--- PÃ¡gina ${i} ---
 ${pageText}
 
 `;
     }
     textArea.value=fullText;
-    progressText.textContent='Texto extraído correctamente';
+    progressText.textContent='Texto extraÃ­do correctamente';
     textOutput.style.display='block';
     const blob=new Blob([fullText],{type:'text/plain;charset=utf-8'});
     const url=URL.createObjectURL(blob);
