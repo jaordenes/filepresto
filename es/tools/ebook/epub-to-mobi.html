@@ -56,25 +56,25 @@ footer a{color:#ccc;text-decoration:none}
   <div class="card">
     <div class="upload-area" id="dropZone">
       <input type="file" id="fileInput" accept=".epub">
-      <div class="upload-icon">📚</div>
-      <p><strong>Arrastra tu archivo EPUB aquí</strong></p>
+      <div class="upload-icon">ð</div>
+      <p><strong>Arrastra tu archivo EPUB aquÃ­</strong></p>
       <p style="color:#888;margin-top:.5rem">o haz clic para seleccionar</p>
     </div>
     <p id="fileName" style="margin-top:.5rem;color:#555;text-align:center"></p>
-    <div class="info-box">📖 MOBI es un formato utilizado por dispositivos Kindle antiguos. Esta herramienta extrae el contenido del EPUB y genera una versión compatible. Para resultados perfectos con Kindle, también puedes usar <strong>Calibre</strong> (gratuito).</div>
+    <div class="info-box">ð MOBI es un formato utilizado por dispositivos Kindle antiguos. Esta herramienta extrae el contenido del EPUB y genera una versiÃ³n compatible. Para resultados perfectos con Kindle, tambiÃ©n puedes usar <strong>Calibre</strong> (gratuito).</div>
     <button class="convert-btn" id="convertBtn" disabled>Convertir a MOBI</button>
     <div class="progress-wrap" id="progressWrap">
       <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
       <div class="progress-text" id="progressText">Procesando...</div>
     </div>
-    <a class="download-btn" id="downloadBtn">⬇️ Descargar archivo</a>
+    <a class="download-btn" id="downloadBtn">â¬ï¸ Descargar archivo</a>
   </div>
   <div class="card">
-    <h2 style="margin-bottom:1rem">Características</h2>
+    <h2 style="margin-bottom:1rem">CaracterÃ­sticas</h2>
     <div class="features">
-      <div class="feature"><div class="feature-icon">🔒</div><h3>100% Privado</h3><p>Todo se procesa en tu navegador</p></div>
-      <div class="feature"><div class="feature-icon">📱</div><h3>Para Kindle</h3><p>Compatible con dispositivos Kindle</p></div>
-      <div class="feature"><div class="feature-icon">⚡</div><h3>Rápido</h3><p>Conversión instantánea</p></div>
+      <div class="feature"><div class="feature-icon">ð</div><h3>100% Privado</h3><p>Todo se procesa en tu navegador</p></div>
+      <div class="feature"><div class="feature-icon">ð±</div><h3>Para Kindle</h3><p>Compatible con dispositivos Kindle</p></div>
+      <div class="feature"><div class="feature-icon">â¡</div><h3>RÃ¡pido</h3><p>ConversiÃ³n instantÃ¡nea</p></div>
     </div>
   </div>
 </div>
@@ -125,9 +125,9 @@ convertBtn.addEventListener('click',async()=>{
     const blob=new Blob([htmlContent],{type:'text/html;charset=utf-8'});
     downloadBtn.href=URL.createObjectURL(blob);
     downloadBtn.download=title+'.html';
-    downloadBtn.textContent='⬇️ Descargar HTML (abrir con Kindle)';
+    downloadBtn.textContent='â¬ï¸ Descargar HTML (abrir con Kindle)';
     downloadBtn.style.display='block';
-    progressFill.style.width='100%';progressText.textContent='Listo - Envía el archivo HTML a tu Kindle';
+    progressFill.style.width='100%';progressText.textContent='Listo - EnvÃ­a el archivo HTML a tu Kindle';
   }catch(e){progressText.textContent='Error: '+e.message;console.error(e)}
   convertBtn.disabled=false;
 });
