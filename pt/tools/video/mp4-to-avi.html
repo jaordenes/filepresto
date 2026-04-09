@@ -1,12 +1,181 @@
 <!DOCTYPE html>
-<html lang="pt"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>MP4 para AVI Online Grátis | FilePresto</title>
-<meta name="description" content="Converta arquivos MP4 para formato AVI grátis online. Sem instalação, sem cadastro.">
-<link rel="canonical" href="https://filepresto.com/pt/tools/video/mp4-to-avi/">
-<link rel="alternate" hreflang="en" href="https://filepresto.com/tools/video/mp4-to-avi/">
-<link rel="alternate" hreflang="es" href="https://filepresto.com/es/tools/video/mp4-to-avi/">
-<link rel="alternate" hreflang="pt" href="https://filepresto.com/pt/tools/video/mp4-to-avi/">
-<link rel="alternate" hreflang="x-default" href="https://filepresto.com/tools/video/mp4-to-avi/">
-<style>*{margin:0;padding:0;box-sizing:border-box}body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#f8fafc;color:#1e293b}header{background:#fff;border-bottom:1px solid #e2e8f0;padding:12px 24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}.logo{font-size:20px;font-weight:800;color:#0F172A;text-decoration:none}nav{display:flex;gap:12px;align-items:center}nav a{color:#64748b;text-decoration:none;font-size:14px}.ls{display:flex;gap:6px}.ls a{padding:3px 8px;border-radius:5px;font-size:11px;font-weight:600;text-decoration:none;color:#64748b;border:1px solid #e2e8f0}.ls a.active{background:#2563EB;color:#fff;border-color:#2563EB}.hero{background:linear-gradient(135deg,#EFF6FF 0%,#F8FAFC 100%);padding:40px 24px;text-align:center;border-bottom:1px solid #e2e8f0}.hero h1{font-size:32px;font-weight:800;color:#0F172A;margin-bottom:10px}.hero p{color:#64748b;max-width:500px;margin:0 auto}.cs{max-width:600px;margin:40px auto;padding:0 24px}.csc{background:#fff;border-radius:16px;padding:40px;text-align:center;box-shadow:0 1px 3px rgba(0,0,0,.08);border:1px solid #e2e8f0}.csi{font-size:48px;margin-bottom:16px}.csb{display:inline-block;padding:4px 12px;background:#EFF6FF;color:#2563EB;border-radius:20px;font-size:12px;font-weight:700;margin-bottom:16px}footer{background:#1e293b;color:#94a3b8;padding:24px;text-align:center;margin-top:60px;font-size:13px}footer a{color:#94a3b8;text-decoration:none}</style></head>
-<body><header><a href="../../../pt/index.html" class="logo">⚡ FilePresto</a><nav><a href="index.html">← Vídeo</a></nav><div class="ls"><a href="../../../tools/video/mp4-to-avi.html">EN</a><a href="../../../es/tools/video/mp4-to-avi.html">ES</a><a href="mp4-to-avi.html" class="active">PT</a></div></header><section class="hero"><h1>🎬 MP4 para AVI</h1><p>Converta arquivos MP4 para formato AVI para compatibilidade máxima.</p></section><div class="cs"><div class="csc"><div class="csi">🚀</div><div class="csb">Em Breve</div><h2>Ferramenta em Desenvolvimento</h2><p>Disponível em breve!</p></div></div>
-<footer><p>© 2025 FilePresto · <a href="../../../pt/privacy.html">Privacidade</a> · <a href="../../../pt/terms.html">Termos</a> · <a href="../../../pt/about.html">Sobre</a> · <a href="../../../pt/contact.html">Contato</a></p></footer></body></html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MP4 a AVI – Convertidor Online Grátis | FilePristo</title>
+  <meta name="description" content="Converta video MP4 a AVI gratuitamente online. Rápido, privado, sin subir arquivos. Impulsado por FFmpeg en tu navegador.">
+  <link rel="canonical" href="https://jaordenes.github.io/filepresto/es/tools/video/mp4-to-avi.html">
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    :root{--primary:#16A34A;--primary-dark:#15803D;--primary-light:#DCFCE7;--text:#1F2937;--text-light:#6B7280;--bg:#F9FAFB;--white:#FFFFFF;--border:#E5E7EB}
+    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;color:var(--text);background:var(--bg);line-height:1.6}
+    a{color:inherit;text-decoration:none}
+    nav{background:var(--white);border-bottom:1px solid var(--border);padding:0 24px;position:sticky;top:0;z-index:100}
+    .nav-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:64px}
+    .logo{font-size:1.4rem;font-weight:800;color:var(--primary)}
+    .logo span{color:var(--text)}
+    .nav-links{display:flex;gap:28px;align-items:center;font-size:.95rem;font-weight:500}
+    .lang-switcher{display:flex;gap:8px;font-size:.85rem}
+    .lang-switcher a{padding:4px 10px;border-radius:6px;border:1px solid var(--border);color:var(--text-light);transition:.2s}
+    .lang-switcher a.active,.lang-switcher a:hover{background:var(--primary);color:#fff;border-color:var(--primary)}
+    .breadcrumb{max-width:1200px;margin:0 auto;padding:16px 24px;font-size:.875rem;color:var(--text-light);display:flex;gap:8px;align-items:center}
+    .hero{background:linear-gradient(135deg,var(--primary) 0%,#14532D 100%);color:#fff;padding:56px 24px;text-align:center}
+    .hero h1{font-size:2.5rem;font-weight:800;margin-bottom:16px}
+    .hero h1 em{font-style:normal;color:#86EFAC}
+    .hero p{font-size:1.1rem;opacity:.9;max-width:600px;margin:0 auto}
+    .converter-section{max-width:760px;margin:0 auto;padding:48px 24px}
+    .converter-box{background:var(--white);border-radius:16px;padding:40px;box-shadow:0 4px 24px rgba(0,0,0,.08)}
+    .upload-area{border:2px dashed var(--border);border-radius:12px;padding:48px 24px;text-align:center;cursor:pointer;transition:.2s;margin-bottom:24px}
+    .upload-area:hover,.upload-area.dragover{border-color:var(--primary);background:var(--primary-light)}
+    .upload-icon{font-size:3rem;margin-bottom:12px}
+    .upload-area h3{font-size:1.1rem;font-weight:600;margin-bottom:8px}
+    .upload-area p{color:var(--text-light);font-size:.9rem}
+    #fileInput{display:none}
+    .file-info{background:var(--bg);border-radius:8px;padding:12px 16px;margin-bottom:20px;font-size:.9rem;display:none}
+    .file-info strong{color:var(--primary)}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:14px 32px;border-radius:10px;font-size:1rem;font-weight:600;cursor:pointer;border:none;transition:.2s}
+    .btn-primary{background:var(--primary);color:#fff;width:100%;justify-content:center}
+    .btn-primary:hover:not(:disabled){background:var(--primary-dark)}
+    .btn-primary:disabled{opacity:.5;cursor:not-allowed}
+    .btn-download{background:#059669;color:#fff;width:100%;justify-content:center;margin-top:12px;display:none}
+    .progress-wrap{margin:20px 0;display:none}
+    .progress-bar{height:8px;background:var(--border);border-radius:4px;overflow:hidden}
+    .progress-fill{height:100%;background:var(--primary);border-radius:4px;transition:width .3s;width:0%}
+    .status{margin-top:10px;font-size:.9rem;color:var(--text-light);text-align:center}
+    .features{max-width:1200px;margin:0 auto;padding:48px 24px}
+    .features h2{font-size:1.75rem;font-weight:700;text-align:center;margin-bottom:32px}
+    .features-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px}
+    .feature-card{background:var(--white);border-radius:12px;padding:28px;box-shadow:0 2px 12px rgba(0,0,0,.05)}
+    .feature-icon{font-size:2rem;margin-bottom:12px}
+    .feature-card h3{font-weight:600;margin-bottom:8px}
+    .feature-card p{color:var(--text-light);font-size:.9rem}
+    footer{background:var(--text);color:#9CA3AF;padding:48px 24px 24px}
+    .footer-inner{max-width:1200px;margin:0 auto}
+    .footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:32px;margin-bottom:32px}
+    .footer-col h4{color:#fff;font-weight:600;margin-bottom:12px}
+    .footer-col a{display:block;margin-bottom:8px;font-size:.9rem;transition:.2s}
+    .footer-col a:hover{color:#fff}
+    .footer-bottom{border-top:1px solid #374151;padding-top:24px;text-align:center;font-size:.85rem}
+    </style>
+  </head>
+  <body>
+    <nav>
+        <div class="nav-inner">
+              <a href="../../../index.html" class="logo">⚡ File<span>Pristo</span></a>
+            <div class="nav-links">
+                  <a href="../pdf/index.html">PDF</a>
+                  <a href="../images/index.html">Imágenes</a>
+                  <a href="../audio/index.html">Audio</a>
+                  <a href="index.html" style="color:var(--primary)">Video</a>
+                  <a href="../documents/index.html">Documentos</a>
+            </div>
+            <div class="lang-switcher">
+                  <a href="../../../tools/video/mp4-to-avi.html">EN</a>
+                  <a href="mp4-to-avi.html">ES</a>
+                  <a href="../../../pt/tools/video/mp4-to-avi.html" class="active">PT</a>
+            </div>
+        </div>
+    </nav>
+  <div class="breadcrumb">
+    <a href="../../../index.html">Inicio</a><span>›</span>
+    <a href="index.html">Herramientas de Video</a><span>›</span>
+    <span>MP4 a AVI</span>
+  </div>
+  <section class="hero">
+    <h1>Convertidor MP4 a <em>AVI</em></h1>
+    <p>Converta videos MP4 al formato AVI para compatibilidad con reprodutores y editores de video más antiguos. 100% en el navegador.</p>
+  </section>
+  <section class="converter-section">
+    <div class="converter-box">
+        <div class="upload-area" id="uploadArea">
+              <div class="upload-icon">🎥</div>
+              <h3>Arraste tu arquivo MP4 aquí</h3>
+              <p>o clique para selecionar — máx. 500 MB</p>
+              <input type="file" id="fileInput" accept=".mp4,video/mp4">
+        </div>
+        <div class="file-info" id="fileInfo">Seleccionado: <strong id="fileName"></strong>strong></div>
+        <button class="btn btn-primary" id="convertBtn" disabled>Converter para AVI</button>
+        <div class="progress-wrap" id="progressWrap">
+              <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+              <div class="status" id="statusMsg">Iniciando…</div>
+        </div>
+        <a class="btn btn-download" id="downloadBtn" download="output.avi">⬇ Baixar AVI</a>
+    </div>
+  </section>
+  <section class="features">
+    <h2>Por que usar o FilePresto?</h2>
+    <div class="features-grid">
+        <div class="feature-card"><div class="feature-icon">🔒</div><h3>100% Privado</h3><p>Seu vídeo nunca sai do seu dispositivo. Toda la conversão ocorre no seu navegador.</p></div>
+        <div class="feature-card"><div class="feature-icon">⚡</div><h3>Ultra Rápido</h3><p>La conversão con FFmpeg funciona a velocidad nativa directamente en tu navegador.</p></div>
+        <div class="feature-card"><div class="feature-icon">🎞️</div><h3>Compatibilidade Heredada</h3><p>AVI funciona con reprodutores antiguos, herramientas de DVD y editores de video.</p></div>
+        <div class="feature-card"><div class="feature-icon">🆓</div><h3>Siempre Grátis</h3><p>Sin suscripciones, sem registro, sin límites. Converta todos los arquivos que necesites.</p></div>
+    </div>
+  </section>
+  <footer>
+      <div class="footer-inner">
+            <div class="footer-grid">
+                    <div class="footer-col"><h4>⚡ FilePristo</h4><p style="font-size:.9rem">Herramientas de conversão de arquivos online. Rápido, privado, sem registro.</p></div>
+                    <div class="footer-col"><h4>Herramientas PDF</h4><a href="../pdf/index.html">Todas las herramientas PDF</a><a href="../pdf/merge-pdf.html">Unir PDF</a><a href="../pdf/split-pdf.html">Dividir PDF</a></div>
+                    <div class="footer-col"><h4>Herramientas Video</h4><a href="index.html">Todas las herramientas</a><a href="avi-to-mp4.html">AVI a MP4</a><a href="mkv-to-mp4.html">MKV a MP4</a></div>
+                    <div class="footer-col"><h4>Empresa</h4><a href="../../../about.html">Acerca de</a><a href="../../../privacy.html">Privacidad</a><a href="../../../terms.html">Términos</a></div>
+            </div>
+            <div class="footer-bottom">© 2025 FilePristo. Todos los derechos reservados.</div>
+      </div>
+  </footer>
+    <script src="https://unpkg.com/@ffmpeg/ffmpeg@0.11.6/dist/ffmpeg.min.js"></script>
+    <script>
+      const {createFFmpeg,fetchFile}=FFmpeg;
+      const ffmpeg=createFFmpeg({log:false,corePath:'https://unpkg.com/@ffmpeg/core@0.11.0/dist/ffmpeg-core.js'});
+      let loaded=false;
+      const uploadArea=document.getElementById('uploadArea');
+      const fileInput=document.getElementById('fileInput');
+      const fileInfo=document.getElementById('fileInfo');
+      const fileName=document.getElementById('fileName');
+      const convertBtn=document.getElementById('convertBtn');
+      const progressWrap=document.getElementById('progressWrap');
+      const progressFill=document.getElementById('progressFill');
+      const statusMsg=document.getElementById('statusMsg');
+      const downloadBtn=document.getElementById('downloadBtn');
+      let selectedFile=null;
+      uploadArea.addEventListener('click',()=>fileInput.click());
+      uploadArea.addEventListener('dragover',e=>{e.preventDefault();uploadArea.classList.add('dragover')});
+      uploadArea.addEventListener('dragleave',()=>uploadArea.classList.remove('dragover'));
+      uploadArea.addEventListener('drop',e=>{e.preventDefault();uploadArea.classList.remove('dragover');const f=e.dataTransfer.files[0];if(f){setFile(f)}});
+      fileInput.addEventListener('change',()=>{if(fileInput.files[0])setFile(fileInput.files[0])});
+      function setFile(f){selectedFile=f;fileName.textContent=f.name+' ('+formatSize(f.size)+')';fileInfo.style.display='block';convertBtn.disabled=false;downloadBtn.style.display='none'}
+      function formatSize(b){return b>1048576?(b/1048576).toFixed(1)+' MB':(b/1024).toFixed(0)+' KB'}
+      convertBtn.addEventListener('click',async()=>{
+          if(!selectedFile)return;
+          convertBtn.disabled=true;
+          progressWrap.style.display='block';
+          downloadBtn.style.display='none';
+          setProgress(5,'Cargando FFmpeg…');
+          try{
+                if(!loaded){await ffmpeg.load();loaded=true}
+                setProgress(20,'Leyendo arquivo…');
+                ffmpeg.setProgress(({ratio})=>setProgress(20+Math.round(ratio*70),'Convertendo…'));
+                ffmpeg.FS('writeFile','input.mp4',await fetchFile(selectedFile));
+                setProgress(25,'Convertendo a AVI…');
+                await ffmpeg.run('-i','input.mp4','-c:v','mpeg4','-q:v','5','-c:a','mp3','-b:a','128k','output.avi');
+                const data=ffmpeg.FS('readFile','output.avi');
+                const blob=new Blob([data.buffer],{type:'video/x-msvideo'});
+                const url=URL.createObjectURL(blob);
+                const base=selectedFile.name.replace(/\.[^.]+$/,'');
+                downloadBtn.href=url;
+                downloadBtn.download=base+'.avi';
+                downloadBtn.style.display='flex';
+                setProgress(100,'¡Listo! Tu AVI está listo.');
+                ffmpeg.FS('unlink','input.mp4');ffmpeg.FS('unlink','output.avi');
+          }catch(e){setProgress(0,'Error: '+e.message);convertBtn.disabled=false}
+      });
+      function setProgress(pct,msg){progressFill.style.width=pct+'%';statusMsg.textContent=msg}
+    </script>
+  </body>
+</html>html>
+    </script>
+  </footer></p></p></em></h1></span></span>
+    </nav>
+  </body>
+  </style></title>
+  </head>
