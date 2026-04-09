@@ -52,34 +52,34 @@ footer a{color:#ccc;text-decoration:none}
 </nav>
 <div class="hero">
   <h1>HTML a EPUB</h1>
-  <p>Convierte páginas HTML a formato EPUB. Gratis y sin registro.</p>
+  <p>Convierte pÃ¡ginas HTML a formato EPUB. Gratis y sin registro.</p>
 </div>
 <div class="container">
   <div class="card">
     <div class="upload-area" id="dropZone">
       <input type="file" id="fileInput" accept=".html,.htm">
-      <div class="upload-icon">🌐</div>
-      <p><strong>Arrastra tu archivo HTML aquí</strong></p>
+      <div class="upload-icon">ð</div>
+      <p><strong>Arrastra tu archivo HTML aquÃ­</strong></p>
       <p style="color:#888;margin-top:.5rem">o haz clic para seleccionar (.html, .htm)</p>
     </div>
     <p id="fileName" style="margin-top:.5rem;color:#555;text-align:center"></p>
     <div class="options">
-      <label>Título del libro (opcional)</label>
-      <input type="text" id="bookTitle" placeholder="Título del ebook">
+      <label>TÃ­tulo del libro (opcional)</label>
+      <input type="text" id="bookTitle" placeholder="TÃ­tulo del ebook">
     </div>
     <button class="convert-btn" id="convertBtn" disabled>Convertir a EPUB</button>
     <div class="progress-wrap" id="progressWrap">
       <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
       <div class="progress-text" id="progressText">Procesando...</div>
     </div>
-    <a class="download-btn" id="downloadBtn">⬇️ Descargar EPUB</a>
+    <a class="download-btn" id="downloadBtn">â¬ï¸ Descargar EPUB</a>
   </div>
   <div class="card">
-    <h2 style="margin-bottom:1rem">Características</h2>
+    <h2 style="margin-bottom:1rem">CaracterÃ­sticas</h2>
     <div class="features">
-      <div class="feature"><div class="feature-icon">🔒</div><h3>100% Privado</h3><p>Todo se procesa en tu navegador</p></div>
-      <div class="feature"><div class="feature-icon">🌐</div><h3>Desde HTML</h3><p>Convierte páginas web a ebook</p></div>
-      <div class="feature"><div class="feature-icon">⚡</div><h3>Rápido</h3><p>Conversión instantánea</p></div>
+      <div class="feature"><div class="feature-icon">ð</div><h3>100% Privado</h3><p>Todo se procesa en tu navegador</p></div>
+      <div class="feature"><div class="feature-icon">ð</div><h3>Desde HTML</h3><p>Convierte pÃ¡ginas web a ebook</p></div>
+      <div class="feature"><div class="feature-icon">â¡</div><h3>RÃ¡pido</h3><p>ConversiÃ³n instantÃ¡nea</p></div>
     </div>
   </div>
 </div>
@@ -103,7 +103,7 @@ dropZone.addEventListener('drop',e=>{e.preventDefault();dropZone.classList.remov
 fileInput.addEventListener('change',()=>{if(fileInput.files[0])setFile(fileInput.files[0])});
 function setFile(f){htmlFile=f;fileNameEl.textContent=f.name+' ('+(f.size/1024).toFixed(1)+' KB)';convertBtn.disabled=false}
 function escXml(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')}
-function getTitle(htmlStr){const m=htmlStr.match(/<title[^>]*>([^<]*)</title>/i);return m?m[1].trim():'Sin título'}
+function getTitle(htmlStr){const m=htmlStr.match(/<title[^>]*>([^<]*)</title>/i);return m?m[1].trim():'Sin tÃ­tulo'}
 function str2u8(s){return new TextEncoder().encode(s)}
 function crc32(buf){let c=0xFFFFFFFF;const t=new Uint32Array(256);for(let i=0;i<256;i++){let v=i;for(let j=0;j<8;j++)v=v&1?(v>>>1)^0xEDB88320:(v>>>1);t[i]=v}for(const b of buf)c=t[(c^b)&0xFF]^(c>>>8);return(c^0xFFFFFFFF)>>>0}
 function createZip(files){
