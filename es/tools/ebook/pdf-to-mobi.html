@@ -56,25 +56,25 @@ footer a{color:#ccc;text-decoration:none}
   <div class="card">
     <div class="upload-area" id="dropZone">
       <input type="file" id="fileInput" accept="application/pdf">
-      <div class="upload-icon">📄</div>
-      <p><strong>Arrastra tu PDF aquí</strong></p>
+      <div class="upload-icon">ð</div>
+      <p><strong>Arrastra tu PDF aquÃ­</strong></p>
       <p style="color:#888;margin-top:.5rem">o haz clic para seleccionar</p>
     </div>
     <p id="fileName" style="margin-top:.5rem;color:#555;text-align:center"></p>
-    <div class="info-box">📱 Esta herramienta extrae el texto del PDF y genera un archivo HTML compatible con Kindle. También puedes enviar PDFs directamente a tu Kindle usando el correo electrónico de tu dispositivo.</div>
+    <div class="info-box">ð± Esta herramienta extrae el texto del PDF y genera un archivo HTML compatible con Kindle. TambiÃ©n puedes enviar PDFs directamente a tu Kindle usando el correo electrÃ³nico de tu dispositivo.</div>
     <button class="convert-btn" id="convertBtn" disabled>Convertir para Kindle</button>
     <div class="progress-wrap" id="progressWrap">
       <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
       <div class="progress-text" id="progressText">Procesando...</div>
     </div>
-    <a class="download-btn" id="downloadBtn">⬇️ Descargar para Kindle</a>
+    <a class="download-btn" id="downloadBtn">â¬ï¸ Descargar para Kindle</a>
   </div>
   <div class="card">
-    <h2 style="margin-bottom:1rem">Características</h2>
+    <h2 style="margin-bottom:1rem">CaracterÃ­sticas</h2>
     <div class="features">
-      <div class="feature"><div class="feature-icon">🔒</div><h3>100% Privado</h3><p>Todo se procesa en tu navegador</p></div>
-      <div class="feature"><div class="feature-icon">📱</div><h3>Para Kindle</h3><p>Optimizado para dispositivos Kindle</p></div>
-      <div class="feature"><div class="feature-icon">⚡</div><h3>Rápido</h3><p>Conversión instantánea</p></div>
+      <div class="feature"><div class="feature-icon">ð</div><h3>100% Privado</h3><p>Todo se procesa en tu navegador</p></div>
+      <div class="feature"><div class="feature-icon">ð±</div><h3>Para Kindle</h3><p>Optimizado para dispositivos Kindle</p></div>
+      <div class="feature"><div class="feature-icon">â¡</div><h3>RÃ¡pido</h3><p>ConversiÃ³n instantÃ¡nea</p></div>
     </div>
   </div>
 </div>
@@ -111,7 +111,7 @@ convertBtn.addEventListener('click',async()=>{
     let bodyHtml='<h1>'+escHtml(title)+'</h1>';
     for(let i=1;i<=total;i++){
       progressFill.style.width=((i/total)*90)+'%';
-      progressText.textContent=`Procesando página ${i}/${total}...`;
+      progressText.textContent=`Procesando pÃ¡gina ${i}/${total}...`;
       const page=await pdf.getPage(i);
       const tc=await page.getTextContent();
       let lastY=null,line='';
@@ -130,7 +130,7 @@ convertBtn.addEventListener('click',async()=>{
     downloadBtn.href=URL.createObjectURL(blob);
     downloadBtn.download=title+'-kindle.html';
     downloadBtn.style.display='block';
-    progressFill.style.width='100%';progressText.textContent='Listo - Envía el archivo a tu Kindle';
+    progressFill.style.width='100%';progressText.textContent='Listo - EnvÃ­a el archivo a tu Kindle';
   }catch(e){progressText.textContent='Error: '+e.message;console.error(e)}
   convertBtn.disabled=false;
 });
