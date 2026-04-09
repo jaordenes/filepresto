@@ -56,28 +56,28 @@ footer a{color:#ccc;text-decoration:none}
   <div class="card">
     <div class="upload-area" id="dropZone">
       <input type="file" id="fileInput" accept=".azw3,.azw,.kfx">
-      <div class="upload-icon">📚</div>
-      <p><strong>Arrastra tu archivo AZW3 aquí</strong></p>
+      <div class="upload-icon">ð</div>
+      <p><strong>Arrastra tu archivo AZW3 aquÃ­</strong></p>
       <p style="color:#888;margin-top:.5rem">o haz clic para seleccionar</p>
     </div>
     <p id="fileName" style="margin-top:.5rem;color:#555;text-align:center"></p>
     <div class="info-box">
-      📖 Los archivos AZW3 son libros en formato Kindle de Amazon. Esta herramienta extrae el contenido y lo empaqueta en formato EPUB compatible con la mayoría de lectores de ebooks.
-      <br><br><strong>Nota:</strong> Los archivos con DRM (protección de copia) no pueden ser convertidos.
+      ð Los archivos AZW3 son libros en formato Kindle de Amazon. Esta herramienta extrae el contenido y lo empaqueta en formato EPUB compatible con la mayorÃ­a de lectores de ebooks.
+      <br><br><strong>Nota:</strong> Los archivos con DRM (protecciÃ³n de copia) no pueden ser convertidos.
     </div>
     <button class="convert-btn" id="convertBtn" disabled>Convertir a EPUB</button>
     <div class="progress-wrap" id="progressWrap">
       <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
       <div class="progress-text" id="progressText">Procesando...</div>
     </div>
-    <a class="download-btn" id="downloadBtn">⬇️ Descargar EPUB</a>
+    <a class="download-btn" id="downloadBtn">â¬ï¸ Descargar EPUB</a>
   </div>
   <div class="card">
-    <h2 style="margin-bottom:1rem">Características</h2>
+    <h2 style="margin-bottom:1rem">CaracterÃ­sticas</h2>
     <div class="features">
-      <div class="feature"><div class="feature-icon">🔒</div><h3>100% Privado</h3><p>Todo se procesa en tu navegador</p></div>
-      <div class="feature"><div class="feature-icon">📱</div><h3>Universal</h3><p>EPUB compatible con todos los lectores</p></div>
-      <div class="feature"><div class="feature-icon">⚡</div><h3>Sin DRM</h3><p>Solo archivos sin protección de copia</p></div>
+      <div class="feature"><div class="feature-icon">ð</div><h3>100% Privado</h3><p>Todo se procesa en tu navegador</p></div>
+      <div class="feature"><div class="feature-icon">ð±</div><h3>Universal</h3><p>EPUB compatible con todos los lectores</p></div>
+      <div class="feature"><div class="feature-icon">â¡</div><h3>Sin DRM</h3><p>Solo archivos sin protecciÃ³n de copia</p></div>
     </div>
   </div>
 </div>
@@ -125,7 +125,7 @@ convertBtn.addEventListener('click',async()=>{
     downloadBtn.download=title+'.epub';
     downloadBtn.style.display='block';
     progressFill.style.width='100%';
-    progressText.textContent='Conversión completada';
+    progressText.textContent='ConversiÃ³n completada';
   }catch(e){progressText.textContent='Error: '+e.message;console.error(e)}
   convertBtn.disabled=false;
 });
