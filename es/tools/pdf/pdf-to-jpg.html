@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>PDF a JPG - FilePresto</title>
-<meta name="description" content="Convierte páginas de PDF a imágenes JPG. Gratis, sin registro.">
+<meta name="description" content="Convierte pÃ¡ginas de PDF a imÃ¡genes JPG. Gratis, sin registro.">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{--primary:#DC2626;--primary-dark:#B91C1C;--bg:#f8f9fa;--text:#333}
@@ -55,14 +55,14 @@ footer a{color:#ccc;text-decoration:none}
 </nav>
 <div class="hero">
   <h1>PDF a JPG</h1>
-  <p>Convierte cada página de tu PDF en imagen JPG. Sin servidor, 100% privado.</p>
+  <p>Convierte cada pÃ¡gina de tu PDF en imagen JPG. Sin servidor, 100% privado.</p>
 </div>
 <div class="container">
   <div class="card">
     <div class="upload-area" id="dropZone">
       <input type="file" id="fileInput" accept="application/pdf">
-      <div class="upload-icon">📄</div>
-      <p><strong>Arrastra tu PDF aquí</strong></p>
+      <div class="upload-icon">ð</div>
+      <p><strong>Arrastra tu PDF aquÃ­</strong></p>
       <p style="color:#888;margin-top:.5rem">o haz clic para seleccionar</p>
     </div>
     <p id="fileName" style="margin-top:.5rem;color:#555;text-align:center"></p>
@@ -73,7 +73,7 @@ footer a{color:#ccc;text-decoration:none}
       </div>
       <div>
         <label>Escala (DPI)</label>
-        <select id="scale"><option value="2">Alta resolución (2x)</option><option value="1.5" selected>Media (1.5x)</option><option value="1">Normal (1x)</option></select>
+        <select id="scale"><option value="2">Alta resoluciÃ³n (2x)</option><option value="1.5" selected>Media (1.5x)</option><option value="1">Normal (1x)</option></select>
       </div>
     </div>
     <button class="convert-btn" id="convertBtn" disabled>Convertir a JPG</button>
@@ -82,16 +82,16 @@ footer a{color:#ccc;text-decoration:none}
       <div class="progress-text" id="progressText">Procesando...</div>
     </div>
     <div class="results" id="results">
-      <h3>Imágenes generadas:</h3>
+      <h3>ImÃ¡genes generadas:</h3>
       <div class="result-grid" id="resultGrid"></div>
     </div>
   </div>
   <div class="card">
-    <h2 style="margin-bottom:1rem">Características</h2>
+    <h2 style="margin-bottom:1rem">CaracterÃ­sticas</h2>
     <div class="features">
-      <div class="feature"><div class="feature-icon">🔒</div><h3>100% Privado</h3><p>Todo se procesa en tu navegador</p></div>
-      <div class="feature"><div class="feature-icon">🖼️</div><h3>Alta calidad</h3><p>Ajusta la resolución y calidad</p></div>
-      <div class="feature"><div class="feature-icon">📦</div><h3>Todas las páginas</h3><p>Convierte todo el PDF a la vez</p></div>
+      <div class="feature"><div class="feature-icon">ð</div><h3>100% Privado</h3><p>Todo se procesa en tu navegador</p></div>
+      <div class="feature"><div class="feature-icon">ð¼ï¸</div><h3>Alta calidad</h3><p>Ajusta la resoluciÃ³n y calidad</p></div>
+      <div class="feature"><div class="feature-icon">ð¦</div><h3>Todas las pÃ¡ginas</h3><p>Convierte todo el PDF a la vez</p></div>
     </div>
   </div>
 </div>
@@ -132,7 +132,7 @@ convertBtn.addEventListener('click',async()=>{
     const images=[];
     for(let i=1;i<=total;i++){
       progressFill.style.width=((i/total)*100)+'%';
-      progressText.textContent=`Renderizando página ${i} de ${total}...`;
+      progressText.textContent=`Renderizando pÃ¡gina ${i} de ${total}...`;
       const page=await pdf.getPage(i);
       const vp=page.getViewport({scale});
       const canvas=document.createElement('canvas');
@@ -146,7 +146,7 @@ convertBtn.addEventListener('click',async()=>{
     images.forEach(({dataUrl,name})=>{
       const item=document.createElement('div');
       item.className='result-item';
-      item.innerHTML=`<img src="${dataUrl}" alt="${name}"><a href="${dataUrl}" download="${name}">⬇️ ${name}</a>`;
+      item.innerHTML=`<img src="${dataUrl}" alt="${name}"><a href="${dataUrl}" download="${name}">â¬ï¸ ${name}</a>`;
       resultGrid.appendChild(item);
     });
     resultsEl.style.display='block';
