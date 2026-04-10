@@ -60,8 +60,8 @@ footer a{color:#ccc;text-decoration:none}
     <div class="upload-area" id="dropZone">
       <input type="file" id="fileInput" accept="application/pdf" multiple>
       <div class="upload-icon">ð</div>
-      <p><strong>Arrastra archivos PDF aquÃ­</strong></p>
-      <p style="color:#888;margin-top:.5rem">o haz clic para seleccionar (mÃ­nimo 2)</p>
+      <p><strong>Arrastra archivos PDF aquí</strong></p>
+      <p style="color:#888;margin-top:.5rem">o haz clic para seleccionar (mínimo 2)</p>
     </div>
     <div class="file-list" id="fileList"></div>
     <button class="convert-btn" id="convertBtn" disabled>Unir PDFs</button>
@@ -72,11 +72,11 @@ footer a{color:#ccc;text-decoration:none}
     <a class="download-btn" id="downloadBtn">â¬ï¸ Descargar PDF unificado</a>
   </div>
   <div class="card">
-    <h2 style="margin-bottom:1rem">CaracterÃ­sticas</h2>
+    <h2 style="margin-bottom:1rem">Características</h2>
     <div class="features">
       <div class="feature"><div class="feature-icon">ð</div><h3>100% Privado</h3><p>Todo se procesa en tu navegador</p></div>
-      <div class="feature"><div class="feature-icon">ð</div><h3>Sin lÃ­mites</h3><p>Une todos los PDFs que necesites</p></div>
-      <div class="feature"><div class="feature-icon">â¡</div><h3>RÃ¡pido</h3><p>Resultado instantÃ¡neo</p></div>
+      <div class="feature"><div class="feature-icon">ð</div><h3>Sin límites</h3><p>Une todos los PDFs que necesites</p></div>
+      <div class="feature"><div class="feature-icon">â¡</div><h3>Rápido</h3><p>Resultado instantáneo</p></div>
     </div>
   </div>
 </div>
@@ -120,7 +120,7 @@ convertBtn.addEventListener('click',async()=>{
   progressWrap.style.display='block';
   downloadBtn.style.display='none';
   try{
-    progressText.textContent='Iniciando fusiÃ³n...';
+    progressText.textContent='Iniciando fusión...';
     const mergedDoc=await PDFLib.PDFDocument.create();
     for(let i=0;i<files.length;i++){
       progressFill.style.width=((i/files.length)*90)+'%';
@@ -137,7 +137,7 @@ convertBtn.addEventListener('click',async()=>{
     downloadBtn.href=URL.createObjectURL(blob);
     downloadBtn.download='unificado.pdf';
     downloadBtn.style.display='block';
-    progressText.textContent=`${files.length} archivos fusionados con Ã©xito`;
+    progressText.textContent=`${files.length} archivos fusionados con éxito`;
   }catch(e){progressText.textContent='Error: '+e.message;console.error(e)}
   convertBtn.disabled=false;
 });
