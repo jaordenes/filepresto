@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MOV a MP4 – Convertidor Online Grátis | FilePresto</title>
-  <meta name="description" content="Converta video MOV a MP4 gratuitamente online. Rápido, privado, sin subir arquivos. Impulsado por FFmpeg en tu navegador.">
+    <title>Converter MOV para MP4 – Conversor Online Grátis | FilePresto</title>
+  <meta name="description" content="Converta video MOV para MP4 gratuitamente online. Rápido, privado, sem subir arquivos. Desenvolvido com FFmpeg no seu navegador.">
   <link rel="canonical" href="https://jaordenes.github.io/filepresto/es/tools/video/mov-to-mp4.html">
   <style>
     *{margin:0;padding:0;box-sizing:border-box}
@@ -81,11 +81,11 @@
   <div class="breadcrumb">
     <a href="../../../index.html">Inicio</a><span>›</span>
     <a href="index.html">Herramientas de Video</a><span>›</span>
-    <span>MOV a MP4</span>
+    <span>MOV para MP4</span>
   </div>
   <section class="hero">
-    <h1>Convertidor MOV a <em>MP4</em></h1>
-    <p>Converta videos Apple QuickTime MOV al formato MP4 universalmente compatible al instante en tu navegador. Sin subidas.</p>
+    <h1>Converter Conversor MOV para <em>MP4</em></h1>
+    <p>Converta videos Apple QuickTime MOV al formato MP4 universalmente compatible al instante no seu navegador. Sin subidas.</p>
   </section>
   <section class="converter-section">
     <div class="converter-box">
@@ -108,9 +108,9 @@
     <h2>Por que usar o FilePresto?</h2>
     <div class="features-grid">
         <div class="feature-card"><div class="feature-icon">🔒</div><h3>100% Privado</h3><p>Seu vídeo nunca sai do seu dispositivo. Toda la conversão ocorre no seu navegador.</p></div>
-        <div class="feature-card"><div class="feature-icon">⚡</div><h3>Ultra Rápido</h3><p>La conversão con FFmpeg funciona a velocidad nativa directamente en tu navegador.</p></div>
+        <div class="feature-card"><div class="feature-icon">⚡</div><h3>Ultra Rápido</h3><p>La conversão con FFmpeg funciona a velocidad nativa directamente no seu navegador.</p></div>
         <div class="feature-card"><div class="feature-icon">📱</div><h3>Compatibilidade Universal</h3><p>MP4 funciona en todos los dispositivos: teléfonos, TVs, tablets y plataformas de streaming.</p></div>
-        <div class="feature-card"><div class="feature-icon">🆓</div><h3>Siempre Grátis</h3><p>Sin suscripciones, sem registro, sin límites. Converta todos los arquivos que necesites.</p></div>
+        <div class="feature-card"><div class="feature-icon">🆓</div><h3>Siempre Grátis</h3><p>Sin suscripciones, sem registro, sem límites. Converta todos los arquivos que necesites.</p></div>
     </div>
   </section>
   <footer>
@@ -118,7 +118,7 @@
             <div class="footer-grid">
                     <div class="footer-col"><h4>⚡ FilePresto</h4><p style="font-size:.9rem">Herramientas de conversão de arquivos online. Rápido, privado, sem registro.</p></div>
                     <div class="footer-col"><h4>Herramientas PDF</h4><a href="../pdf/index.html">Todas las herramientas PDF</a><a href="../pdf/merge-pdf.html">Unir PDF</a><a href="../pdf/split-pdf.html">Dividir PDF</a></div>
-                    <div class="footer-col"><h4>Herramientas Video</h4><a href="index.html">Todas las herramientas</a><a href="avi-to-mp4.html">AVI a MP4</a><a href="mp4-to-avi.html">MP4 a AVI</a></div>
+                    <div class="footer-col"><h4>Herramientas Video</h4><a href="index.html">Todas las herramientas</a><a href="avi-to-mp4.html">AVI para MP4</a><a href="mp4-to-avi.html">MP4 para AVI</a></div>
                     <div class="footer-col"><h4>Empresa</h4><a href="../../../about.html">Acerca de</a><a href="../../../privacy.html">Privacidad</a><a href="../../../terms.html">Términos</a></div>
             </div>
             <div class="footer-bottom">© 2025 FilePresto. Todos los derechos reservados.</div>
@@ -157,7 +157,7 @@
                 setProgress(20,'Leyendo arquivo…');
                 ffmpeg.setProgress(({ratio})=>setProgress(20+Math.round(ratio*70),'Convertendo…'));
                 ffmpeg.FS('writeFile','input.mov',await fetchFile(selectedFile));
-                setProgress(25,'Convertendo a MP4…');
+                setProgress(25,'Convertendo para MP4…');
                 await ffmpeg.run('-i','input.mov','-c:v','libx264','-preset','fast','-crf','22','-c:a','aac','-b:a','128k','output.mp4');
                 const data=ffmpeg.FS('readFile','output.mp4');
                 const blob=new Blob([data.buffer],{type:'video/mp4'});
