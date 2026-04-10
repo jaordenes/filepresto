@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>EPUB a AZW3 - FilePresto</title>
+<title>Converter EPUB para AZW3 - FilePresto</title>
 <meta name="description" content="Converta libros EPUB al formato Kindle AZW3.">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
@@ -50,7 +50,7 @@ footer a{color:#ccc;text-decoration:none}
   </div>
 </nav>
 <div class="hero">
-  <h1>EPUB a AZW3</h1>
+  <h1>Converter EPUB para AZW3</h1>
   <p>Converta libros EPUB al formato Kindle AZW3.</p>
 </div>
 <div class="container">
@@ -62,7 +62,7 @@ footer a{color:#ccc;text-decoration:none}
       <p style="color:#888;margin-top:.5rem">o clique para selecionar</p>
     </div>
     <p id="fileName" style="margin-top:.5rem;color:#555;text-align:center"></p>
-    <div class="info-box">📖 AZW3 es un formato propietario de Amazon Kindle. Esta herramienta genera un arquivo EPUB compatible que puedes convertir a AZW3 usando Calibre (gratuito) en tu computadora.</div>
+    <div class="info-box">📖 AZW3 es un formato propietario de Amazon Kindle. Esta herramienta genera un arquivo EPUB compatible que puedes convertir para AZW3 usando Calibre (gratuito) en tu computadora.</div>
     <button class="convert-btn" id="convertBtn" disabled>Converter para AZW3</button>
     <div class="progress-wrap" id="progressWrap">
       <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
@@ -74,7 +74,7 @@ footer a{color:#ccc;text-decoration:none}
     <h2 style="margin-bottom:1rem">Características</h2>
     <div class="features">
       <div class="feature"><div class="feature-icon">🔒</div><h3>100% Privado</h3><p>Tudo é processado no seu navegador</p></div>
-      <div class="feature"><div class="feature-icon">📚</div><h3>Sin DRM</h3><p>Solo arquivos sin protección de copia</p></div>
+      <div class="feature"><div class="feature-icon">📚</div><h3>Sin DRM</h3><p>Solo arquivos sem protección de copia</p></div>
       <div class="feature"><div class="feature-icon">⚡</div><h3>Rápido</h3><p>Conversão instantânea</p></div>
     </div>
   </div>
@@ -135,7 +135,7 @@ convertBtn.addEventListener('click',async()=>{
     progressFill.style.width='30%';progressText.textContent='Leyendo arquivo...';
     const ab=await ebookFile.arrayBuffer();
     const title=ebookFile.name.replace(/\.\w+$/,'');
-    progressFill.style.width='60%';progressText.textContent='Convertendo a AZW3...';
+    progressFill.style.width='60%';progressText.textContent='Convertendo para AZW3...';
     // For Kindle formats, we create an EPUB as the best browser-side alternative
     const contentHtml='<?xml version="1.0" encoding="utf-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>'+escXml(title)+'</title></head><body><h1>'+escXml(title)+'</h1><p>Archivo convertido desde EPUB por FilePresto.</p></body></html>';
     const contentOpf='<?xml version="1.0" encoding="utf-8"?><package xmlns="http://www.idpf.org/2007/opf" version="2.0" unique-identifier="uid"><metadata xmlns:dc="http://purl.org/dc/elements/1.1/"><dc:title>'+escXml(title)+'</dc:title><dc:language>es</dc:language><dc:identifier id="uid">filepresto</dc:identifier></metadata><manifest><item id="content" href="content.html" media-type="application/xhtml+xml"/><item id="ncx" href="toc.ncx" media-type="application/x-dtbncx+xml"/></manifest><spine toc="ncx"><itemref idref="content"/></spine></package>';
