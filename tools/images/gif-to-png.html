@@ -1,3 +1,12 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"><\/script>
+<script>
+(function(){var files=[],results={};var dz=document.getElementById('dropZone'),fi=document.getElementById('fileInput'),fl=document.getElementById('fileList');var btnCA=document.getElementById('btnConvertAll'),btnDA=document.getElementById('btnDownloadAll'),btnCl=document.getElementById('btnClear'),bp=document.getElementById('batchProgress');dz.addEventListener('dragover',function(e){e.preventDefault();dz.classList.add('dragover');});dz.addEventListener('dragleave',function(){dz.classList.remove('dragover');});dz.addEventListener('drop',function(e){e.preventDefault();dz.classList.remove('dragover');addFiles(e.dataTransfer.files);});dz.addEventListener('click',function(e){if(e.target===dz||e.target.tagName==='H3'||e.target.tagName==='P'||e.target.classList.contains('drop-icon')||e.target.classList.contains('file-types'))fi.click();});fi.addEventListener('change',function(){addFiles(this.files);this.value='';});function addFiles(flist){var added=0;Array.from(flist).forEach(function(f){files.push(f);added++;renderItem(f);});if(added>0){btnCA.style.display='inline-block';btnCl.style.display='inline-block';bp.textContent=files.length+' file'+(files.length>1?'s':'')+' ready to convert';}}function renderItem(f){var id='f'+Date.now()+Math.random().toString(36).substr(2,5);f._bid=id;var item=document.createElement('div');item.className='file-item';item.id='item-'+id;var kb=Math.round(f.size/1024);var sz=kb>1024?(kb/1024).toFixed(1)+' MB':kb+' KB';item.innerHTML='<img class="file-thumb" id="thumb-'+id+'" src="" alt=""/><div class="file-meta"><div class="file-name">'+f.name.replace(/&/g,"&amp;")+'</div><div class="file-size">'+sz+'</div></div><span class="file-status pending" id="st-'+id+'">Pending</span><a class="btn-dl-single" id="dl-'+id+'" download="">⬇</a>';fl.appendChild(item);var r=new FileReader();r.onload=function(e){var t=document.getElementById('thumb-'+id);if(t)t.src=e.target.result;};r.readAsDataURL(f);}btnCA.addEventListener('click',function(){btnCA.style.display='none';btnDA.style.display='none';bp.textContent='Converting...';var pending=files.filter(function(f){return !results[f._bid];});var total=pending.length,done=0;if(total===0){btnDA.style.display='inline-block';bp.textContent='All done!';return;}pending.forEach(function(f){setSt(f._bid,'converting','Converting...');convertFile(f,function(dataURL,err){done++;if(err){setSt(f._bid,'error','Error');}else{results[f._bid]=dataURL;setSt(f._bid,'done','Done ✓');var base=f.name.replace(/\\.[^.]+$/,'');var dl=document.getElementById('dl-'+f._bid);if(dl){dl.href=dataURL;dl.download=base+'.png';dl.style.display='inline-block';}}bp.textContent=done+'/'+total+' converted';if(done===total){btnDA.style.display='inline-block';bp.textContent=total+' file'+(total>1?'s':'')+' converted!';}});});});function setSt(id,cls,txt){var s=document.getElementById('st-'+id);if(s){s.className='file-status '+cls;s.textContent=txt;}}function convertFile(f,cb){var reader=new FileReader();reader.onload=function(e){var img=new Image();img.onload=function(){try{var cv=document.createElement('canvas');cv.width=img.naturalWidth;cv.height=img.naturalHeight;var ctx=cv.getContext('2d');ctx.drawImage(img,0,0);cb(cv.toDataURL('image/png',1.0),null);}catch(ex){cb(null,ex);}};img.onerror=function(){cb(null,'load error');};img.src=e.target.result;};reader.onerror=function(){cb(null,'read error');};reader.readAsDataURL(f);}btnDA.addEventListener('click',function(){var zip=new JSZip();var count=0;files.forEach(function(f){var d=results[f._bid];if(!d)return;var base=f.name.replace(/\\.[^.]+$/,'');zip.file(base+'.png',d.split(',')[1],{base64:true});count++;});if(count===0)return;zip.generateAsync({type:'blob'}).then(function(blob){var a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='filepresto-png-images.zip';a.click();});});btnCl.addEventListener('click',function(){files=[];results={};fl.innerHTML='';btnCA.style.display='none';btnDA.style.display='none';btnCl.style.display='none';bp.textContent='';});})();
+<\/script>ass="features">
+  <div class="feat"><div class="feat-icon">🔒</div><h4>100% Private</h4><p>Conversion in your browser. Files never uploaded.</p></div>
+  <div class="feat"><div class="feat-icon">⚡</div><h4>Instant</h4><p>No waiting. Convert in under a second.</p></div>
+  <div class="feat"><div class="feat-icon">🆓</div><h4>Free Forever</h4><p>No limits, no sign-up required.</p></div>
+  <div class="feat"><div class="feat-icon">📱</div><h4>Works Everywhere</h4><p>Any browser, desktop or mobile.</p></div>
+</div>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -41,55 +50,29 @@ footer{background:#1e293b;color:#94a3b8;padding:2rem;text-align:center}
 footer a{color:#94a3b8;text-decoration:none;margin:0 .75rem}
 .footer-links{margin-bottom:1rem}
 nav{background:#fff;border-bottom:1px solid #E2E8F0;padding:0 24px;height:64px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}.nav-logo{font-size:1.4rem;font-weight:800;color:#2563EB;text-decoration:none}.nav-links{display:flex;gap:24px;align-items:center;font-size:.95rem}.nav-links a{color:#64748B;font-weight:500}.nav-links a.active{color:#DC2626;font-weight:700}.lang-switcher{display:flex;gap:6px;align-items:center;font-size:.85rem;border-left:1px solid #E2E8F0;padding-left:16px;margin-left:8px}.lang-switcher a{color:#64748B;font-weight:600;padding:2px 6px;border-radius:4px}.lang-switcher a.active{background:#DC2626;color:#fff}.btn-pro{background:#2563EB;color:#fff!important;padding:8px 18px;border-radius:8px;font-weight:600;font-size:.9rem}
+
+.batch-drop-zone{border:2.5px dashed #BFDBFE;border-radius:16px;padding:48px 24px;text-align:center;background:#fff;cursor:pointer;transition:.2s}.batch-drop-zone:hover,.batch-drop-zone.dragover{border-color:#2563EB;background:#EFF6FF}.batch-drop-zone .drop-icon{font-size:3rem;margin-bottom:12px}.batch-drop-zone h3{font-size:1.1rem;font-weight:700;margin-bottom:8px}.batch-drop-zone p{color:#64748B;font-size:.9rem;margin-bottom:20px}.batch-btns{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}.btn-select{background:#2563EB;color:#fff;border:none;padding:12px 28px;border-radius:10px;font-size:.95rem;font-weight:700;cursor:pointer}.btn-select:hover{background:#1D4ED8}.file-types{font-size:.8rem;color:#94A3B8;margin-top:12px}.file-list{margin-top:20px;display:flex;flex-direction:column;gap:10px}.file-item{background:#fff;border:1px solid #E2E8F0;border-radius:12px;padding:14px 18px;display:flex;align-items:center;gap:14px}.file-thumb{width:48px;height:48px;object-fit:cover;border-radius:6px;background:#F1F5F9;flex-shrink:0}.file-meta{flex:1;min-width:0}.file-name{font-size:.9rem;font-weight:600;color:#0F172A;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.file-size{font-size:.78rem;color:#94A3B8;margin-top:2px}.file-status{font-size:.8rem;font-weight:600;padding:4px 10px;border-radius:6px;white-space:nowrap}.file-status.pending{background:#F1F5F9;color:#64748B}.file-status.converting{background:#FEF3C7;color:#D97706}.file-status.done{background:#DCFCE7;color:#16A34A}.file-status.error{background:#FEE2E2;color:#DC2626}.btn-dl-single{background:#16A34A;color:#fff;border:none;padding:6px 14px;border-radius:7px;font-size:.82rem;font-weight:700;cursor:pointer;text-decoration:none;display:none}.batch-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:20px}.btn-convert-all{background:#2563EB;color:#fff;border:none;padding:14px 36px;border-radius:10px;font-size:1rem;font-weight:700;cursor:pointer;display:none}.btn-convert-all:hover{background:#1D4ED8}.btn-download-all{background:#16A34A;color:#fff;border:none;padding:14px 36px;border-radius:10px;font-size:1rem;font-weight:700;cursor:pointer;display:none}.btn-download-all:hover{background:#15803D}.btn-clear{background:#F1F5F9;color:#64748B;border:none;padding:14px 24px;border-radius:10px;font-size:.9rem;font-weight:600;cursor:pointer;display:none}.batch-progress{font-size:.85rem;color:#64748B;margin-top:10px;text-align:center}
 </style>
 </head>
 <body>
 <nav><a href="../../index.html" class="nav-logo">&#9889; FilePresto</a><div class="nav-links"><a href="index.html" class="active">Images</a><a href="../pdf/index.html">PDF</a><a href="../video/index.html">Video</a><a href="../audio/index.html">Audio</a><a href="../ebook/index.html">eBooks</a><a href="../documents/index.html">Documents</a><a href="../../pricing.html">Pricing</a><div class="lang-switcher"><a href="gif-to-png.html" class="active">EN</a><a href="../../es/tools/images/gif-to-png.html">ES</a><a href="../../pt/tools/images/gif-to-png.html">PT</a></div><a href="../../pricing.html" class="btn-pro">Pro</a></div></nav>
 <section class="hero">
-  <h1>🔄 Converter GIF para PNG</h1>
-  <p>Extraia o primeiro frame do seu GIF como imagem PNG. Gratuito.</p>
+  <h1>Convert <span>GIF to PNG</span></h1>
+  <p>Convert GIF to PNG online for free. Extract frames as high-quality PNG images. No sign-up required.</p>
 </section>
-<div class="tool-container">
-  <div class="drop-zone" id="dropZone">
-    <div class="icon">🔄</div>
-    <h3>Arraste e solte sua imagem aqui</h3>
-    <p>ou clique para selecionar o arquivo</p>
-    <input type="file" id="fileInput" accept=".gif,image/gif">
+<div class="converter-box">
+  <div class="batch-drop-zone" id="dropZone">
+    <div class="drop-icon">🖼️</div><h3>Drop your GIF files here</h3>
+    <p>or click to select files from your device</p>
+    <div class="batch-btns"><button class="btn-select" onclick="document.getElementById('fileInput').click()">Select GIF Files</button></div>
+    <div class="file-types">Supported: GIF · Multiple files · 100% Private</div>
   </div>
-  <div class="progress" id="progress"><div class="progress-bar" id="progressBar"></div></div>
-  <div id="preview-section">
-    <img id="preview-img" alt="Prévia">
-    <div class="file-info" id="fileInfo"></div>
-    <canvas id="canvas" style="display:none"></canvas>
-    <button class="btn" id="convertBtn">Converter</button>
-    <button id="download-btn">⬇️ Baixar PNG</button>
+  <input type="file" id="fileInput" accept=".gif,image/gif" style="display:none" multiple/>
+  <div class="file-list" id="fileList"></div>
+  <div class="batch-actions">
+    <button class="btn-convert-all" id="btnConvertAll">⚡ Convert All to PNG</button>
+    <button class="btn-download-all" id="btnDownloadAll">⬇ Download All (ZIP)</button>
+    <button class="btn-clear" id="btnClear">✕ Clear</button>
   </div>
+  <div class="batch-progress" id="batchProgress"></div>
 </div>
-<footer><div class="footer-grid"><div class="footer-col"><h4>&#9889; FilePresto</h4><p style="font-size:.85rem;line-height:1.5">Free online file converter. Fast, secure and no sign-up required.</p></div><div class="footer-col"><h4>Tools</h4><a href="index.html">Image Converter</a><a href="../pdf/index.html">PDF Tools</a><a href="../video/index.html">Video Converter</a><a href="../audio/index.html">Audio Converter</a><a href="../ebook/index.html">eBook Converter</a><a href="../documents/index.html">Document Converter</a></div><div class="footer-col"><h4>Company</h4><a href="../../about.html">About</a><a href="../../pricing.html">Pricing</a><a href="../../contact.html">Contact</a></div><div class="footer-col"><h4>Legal</h4><a href="../../privacy.html">Privacy Policy</a><a href="../../terms.html">Terms of Service</a></div></div><div class="footer-bottom">&copy; 2025 FilePresto. All rights reserved.</div></footer>
-<script>
-const dropZone=document.getElementById('dropZone'),fileInput=document.getElementById('fileInput'),previewSection=document.getElementById('preview-section'),previewImg=document.getElementById('preview-img'),fileInfo=document.getElementById('fileInfo'),canvas=document.getElementById('canvas'),convertBtn=document.getElementById('convertBtn'),downloadBtn=document.getElementById('download-btn'),progress=document.getElementById('progress'),progressBar=document.getElementById('progressBar');
-let currentFile=null;
-dropZone.addEventListener('click',()=>fileInput.click());
-dropZone.addEventListener('dragover',e=>{e.preventDefault();dropZone.classList.add('dragover')});
-dropZone.addEventListener('dragleave',()=>dropZone.classList.remove('dragover'));
-dropZone.addEventListener('drop',e=>{e.preventDefault();dropZone.classList.remove('dragover');if(e.dataTransfer.files[0])loadFile(e.dataTransfer.files[0])});
-fileInput.addEventListener('change',e=>{if(e.target.files[0])loadFile(e.target.files[0])});
-function loadFile(f){currentFile=f;const r=new FileReader();r.onload=e=>{previewImg.src=e.target.result;fileInfo.textContent='Arquivo: '+f.name+' ('+Math.round(f.size/1024)+' KB)';previewSection.style.display='block';downloadBtn.style.display='none';convertBtn.style.display='block';};r.readAsDataURL(f);}
-convertBtn.addEventListener('click',()=>{
-  if(!currentFile)return;
-  progress.style.display='block';progressBar.style.width='30%';
-  const img=new Image();
-  img.onload=()=>{
-    progressBar.style.width='70%';canvas.width=img.naturalWidth;canvas.height=img.naturalHeight;
-    const ctx=canvas.getContext('2d');
-    
-    ctx.drawImage(img,0,0);progressBar.style.width='100%';
-    setTimeout(()=>{progress.style.display='none';progressBar.style.width='0';convertBtn.style.display='none';downloadBtn.style.display='block';
-      downloadBtn.onclick=()=>{const a=document.createElement('a');a.download=currentFile.name.replace(/\.[^.]+$/,'.png');a.href=canvas.toDataURL('image/png',0.92);a.click();};
-    },300);
-  };
-  img.src=URL.createObjectURL(currentFile);
-});
-</script>
-</body>
-</html>
