@@ -6,25 +6,61 @@
 <link rel="alternate" hreflang="en" href="https://jaordenes.github.io/filepresto/tools/images/png-to-webp.html"/>
 <link rel="alternate" hreflang="es" href="https://jaordenes.github.io/filepresto/es/tools/images/png-to-webp.html"/>
 <link rel="alternate" hreflang="pt" href="https://jaordenes.github.io/filepresto/pt/tools/images/png-to-webp.html"/>
-<style>*{box-sizing:border-box;margin:0;padding:0}body{font-family:'Segoe UI',sans-serif;background:#F8FAFC;color:#0F172A}a{text-decoration:none;color:inherit}nav{background:#fff;border-bottom:1px solid #E2E8F0;padding:0 24px;height:64px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}.nav-logo{font-size:1.4rem;font-weight:800;color:#2563EB}.nav-links{display:flex;gap:24px;align-items:center;font-size:.95rem}.nav-links a{color:#64748B;font-weight:500}.nav-links a:hover,.nav-links a.active{color:#2563EB;font-weight:700}.lang-switcher{display:flex;gap:6px;align-items:center;font-size:.85rem;border-left:1px solid #E2E8F0;padding-left:16px;margin-left:8px}.lang-switcher a{color:#64748B;font-weight:600;padding:2px 6px;border-radius:4px}.lang-switcher a.active{background:#2563EB;color:#fff}.btn-pro{background:#2563EB;color:#fff!important;padding:8px 18px;border-radius:8px;font-weight:600;font-size:.9rem}.breadcrumb{padding:14px 24px;font-size:.85rem;color:#64748B;max-width:900px;margin:0 auto}.breadcrumb a{color:#2563EB}.hero{text-align:center;padding:48px 24px 32px;background:linear-gradient(135deg,#EFF6FF,#F8FAFC)}.hero h1{font-size:2rem;font-weight:800;margin-bottom:10px}.hero h1 span{color:#2563EB}.hero p{color:#64748B;font-size:1rem;max-width:520px;margin:0 auto}.converter-box{max-width:700px;margin:32px auto;padding:0 24px}.drop-zone{border:2.5px dashed #BFDBFE;border-radius:16px;padding:56px 24px;text-align:center;background:#fff;cursor:pointer;transition:.2s}.drop-zone:hover{border-color:#2563EB;background:#EFF6FF}.drop-icon{font-size:3rem;margin-bottom:16px}.drop-zone h3{font-size:1.1rem;font-weight:700;margin-bottom:8px}.drop-zone p{color:#64748B;font-size:.9rem;margin-bottom:20px}.btn-select{background:#2563EB;color:#fff;border:none;padding:12px 28px;border-radius:10px;font-size:.95rem;font-weight:700;cursor:pointer}.file-types{font-size:.8rem;color:#94A3B8;margin-top:12px}.result-area{display:none;margin-top:20px;background:#fff;border:1px solid #E2E8F0;border-radius:16px;padding:24px;text-align:center}.result-area.active{display:block}.preview-img{max-width:100%;max-height:200px;border-radius:8px;margin-bottom:16px}.btn-download{background:#16A34A;color:#fff;border:none;padding:12px 32px;border-radius:10px;font-size:1rem;font-weight:700;cursor:pointer;width:100%}.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;max-width:700px;margin:32px auto;padding:0 24px}.feat{background:#fff;border:1px solid #E2E8F0;border-radius:12px;padding:20px;text-align:center}.feat-icon{font-size:1.8rem;margin-bottom:8px}.feat h4{font-size:.95rem;font-weight:700;margin-bottom:4px}.feat p{color:#64748B;font-size:.82rem;line-height:1.5}.info-section{max-width:700px;margin:0 auto 48px;padding:0 24px}.info-section h2{font-size:1.3rem;font-weight:700;margin-bottom:12px}.info-section p{color:#64748B;line-height:1.7;font-size:.95rem;margin-bottom:12px}footer{background:#0F172A;color:#94A3B8;padding:48px 24px 24px}.footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:32px;max-width:1100px;margin:0 auto 32px}.footer-col h4{color:#F1F5F9;font-weight:700;margin-bottom:12px;font-size:.95rem}.footer-col a{display:block;margin-bottom:8px;color:#94A3B8;font-size:.88rem}.footer-col a:hover{color:#fff}.footer-bottom{text-align:center;border-top:1px solid #1E293B;padding-top:20px;font-size:.82rem}</style>
+<style>*{box-sizing:border-box;margin:0;padding:0}body{font-family:'Segoe UI',sans-serif;background:#F8FAFC;color:#0F172A}a{text-decoration:none;color:inherit}nav{background:#fff;border-bottom:1px solid #E2E8F0;padding:0 24px;height:64px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}.nav-logo{font-size:1.4rem;font-weight:800;color:#2563EB}.nav-links{display:flex;gap:24px;align-items:center;font-size:.95rem}.nav-links a{color:#64748B;font-weight:500}.nav-links a:hover,.nav-links a.active{color:#2563EB;font-weight:700}.lang-switcher{display:flex;gap:6px;align-items:center;font-size:.85rem;border-left:1px solid #E2E8F0;padding-left:16px;margin-left:8px}.lang-switcher a{color:#64748B;font-weight:600;padding:2px 6px;border-radius:4px}.lang-switcher a.active{background:#2563EB;color:#fff}.btn-pro{background:#2563EB;color:#fff!important;padding:8px 18px;border-radius:8px;font-weight:600;font-size:.9rem}.breadcrumb{padding:14px 24px;font-size:.85rem;color:#64748B;max-width:900px;margin:0 auto}.breadcrumb a{color:#2563EB}.hero{text-align:center;padding:48px 24px 32px;background:linear-gradient(135deg,#EFF6FF,#F8FAFC)}.hero h1{font-size:2rem;font-weight:800;margin-bottom:10px}.hero h1 span{color:#2563EB}.hero p{color:#64748B;font-size:1rem;max-width:520px;margin:0 auto}.converter-box{max-width:700px;margin:32px auto;padding:0 24px}.drop-zone{border:2.5px dashed #BFDBFE;border-radius:16px;padding:56px 24px;text-align:center;background:#fff;cursor:pointer;transition:.2s}.drop-zone:hover{border-color:#2563EB;background:#EFF6FF}.drop-icon{font-size:3rem;margin-bottom:16px}.drop-zone h3{font-size:1.1rem;font-weight:700;margin-bottom:8px}.drop-zone p{color:#64748B;font-size:.9rem;margin-bottom:20px}.btn-select{background:#2563EB;color:#fff;border:none;padding:12px 28px;border-radius:10px;font-size:.95rem;font-weight:700;cursor:pointer}.file-types{font-size:.8rem;color:#94A3B8;margin-top:12px}.result-area{display:none;margin-top:20px;background:#fff;border:1px solid #E2E8F0;border-radius:16px;padding:24px;text-align:center}.result-area.active{display:block}.preview-img{max-width:100%;max-height:200px;border-radius:8px;margin-bottom:16px}.btn-download{background:#16A34A;color:#fff;border:none;padding:12px 32px;border-radius:10px;font-size:1rem;font-weight:700;cursor:pointer;width:100%}.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;max-width:700px;margin:32px auto;padding:0 24px}.feat{background:#fff;border:1px solid #E2E8F0;border-radius:12px;padding:20px;text-align:center}.feat-icon{font-size:1.8rem;margin-bottom:8px}.feat h4{font-size:.95rem;font-weight:700;margin-bottom:4px}.feat p{color:#64748B;font-size:.82rem;line-height:1.5}.info-section{max-width:700px;margin:0 auto 48px;padding:0 24px}.info-section h2{font-size:1.3rem;font-weight:700;margin-bottom:12px}.info-section p{color:#64748B;line-height:1.7;font-size:.95rem;margin-bottom:12px}footer{background:#0F172A;color:#94A3B8;padding:48px 24px 24px}.footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:32px;max-width:1100px;margin:0 auto 32px}.footer-col h4{color:#F1F5F9;font-weight:700;margin-bottom:12px;font-size:.95rem}.footer-col a{display:block;margin-bottom:8px;color:#94A3B8;font-size:.88rem}.footer-col a:hover{color:#fff}.footer-bottom{text-align:center;border-top:1px solid #1E293B;padding-top:20px;font-size:.82rem}
+/* BATCH STYLES */
+.batch-drop-zone{border:2.5px dashed #BFDBFE;border-radius:16px;padding:48px 24px;text-align:center;background:#fff;cursor:pointer;transition:.2s;position:relative}
+.batch-drop-zone:hover,.batch-drop-zone.dragover{border-color:#2563EB;background:#EFF6FF}
+.batch-drop-zone .drop-icon{font-size:3rem;margin-bottom:12px}
+.batch-drop-zone h3{font-size:1.1rem;font-weight:700;margin-bottom:8px}
+.batch-drop-zone p{color:#64748B;font-size:.9rem;margin-bottom:20px}
+.batch-btns{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.btn-select{background:#2563EB;color:#fff;border:none;padding:12px 28px;border-radius:10px;font-size:.95rem;font-weight:700;cursor:pointer}
+.btn-select:hover{background:#1D4ED8}
+.file-types{font-size:.8rem;color:#94A3B8;margin-top:12px}
+.file-list{margin-top:20px;display:flex;flex-direction:column;gap:10px}
+.file-item{background:#fff;border:1px solid #E2E8F0;border-radius:12px;padding:14px 18px;display:flex;align-items:center;gap:14px}
+.file-thumb{width:48px;height:48px;object-fit:cover;border-radius:6px;background:#F1F5F9;flex-shrink:0}
+.file-meta{flex:1;min-width:0}
+.file-name{font-size:.9rem;font-weight:600;color:#0F172A;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.file-size{font-size:.78rem;color:#94A3B8;margin-top:2px}
+.file-status{font-size:.8rem;font-weight:600;padding:4px 10px;border-radius:6px;white-space:nowrap}
+.file-status.pending{background:#F1F5F9;color:#64748B}
+.file-status.converting{background:#FEF3C7;color:#D97706}
+.file-status.done{background:#DCFCE7;color:#16A34A}
+.file-status.error{background:#FEE2E2;color:#DC2626}
+.btn-dl-single{background:#16A34A;color:#fff;border:none;padding:6px 14px;border-radius:7px;font-size:.82rem;font-weight:700;cursor:pointer;text-decoration:none;display:none}
+.batch-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:20px}
+.btn-convert-all{background:#2563EB;color:#fff;border:none;padding:14px 36px;border-radius:10px;font-size:1rem;font-weight:700;cursor:pointer;display:none}
+.btn-convert-all:hover{background:#1D4ED8}
+.btn-download-all{background:#16A34A;color:#fff;border:none;padding:14px 36px;border-radius:10px;font-size:1rem;font-weight:700;cursor:pointer;display:none}
+.btn-download-all:hover{background:#15803D}
+.btn-clear{background:#F1F5F9;color:#64748B;border:none;padding:14px 24px;border-radius:10px;font-size:.9rem;font-weight:600;cursor:pointer;display:none}
+.batch-progress{font-size:.85rem;color:#64748B;margin-top:10px;text-align:center}
+</style>
 </head><body>
 <nav><a href="../../index.html" class="nav-logo">⚡ FilePresto</a><div class="nav-links"><a href="index.html" class="active">Images</a><a href="../pdf/index.html">PDF</a><a href="../video/index.html">Video</a><a href="../audio/index.html">Audio</a><a href="../ebook/index.html">eBooks</a><a href="../documents/index.html">Documents</a><a href="../../pricing.html">Pricing</a><div class="lang-switcher"><a href="png-to-webp.html" class="active">EN</a><a href="../../es/tools/images/png-to-webp.html">ES</a><a href="../../pt/tools/images/png-to-webp.html">PT</a></div><a href="../../pricing.html" class="btn-pro">Pro</a></div></nav>
 <div class="breadcrumb"><a href="../../index.html">Home</a> › <a href="index.html">Images</a> › PNG to WebP</div>
 <section class="hero"><h1>Convert <span>PNG to WebP</span></h1><p>Convert PNG to WebP online for free. Smaller file sizes, same quality. No sign-up, no uploads, instant.</p></section>
 <div class="converter-box">
-  <div class="drop-zone" id="dropZone" onclick="document.getElementById('fileInput').click()">
-    <div class="drop-icon">🖼️</div><h3>Drop your PNG here</h3>
-    <p>or click to select a file from your device</p>
-    <button class="btn-select">Select PNG File</button>
-    <div class="file-types">Supported: PNG · Max 50MB</div>
+  <div class="batch-drop-zone" id="dropZone">
+    <div class="drop-icon">🖼️</div>
+    <h3>Drop your PNG files here</h3>
+    <p>or click to select files from your device</p>
+    <div class="batch-btns">
+      <button class="btn-select" onclick="document.getElementById('fileInput').click()">Select PNG Files</button>
+    </div>
+    <div class="file-types">Supported: PNG · Multiple files · 100% Private</div>
   </div>
-  <input type="file" id="fileInput" accept=".png,image/png" style="display:none"/>
-  <div class="result-area" id="resultArea">
-    <img id="previewImg" class="preview-img" src="" alt="Preview"/>
-    <p id="fileInfo" style="color:#64748B;font-size:.85rem;margin-bottom:12px"></p>
-    <button class="btn-download" id="downloadBtn">⬇ Download WebP</button>
+  <input type="file" id="fileInput" accept=".png,image/png" style="display:none" multiple/>
+  <div class="file-list" id="fileList"></div>
+  <div class="batch-actions">
+    <button class="btn-convert-all" id="btnConvertAll">⚡ Convert All to WebP</button>
+    <button class="btn-download-all" id="btnDownloadAll">⬇ Download All (ZIP)</button>
+    <button class="btn-clear" id="btnClear">✕ Clear</button>
   </div>
+  <div class="batch-progress" id="batchProgress"></div>
 </div>
+
 <div class="features">
   <div class="feat"><div class="feat-icon">🔒</div><h4>100% Private</h4><p>Conversion in your browser. Files never uploaded.</p></div>
   <div class="feat"><div class="feat-icon">⚡</div><h4>Instant</h4><p>No waiting. Convert in under a second.</p></div>
@@ -171,50 +207,26 @@ footer{background:var(--white);border-top:1px solid var(--border);padding:32px 2
 </div>
 <div class="footer-copy">&#169; 2026 FilePresto. Todos los derechos reservados.</div>
 </footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"><\/script>
 <script>
-var qSlider=document.getElementById('quality');
-var qVal=document.getElementById('qualityVal');
-qSlider.addEventListener('input',function(){qVal.textContent=this.value+'%';});
-var uploadZone=document.getElementById('uploadZone');
-var fileInput=document.getElementById('fileInput');
-uploadZone.addEventListener('dragover',function(e){e.preventDefault();uploadZone.classList.add('dragover');});
-uploadZone.addEventListener('dragleave',function(){uploadZone.classList.remove('dragover');});
-uploadZone.addEventListener('drop',function(e){e.preventDefault();uploadZone.classList.remove('dragover');var f=e.dataTransfer.files[0];if(f)handleFile(f);});
-fileInput.addEventListener('change',function(){if(this.files[0])handleFile(this.files[0]);});
-function handleFile(file){
-  if(!file.type.includes('png')){showStatus('error','Por favor selecciona un archivo PNG.');return;}
-  showStatus('loading','Convirtiendo PNG a WebP...');
-  var reader=new FileReader();
-  reader.onload=function(e){
-    var img=new Image();
-    img.onload=function(){
-      var canvas=document.createElement('canvas');
-      canvas.width=img.width;canvas.height=img.height;
-      var ctx=canvas.getContext('2d');
-      ctx.drawImage(img,0,0);
-      var q=parseInt(document.getElementById('quality').value)/100;
-      var dataURL=canvas.toDataURL('image/webp',q);
-      var baseName=file.name.replace(/\.png$/i,'');
-      document.getElementById('preview').src=dataURL;
-      var dlBtn=document.getElementById('downloadBtn');
-      dlBtn.href=dataURL;dlBtn.download=baseName+'.webp';
-      document.getElementById('status').style.display='none';
-      document.getElementById('result').classList.add('show');
-    };
-    img.src=e.target.result;
-  };
-  reader.readAsDataURL(file);
-}
-function showStatus(type,msg){
-  var s=document.getElementById('status');
-  s.className='status '+type;s.style.display='flex';
-  document.getElementById('statusText').textContent=msg;
-}
-function resetTool(){
-  document.getElementById('result').classList.remove('show');
-  document.getElementById('status').style.display='none';
-  document.getElementById('fileInput').value='';
-}
-</script>
+(function(){
+var files=[],results={};
+var dz=document.getElementById('dropZone'),fi=document.getElementById('fileInput'),fl=document.getElementById('fileList');
+var btnCA=document.getElementById('btnConvertAll'),btnDA=document.getElementById('btnDownloadAll'),btnCl=document.getElementById('btnClear'),bp=document.getElementById('batchProgress');
+dz.addEventListener('dragover',function(e){e.preventDefault();dz.classList.add('dragover');});
+dz.addEventListener('dragleave',function(){dz.classList.remove('dragover');});
+dz.addEventListener('drop',function(e){e.preventDefault();dz.classList.remove('dragover');addFiles(e.dataTransfer.files);});
+dz.addEventListener('click',function(e){if(e.target===dz||e.target.tagName==='H3'||e.target.tagName==='P'||e.target.classList.contains('drop-icon')||e.target.classList.contains('file-types'))fi.click();});
+fi.addEventListener('change',function(){addFiles(this.files);this.value='';});
+function addFiles(flist){var added=0;Array.from(flist).forEach(function(f){files.push(f);added++;renderItem(f);});if(added>0){btnCA.style.display='inline-block';btnCl.style.display='inline-block';bp.textContent=files.length+' file'+(files.length>1?'s':'')+' ready to convert';}}
+function renderItem(f){var id='f'+Date.now()+Math.random().toString(36).substr(2,5);f._bid=id;var item=document.createElement('div');item.className='file-item';item.id='item-'+id;var kb=Math.round(f.size/1024);var sz=kb>1024?(kb/1024).toFixed(1)+' MB':kb+' KB';item.innerHTML='<img class="file-thumb" id="thumb-'+id+'" src="" alt=""/><div class="file-meta"><div class="file-name">'+escH(f.name)+'</div><div class="file-size">'+sz+'</div></div><span class="file-status pending" id="st-'+id+'">Pending</span><a class="btn-dl-single" id="dl-'+id+'" download="">⬇</a>';fl.appendChild(item);var r=new FileReader();r.onload=function(e){var t=document.getElementById('thumb-'+id);if(t)t.src=e.target.result;};r.readAsDataURL(f);}
+function escH(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+btnCA.addEventListener('click',function(){btnCA.style.display='none';btnDA.style.display='none';bp.textContent='Converting...';var pending=files.filter(function(f){return !results[f._bid];});var total=pending.length,done=0;if(total===0){btnDA.style.display='inline-block';bp.textContent='All done!';return;}pending.forEach(function(f){setSt(f._bid,'converting','Converting...');convertFile(f,function(dataURL,err){done++;if(err){setSt(f._bid,'error','Error');}else{results[f._bid]=dataURL;setSt(f._bid,'done','Done ✓');var base=f.name.replace(/\\.[^.]+$/,'');var dl=document.getElementById('dl-'+f._bid);if(dl){dl.href=dataURL;dl.download=base+'.webp';dl.style.display='inline-block';}}bp.textContent=done+'/'+total+' converted';if(done===total){btnDA.style.display='inline-block';bp.textContent=total+' file'+(total>1?'s':'')+' converted!';}});});});
+function setSt(id,cls,txt){var s=document.getElementById('st-'+id);if(s){s.className='file-status '+cls;s.textContent=txt;}}
+function convertFile(f,cb){var reader=new FileReader();reader.onload=function(e){var img=new Image();img.onload=function(){try{var cv=document.createElement('canvas');cv.width=img.naturalWidth;cv.height=img.naturalHeight;var ctx=cv.getContext('2d');ctx.drawImage(img,0,0);cb(cv.toDataURL('image/webp',0.92),null);}catch(ex){cb(null,ex);}};img.onerror=function(){cb(null,'load error');};img.src=e.target.result;};reader.onerror=function(){cb(null,'read error');};reader.readAsDataURL(f);}
+btnDA.addEventListener('click',function(){var zip=new JSZip();var count=0;files.forEach(function(f){var d=results[f._bid];if(!d)return;var base=f.name.replace(/\\.[^.]+$/,'');zip.file(base+'.webp',d.split(',')[1],{base64:true});count++;});if(count===0)return;zip.generateAsync({type:'blob'}).then(function(blob){var a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='filepresto-webp-images.zip';a.click();});});
+btnCl.addEventListener('click',function(){files=[];results={};fl.innerHTML='';btnCA.style.display='none';btnDA.style.display='none';btnCl.style.display='none';bp.textContent='';});
+})();
+<\/script>
 </body>
 </html>
