@@ -1,73 +1,182 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt"><head><meta charset="UTF-8"/>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>"><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>SVG to PNG Converter – Free Online | FilePresto</title>
+<meta name="description" content="Convert SVG vector graphics to PNG raster images online for free. Choose your output size. No sign-up required."/>
+<link rel="alternate" hreflang="en" href="https://jaordenes.github.io/filepresto/tools/images/svg-to-png.html"/>
+<link rel="alternate" hreflang="es" href="https://jaordenes.github.io/filepresto/es/tools/images/svg-to-png.html"/>
+<link rel="alternate" hreflang="pt" href="https://jaordenes.github.io/filepresto/pt/tools/images/svg-to-png.html"/>
+<style>*{box-sizing:border-box;margin:0;padding:0}body{font-family:'Segoe UI',sans-serif;background:#F8FAFC;color:#0F172A}a{text-decoration:none;color:inherit}nav{background:#fff;border-bottom:1px solid #E2E8F0;padding:0 24px;height:64px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}.nav-logo{font-size:1.4rem;font-weight:800;color:#2563EB}.nav-links{display:flex;gap:24px;align-items:center;font-size:.95rem}.nav-links a{color:#64748B;font-weight:500}.nav-links a.active{color:#2563EB;font-weight:700}.lang-switcher{display:flex;gap:6px;align-items:center;font-size:.85rem;border-left:1px solid #E2E8F0;padding-left:16px;margin-left:8px}.lang-switcher a{color:#64748B;font-weight:600;padding:2px 6px;border-radius:4px}.lang-switcher a.active{background:#2563EB;color:#fff}.btn-pro{background:#2563EB;color:#fff!important;padding:8px 18px;border-radius:8px;font-weight:600;font-size:.9rem}.breadcrumb{padding:14px 24px;font-size:.85rem;color:#64748B;max-width:900px;margin:0 auto}.breadcrumb a{color:#2563EB}.hero{text-align:center;padding:48px 24px 32px;background:linear-gradient(135deg,#EFF6FF,#F8FAFC)}.hero h1{font-size:2rem;font-weight:800;margin-bottom:10px}.hero h1 span{color:#2563EB}.hero p{color:#64748B;font-size:1rem;max-width:520px;margin:0 auto}.converter-box{max-width:700px;margin:32px auto;padding:0 24px}.drop-zone{border:2.5px dashed #BFDBFE;border-radius:16px;padding:56px 24px;text-align:center;background:#fff;cursor:pointer;transition:.2s}.drop-zone:hover{border-color:#2563EB;background:#EFF6FF}.drop-icon{font-size:3rem;margin-bottom:16px}.drop-zone h3{font-size:1.1rem;font-weight:700;margin-bottom:8px}.drop-zone p{color:#64748B;font-size:.9rem;margin-bottom:20px}.btn-select{background:#2563EB;color:#fff;border:none;padding:12px 28px;border-radius:10px;font-size:.95rem;font-weight:700;cursor:pointer}.file-types{font-size:.8rem;color:#94A3B8;margin-top:12px}.options-row{display:flex;gap:12px;align-items:center;margin-top:16px;flex-wrap:wrap}.options-row label{font-size:.9rem;font-weight:600;color:#374151}.options-row input{width:90px;padding:8px 12px;border:1.5px solid #E2E8F0;border-radius:8px;font-size:.9rem}.result-area{display:none;margin-top:20px;background:#fff;border:1px solid #E2E8F0;border-radius:16px;padding:24px;text-align:center}.result-area.active{display:block}.preview-img{max-width:100%;max-height:200px;border-radius:8px;margin-bottom:16px}.btn-download{background:#16A34A;color:#fff;border:none;padding:12px 32px;border-radius:10px;font-size:1rem;font-weight:700;cursor:pointer;width:100%}.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;max-width:700px;margin:32px auto;padding:0 24px}.feat{background:#fff;border:1px solid #E2E8F0;border-radius:12px;padding:20px;text-align:center}.feat-icon{font-size:1.8rem;margin-bottom:8px}.feat h4{font-size:.95rem;font-weight:700;margin-bottom:4px}.feat p{color:#64748B;font-size:.82rem;line-height:1.5}.info-section{max-width:700px;margin:0 auto 48px;padding:0 24px}.info-section h2{font-size:1.3rem;font-weight:700;margin-bottom:12px}.info-section p{color:#64748B;line-height:1.7;font-size:.95rem;margin-bottom:12px}footer{background:#0F172A;color:#94A3B8;padding:48px 24px 24px}.footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:32px;max-width:1100px;margin:0 auto 32px}.footer-col h4{color:#F1F5F9;font-weight:700;margin-bottom:12px;font-size:.95rem}.footer-col a{display:block;margin-bottom:8px;color:#94A3B8;font-size:.88rem}.footer-col a:hover{color:#fff}.footer-bottom{text-align:center;border-top:1px solid #1E293B;padding-top:20px;font-size:.82rem}
+.batch-drop-zone{border:2.5px dashed #BFDBFE;border-radius:16px;padding:48px 24px;text-align:center;background:#fff;cursor:pointer;transition:.2s}.batch-drop-zone:hover,.batch-drop-zone.dragover{border-color:#2563EB;background:#EFF6FF}.batch-drop-zone .drop-icon{font-size:3rem;margin-bottom:12px}.batch-drop-zone h3{font-size:1.1rem;font-weight:700;margin-bottom:8px}.batch-drop-zone p{color:#64748B;font-size:.9rem;margin-bottom:20px}.batch-btns{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}.btn-select{background:#2563EB;color:#fff;border:none;padding:12px 28px;border-radius:10px;font-size:.95rem;font-weight:700;cursor:pointer}.btn-select:hover{background:#1D4ED8}.file-types{font-size:.8rem;color:#94A3B8;margin-top:12px}.file-list{margin-top:20px;display:flex;flex-direction:column;gap:10px}.file-item{background:#fff;border:1px solid #E2E8F0;border-radius:12px;padding:14px 18px;display:flex;align-items:center;gap:14px}.file-thumb{width:48px;height:48px;object-fit:cover;border-radius:6px;background:#F1F5F9;flex-shrink:0}.file-meta{flex:1;min-width:0}.file-name{font-size:.9rem;font-weight:600;color:#0F172A;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.file-size{font-size:.78rem;color:#94A3B8;margin-top:2px}.file-status{font-size:.8rem;font-weight:600;padding:4px 10px;border-radius:6px;white-space:nowrap}.file-status.pending{background:#F1F5F9;color:#64748B}.file-status.converting{background:#FEF3C7;color:#D97706}.file-status.done{background:#DCFCE7;color:#16A34A}.file-status.error{background:#FEE2E2;color:#DC2626}.btn-dl-single{background:#16A34A;color:#fff;border:none;padding:6px 14px;border-radius:7px;font-size:.82rem;font-weight:700;cursor:pointer;text-decoration:none;display:none}.batch-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:20px}.btn-convert-all{background:#2563EB;color:#fff;border:none;padding:14px 36px;border-radius:10px;font-size:1rem;font-weight:700;cursor:pointer;display:none}.btn-convert-all:hover{background:#1D4ED8}.btn-download-all{background:#16A34A;color:#fff;border:none;padding:14px 36px;border-radius:10px;font-size:1rem;font-weight:700;cursor:pointer;display:none}.btn-download-all:hover{background:#15803D}.btn-clear{background:#F1F5F9;color:#64748B;border:none;padding:14px 24px;border-radius:10px;font-size:.9rem;font-weight:600;cursor:pointer;display:none}.batch-progress{font-size:.85rem;color:#64748B;margin-top:10px;text-align:center}
+</style>
+</head><body>
+<nav><a href="../../../index.html" class="nav-logo">⚡ FilePresto</a><div class="nav-links"><a href="index.html" class="active">Imagens</a><a href="../pdf/index.html">PDF</a><a href="../video/index.html">Vídeo</a><a href="../audio/index.html">Áudio</a><a href="../ebook/index.html">eBooks</a><a href="../documents/index.html">Documentos</a><a href="../../../pricing.html">Preços</a><div class="lang-switcher"><a href="../../../tools/images/svg-to-png.html">EN</a><a href="../../../es/tools/images/svg-to-png.html">ES</a><a href="svg-to-png.html" class="active">PT</a></div><a href="../../../pricing.html" class="btn-pro">Pro</a></div></nav>
+<div class="breadcrumb"><a href="../../../index.html">Início</a> › <a href="index.html">Imagens</a> › SVG para PNG</div>
+<section class="hero"><h1>Converter <span>SVG para PNG</span></h1><p>Convert SVG vector graphics to PNG raster images. Choose output size. No sign-up, no uploads, instant.</p></section>
+<div class="converter-box">
+  <div class="batch-drop-zone" id="dropZone">
+    <div class="drop-icon">🖼️</div><h3>Arraste seus arquivos SVG aqui</h3>
+    <p>ou clique para selecionar arquivos</p>
+    <div class="batch-btns"><button class="btn-select" onclick="document.getElementById('fileInput').click()">Selecionar arquivos SVG</button></div>
+    <div class="file-types">Compatível: SVG · Vários arquivos · 100% Privado</div>
+  </div>
+  <input type="file" id="fileInput" accept=".svg,image/svg+xml" style="display:none" multiple/>
+  <div class="file-list" id="fileList"></div>
+  <div class="batch-actions">
+    <button class="btn-convert-all" id="btnConvertAll">⚡ Converter tudo para PNG</button>
+    <button class="btn-download-all" id="btnDownloadAll">⬇ Baixar tudo (ZIP)</button>
+    <button class="btn-clear" id="btnClear">✕ Limpar</button>
+  </div>
+  <div class="batch-progress" id="batchProgress"></div>
+</div>
+
+<div class="features">
+  <div class="feat"><div class="feat-icon">🔒</div><h4>100% Privado</h4><p>Conversão no seu navegador. Arquivos nunca enviados.</p></div>
+  <div class="feat"><div class="feat-icon">⚡</div><h4>Instantâneo</h4><p>Sem espera. Converte em menos de um segundo.</p></div>
+  <div class="feat"><div class="feat-icon">🆓</div><h4>Sempre Grátis</h4><p>Sem limites, sem cadastro necessário.</p></div>
+  <div class="feat"><div class="feat-icon">📐</div><h4>Custom Size</h4><p>Choose exact output dimensions in pixels.</p></div>
+</div>
+<div class="info-section">
+  <h2>Why Convert SVG to PNG?</h2>
+  <p>SVG (Scalable Vector Graphics) is ideal for logos and icons, but not all platforms support it. PNG is universally compatible with all browsers, apps and operating systems. Converting SVG to PNG ensures your graphics display correctly everywhere.</p>
+  <h2 style="margin-top:24px">How It Works</h2>
+  <p>Our converter renders your SVG on an HTML5 Canvas at your specified dimensions and exports it as a PNG. This process is entirely local — no data is sent to any server.</p>
+</div>
+<script>
+const fi=document.getElementById('fileInput'),dz=document.getElementById('dropZone'),ra=document.getElementById('resultArea'),pi=document.getElementById('previewImg'),fi2=document.getElementById('fileInfo'),db=document.getElementById('downloadBtn'),wi=document.getElementById('widthInput'),hi=document.getElementById('heightInput');
+let ou=null,lastFile=null;
+fi.addEventListener('change',e=>{lastFile=e.target.files[0];hf(lastFile);});
+dz.addEventListener('dragover',e=>{e.preventDefault();dz.style.borderColor='#2563EB';});
+dz.addEventListener('dragleave',()=>{dz.style.borderColor='#BFDBFE';});
+dz.addEventListener('drop',e=>{e.preventDefault();dz.style.borderColor='#BFDBFE';lastFile=e.dataTransfer.files[0];hf(lastFile);});
+function hf(file){if(!file)return;const r=new FileReader();r.onload=ev=>{const svgData=ev.target.result;const img=new Image();const w=parseInt(wi.value)||1024;const h=parseInt(hi.value)||1024;img.onload=()=>{const c=document.createElement('canvas');c.width=w;c.height=h;c.getContext('2d').drawImage(img,0,0,w,h);if(ou)URL.revokeObjectURL(ou);c.toBlob(b=>{ou=URL.createObjectURL(b);pi.src=ou;fi2.textContent=w+' x '+h+' px · '+(b.size/1048576).toFixed(2)+' MB · PNG';db.onclick=()=>{const a=document.createElement('a');a.href=ou;a.download=file.name.replace(/.[^.]+$/,'')+'.png';a.click();};ra.classList.add('active');},'image/png');};img.src=svgData;};r.readAsDataURL(file);}
+</script>
+<footer><div class="footer-grid">
+  <div class="footer-col"><h4>⚡ FilePresto</h4><p style="font-size:.85rem;line-height:1.5">Free online file converter. Fast, secure and no sign-up required.</p></div>
+  <div class="footer-col"><h4>Tools</h4><a href="index.html">Image Converter</a><a href="../pdf/index.html">PDF Tools</a><a href="../video/index.html">Video Converter</a><a href="../audio/index.html">Audio Converter</a><a href="../ebook/index.html">eBook Converter</a><a href="../documents/index.html">Document Converter</a></div>
+  <div class="footer-col"><h4>Company</h4><a href="../../about.html">About</a><a href="../../pricing.html">Pricing</a><a href="../../contact.html">Contact</a></div>
+  <div class="footer-col"><h4>Legal</h4><a href="../../privacy.html">Privacy Policy</a><a href="../../terms.html">Terms of Service</a></div>
+</div><div class="footer-bottom">© 2025 FilePresto. All rights reserved.</div></footer>
+</body></html><!DOCTYPE html>
+<html lang="es">
 <head>
 <meta charset="UTF-8">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Converter Converter SVG para PNG Online Grátis | FilePresto</title>
-<meta name="description" content="Converta gráficos vectoriales SVG a imagens PNG de alta resolución online. Elige el tamaño de salida. Grátis y sem instalação.">
-<link rel="canonical" href="https://jaordenes.github.io/filepresto/es/tools/images/svg-to-png.html">
-<link rel="alternate" hreflang="en" href="https://jaordenes.github.io/filepresto/tools/images/svg-to-png.html">
-<link rel="alternate" hreflang="pt" href="https://jaordenes.github.io/filepresto/es/tools/images/svg-to-png.html">
-<link rel="alternate" hreflang="pt" href="https://jaordenes.github.io/filepresto/pt/tools/images/svg-to-png.html">
-<link rel="alternate" hreflang="x-default" href="https://jaordenes.github.io/filepresto/tools/images/svg-to-png.html">
-<style>*{margin:0;padding:0;box-sizing:border-box}:root{--primary:#2563EB;--primary-dark:#1D4ED8;--primary-light:#EFF6FF;--text:#1F2937;--text-light:#6B7280;--bg:#F9FAFB;--border:#E5E7EB;--radius:12px;--shadow:0 4px 24px rgba(37,99,235,.08)}body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;color:var(--text);background:var(--bg);line-height:1.6}a{color:inherit;text-decoration:none}nav{background:#fff;border-bottom:1px solid var(--border);padding:0 24px;position:sticky;top:0;z-index:100}.nav-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:64px}.logo{font-size:1.4rem;font-weight:800;color:var(--primary)}.logo span{color:var(--text)}.nav-links{display:flex;gap:28px;align-items:center;font-size:.95rem;font-weight:500}.nav-links a:hover{color:var(--primary)}.lang-switcher{display:flex;gap:8px;font-size:.85rem}.lang-switcher a{padding:4px 10px;border-radius:6px;border:1px solid var(--border);color:var(--text-light);transition:.2s}.lang-switcher a.active,.lang-switcher a:hover{background:var(--primary);color:#fff;border-color:var(--primary)}.breadcrumb{max-width:1200px;margin:0 auto;padding:16px 24px;font-size:.875rem;color:var(--text-light);display:flex;gap:8px}.hero{background:linear-gradient(135deg,var(--primary),#1E3A8A);color:#fff;padding:56px 24px;text-align:center}.hero h1{font-size:2.2rem;font-weight:800;margin-bottom:12px}.hero p{opacity:.9;max-width:540px;margin:0 auto}.container{max-width:900px;margin:0 auto;padding:40px 24px}.tool-box{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden;margin-bottom:28px}.tool-box-header{background:var(--primary-light);padding:20px 28px;border-bottom:1px solid var(--border)}.tool-box-header h2{font-size:1.2rem;color:var(--primary);font-weight:700}.tool-box-body{padding:28px}.drop-zone{border:2px dashed var(--border);border-radius:var(--radius);padding:48px 24px;text-align:center;cursor:pointer;transition:.2s;background:var(--bg)}.drop-zone:hover,.drag-over{border-color:var(--primary);background:var(--primary-light)}.file-input{display:none}.btn-select{display:inline-block;margin-top:16px;background:var(--primary);color:#fff;padding:10px 24px;border-radius:8px;font-weight:600;cursor:pointer}.options{margin-top:20px;display:none;gap:16px;flex-wrap:wrap;align-items:center}.opt-group{display:flex;flex-direction:column;gap:4px}.opt-group label{font-size:.8rem;font-weight:600;color:var(--text-light)}.opt-group select,.opt-group input{padding:8px 12px;border:1px solid var(--border);border-radius:6px;font-family:inherit;font-size:.9rem}.preview-area{display:none;margin-top:20px;text-align:center}.preview-area img{max-width:100%;max-height:200px;object-fit:contain;border:1px solid var(--border);border-radius:8px}.actions{display:flex;gap:12px;margin-top:16px;flex-wrap:wrap}.btn-convert{background:var(--primary);color:#fff;padding:12px 28px;border-radius:8px;font-weight:700;border:none;cursor:pointer;flex:1}.btn-download{background:#16A34A;color:#fff;padding:12px 28px;border-radius:8px;font-weight:700;border:none;cursor:pointer;display:none;flex:1}.status{margin-top:12px;font-size:.875rem;color:var(--text-light);text-align:center}footer{background:#1F2937;color:#9CA3AF;padding:40px 24px;text-align:center;font-size:.875rem;margin-top:40px}.footer-inner{max-width:1200px;margin:0 auto}.footer-links{display:flex;justify-content:center;flex-wrap:wrap;gap:16px;margin-bottom:16px}.footer-links a:hover{color:#fff}</style>
+<title>SVG a PNG - Convertir SVG a PNG Gratis | FilePresto</title>
+<meta name="description" content="Convierte archivos SVG a PNG gratis. Elige la resolución de salida. Procesamiento local.">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--primary:#2563EB;--primary-dark:#1D4ED8;--accent:#7C3AED;--bg:#F8FAFC;--white:#FFFFFF;--text:#0F172A;--text-muted:#64748B;--border:#E2E8F0;--radius:12px}
+body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);min-height:100vh}
+header{background:var(--white);border-bottom:1px solid var(--border);padding:0 24px;height:64px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;box-shadow:0 1px 3px rgba(0,0,0,.06)}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--text)}
+.logo-icon{width:36px;height:36px;background:linear-gradient(135deg,var(--primary),var(--accent));border-radius:8px;display:flex;align-items:center;justify-content:center;color:white;font-size:18px}
+.logo-text{font-size:20px;font-weight:700}
+nav{display:flex;gap:24px;align-items:center}
+nav a{text-decoration:none;color:var(--text-muted);font-size:14px;font-weight:500}
+nav a:hover{color:var(--primary)}
+.btn-nav{background:var(--primary);color:white!important;padding:8px 18px;border-radius:8px;font-size:14px;font-weight:600;text-decoration:none}
+main{max-width:800px;margin:0 auto;padding:40px 24px}
+.breadcrumb{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--text-muted);margin-bottom:32px}
+.breadcrumb a{color:var(--text-muted);text-decoration:none}.breadcrumb a:hover{color:var(--primary)}.breadcrumb span{color:var(--text)}
+.page-title{font-size:36px;font-weight:800;margin-bottom:12px;background:linear-gradient(135deg,var(--primary),var(--accent));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.page-desc{font-size:16px;color:var(--text-muted);margin-bottom:40px}
+.upload-zone{border:2px dashed var(--border);border-radius:var(--radius);padding:60px 40px;text-align:center;cursor:pointer;transition:all .3s;background:var(--white)}
+.upload-zone:hover,.upload-zone.dragover{border-color:var(--primary);background:#EFF6FF}
+.upload-icon{font-size:48px;margin-bottom:16px}
+.upload-title{font-size:18px;font-weight:600;margin-bottom:8px}
+.upload-subtitle{font-size:14px;color:var(--text-muted)}
+.upload-btn{display:inline-block;margin-top:20px;background:var(--primary);color:white;padding:12px 28px;border-radius:8px;font-weight:600;cursor:pointer}
+#fileInput{display:none}
+.settings-panel{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:24px;margin-top:24px}
+.settings-panel h3{font-size:16px;font-weight:600;margin-bottom:16px}
+.scale-options{display:flex;gap:12px;flex-wrap:wrap}
+.scale-btn{padding:10px 20px;border:2px solid var(--border);border-radius:8px;font-size:14px;font-weight:600;cursor:pointer;background:var(--white);color:var(--text);transition:all .2s}
+.scale-btn.active{border-color:var(--primary);background:#EFF6FF;color:var(--primary)}
+.status{margin-top:24px;padding:16px;border-radius:var(--radius);display:none;align-items:center;gap:12px}
+.status.loading{display:flex;background:#EFF6FF;color:var(--primary)}
+.status.error{display:flex;background:#FEF2F2;color:#DC2626}
+.spinner{width:20px;height:20px;border:2px solid currentColor;border-top-color:transparent;border-radius:50%;animation:spin .8s linear infinite;flex-shrink:0}
+@keyframes spin{to{transform:rotate(360deg)}}
+.result{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:32px;margin-top:24px;text-align:center;display:none}
+.result.show{display:block}
+.preview-wrap{margin-bottom:24px}
+.preview-wrap img{max-width:100%;max-height:300px;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,.1)}
+.download-btn{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,var(--primary),var(--accent));color:white;padding:14px 32px;border-radius:10px;font-size:16px;font-weight:700;text-decoration:none;border:none;cursor:pointer}
+.download-btn:hover{opacity:.9}
+.reset-btn{display:inline-block;margin-top:12px;color:var(--text-muted);font-size:14px;cursor:pointer;text-decoration:underline;background:none;border:none}
+.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:16px;margin-top:48px}
+.feature-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:20px;text-align:center}
+.feature-icon{font-size:28px;margin-bottom:8px}
+.feature-title{font-size:14px;font-weight:600;margin-bottom:4px}
+.feature-desc{font-size:12px;color:var(--text-muted)}
+footer{background:var(--white);border-top:1px solid var(--border);padding:32px 24px;text-align:center;margin-top:80px}
+.footer-links{display:flex;justify-content:center;gap:24px;margin-bottom:12px;flex-wrap:wrap}
+.footer-links a{color:var(--text-muted);text-decoration:none;font-size:13px}.footer-links a:hover{color:var(--primary)}
+.footer-copy{font-size:12px;color:var(--text-muted)}
+</style>
 </head>
 <body>
-<nav><div class="nav-inner"><a href="../../../index.html" class="logo">File<span>Presto</span></a><div class="nav-links"><a href="index.html" style="color:var(--primary)">Imágenes</a><a href="../pdf/index.html">PDF</a><a href="../video/index.html">Video</a><a href="../audio/index.html">Audio</a><a href="../ebook/index.html">eBooks</a><a href="../../../pricing.html">Precios</a></div><div class="lang-switcher"><a href="../../../../tools/images/svg-to-png.html">EN</a><a href="svg-to-png.html">ES</a><a href="../../../../pt/tools/images/svg-to-png.html" class="active">PT</a></div></div></nav>
-<div class="breadcrumb"><a href="../../../index.html">Inicio</a><span>/</span><a href="index.html">Imágenes</a><span>/</span><span>SVG para PNG</span></div>
-<section class="hero"><h1>Converter Converter SVG para PNG</h1><p>Exporta gráficos vectoriales SVG a imagens PNG de alta resolución. Elige el tamaño de salida.</p></section>
-<div class="container">
-  <div class="tool-box">
-    <div class="tool-box-header"><h2>SVG para PNG &mdash; Conversor Online</h2></div>
-    <div class="tool-box-body">
-      <div class="drop-zone" id="dz">
-        <div style="font-size:3rem;margin-bottom:12px">&#128247;</div>
-        <h3>Arraste tu arquivo SVG aquí</h3>
-        <p>o clique para selecionar</p>
-        <label class="btn-select">Selecionar SVG<input type="file" class="file-input" id="fi" accept=".svg,image/svg+xml"></label>
-      </div>
-      <div class="options" id="opts">
-        <div class="opt-group"><label>Tamanho</label><select id="sz"><option value="1">Tamanho original (1x)</option><option value="2">Doble (2x)</option><option value="3">Triple (3x)</option><option value="4">4x</option><option value="custom">Personalizado</option></select></div>
-        <div class="opt-group" id="cwrap" style="display:none"><label>Ancho (px)</label><input type="number" id="cw" value="800" min="10" max="8000"></div>
-      </div>
-      <div class="preview-area" id="pa"><img id="prev" src="" alt="Vista previa"></div>
-      <div class="actions" id="acts" style="display:none">
-        <button class="btn-convert" id="bc">Converter para PNG</button>
-        <button class="btn-download" id="bd">&#11015; Baixar PNG</button>
-      </div>
-      <div class="status" id="st"></div>
-      <canvas id="cv" style="display:none"></canvas>
-    </div>
-  </div>
+<header>
+<a href="../../index.html" class="logo">
+<div class="logo-icon">&#128206;</div>
+<span class="logo-text">FilePresto</span>
+</a>
+<nav>
+<a href="../../index.html">Inicio</a>
+<a href="index.html">Imágenes</a>
+<a href="../../pricing.html">Precios</a>
+<a href="../../about.html">Nosotros</a>
+<a href="../../contact.html" class="btn-nav">Contacto</a>
+</nav>
+</header>
+<main>
+<div class="breadcrumb">
+<a href="../../index.html">Inicio</a><span>&#8250;</span>
+<a href="index.html">Imágenes</a><span>&#8250;</span>
+<span>SVG a PNG</span>
 </div>
-<footer><div class="footer-inner"><div class="footer-links"><a href="../../../about.html">Nosotros</a><a href="../../../pricing.html">Precios</a><a href="../../../contact.html">Contacto</a><a href="../../../privacy.html">Privacidad</a><a href="../../../terms.html">Términos</a></div><p>&copy; 2025 FilePresto.</p></div></footer>
+<h1 class="page-title">SVG a PNG</h1>
+<p class="page-desc">Convierte vectores SVG a imágenes PNG de alta resolución. Elige la escala de salida para obtener imágenes nítidas para cualquier uso. Todo en tu navegador.</p>
+<div class="upload-zone" id="uploadZone">
+<div class="upload-icon">&#128247;</div>
+<div class="upload-title">Arrastra tu archivo SVG aquí</div>
+<div class="upload-subtitle">o haz clic para seleccionar</div>
+<label class="upload-btn" for="fileInput">Seleccionar archivo SVG</label>
+<input type="file" id="fileInput" accept=".svg,image/svg+xml">
+</div>
+<div class="settings-panel">
+<h3>Escala de salida (resolución)</h3>
+<div class="scale-options">
+<button class="scale-btn" onclick="setScale(1,this)">1x (original)</button>
+<button class="scale-btn active" onclick="setScale(2,this)">2x (HD)</button>
+<button class="scale-btn" onclick="setScale(3,this)">3x (Full HD)</button>
+<button class="scale-btn" onclick="setScale(4,this)">4x (4K)</button>
+</div>
+</div>
+<div class="status" id="status"><div class="spinner"></div><span id="statusText">Convirtiendo...</span></div>
+<div class="result" id="result">
+<div class="preview-wrap"><img id="preview" src="" alt="Vista previa PNG"></div>
+<a class="download-btn" id="downloadBtn" href="#" download="">&#11123; Descargar PNG</a>
+<br><button class="reset-btn" onclick="resetTool()">&#8635; Convertir otro SVG</button>
+</div>
+<div class="features">
+<div class="feature-card"><div class="feature-icon">&#9889;</div><div class="feature-title">Alta Resolución</div><div class="feature-desc">Hasta 4x el tamaño original</div></div>
+<div class="feature-card"><div class="feature-icon">&#128274;</div><div class="feature-title">Privado</div><div class="feature-desc">Sin subida de archivos</div></div>
+<div class="feature-card"><div class="feature-icon">&#127873;</div><div class="feature-title">Gratis</div><div class="feature-desc">Sin límites ni registro</div></div>
+<div class="feature-card"><div class="feature-icon">&#128247;</div><div class="feature-title">Transparencia</div><div class="feature-desc">Conserva el fondo transparente</div></div>
+</div>
+</main>
+<footer>
+<div class="footer-links">
+<a href="../../privacy.html">Privacidad</a><a href="../../terms.html">Términos</a>
+<a href="../../contact.html">Contacto</a><a href="../../about.html">Nosotros</a><a href="../../pricing.html">Precios</a>
+</div>
+<div class="footer-copy">&#169; 2026 FilePresto. Todos los derechos reservados.</div>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"><\/script>
 <script>
-var dz=document.getElementById('dz'),fi=document.getElementById('fi'),pa=document.getElementById('pa'),prev=document.getElementById('prev'),opts=document.getElementById('opts'),acts=document.getElementById('acts'),sz=document.getElementById('sz'),cwrap=document.getElementById('cwrap'),cw=document.getElementById('cw'),cv=document.getElementById('cv'),bc=document.getElementById('bc'),bd=document.getElementById('bd'),st=document.getElementById('st');
-var cf=null,cb=null,svgContent='';
-sz.addEventListener('change',function(){cwrap.style.display=sz.value==='custom'?'flex':'none';});
-dz.addEventListener('click',function(e){if(e.target!==fi&&!e.target.classList.contains('btn-select'))fi.click();});
-dz.addEventListener('dragover',function(e){e.preventDefault();dz.classList.add('drag-over');});
-dz.addEventListener('dragleave',function(){dz.classList.remove('drag-over');});
-dz.addEventListener('drop',function(e){e.preventDefault();dz.classList.remove('drag-over');if(e.dataTransfer.files[0])lf(e.dataTransfer.files[0]);});
-fi.addEventListener('change',function(){if(fi.files[0])lf(fi.files[0]);});
-function lf(f){cf=f;cb=null;bd.style.display='none';st.textContent='';var r=new FileReader();r.onload=function(e){svgContent=e.target.result;var blob=new Blob([svgContent],{type:'image/svg+xml'});prev.src=URL.createObjectURL(blob);pa.style.display='block';opts.style.display='flex';acts.style.display='flex';};r.readAsText(f);}
-bc.addEventListener('click',function(){
-  if(!cf)return;st.textContent='Convertendo...';
-  var scale=sz.value==='custom'?1:parseFloat(sz.value);
-  var img=new Image();
-  var blob=new Blob([svgContent],{type:'image/svg+xml'});
-  var url=URL.createObjectURL(blob);
-  img.onload=function(){
-    var w=sz.value==='custom'?parseInt(cw.value):img.naturalWidth*scale;
-    var h=sz.value==='custom'?(img.naturalHeight/img.naturalWidth)*w:img.naturalHeight*scale;
-    cv.width=w;cv.height=h;
-    cv.getContext('2d').drawImage(img,0,0,w,h);
-    cv.toBlob(function(b){cb=b;bd.src=URL.createObjectURL(b);bd.style.display='block';st.textContent='Listo. '+(b.size/1024).toFixed(1)+' KB';URL.revokeObjectURL(url);},'image/png');
-  };
-  img.src=url;
-});
-bd.addEventListener('click',function(){if(!cb)return;var a=document.createElement('a');a.download=cf.name.replace(/\.svg$/i,'')+'.png';a.href=URL.createObjectURL(cb);a.click();});
-</script>
+(function(){var files=[],results={};var dz=document.getElementById('dropZone'),fi=document.getElementById('fileInput'),fl=document.getElementById('fileList');var btnCA=document.getElementById('btnConvertAll'),btnDA=document.getElementById('btnDownloadAll'),btnCl=document.getElementById('btnClear'),bp=document.getElementById('batchProgress');dz.addEventListener('dragover',function(e){e.preventDefault();dz.classList.add('dragover');});dz.addEventListener('dragleave',function(){dz.classList.remove('dragover');});dz.addEventListener('drop',function(e){e.preventDefault();dz.classList.remove('dragover');addFiles(e.dataTransfer.files);});dz.addEventListener('click',function(e){if(e.target===dz||e.target.tagName==='H3'||e.target.tagName==='P'||e.target.classList.contains('drop-icon')||e.target.classList.contains('file-types'))fi.click();});fi.addEventListener('change',function(){addFiles(this.files);this.value='';});function addFiles(flist){var added=0;Array.from(flist).forEach(function(f){files.push(f);added++;renderItem(f);});if(added>0){btnCA.style.display='inline-block';btnCl.style.display='inline-block';bp.textContent=files.length+' arquivo'+(files.length>1?'s':'')+' prontos para converter';}}function renderItem(f){var id='f'+Date.now()+Math.random().toString(36).substr(2,5);f._bid=id;var item=document.createElement('div');item.className='file-item';item.id='item-'+id;var kb=Math.round(f.size/1024);var sz=kb>1024?(kb/1024).toFixed(1)+' MB':kb+' KB';item.innerHTML='<img class="file-thumb" id="thumb-'+id+'" src="" alt=""/><div class="file-meta"><div class="file-name">'+f.name.replace(/&/g,"&amp;")+'</div><div class="file-size">'+sz+'</div></div><span class="file-status pending" id="st-'+id+'">Pending</span><a class="btn-dl-single" id="dl-'+id+'" download="">⬇</a>';fl.appendChild(item);var r=new FileReader();r.onload=function(e){var t=document.getElementById('thumb-'+id);if(t)t.src=e.target.result;};r.readAsDataURL(f);}btnCA.addEventListener('click',function(){btnCA.style.display='none';btnDA.style.display='none';bp.textContent='Convertendo...';var pending=files.filter(function(f){return !results[f._bid];});var total=pending.length,done=0;if(total===0){btnDA.style.display='inline-block';bp.textContent='Tudo pronto!';return;}pending.forEach(function(f){setSt(f._bid,'converting','Converting...');convertFile(f,function(dataURL,err){done++;if(err){setSt(f._bid,'error','Error');}else{results[f._bid]=dataURL;setSt(f._bid,'done','Pronto ✓');var base=f.name.replace(/\\.[^.]+$/,'');var dl=document.getElementById('dl-'+f._bid);if(dl){dl.href=dataURL;dl.download=base+'.png';dl.style.display='inline-block';}}bp.textContent=done+'/'+total+' convertidos';if(done===total){btnDA.style.display='inline-block';bp.textContent=total+' file'+(total>1?'s':'')+' converted!';}});});});function setSt(id,cls,txt){var s=document.getElementById('st-'+id);if(s){s.className='file-status '+cls;s.textContent=txt;}}function convertFile(f,cb){var reader=new FileReader();reader.onload=function(e){var img=new Image();img.onload=function(){try{var cv=document.createElement('canvas');cv.width=img.naturalWidth||800;cv.height=img.naturalHeight||600;var ctx=cv.getContext('2d');ctx.drawImage(img,0,0);cb(cv.toDataURL('image/png',1.0),null);}catch(ex){cb(null,ex);}};img.onerror=function(){cb(null,'load error');};var blob=new Blob([e.target.result],{type:'image/svg+xml'});img.src=URL.createObjectURL(blob);};reader.onerror=function(){cb(null,'read error');};reader.readAsText(f);}btnDA.addEventListener('click',function(){var zip=new JSZip();var count=0;files.forEach(function(f){var d=results[f._bid];if(!d)return;var base=f.name.replace(/\\.[^.]+$/,'');zip.file(base+'.png',d.split(',')[1],{base64:true});count++;});if(count===0)return;zip.generateAsync({type:'blob'}).then(function(blob){var a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='filepresto-png-imagens.zip';a.click();});});btnCl.addEventListener('click',function(){files=[];results={};fl.innerHTML='';btnCA.style.display='none';btnDA.style.display='none';btnCl.style.display='none';bp.textContent='';});})();
+<\/script>
 </body>
 </html>
