@@ -32,7 +32,7 @@ nav{background:#fff;border-bottom:1px solid #E2E8F0;padding:0 24px;height:64px;d
 .btn-pro{background:#2563EB;color:#fff!important;padding:8px 18px;border-radius:8px;font-weight:600;font-size:.9rem}
 .hero{background:linear-gradient(135deg,#2563EB 0%,#1E3A8A 100%);color:#fff;padding:48px 24px;text-align:center;min-height:220px;display:flex;flex-direction:column;align-items:center;justify-content:center}
 .hero h1{font-size:2.4rem;font-weight:800;margin-bottom:12px;color:#fff}
-.hero h1 span{color:#2563EB}
+.hero h1 span{color:#FCD34D}
 .hero p{color:rgba(255,255,255,.88);font-size:1.05rem;max-width:500px;margin:0 auto}
 .breadcrumb{padding:16px 24px;font-size:.85rem;color:#64748B;max-width:960px;margin:0 auto}
 .breadcrumb a{color:#2563EB}
@@ -64,9 +64,11 @@ footer{background:#0F172A;color:#94A3B8;padding:48px 24px 24px}
 .footer-col a{display:block;margin-bottom:8px;color:#94A3B8;font-size:.88rem}
 .footer-col a:hover{color:#fff}
 .footer-bottom{text-align:center;border-top:1px solid #1E293B;padding-top:20px;font-size:.82rem}
-</style>
+
+.skip-link{position:absolute;top:-40px;left:0;background:var(--primary);color:#fff;padding:8px 16px;z-index:999;transition:top 0.3s}.skip-link:focus{top:0}</style>
 </head>
 <body>
+<a href="#main-content" class="skip-link">Skip to content</a>
 <nav>
   <a href="index.html" class="nav-logo">⚡ FilePresto</a>
   <div class="nav-links">
@@ -85,6 +87,7 @@ footer{background:#0F172A;color:#94A3B8;padding:48px 24px 24px}
     <a href="pricing.html" class="btn-pro">Pro</a>
   </div>
 </nav>
+<main id="main-content">
 
 <div class="breadcrumb"><a href="index.html">Home</a> › Pricing</div>
 
@@ -149,6 +152,7 @@ footer{background:#0F172A;color:#94A3B8;padding:48px 24px 24px}
   </div>
 </div>
 
+</main>
 <footer>
   <div class="footer-grid">
     <div class="footer-col">
