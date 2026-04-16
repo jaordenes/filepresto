@@ -11,6 +11,7 @@
 <meta property="og:description" content="Convert images, PDFs, videos, audio and eBooks online for free. No installation required. Fast, secure and easy to use.">
 <meta property="og:image" content="https://jaordenes.github.io/filepresto/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://jaordenes.github.io/filepresto/og-image.png">
 <meta name="twitter:title" content="FilePresto – Free Online File Converter">
 <meta name="twitter:description" content="Convert images, PDFs, videos, audio and eBooks online for free. No installation required.">
 <link rel="canonical" href="https://jaordenes.github.io/filepresto/">
@@ -75,9 +76,30 @@ footer{background:#0F172A;color:#94A3B8;padding:48px 24px 24px}
 .footer-col a{display:block;margin-bottom:8px;color:#94A3B8;font-size:.88rem}
 .footer-col a:hover{color:#fff}
 .footer-bottom{text-align:center;border-top:1px solid #1E293B;padding-top:20px;font-size:.82rem}
-</style>
+
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}
+.skip-link{position:absolute;top:-40px;left:0;background:#2563EB;color:#fff;padding:8px 16px;z-index:200;border-radius:0 0 8px 0;font-weight:600;transition:top .2s}
+.skip-link:focus{top:0}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
+.hamburger span{display:block;width:24px;height:2px;background:#0F172A;border-radius:2px;transition:.3s}
+@media(max-width:768px){
+  .nav-links{display:none;position:absolute;top:64px;left:0;right:0;background:#fff;flex-direction:column;padding:16px 24px;gap:12px;border-bottom:1px solid #E2E8F0;box-shadow:0 4px 16px rgba(0,0,0,.08)}
+  .nav-links.open{display:flex}
+  .hamburger{display:flex}
+  .hero h1{font-size:2rem}
+  .cat-grid{grid-template-columns:1fr}
+  .stats{gap:20px}
+  .stat-num{font-size:1.8rem}
+  .feat-grid{grid-template-columns:1fr 1fr}
+  .cta-btns{flex-direction:column;align-items:center}
+}
+@media(max-width:480px){
+  .feat-grid{grid-template-columns:1fr}
+  nav{padding:0 16px}
+}</style>
 </head>
 <body>
+<a href="#main-content" class="skip-link">Skip to main content</a>
 <nav>
   <a href="index.html" class="nav-logo">⚡ FilePresto</a>
   <div class="nav-links">
@@ -95,14 +117,16 @@ footer{background:#0F172A;color:#94A3B8;padding:48px 24px 24px}
     </div>
     <a href="pricing.html" class="btn-pro">Pro</a>
   </div>
-</nav>
+
+  <button class="hamburger" onclick="toggleMenu()" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button></nav>
+<main id="main-content">
 
 <section class="hero">
   <h1>Convert Any File,<br/><span>Instantly & Free</span></h1>
   <p>Images, PDFs, videos, audio, eBooks and documents. No sign-up required. Works in your browser.</p>
   <div class="search-bar">
-    <input type="text" placeholder="Search converter, e.g. JPG to PNG..."/>
-    <button>Search</button>
+    <input id="search-input" type="text" placeholder="Search converter, e.g. JPG to PNG..." aria-label="Search converter"/>
+    <button type="button" onclick="handleSearch()">Search</button>
   </div>
   <div class="stats">
     <div class="stat"><div class="stat-num">50+</div><div class="stat-label">Free Tools</div></div>
@@ -221,6 +245,7 @@ footer{background:#0F172A;color:#94A3B8;padding:48px 24px 24px}
   </div>
 </section>
 
+</main>
 <footer>
   <div class="footer-grid">
     <div class="footer-col">
@@ -248,7 +273,43 @@ footer{background:#0F172A;color:#94A3B8;padding:48px 24px 24px}
       <a href="terms.html">Terms of Service</a>
     </div>
   </div>
-  <div class="footer-bottom">© 2025 FilePresto. All rights reserved.</div>
+  <div class="footer-bottom">© 2026 FilePresto. All rights reserved.</div>
 </footer>
+
+<script>
+function handleSearch(){
+  var q=document.getElementById('search-input').value.trim();
+  if(!q)return;
+  var tools=[
+    {name:'JPG to PNG',path:'tools/images/jpg-to-png.html'},
+    {name:'PNG to JPG',path:'tools/images/png-to-jpg.html'},
+    {name:'WebP to JPG',path:'tools/images/webp-to-jpg.html'},
+    {name:'JPG to WebP',path:'tools/images/jpg-to-webp.html'},
+    {name:'PNG to WebP',path:'tools/images/png-to-webp.html'},
+    {name:'HEIC to JPG',path:'tools/images/heic-to-jpg.html'},
+    {name:'SVG to PNG',path:'tools/images/svg-to-png.html'},
+    {name:'Compress Image',path:'tools/images/compress-image.html'},
+    {name:'Resize Image',path:'tools/images/resize-image.html'},
+    {name:'Crop Image',path:'tools/images/crop-image.html'},
+    {name:'GIF to PNG',path:'tools/images/gif-to-png.html'},
+    {name:'PDF Tools',path:'tools/pdf/index.html'},
+    {name:'Video Converter',path:'tools/video/index.html'},
+    {name:'Audio Converter',path:'tools/audio/index.html'},
+    {name:'eBook Converter',path:'tools/ebook/index.html'},
+    {name:'Document Converter',path:'tools/documents/index.html'}
+  ];
+  var ql=q.toLowerCase();
+  var match=tools.find(function(t){return t.name.toLowerCase().includes(ql);});
+  if(match){window.location.href=match.path;}
+  else{window.location.href='tools/images/index.html';}
+}
+document.getElementById('search-input').addEventListener('keydown',function(e){if(e.key==='Enter')handleSearch();});
+function toggleMenu(){
+  var nav=document.querySelector('.nav-links');
+  var btn=document.querySelector('.hamburger');
+  var isOpen=nav.classList.toggle('open');
+  btn.setAttribute('aria-expanded',isOpen);
+}
+</script>
 </body>
 </html>
