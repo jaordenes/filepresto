@@ -11,6 +11,7 @@
 <meta property="og:description" content="Convierte imágenes, PDFs, vídeos, audio y eBooks online gratis. Sin instalación. Rápido, seguro y fácil de usar.">
 <meta property="og:image" content="https://jaordenes.github.io/filepresto/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://jaordenes.github.io/filepresto/assets/og-image.png">
 <link rel="canonical" href="https://jaordenes.github.io/filepresto/es/">
 <meta name="description" content="FilePresto: convierte imágenes, PDF, video, audio y eBooks online gratis. JPG a PNG, PDF a Word, MP4 a MP3 y más de 50 herramientas de conversión. Sin instalación.">
 <link rel="canonical" href="https://jaordenes.github.io/filepresto/es/">
@@ -84,9 +85,13 @@ footer{background:#111827;color:#9CA3AF;padding:48px 24px}
 .footer-bottom{border-top:1px solid #374151;padding-top:24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;font-size:.8rem}
 @media(max-width:768px){.hero h1{font-size:2rem}.footer-grid{grid-template-columns:1fr 1fr}.nav-links{gap:12px}.stats{gap:24px}}
 @media(max-width:480px){.footer-grid{grid-template-columns:1fr}}
-</style>
+
+.skip-link{position:absolute;top:-40px;left:0;background:var(--primary);color:#fff;padding:8px 16px;z-index:999;transition:top 0.3s}.skip-link:focus{top:0}
+.hamburger{display:none;background:none;border:none;font-size:1.5rem;cursor:pointer;color:var(--primary)}
+@media(max-width:768px){.hamburger{display:block}.nav-links{display:none;flex-direction:column;position:absolute;top:64px;left:0;right:0;background:var(--white);padding:16px;box-shadow:0 4px 12px rgba(0,0,0,.1)}.nav-links.open{display:flex}}</style>
 </head>
 <body>
+<a href="#main-content" class="skip-link">Saltar al contenido</a>
 <nav>
   <div class="nav-inner">
     <a href="../index.html" class="logo">File<span>Presto</span></a>
@@ -102,9 +107,11 @@ footer{background:#111827;color:#9CA3AF;padding:48px 24px}
       <a href="../index.html">EN</a>
       <a href="index.html" class="active">ES</a>
       <a href="../pt/index.html">PT</a>
-    </div>
+      <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">&#9776;</button>
+</div>
   </div>
 </nav>
+<main id="main-content">
 
 <section class="hero">
   <div class="hero-badge">&#9889; Más de 50 herramientas gratuitas de conversión</div>
@@ -265,6 +272,7 @@ footer{background:#111827;color:#9CA3AF;padding:48px 24px}
   <a href="tools/images/index.html" class="btn-white">Empezar gratis &#8594;</a>
 </section>
 
+</main>
 <footer>
   <div class="footer-inner">
     <div class="footer-grid">
@@ -293,7 +301,7 @@ footer{background:#111827;color:#9CA3AF;padding:48px 24px}
       </div>
     </div>
     <div class="footer-bottom">
-      <span>&copy; 2025 FilePresto. Todos los derechos reservados.</span>
+      <span>&copy; 2026 FilePresto. Todos los derechos reservados.</span>
       <div class="lang-switcher" style="display:flex;gap:8px;font-size:.8rem">
         <a href="../index.html" style="padding:4px 10px;border-radius:6px;border:1px solid #374151;color:#9CA3AF">EN</a>
         <a href="index.html" style="padding:4px 10px;border-radius:6px;background:#2563EB;color:#fff;border:1px solid #2563EB">ES</a>
@@ -302,5 +310,11 @@ footer{background:#111827;color:#9CA3AF;padding:48px 24px}
     </div>
   </div>
 </footer>
-</body>
+
+<script>
+function toggleMenu(){
+  var nav=document.querySelector(".nav-links");
+  if(nav) nav.classList.toggle("open");
+}
+</script></body>
 </html>
