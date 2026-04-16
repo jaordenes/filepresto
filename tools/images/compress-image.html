@@ -6,32 +6,79 @@
 <link rel="alternate" hreflang="en" href="https://jaordenes.github.io/filepresto/tools/images/compress-image.html"/>
 <link rel="alternate" hreflang="es" href="https://jaordenes.github.io/filepresto/es/tools/images/compress-image.html"/>
 <link rel="alternate" hreflang="pt" href="https://jaordenes.github.io/filepresto/pt/tools/images/compress-image.html"/>
-<style>*{box-sizing:border-box;margin:0;padding:0}body{font-family:'Segoe UI',sans-serif;background:#F8FAFC;color:#0F172A}a{text-decoration:none;color:inherit}nav{background:#fff;border-bottom:1px solid #E2E8F0;padding:0 24px;height:64px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}.nav-logo{font-size:1.4rem;font-weight:800;color:#2563EB}.nav-links{display:flex;gap:24px;align-items:center;font-size:.95rem}.nav-links a{color:#64748B;font-weight:500}.nav-links a.active{color:#2563EB;font-weight:700}.lang-switcher{display:flex;gap:6px;align-items:center;font-size:.85rem;border-left:1px solid #E2E8F0;padding-left:16px;margin-left:8px}.lang-switcher a{color:#64748B;font-weight:600;padding:2px 6px;border-radius:4px}.lang-switcher a.active{background:#2563EB;color:#fff}.btn-pro{background:#2563EB;color:#fff!important;padding:8px 18px;border-radius:8px;font-weight:600;font-size:.9rem}.breadcrumb{padding:14px 24px;font-size:.85rem;color:#64748B;max-width:900px;margin:0 auto}.breadcrumb a{color:#2563EB}.hero{text-align:center;padding:48px 24px 32px;background:linear-gradient(135deg,#EFF6FF,#F8FAFC)}.hero h1{font-size:2rem;font-weight:800;margin-bottom:10px}.hero h1 span{color:#2563EB}.hero p{color:#64748B;font-size:1rem;max-width:520px;margin:0 auto}.converter-box{max-width:700px;margin:32px auto;padding:0 24px}.drop-zone{border:2.5px dashed #BFDBFE;border-radius:16px;padding:56px 24px;text-align:center;background:#fff;cursor:pointer;transition:.2s}.drop-zone:hover{border-color:#2563EB;background:#EFF6FF}.drop-icon{font-size:3rem;margin-bottom:16px}.drop-zone h3{font-size:1.1rem;font-weight:700;margin-bottom:8px}.drop-zone p{color:#64748B;font-size:.9rem;margin-bottom:20px}.btn-select{background:#2563EB;color:#fff;border:none;padding:12px 28px;border-radius:10px;font-size:.95rem;font-weight:700;cursor:pointer}.file-types{font-size:.8rem;color:#94A3B8;margin-top:12px}.slider-row{margin-top:20px;background:#fff;border:1px solid #E2E8F0;border-radius:12px;padding:20px}.slider-row label{font-size:.9rem;font-weight:600;color:#374151;display:flex;justify-content:space-between;margin-bottom:8px}.slider-row input[type=range]{width:100%}.result-area{display:none;margin-top:20px;background:#fff;border:1px solid #E2E8F0;border-radius:16px;padding:24px;text-align:center}.result-area.active{display:block}.preview-img{max-width:100%;max-height:200px;border-radius:8px;margin-bottom:16px}.stats{display:flex;gap:16px;justify-content:center;margin-bottom:16px;flex-wrap:wrap}.stat-box{background:#F1F5F9;border-radius:8px;padding:10px 20px;text-align:center}.stat-label{font-size:.75rem;color:#64748B;margin-bottom:2px}.stat-value{font-size:1rem;font-weight:700;color:#0F172A}.btn-download{background:#16A34A;color:#fff;border:none;padding:12px 32px;border-radius:10px;font-size:1rem;font-weight:700;cursor:pointer;width:100%}.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;max-width:700px;margin:32px auto;padding:0 24px}.feat{background:#fff;border:1px solid #E2E8F0;border-radius:12px;padding:20px;text-align:center}.feat-icon{font-size:1.8rem;margin-bottom:8px}.feat h4{font-size:.95rem;font-weight:700;margin-bottom:4px}.feat p{color:#64748B;font-size:.82rem;line-height:1.5}.info-section{max-width:700px;margin:0 auto 48px;padding:0 24px}.info-section h2{font-size:1.3rem;font-weight:700;margin-bottom:12px}.info-section p{color:#64748B;line-height:1.7;font-size:.95rem;margin-bottom:12px}footer{background:#0F172A;color:#94A3B8;padding:48px 24px 24px}.footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:32px;max-width:1100px;margin:0 auto 32px}.footer-col h4{color:#F1F5F9;font-weight:700;margin-bottom:12px;font-size:.95rem}.footer-col a{display:block;margin-bottom:8px;color:#94A3B8;font-size:.88rem}.footer-col a:hover{color:#fff}.footer-bottom{text-align:center;border-top:1px solid #1E293B;padding-top:20px;font-size:.82rem}</style>
+<style>*{box-sizing:border-box;margin:0;padding:0}body{font-family:'Segoe UI',sans-serif;background:#F8FAFC;color:#0F172A}a{text-decoration:none;color:inherit}nav{background:#fff;border-bottom:1px solid #E2E8F0;padding:0 24px;height:64px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}.nav-logo{font-size:1.4rem;font-weight:800;color:#2563EB}.nav-links{display:flex;gap:24px;align-items:center;font-size:.95rem}.nav-links a{color:#64748B;font-weight:500}.nav-links a.active{color:#2563EB;font-weight:700}.lang-switcher{display:flex;gap:6px;align-items:center;font-size:.85rem;border-left:1px solid #E2E8F0;padding-left:16px;margin-left:8px}.lang-switcher a{color:#64748B;font-weight:600;padding:2px 6px;border-radius:4px}.lang-switcher a.active{background:#2563EB;color:#fff}.btn-pro{background:#2563EB;color:#fff!important;padding:8px 18px;border-radius:8px;font-weight:600;font-size:.9rem}.breadcrumb{padding:14px 24px;font-size:.85rem;color:#64748B;max-width:900px;margin:0 auto}.breadcrumb a{color:#2563EB}.hero{text-align:center;padding:48px 24px 32px;background:linear-gradient(135deg,#EFF6FF,#F8FAFC)}.hero h1{font-size:2rem;font-weight:800;margin-bottom:10px}.hero h1 span{color:#2563EB}.hero p{color:#64748B;font-size:1rem;max-width:520px;margin:0 auto}.converter-box{max-width:700px;margin:32px auto;padding:0 24px}.drop-zone{border:2.5px dashed #BFDBFE;border-radius:16px;padding:56px 24px;text-align:center;background:#fff;cursor:pointer;transition:.2s}.drop-zone:hover{border-color:#2563EB;background:#EFF6FF}.drop-icon{font-size:3rem;margin-bottom:16px}.drop-zone h3{font-size:1.1rem;font-weight:700;margin-bottom:8px}.drop-zone p{color:#64748B;font-size:.9rem;margin-bottom:20px}.btn-select{background:#2563EB;color:#fff;border:none;padding:12px 28px;border-radius:10px;font-size:.95rem;font-weight:700;cursor:pointer}.file-types{font-size:.8rem;color:#94A3B8;margin-top:12px}.slider-row{margin-top:20px;background:#fff;border:1px solid #E2E8F0;border-radius:12px;padding:20px}.slider-row label{font-size:.9rem;font-weight:600;color:#374151;display:flex;justify-content:space-between;margin-bottom:8px}.slider-row input[type=range]{width:100%}.result-area{display:none;margin-top:20px;background:#fff;border:1px solid #E2E8F0;border-radius:16px;padding:24px;text-align:center}.result-area.active{display:block}.preview-img{max-width:100%;max-height:200px;border-radius:8px;margin-bottom:16px}.stats{display:flex;gap:16px;justify-content:center;margin-bottom:16px;flex-wrap:wrap}.stat-box{background:#F1F5F9;border-radius:8px;padding:10px 20px;text-align:center}.stat-label{font-size:.75rem;color:#64748B;margin-bottom:2px}.stat-value{font-size:1rem;font-weight:700;color:#0F172A}.btn-download{background:#16A34A;color:#fff;border:none;padding:12px 32px;border-radius:10px;font-size:1rem;font-weight:700;cursor:pointer;width:100%}.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;max-width:700px;margin:32px auto;padding:0 24px}.feat{background:#fff;border:1px solid #E2E8F0;border-radius:12px;padding:20px;text-align:center}.feat-icon{font-size:1.8rem;margin-bottom:8px}.feat h4{font-size:.95rem;font-weight:700;margin-bottom:4px}.feat p{color:#64748B;font-size:.82rem;line-height:1.5}.info-section{max-width:700px;margin:0 auto 48px;padding:0 24px}.info-section h2{font-size:1.3rem;font-weight:700;margin-bottom:12px}.info-section p{color:#64748B;line-height:1.7;font-size:.95rem;margin-bottom:12px}footer{background:#0F172A;color:#94A3B8;padding:48px 24px 24px}.footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:32px;max-width:1100px;margin:0 auto 32px}.footer-col h4{color:#F1F5F9;font-weight:700;margin-bottom:12px;font-size:.95rem}.footer-col a{display:block;margin-bottom:8px;color:#94A3B8;font-size:.88rem}.footer-col a:hover{color:#fff}.footer-bottom{text-align:center;border-top:1px solid #1E293B;padding-top:20px;font-size:.82rem}
+.batch-drop-zone{border:2.5px dashed #BFDBFE;border-radius:16px;padding:48px 24px;text-align:center;background:#fff;cursor:pointer;transition:.2s}
+.batch-drop-zone:hover,.batch-drop-zone.dragover{border-color:#2563EB;background:#EFF6FF}
+.batch-drop-zone .drop-icon{font-size:3rem;margin-bottom:12px}
+.batch-drop-zone h3{font-size:1.1rem;font-weight:700;margin-bottom:8px}
+.batch-drop-zone p{color:#64748B;font-size:.9rem;margin-bottom:20px}
+.batch-btns{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.btn-select{background:#2563EB;color:#fff;border:none;padding:12px 28px;border-radius:10px;font-size:.95rem;font-weight:700;cursor:pointer}
+.btn-select:hover{background:#1D4ED8}
+.file-types{font-size:.8rem;color:#94A3B8;margin-top:12px}
+.options-panel{background:#fff;border:1px solid #E2E8F0;border-radius:12px;padding:20px 24px;margin-top:16px;display:none}
+.options-panel.visible{display:block}
+.options-row{display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:12px}
+.options-row label{font-size:.9rem;font-weight:600;color:#0F172A;min-width:80px}
+.options-row input[type=range]{flex:1;min-width:120px}
+.options-row .val-display{font-size:.9rem;font-weight:700;color:#2563EB;min-width:50px}
+.file-list{margin-top:16px;display:flex;flex-direction:column;gap:10px}
+.file-item{background:#fff;border:1px solid #E2E8F0;border-radius:12px;padding:14px 18px;display:flex;align-items:center;gap:14px}
+.file-thumb{width:48px;height:48px;object-fit:cover;border-radius:6px;background:#F1F5F9;flex-shrink:0}
+.file-meta{flex:1;min-width:0}
+.file-name{font-size:.9rem;font-weight:600;color:#0F172A;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.file-size{font-size:.78rem;color:#94A3B8;margin-top:2px}
+.file-savings{font-size:.78rem;color:#16A34A;margin-top:2px;display:none}
+.file-status{font-size:.8rem;font-weight:600;padding:4px 10px;border-radius:6px;white-space:nowrap}
+.file-status.pending{background:#F1F5F9;color:#64748B}
+.file-status.converting{background:#FEF3C7;color:#D97706}
+.file-status.done{background:#DCFCE7;color:#16A34A}
+.file-status.error{background:#FEE2E2;color:#DC2626}
+.btn-dl-single{background:#16A34A;color:#fff;border:none;padding:6px 14px;border-radius:7px;font-size:.82rem;font-weight:700;cursor:pointer;text-decoration:none;display:none}
+.batch-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:20px}
+.btn-convert-all{background:#2563EB;color:#fff;border:none;padding:14px 36px;border-radius:10px;font-size:1rem;font-weight:700;cursor:pointer;display:none}
+.btn-convert-all:hover{background:#1D4ED8}
+.btn-download-all{background:#16A34A;color:#fff;border:none;padding:14px 36px;border-radius:10px;font-size:1rem;font-weight:700;cursor:pointer;display:none}
+.btn-download-all:hover{background:#15803D}
+.btn-clear{background:#F1F5F9;color:#64748B;border:none;padding:14px 24px;border-radius:10px;font-size:.9rem;font-weight:600;cursor:pointer;display:none}
+.batch-progress{font-size:.85rem;color:#64748B;margin-top:10px;text-align:center}
+</style>
 </head><body>
 <nav><a href="../../index.html" class="nav-logo">⚡ FilePresto</a><div class="nav-links"><a href="index.html" class="active">Images</a><a href="../pdf/index.html">PDF</a><a href="../video/index.html">Video</a><a href="../audio/index.html">Audio</a><a href="../ebook/index.html">eBooks</a><a href="../documents/index.html">Documents</a><a href="../../pricing.html">Pricing</a><div class="lang-switcher"><a href="compress-image.html" class="active">EN</a><a href="../../es/tools/images/compress-image.html">ES</a><a href="../../pt/tools/images/compress-image.html">PT</a></div><a href="../../pricing.html" class="btn-pro">Pro</a></div></nav>
 <div class="breadcrumb"><a href="../../index.html">Home</a> › <a href="index.html">Images</a> › Compress Image</div>
 <section class="hero"><h1><span>Compress</span> Images Free</h1><p>Reduce JPG, PNG and WebP file sizes without visible quality loss. No sign-up, no uploads, instant.</p></section>
 <div class="converter-box">
-  <div class="drop-zone" id="dropZone" onclick="document.getElementById('fileInput').click()">
-    <div class="drop-icon">🗜️</div><h3>Drop your image here</h3><p>or click to select a file from your device</p>
-    <button class="btn-select">Select Image</button>
-    <div class="file-types">Supported: JPG, PNG, WebP · Max 50MB</div>
-  </div>
-  <input type="file" id="fileInput" accept="image/jpeg,image/png,image/webp,.jpg,.jpeg,.png,.webp" style="display:none"/>
-  <div class="slider-row" id="sliderRow" style="display:none">
-    <label>Quality: <span id="qualityVal">80</span>%</label>
-    <input type="range" id="qualitySlider" min="10" max="100" value="80"/>
-  </div>
-  <div class="result-area" id="resultArea">
-    <img id="previewImg" class="preview-img" src="" alt="Compressed preview"/>
-    <div class="stats">
-      <div class="stat-box"><div class="stat-label">Original</div><div class="stat-value" id="origSize">-</div></div>
-      <div class="stat-box"><div class="stat-label">Compressed</div><div class="stat-value" id="compSize">-</div></div>
-      <div class="stat-box"><div class="stat-label">Saved</div><div class="stat-value" id="savedPct" style="color:#16A34A">-</div></div>
+  <div class="batch-drop-zone" id="dropZone">
+    <div class="drop-icon">🗜️</div>
+    <h3>Drop your images here</h3>
+    <p>or click to select files from your device</p>
+    <div class="batch-btns">
+      <button class="btn-select" onclick="document.getElementById('fileInput').click()">Select Images</button>
     </div>
-    <button class="btn-download" id="downloadBtn">⬇ Download Compressed Image</button>
+    <div class="file-types">Supported: JPG, PNG, WebP · Multiple files · 100% Private</div>
   </div>
+  <input type="file" id="fileInput" accept="image/jpeg,image/png,image/webp,.jpg,.jpeg,.png,.webp" style="display:none" multiple/>
+  <div class="options-panel" id="optPanel">
+    <div class="options-row">
+      <label>Quality:</label>
+      <input type="range" id="qualitySlider" min="10" max="100" value="80"/>
+      <span class="val-display" id="qualityVal">80%</span>
+    </div>
+    <div class="options-row">
+      <label>Max Width:</label>
+      <input type="range" id="maxWidthSlider" min="200" max="4000" step="100" value="1920"/>
+      <span class="val-display" id="maxWidthVal">1920px</span>
+    </div>
+  </div>
+  <div class="file-list" id="fileList"></div>
+  <div class="batch-actions">
+    <button class="btn-convert-all" id="btnConvertAll">⚡ Compress All</button>
+    <button class="btn-download-all" id="btnDownloadAll">⬇ Download All (ZIP)</button>
+    <button class="btn-clear" id="btnClear">✕ Clear</button>
+  </div>
+  <div class="batch-progress" id="batchProgress"></div>
 </div>
+
 <div class="features">
   <div class="feat"><div class="feat-icon">🔒</div><h4>100% Private</h4><p>Compression in your browser. Files never uploaded.</p></div>
   <div class="feat"><div class="feat-icon">⚡</div><h4>Instant</h4><p>See results immediately as you adjust quality.</p></div>
@@ -205,68 +252,30 @@ footer{background:var(--white);border-top:1px solid var(--border);padding:32px 2
 </div>
 <div class="footer-copy">&#169; 2026 FilePresto. Todos los derechos reservados.</div>
 </footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
 <script>
-var qSlider=document.getElementById('quality');
-var qVal=document.getElementById('qualityVal');
+(function(){
+var files=[],results={};
+var dz=document.getElementById('dropZone'),fi=document.getElementById('fileInput'),fl=document.getElementById('fileList');
+var btnCA=document.getElementById('btnConvertAll'),btnDA=document.getElementById('btnDownloadAll'),btnCl=document.getElementById('btnClear'),bp=document.getElementById('batchProgress');
+var optPanel=document.getElementById('optPanel');
+var qSlider=document.getElementById('qualitySlider'),qVal=document.getElementById('qualityVal');
+var mwSlider=document.getElementById('maxWidthSlider'),mwVal=document.getElementById('maxWidthVal');
 qSlider.addEventListener('input',function(){qVal.textContent=this.value+'%';});
-var mwSlider=document.getElementById('maxWidth');
-var mwVal=document.getElementById('maxWidthVal');
 mwSlider.addEventListener('input',function(){mwVal.textContent=this.value+'px';});
-var uploadZone=document.getElementById('uploadZone');
-var fileInput=document.getElementById('fileInput');
-uploadZone.addEventListener('dragover',function(e){e.preventDefault();uploadZone.classList.add('dragover');});
-uploadZone.addEventListener('dragleave',function(){uploadZone.classList.remove('dragover');});
-uploadZone.addEventListener('drop',function(e){e.preventDefault();uploadZone.classList.remove('dragover');var f=e.dataTransfer.files[0];if(f)handleFile(f);});
-fileInput.addEventListener('change',function(){if(this.files[0])handleFile(this.files[0]);});
-function handleFile(file){
-  if(!file.type.match(/jpeg|png|webp/)){showStatus('error','Selecciona una imagen JPG, PNG o WebP.');return;}
-  showStatus('loading','Comprimiendo imagen...');
-  var origSize=file.size;
-  var reader=new FileReader();
-  reader.onload=function(e){
-    var img=new Image();
-    img.onload=function(){
-      var maxW=parseInt(document.getElementById('maxWidth').value);
-      var w=img.width,h=img.height;
-      if(w>maxW){h=Math.round(h*(maxW/w));w=maxW;}
-      var canvas=document.createElement('canvas');
-      canvas.width=w;canvas.height=h;
-      var ctx=canvas.getContext('2d');
-      if(file.type.includes('png')){ctx.clearRect(0,0,w,h);}
-      else{ctx.fillStyle='#FFFFFF';ctx.fillRect(0,0,w,h);}
-      ctx.drawImage(img,0,0,w,h);
-      var q=parseInt(document.getElementById('quality').value)/100;
-      var mime=file.type.includes('png')?'image/png':file.type.includes('webp')?'image/webp':'image/jpeg';
-      var dataURL=canvas.toDataURL(mime,q);
-      var compBytes=Math.round((dataURL.length-22)*3/4);
-      var savings=Math.round((1-compBytes/origSize)*100);
-      document.getElementById('savingsBadge').textContent='\uD83C\uDF89 Ahorraste '+Math.max(0,savings)+'%';
-      document.getElementById('previewOrig').src=e.target.result;
-      document.getElementById('origSize').textContent='Original: '+formatSize(origSize);
-      document.getElementById('previewComp').src=dataURL;
-      document.getElementById('compSize').textContent='Comprimida: '+formatSize(compBytes);
-      var ext=mime.split('/')[1];
-      var baseName=file.name.replace(/\.[^.]+$/,'');
-      var dlBtn=document.getElementById('downloadBtn');
-      dlBtn.href=dataURL;dlBtn.download=baseName+'-comprimida.'+ext;
-      document.getElementById('status').style.display='none';
-      document.getElementById('result').classList.add('show');
-    };
-    img.src=e.target.result;
-  };
-  reader.readAsDataURL(file);
-}
-function formatSize(bytes){if(bytes>1048576)return (bytes/1048576).toFixed(1)+' MB';return Math.round(bytes/1024)+' KB';}
-function showStatus(type,msg){
-  var s=document.getElementById('status');
-  s.className='status '+type;s.style.display='flex';
-  document.getElementById('statusText').textContent=msg;
-}
-function resetTool(){
-  document.getElementById('result').classList.remove('show');
-  document.getElementById('status').style.display='none';
-  document.getElementById('fileInput').value='';
-}
+dz.addEventListener('dragover',function(e){e.preventDefault();dz.classList.add('dragover');});
+dz.addEventListener('dragleave',function(){dz.classList.remove('dragover');});
+dz.addEventListener('drop',function(e){e.preventDefault();dz.classList.remove('dragover');addFiles(e.dataTransfer.files);});
+dz.addEventListener('click',function(e){if(e.target===dz||e.target.tagName==='H3'||e.target.tagName==='P'||e.target.classList.contains('drop-icon')||e.target.classList.contains('file-types'))fi.click();});
+fi.addEventListener('change',function(){addFiles(this.files);this.value='';});
+function addFiles(flist){var added=0;Array.from(flist).forEach(function(f){if(!f.type.match(/jpeg|png|webp/))return;files.push(f);added++;renderItem(f);});if(added>0){optPanel.classList.add('visible');btnCA.style.display='inline-block';btnCl.style.display='inline-block';bp.textContent=files.length+' file'+(files.length>1?'s':'')+' ready to compress';}}
+function renderItem(f){var id='f'+Date.now()+Math.random().toString(36).substr(2,5);f._bid=id;var item=document.createElement('div');item.className='file-item';item.id='item-'+id;var kb=Math.round(f.size/1024);var sz=kb>1024?(kb/1024).toFixed(1)+' MB':kb+' KB';item.innerHTML='<img class="file-thumb" id="thumb-'+id+'" src="" alt=""/><div class="file-meta"><div class="file-name">'+f.name.replace(/&/g,"&amp;")+'</div><div class="file-size">'+sz+'</div><div class="file-savings" id="sav-'+id+'"></div></div><span class="file-status pending" id="st-'+id+'">Pending</span><a class="btn-dl-single" id="dl-'+id+'" download="">⬇</a>';fl.appendChild(item);var r=new FileReader();r.onload=function(e){var t=document.getElementById('thumb-'+id);if(t)t.src=e.target.result;};r.readAsDataURL(f);}
+btnCA.addEventListener('click',function(){btnCA.style.display='none';btnDA.style.display='none';bp.textContent='Compressing...';var q=parseInt(qSlider.value)/100;var maxW=parseInt(mwSlider.value);var pending=files.filter(function(f){return !results[f._bid];});var total=pending.length,done=0;if(total===0){btnDA.style.display='inline-block';return;}pending.forEach(function(f){setSt(f._bid,'converting','Compressing...');compressFile(f,q,maxW,function(dataURL,savedPct,err){done++;if(err){setSt(f._bid,'error','Error');}else{results[f._bid]=dataURL;setSt(f._bid,'done','Done ✓');var sav=document.getElementById('sav-'+f._bid);if(sav){sav.textContent='Saved '+Math.max(0,savedPct)+'%';sav.style.display='block';}var ext=f.type.includes('png')?'png':f.type.includes('webp')?'webp':'jpg';var base=f.name.replace(/\.[^.]+$/,'');var dl=document.getElementById('dl-'+f._bid);if(dl){dl.href=dataURL;dl.download=base+'-compressed.'+ext;dl.style.display='inline-block';}}bp.textContent=done+'/'+total+' compressed';if(done===total){btnDA.style.display='inline-block';bp.textContent=total+' file'+(total>1?'s':'')+' compressed!';}});});});
+function setSt(id,cls,txt){var s=document.getElementById('st-'+id);if(s){s.className='file-status '+cls;s.textContent=txt;}}
+function compressFile(f,q,maxW,cb){var reader=new FileReader();reader.onload=function(e){var img=new Image();img.onload=function(){try{var w=img.naturalWidth,h=img.naturalHeight;if(w>maxW){h=Math.round(h*(maxW/w));w=maxW;}var cv=document.createElement('canvas');cv.width=w;cv.height=h;var ctx=cv.getContext('2d');if(f.type.includes('png')){ctx.clearRect(0,0,w,h);}else{ctx.fillStyle='#fff';ctx.fillRect(0,0,w,h);}ctx.drawImage(img,0,0,w,h);var mime=f.type.includes('png')?'image/png':f.type.includes('webp')?'image/webp':'image/jpeg';var dataURL=cv.toDataURL(mime,q);var compBytes=Math.round((dataURL.length-22)*3/4);var savedPct=Math.round((1-compBytes/f.size)*100);cb(dataURL,savedPct,null);}catch(ex){cb(null,0,ex);}};img.onerror=function(){cb(null,0,'load error');};img.src=e.target.result;};reader.onerror=function(){cb(null,0,'read error');};reader.readAsDataURL(f);}
+btnDA.addEventListener('click',function(){var zip=new JSZip();var count=0;files.forEach(function(f){var d=results[f._bid];if(!d)return;var ext=f.type.includes('png')?'png':f.type.includes('webp')?'webp':'jpg';var base=f.name.replace(/\.[^.]+$/,'');zip.file(base+'-compressed.'+ext,d.split(',')[1],{base64:true});count++;});if(count===0)return;zip.generateAsync({type:'blob'}).then(function(blob){var a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='filepresto-compressed-images.zip';a.click();});});
+btnCl.addEventListener('click',function(){files=[];results={};fl.innerHTML='';optPanel.classList.remove('visible');btnCA.style.display='none';btnDA.style.display='none';btnCl.style.display='none';bp.textContent='';});
+})();
 </script>
 </body>
 </html>
