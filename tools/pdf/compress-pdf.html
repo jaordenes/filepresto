@@ -2,6 +2,12 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
+<!-- Security headers -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://unpkg.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self'; connect-src 'self' https://unpkg.com; worker-src blob:; child-src blob:; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests;">
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+<meta http-equiv="X-Frame-Options" content="DENY">
+<meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+<meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), payment=(), usb=(), bluetooth=(), serial=(), nfc=()">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Compress PDF – Free Online PDF Compressor | FilePresto</title>
@@ -34,148 +40,3 @@
     .upload-area:hover,.upload-area.dragover{border-color:var(--primary);background:var(--primary-light)}
     .upload-icon{font-size:3rem;margin-bottom:12px}
     .upload-area h3{font-size:1.1rem;font-weight:600;margin-bottom:8px}
-    .upload-area p{color:var(--text-light);font-size:.9rem}
-    #fileInput{display:none}
-    .file-info{background:var(--bg);border-radius:8px;padding:12px 16px;margin-bottom:20px;font-size:.9rem;display:none}
-    .file-info strong{color:var(--primary)}
-    .info-note{background:#FEF3C7;border:1px solid #FDE68A;border-radius:8px;padding:12px 16px;margin-bottom:20px;font-size:.85rem;color:#92400E;display:none}
-    .btn{display:inline-flex;align-items:center;gap:8px;padding:14px 32px;border-radius:10px;font-size:1rem;font-weight:600;cursor:pointer;border:none;transition:.2s}
-    .btn-primary{background:var(--primary);color:#fff;width:100%;justify-content:center}
-         .btn-primary:hover:not(:disabled){background:var(--primary-dark)}
-    .btn-primary:disabled{opacity:.5;cursor:not-allowed}
-    .btn-download{background:#059669;color:#fff;width:100%;justify-content:center;margin-top:12px;display:none}
-    .btn-download:hover{background:#047857}
-    .progress-wrap{margin:20px 0;display:none}
-    .progress-bar{height:8px;background:var(--border);border-radius:4px;overflow:hidden}
-    .progress-fill{height:100%;background:var(--primary);border-radius:4px;transition:width .3s;width:0%}
-    .status{margin-top:10px;font-size:.9rem;color:var(--text-light);text-align:center}
-    .size-compare{display:none;margin-top:12px;background:var(--primary-light);border-radius:8px;padding:14px 16px;font-size:.9rem;text-align:center}
-    .features{max-width:1200px;margin:0 auto;padding:48px 24px}
-    .features h2{font-size:1.75rem;font-weight:700;text-align:center;margin-bottom:32px}
-    .features-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px}
-    .feature-card{background:var(--white);border-radius:12px;padding:28px;box-shadow:0 2px 12px rgba(0,0,0,.05)}
-    .feature-icon{font-size:2rem;margin-bottom:12px}
-    .feature-card h3{font-weight:600;margin-bottom:8px}
-    .feature-card p{color:var(--text-light);font-size:.9rem}
-    footer{background:var(--text);color:#9CA3AF;padding:48px 24px 24px}
-    .footer-inner{max-width:1200px;margin:0 auto}
-    .footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:32px;margin-bottom:32px}
-    .footer-col h4{color:#fff;font-weight:600;margin-bottom:12px}
-    .footer-col a{display:block;margin-bottom:8px;font-size:.9rem;transition:.2s}
-    .footer-col a:hover{color:#fff}
-    .footer-bottom{border-top:1px solid #374151;padding-top:24px;text-align:center;font-size:.85rem}
-    </style>
-  </head>
-  <body>
-    <nav><a href="../../index.html" class="nav-logo">&#9889; FilePresto</a><div class="nav-links"><a href="../images/index.html">Images</a><a href="index.html" class="active">PDF</a><a href="../video/index.html">Video</a><a href="../audio/index.html">Audio</a><a href="../ebook/index.html">eBooks</a><a href="../documents/index.html">Documents</a><a href="../../pricing.html">Pricing</a><div class="lang-switcher"><a href="compress-pdf.html" class="active">EN</a><a href="../../es/tools/pdf/compress-pdf.html">ES</a><a href="../../pt/tools/pdf/compress-pdf.html">PT</a></div><a href="../../pricing.html" class="btn-pro">Pro</a></div></nav>
-  <div class="breadcrumb">
-    <a href="../../index.html">Home</a><span>›</span>
-    <a href="index.html">PDF Tools</a><span>›</span>
-    <span>Compress PDF</span>
-  </div>
-  <section class="hero">
-    <h1>Compress <em>PDF</em> Files</h1>
-    <p>Reduce PDF file size instantly in your browser. Remove redundant data and optimize your PDF for sharing and email. Free and private.</p>
-  </section>
-  <section class="converter-section">
-    <div class="converter-box">
-        <div class="upload-area" id="uploadArea">
-              <div class="upload-icon">🗜️</div>
-              <h3>Drop your PDF file here</h3>
-              <p>or click to browse</p>
-              <input type="file" id="fileInput" accept=".pdf,application/pdf">
-        </div>
-        <div class="file-info" id="fileInfo">Selected: <strong id="fileName"></strong>strong> — <span id="origSize"></span></div>
-        <div class="info-note" id="infoNote">ℹ️ Note: Browser-based compression removes redundant metadata and re-saves the PDF structure. Results vary — PDFs with large images may need server-side compression for maximum reduction.</div>
-        <button class="btn btn-primary" id="compressBtn" disabled>Compress PDF</button>
-        <div class="progress-wrap" id="progressWrap">
-              <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
-              <div class="status" id="statusMsg">Compressing…</div>
-        </div>
-        <div class="size-compare" id="sizeCompare"></div>
-        <a class="btn btn-download" id="downloadBtn" download="compressed.pdf">⬇ Download Compressed PDF</a>
-    </div>
-  </section>
-  <section class="features">
-    <h2>Why Use FilePresto?</h2>
-    <div class="features-grid">
-        <div class="feature-card"><div class="feature-icon">🔒</div><h3>100% Private</h3><p>Your files never leave your device. All compression happens locally in your browser.</p></div>
-        <div class="feature-card"><div class="feature-icon">🗜️</div><h3>Smaller Files</h3><p>Removes redundant data and optimizes PDF structure to reduce file size.</p></div>
-        <div class="feature-card"><div class="feature-icon">⚡</div><h3>Instant Results</h3><p>Powered by pdf-lib, compression happens in seconds directly in your browser.</p></div>
-        <div class="feature-card"><div class="feature-icon">🆓</div><h3>Always Free</h3><p>No subscriptions, no sign-up, no limits. Compress as many PDFs as you need.</p></div>
-    </div>
-  </section>
-  <footer><div class="footer-grid"><div class="footer-col"><h4>&#9889; FilePresto</h4><p style="font-size:.85rem;line-height:1.5">Free online file converter. Fast, secure and no sign-up required.</p></div><div class="footer-col"><h4>Tools</h4><a href="../images/index.html">Image Converter</a><a href="index.html">PDF Tools</a><a href="../video/index.html">Video Converter</a><a href="../audio/index.html">Audio Converter</a><a href="../ebook/index.html">eBook Converter</a><a href="../documents/index.html">Document Converter</a></div><div class="footer-col"><h4>Company</h4><a href="../../about.html">About</a><a href="../../pricing.html">Pricing</a><a href="../../contact.html">Contact</a></div><div class="footer-col"><h4>Legal</h4><a href="../../privacy.html">Privacy Policy</a><a href="../../terms.html">Terms of Service</a></div></div><div class="footer-bottom">&copy; 2025 FilePresto. All rights reserved.</div></footer>
-    <script src="https://unpkg.com/pdf-lib@1.17.1/dist/pdf-lib.min.js"></script>
-    <script>
-      const uploadArea=document.getElementById('uploadArea');
-      const fileInput=document.getElementById('fileInput');
-      const fileInfo=document.getElementById('fileInfo');
-      const fileNameEl=document.getElementById('fileName');
-      const origSizeEl=document.getElementById('origSize');
-      const infoNote=document.getElementById('infoNote');
-      const compressBtn=document.getElementById('compressBtn');
-      const progressWrap=document.getElementById('progressWrap');
-      const progressFill=document.getElementById('progressFill');
-      const statusMsg=document.getElementById('statusMsg');
-      const sizeCompare=document.getElementById('sizeCompare');
-      const downloadBtn=document.getElementById('downloadBtn');
-      let selectedFile=null;
-      function formatSize(b){return b>1048576?(b/1048576).toFixed(2)+' MB':(b/1024).toFixed(1)+' KB'}
-      uploadArea.addEventListener('click',()=>fileInput.click());
-      uploadArea.addEventListener('dragover',e=>{e.preventDefault();uploadArea.classList.add('dragover')});
-      uploadArea.addEventListener('dragleave',()=>uploadArea.classList.remove('dragover'));
-      uploadArea.addEventListener('drop',e=>{e.preventDefault();uploadArea.classList.remove('dragover');const f=e.dataTransfer.files[0];if(f&&f.type==='application/pdf')setFile(f)});
-      fileInput.addEventListener('change',()=>{if(fileInput.files[0])setFile(fileInput.files[0])});
-      function setFile(f){
-          selectedFile=f;
-          fileNameEl.textContent=f.name;
-          origSizeEl.textContent=formatSize(f.size);
-          fileInfo.style.display='block';
-          infoNote.style.display='block';
-          compressBtn.disabled=false;
-          downloadBtn.style.display='none';
-          sizeCompare.style.display='none';
-      }
-      compressBtn.addEventListener('click',async()=>{
-          if(!selectedFile)return;
-          compressBtn.disabled=true;
-          progressWrap.style.display='block';
-          downloadBtn.style.display='none';
-          sizeCompare.style.display='none';
-          progressFill.style.width='20%';
-          statusMsg.textContent='Loading PDF…';
-          try{
-                const {PDFDocument}=PDFLib;
-                const bytes=await selectedFile.arrayBuffer();
-                progressFill.style.width='50%';
-                statusMsg.textContent='Optimizing PDF structure…';
-                const doc=await PDFDocument.load(bytes,{updateMetadata:false});
-                progressFill.style.width='80%';
-                statusMsg.textContent='Saving compressed PDF…';
-                const compressed=await doc.save({useObjectStreams:true,addDefaultPage:false,objectsPerTick:50});
-                progressFill.style.width='100%';
-                const origKB=selectedFile.size;
-                const newKB=compressed.byteLength;
-                const reduction=Math.round((1-newKB/origKB)*100);
-                const blob=new Blob([compressed],{type:'application/pdf'});
-                const url=URL.createObjectURL(blob);
-                const base=selectedFile.name.replace(/\.pdf$/i,'');
-                downloadBtn.href=url;
-                downloadBtn.download=base+'_compressed.pdf';
-                downloadBtn.style.display='flex';
-                sizeCompare.innerHTML='Original: <strong>'+formatSize(origKB)+'</strong> → Compressed: <strong>'+formatSize(newKB)+'</strong>'+(reduction>0?' <strong style="color:var(--primary)">(-'+reduction+'%)</strong>':' (no size reduction — PDF was already optimized)');
-                sizeCompare.style.display='block';
-                statusMsg.textContent='Done!';
-                compressBtn.disabled=false;
-          }catch(e){statusMsg.textContent='Error: '+e.message;compressBtn.disabled=false}
-      });
-    </script>
-  </body>
-</html>html>
-    </script>
-  </footer></p></p></em></h1></span></span>
-    </nav>
-  </body>
-  </style></title>
-  </head>
