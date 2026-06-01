@@ -2,6 +2,12 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
+<!-- Security headers -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://unpkg.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self'; connect-src 'self' https://unpkg.com; worker-src blob:; child-src blob:; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests;">
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+<meta http-equiv="X-Frame-Options" content="DENY">
+<meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+<meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), payment=(), usb=(), bluetooth=(), serial=(), nfc=()">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Merge PDF – Free Online PDF Combiner | FilePresto</title>
@@ -34,153 +40,3 @@
     .upload-area:hover,.upload-area.dragover{border-color:var(--primary);background:var(--primary-light)}
     .upload-icon{font-size:3rem;margin-bottom:12px}
     .upload-area h3{font-size:1.1rem;font-weight:600;margin-bottom:8px}
-    .upload-area p{color:var(--text-light);font-size:.9rem}
-    #fileInput{display:none}
-    .file-list{margin-bottom:20px;display:none}
-    .file-list-title{font-size:.85rem;font-weight:600;color:var(--text-light);margin-bottom:8px;text-transform:uppercase;letter-spacing:.05em}
-    .file-item{display:flex;align-items:center;justify-content:space-between;background:var(--bg);border-radius:8px;padding:10px 14px;margin-bottom:6px;font-size:.9rem}
-    .file-item-name{flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-    .file-item-remove{background:none;border:none;color:var(--text-light);cursor:pointer;padding:2px 6px;border-radius:4px;font-size:1.1rem;transition:.2s}
-    .file-item-remove:hover{color:#DC2626;background:#FEF2F2}
-    .btn{display:inline-flex;align-items:center;gap:8px;padding:14px 32px;border-radius:10px;font-size:1rem;font-weight:600;cursor:pointer;border:none;transition:.2s}
-    .btn-primary{background:var(--primary);color:#fff;width:100%;justify-content:center}
-    .btn-primary:hover:not(:disabled){background:var(--primary-dark)}
-    .btn-primary:disabled{opacity:.5;cursor:not-allowed}
-    .btn-download{background:#059669;color:#fff;width:100%;justify-content:center;margin-top:12px;display:none}
-    .btn-download:hover{background:#047857}
-    .progress-wrap{margin:20px 0;display:none}
-    .progress-bar{height:8px;background:var(--border);border-radius:4px;overflow:hidden}
-    .progress-fill{height:100%;background:var(--primary);border-radius:4px;transition:width .3s;width:0%}
-    .status{margin-top:10px;font-size:.9rem;color:var(--text-light);text-align:center}
-    .features{max-width:1200px;margin:0 auto;padding:48px 24px}
-    .features h2{font-size:1.75rem;font-weight:700;text-align:center;margin-bottom:32px}
-    .features-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px}
-    .feature-card{background:var(--white);border-radius:12px;padding:28px;box-shadow:0 2px 12px rgba(0,0,0,.05)}
-    .feature-icon{font-size:2rem;margin-bottom:12px}
-    .feature-card h3{font-weight:600;margin-bottom:8px}
-    .feature-card p{color:var(--text-light);font-size:.9rem}
-    footer{background:var(--text);color:#9CA3AF;padding:48px 24px 24px}
-    .footer-inner{max-width:1200px;margin:0 auto}
-    .footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:32px;margin-bottom:32px}
-    .footer-col h4{color:#fff;font-weight:600;margin-bottom:12px}
-    .footer-col a{display:block;margin-bottom:8px;font-size:.9rem;transition:.2s}
-    .footer-col a:hover{color:#fff}
-    .footer-bottom{border-top:1px solid #374151;padding-top:24px;text-align:center;font-size:.85rem}
-    </style>
-  </head>
-  <body>
-    <nav><a href="../../index.html" class="nav-logo">&#9889; FilePresto</a><div class="nav-links"><a href="../images/index.html">Images</a><a href="index.html" class="active">PDF</a><a href="../video/index.html">Video</a><a href="../audio/index.html">Audio</a><a href="../ebook/index.html">eBooks</a><a href="../documents/index.html">Documents</a><a href="../../pricing.html">Pricing</a><div class="lang-switcher"><a href="merge-pdf.html" class="active">EN</a><a href="../../es/tools/pdf/merge-pdf.html">ES</a><a href="../../pt/tools/pdf/merge-pdf.html">PT</a></div><a href="../../pricing.html" class="btn-pro">Pro</a></div></nav>
-  <div class="breadcrumb">
-    <a href="../../index.html">Home</a><span>›</span>
-    <a href="index.html">PDF Tools</a><span>›</span>
-    <span>Merge PDF</span>
-  </div>
-  <section class="hero">
-    <h1>Merge <em>PDF</em> Files</h1>
-    <p>Combine multiple PDF files into a single document instantly in your browser. Fast, private, and completely free.</p>
-  </section>
-  <section class="converter-section">
-    <div class="converter-box">
-        <div class="upload-area" id="uploadArea">
-              <div class="upload-icon">📄</div>
-              <h3>Drop PDF files here</h3>
-              <p>or click to browse — select 2 or more PDF files</p>
-              <input type="file" id="fileInput" accept=".pdf,application/pdf" multiple>
-        </div>
-        <div class="file-list" id="fileList">
-              <div class="file-list-title">Files to merge (in order):</div>
-              <div id="fileItems"></div>
-        </div>
-        <button class="btn btn-primary" id="mergeBtn" disabled>Merge PDFs</button>
-        <div class="progress-wrap" id="progressWrap">
-              <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
-              <div class="status" id="statusMsg">Merging…</div>
-        </div>
-        <a class="btn btn-download" id="downloadBtn" download="merged.pdf">⬇ Download Merged PDF</a>
-    </div>
-  </section>
-  <section class="features">
-    <h2>Why Use FilePresto?</h2>
-    <div class="features-grid">
-        <div class="feature-card"><div class="feature-icon">🔒</div><h3>100% Private</h3><p>Your files never leave your device. All merging happens locally in your browser.</p></div>
-        <div class="feature-card"><div class="feature-icon">📑</div><h3>Unlimited Files</h3><p>Combine as many PDF documents as you need into a single file.</p></div>
-        <div class="feature-card"><div class="feature-icon">⚡</div><h3>Instant Results</h3><p>Powered by pdf-lib, merging happens in seconds directly in your browser.</p></div>
-        <div class="feature-card"><div class="feature-icon">🆓</div><h3>Always Free</h3><p>No subscriptions, no sign-up, no limits. Merge as many PDFs as you need.</p></div>
-    </div>
-  </section>
-  <footer><div class="footer-grid"><div class="footer-col"><h4>&#9889; FilePresto</h4><p style="font-size:.85rem;line-height:1.5">Free online file converter. Fast, secure and no sign-up required.</p></div><div class="footer-col"><h4>Tools</h4><a href="../images/index.html">Image Converter</a><a href="index.html">PDF Tools</a><a href="../video/index.html">Video Converter</a><a href="../audio/index.html">Audio Converter</a><a href="../ebook/index.html">eBook Converter</a><a href="../documents/index.html">Document Converter</a></div><div class="footer-col"><h4>Company</h4><a href="../../about.html">About</a><a href="../../pricing.html">Pricing</a><a href="../../contact.html">Contact</a></div><div class="footer-col"><h4>Legal</h4><a href="../../privacy.html">Privacy Policy</a><a href="../../terms.html">Terms of Service</a></div></div><div class="footer-bottom">&copy; 2025 FilePresto. All rights reserved.</div></footer>
-    <script src="https://unpkg.com/pdf-lib@1.17.1/dist/pdf-lib.min.js"></script>
-    <script>
-      const uploadArea=document.getElementById('uploadArea');
-      const fileInput=document.getElementById('fileInput');
-      const fileList=document.getElementById('fileList');
-      const fileItems=document.getElementById('fileItems');
-      const mergeBtn=document.getElementById('mergeBtn');
-      const progressWrap=document.getElementById('progressWrap');
-      const progressFill=document.getElementById('progressFill');
-      const statusMsg=document.getElementById('statusMsg');
-      const downloadBtn=document.getElementById('downloadBtn');
-      let selectedFiles=[];
-      uploadArea.addEventListener('click',()=>fileInput.click());
-      uploadArea.addEventListener('dragover',e=>{e.preventDefault();uploadArea.classList.add('dragover')});
-      uploadArea.addEventListener('dragleave',()=>uploadArea.classList.remove('dragover'));
-      uploadArea.addEventListener('drop',e=>{e.preventDefault();uploadArea.classList.remove('dragover');addFiles(Array.from(e.dataTransfer.files).filter(f=>f.type==='application/pdf'))});
-      fileInput.addEventListener('change',()=>{addFiles(Array.from(fileInput.files));fileInput.value=''});
-      function addFiles(newFiles){
-          newFiles.forEach(f=>{if(!selectedFiles.find(x=>x.name===f.name&&x.size===f.size))selectedFiles.push(f)});
-          renderFileList();
-      }
-      function renderFileList(){
-          fileItems.innerHTML='';
-          selectedFiles.forEach((f,i)=>{
-                const el=document.createElement('div');
-                el.className='file-item';
-                el.innerHTML='<span class="file-item-name">'+f.name+'</span><button class="file-item-remove" data-i="'+i+'">✕</button>';
-                fileItems.appendChild(el);
-          });
-          fileList.style.display=selectedFiles.length>0?'block':'none';
-          mergeBtn.disabled=selectedFiles.length<2;
-          downloadBtn.style.display='none';
-      }
-      fileItems.addEventListener('click',e=>{
-          const btn=e.target.closest('[data-i]');
-          if(btn){selectedFiles.splice(parseInt(btn.dataset.i),1);renderFileList()}
-      });
-      mergeBtn.addEventListener('click',async()=>{
-          mergeBtn.disabled=true;
-          progressWrap.style.display='block';
-          downloadBtn.style.display='none';
-          progressFill.style.width='10%';
-          statusMsg.textContent='Starting merge…';
-          try{
-                const {PDFDocument}=PDFLib;
-                const merged=await PDFDocument.create();
-                for(let i=0;i<selectedFiles.length;i++){
-                        statusMsg.textContent='Processing file '+(i+1)+' of '+selectedFiles.length+'…';
-                        progressFill.style.width=(10+Math.round((i/selectedFiles.length)*80))+'%';
-                        const bytes=await selectedFiles[i].arrayBuffer();
-                        const doc=await PDFDocument.load(bytes);
-                        const pages=await merged.copyPages(doc,doc.getPageIndices());
-                        pages.forEach(p=>merged.addPage(p));
-                }
-                progressFill.style.width='95%';
-                statusMsg.textContent='Saving…';
-                const pdfBytes=await merged.save();
-                const blob=new Blob([pdfBytes],{type:'application/pdf'});
-                const url=URL.createObjectURL(blob);
-                downloadBtn.href=url;
-                downloadBtn.download='merged.pdf';
-                downloadBtn.style.display='flex';
-                progressFill.style.width='100%';
-                statusMsg.textContent='Done! '+selectedFiles.length+' PDFs merged successfully.';
-          }catch(e){statusMsg.textContent='Error: '+e.message;mergeBtn.disabled=false}
-      });
-    </script>
-  </body>
-</html>html>
-    </script>
-  </footer></p></p></em></h1></span></span>
-    </nav>
-  </body>
-  </style></title>
-  </head>
