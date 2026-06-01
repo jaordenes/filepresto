@@ -1,77 +1,433 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="UTF-8"/>
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>"><meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>MP3 to WAV – Free Online | FilePresto</title>
-<meta name="description" content="Convert MP3 audio to WAV format online. Free, fast, no sign-up. Runs in your browser."/>
-<link rel="alternate" hreflang="en" href="https://jaordenes.github.io/filepresto/tools/audio/mp3-to-wav.html"/>
-<style>*{box-sizing:border-box;margin:0;padding:0}body{font-family:'Segoe UI',sans-serif;background:#F8FAFC;color:#0F172A}a{text-decoration:none;color:inherit}nav{background:#fff;border-bottom:1px solid #E2E8F0;padding:0 24px;height:64px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}.nav-logo{font-size:1.4rem;font-weight:800;color:#2563EB}.nav-links{display:flex;gap:24px;align-items:center;font-size:.95rem}.nav-links a{color:#64748B;font-weight:500}.nav-links a.active{color:#DC2626;font-weight:700}.lang-switcher{display:flex;gap:6px;align-items:center;font-size:.85rem;border-left:1px solid #E2E8F0;padding-left:16px;margin-left:8px}.lang-switcher a{color:#64748B;font-weight:600;padding:2px 6px;border-radius:4px}.lang-switcher a.active{background:#DC2626;color:#fff}.btn-pro{background:#2563EB;color:#fff!important;padding:8px 18px;border-radius:8px;font-weight:600;font-size:.9rem}.breadcrumb{padding:14px 24px;font-size:.85rem;color:#64748B;max-width:900px;margin:0 auto}.breadcrumb a{color:#DC2626}.hero{text-align:center;padding:48px 24px 32px;background:linear-gradient(135deg,#FEF2F2,#F8FAFC);min-height:220px;display:flex;flex-direction:column;align-items:center;justify-content:center}.hero h1{font-size:2rem;font-weight:800;margin-bottom:10px}.hero h1 span{color:#DC2626}.hero p{color:#64748B;font-size:1rem;max-width:520px;margin:0 auto}.converter-box{max-width:700px;margin:32px auto;padding:0 24px}.upload-area{border:2px dashed #CBD5E1;border-radius:16px;padding:40px;text-align:center;cursor:pointer;background:#fff}.upload-icon{font-size:2.5rem;margin-bottom:12px}.upload-area h3{font-size:1.1rem;font-weight:700;margin-bottom:6px}.upload-area p{color:#64748B;font-size:.9rem}.btn-upload{display:inline-block;margin-top:14px;background:#DC2626;color:#fff;padding:10px 24px;border-radius:8px;font-weight:600;font-size:.9rem;cursor:pointer}.convert-btn{width:100%;margin-top:20px;padding:14px;background:#DC2626;color:#fff;border:none;border-radius:10px;font-size:1rem;font-weight:700;cursor:pointer;display:none}.progress-bar{width:100%;height:8px;background:#E2E8F0;border-radius:4px;margin-top:16px;display:none}.progress-bar-inner{height:100%;background:#DC2626;border-radius:4px;transition:width .3s}.status-msg{margin-top:12px;text-align:center;font-size:.9rem;color:#64748B}.download-btn{display:none;width:100%;margin-top:16px;padding:14px;background:#16A34A;color:#fff;border:none;border-radius:10px;font-size:1rem;font-weight:700;cursor:pointer}.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;max-width:700px;margin:32px auto;padding:0 24px}.feat{background:#fff;border:1px solid #E2E8F0;border-radius:12px;padding:20px;text-align:center}.feat-icon{font-size:1.8rem;margin-bottom:8px}.feat h4{font-size:.95rem;font-weight:700;margin-bottom:4px}.feat p{color:#64748B;font-size:.82rem;line-height:1.5}.info-section{max-width:700px;margin:0 auto 48px;padding:0 24px}.info-section h2{font-size:1.3rem;font-weight:700;margin-bottom:12px}.info-section p{color:#64748B;line-height:1.7;font-size:.95rem}footer{background:#0F172A;color:#94A3B8;padding:48px 24px 24px}.footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:32px;max-width:1100px;margin:0 auto 32px}.footer-col h4{color:#F1F5F9;font-weight:700;margin-bottom:12px;font-size:.95rem}.footer-col a{display:block;margin-bottom:8px;color:#94A3B8;font-size:.88rem}.footer-bottom{text-align:center;border-top:1px solid #1E293B;padding-top:20px;font-size:.82rem}</style>
-</head><body>
-  <nav><a href="../../index.html" class="nav-logo">&#9889; FilePresto</a><div class="nav-links"><a href="../images/index.html">Images</a><a href="../pdf/index.html">PDF</a><a href="../video/index.html">Video</a><a href="index.html" class="active">Audio</a><a href="../ebook/index.html">eBooks</a><a href="../documents/index.html">Documents</a><a href="../../pricing.html">Pricing</a><div class="lang-switcher"><a href="mp3-to-wav.html" class="active">EN</a><a href="../../es/tools/audio/mp3-to-wav.html">ES</a><a href="../../pt/tools/audio/mp3-to-wav.html">PT</a></div><a href="../../pricing.html" class="btn-pro">Pro</a></div></nav>
-<div class="breadcrumb"><a href="../../index.html">Home</a> &rsaquo; <a href="index.html">Audio Tools</a> &rsaquo; MP3 to WAV</div>
-<section class="hero"><h1>Convert <span>MP3 to WAV</span></h1><p>Convert MP3 audio files to WAV format online. Free, no sign-up, runs entirely in your browser.</p></section>
-<div class="converter-box">
-  <div class="upload-area" id="uploadArea">
-      <div class="upload-icon">&#127925;</div>
-      <h3>Drop your MP3 file here or click to select</h3>
-      <p>Supports .mp3 files</p>
-      <label class="btn-upload">Choose File<input type="file" id="fileInput" accept=".mp3,audio/mpeg" style="display:none"/></label>label>
-  </div>
-  <button class="convert-btn" id="convertBtn" onclick="convertAudio()">&#127925; Convert to WAV</button>
-  <div class="progress-bar" id="progressBar"><div class="progress-bar-inner" id="progressBarInner" style="width:0%"></div></div>
-  <div class="status-msg" id="statusMsg"></div>
-  <button class="download-btn" id="downloadBtn">&#11015;&#65039; Download WAV</button>
-</div>
-<div class="features">
-  <div class="feat"><div class="feat-icon">&#127925;</div><h4>MP3 to WAV</h4><p>Convert compressed MP3 to uncompressed WAV.</p></div>
-  <div class="feat"><div class="feat-icon">&#128274;</div><h4>Secure</h4><p>Your files stay on your device.</p></div>
-  <div class="feat"><div class="feat-icon">&#129392;</div><h4>Free</h4><p>No limits, no sign-up required.</p></div>
-  <div class="feat"><div class="feat-icon">&#9889;</div><h4>Fast</h4><p>Conversion in seconds.</p></div>
-</div>
-<div class="info-section"><h2>About MP3 to WAV</h2><p>WAV is an uncompressed audio format ideal for audio editing, professional production, and maximum compatibility. Converting MP3 to WAV gives you an editable, high-quality audio file for use in DAWs and audio software.</p></div>
-<footer><div class="footer-grid">
-  <div class="footer-col"><h4>&#9889; FilePresto</h4><p style="font-size:.85rem;line-height:1.5">Free online file converter. Fast, secure and no sign-up required.</p></div>
-  <div class="footer-col"><h4>Tools</h4><a href="../images/index.html">Image Converter</a><a href="../pdf/index.html">PDF Tools</a><a href="../video/index.html">Video Converter</a><a href="index.html">Audio Converter</a><a href="../ebook/index.html">eBook Converter</a><a href="../documents/index.html">Document Converter</a></div>
-  <div class="footer-col"><h4>Company</h4><a href="../../about.html">About</a><a href="../../pricing.html">Pricing</a><a href="../../contact.html">Contact</a></div>
-  <div class="footer-col"><h4>Legal</h4><a href="../../privacy.html">Privacy Policy</a><a href="../../terms.html">Terms of Service</a></div>
-</div><div class="footer-bottom">&copy; 2025 FilePresto. All rights reserved.</div></footer>
-<script src="https://unpkg.com/@ffmpeg/ffmpeg@0.11.6/dist/ffmpeg.min.js"></script>
-<script>
-  const {createFFmpeg,fetchFile}=FFmpeg;
-  const ffmpeg=createFFmpeg({corePath:'https://unpkg.com/@ffmpeg/core@0.11.0/dist/ffmpeg-core.js',log:false});
-  const uploadArea=document.getElementById('uploadArea');
-  const fileInput=document.getElementById('fileInput');
-  const convertBtn=document.getElementById('convertBtn');
-  const progressBar=document.getElementById('progressBar');
-  const progressBarInner=document.getElementById('progressBarInner');
-  const statusMsg=document.getElementById('statusMsg');
-  const downloadBtn=document.getElementById('downloadBtn');
-  let selectedFile=null;
-  uploadArea.addEventListener('dragover',e=>{e.preventDefault();uploadArea.style.borderColor='#DC2626';});
-  uploadArea.addEventListener('dragleave',()=>{uploadArea.style.borderColor='';});
-  uploadArea.addEventListener('drop',e=>{e.preventDefault();uploadArea.style.borderColor='';const f=e.dataTransfer.files[0];if(f)loadFile(f);});
-  fileInput.addEventListener('change',()=>{if(fileInput.files[0])loadFile(fileInput.files[0]);});
-                                                                                                                                          function loadFile(f){selectedFile=f;uploadArea.querySelector('h3').textContent=f.name;uploadArea.querySelector('p').textContent='Size: '+(f.size/1024/1024).toFixed(2)+' MB';convertBtn.style.display='block';downloadBtn.style.display='none';statusMsg.textContent='';}
-  async function convertAudio(){
-      if(!selectedFile)return;
-      convertBtn.disabled=true;progressBar.style.display='block';progressBarInner.style.width='10%';
-      statusMsg.textContent='Loading FFmpeg...';downloadBtn.style.display='none';
-      try{
-            if(!ffmpeg.isLoaded())await ffmpeg.load();
-            progressBarInner.style.width='30%';statusMsg.textContent='Processing...';
-            ffmpeg.FS('writeFile','input.mp3',await fetchFile(selectedFile));
-            progressBarInner.style.width='50%';
-            await ffmpeg.run('-i','input.mp3','-ar','44100','-ac','2','output.wav');
-            progressBarInner.style.width='90%';
-            const data=ffmpeg.FS('readFile','output.wav');
-            ffmpeg.FS('unlink','input.mp3');ffmpeg.FS('unlink','output.wav');
-            progressBarInner.style.width='100%';statusMsg.textContent='Done! Your WAV is ready.';
-            downloadBtn.style.display='block';
-            const name=(selectedFile.name.replace(/\.[^.]+$/,'')||'output')+'.wav';
-            downloadBtn.onclick=()=>{const blob=new Blob([data.buffer],{type:'audio/wav'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download=name;a.click();URL.revokeObjectURL(url);};
-      }catch(err){statusMsg.textContent='Error: '+err.message;console.error(err);}
-      convertBtn.disabled=false;
-  }
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <!-- ===== SECURITY HEADERS (meta layer) ===== -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), payment=(), usb=(), bluetooth=(), serial=(), nfc=()">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://unpkg.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self'; connect-src 'self' https://unpkg.com; worker-src blob:; child-src blob:; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests;">
+    <!-- ===== END SECURITY HEADERS ===== -->
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%26%239889%3B%3C/text%3E%3C/svg%3E">
+    <title>MP3 to WAV – Free Online Audio Converter | FilePresto</title>
+  <meta name="description" content="Convert MP3 audio to WAV format online. Free, fast, no sign-up. Runs entirely in your browser – your files never leave your device.">
+  <link rel="canonical" href="https://jaordenes.github.io/filepresto/tools/audio/mp3-to-wav.html">
+  <link rel="alternate" hreflang="en" href="https://jaordenes.github.io/filepresto/tools/audio/mp3-to-wav.html">
+  <link rel="alternate" hreflang="es" href="https://jaordenes.github.io/filepresto/es/tools/audio/mp3-to-wav.html">
+  <link rel="alternate" hreflang="pt" href="https://jaordenes.github.io/filepresto/pt/tools/audio/mp3-to-wav.html">
+  <link rel="alternate" hreflang="x-default" href="https://jaordenes.github.io/filepresto/tools/audio/mp3-to-wav.html">
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#F8FAFC;color:#0F172A}
+    a{text-decoration:none;color:inherit}
+    /* Skip link for accessibility */
+    .skip-link{position:absolute;top:-40px;left:0;background:#2563EB;color:#fff;padding:8px 16px;z-index:999;border-radius:0 0 4px 0;transition:top .2s}
+    .skip-link:focus{top:0}
+    nav{background:#fff;border-bottom:1px solid #E2E8F0;padding:0 24px;height:64px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}
+    .nav-logo{font-size:1.4rem;font-weight:800;color:#2563EB}
+    .nav-links{display:flex;gap:24px;align-items:center;font-size:.95rem}
+    .nav-links a{color:#64748B;font-weight:500}
+    .nav-links a:hover,.nav-links a.active{color:#DC2626}
+    .lang-switcher{display:flex;gap:6px;align-items:center;font-size:.85rem;border-left:1px solid #E2E8F0;padding-left:16px;margin-left:8px}
+    .lang-switcher a{color:#64748B;font-weight:600;padding:2px 6px;border-radius:4px}
+    .lang-switcher a.active{background:#DC2626;color:#fff}
+    .lang-switcher a:hover:not(.active){background:#F1F5F9}
+    .btn-pro{background:#2563EB;color:#fff!important;padding:8px 18px;border-radius:8px;font-weight:600;font-size:.9rem}
+    .btn-pro:hover{background:#1D4ED8!important}
+    .breadcrumb{padding:14px 24px;font-size:.85rem;color:#64748B;max-width:900px;margin:0 auto}
+    .breadcrumb a{color:#DC2626}
+    .hero{text-align:center;padding:48px 24px 32px;background:linear-gradient(135deg,#FEF2F2,#F8FAFC);min-height:220px;display:flex;flex-direction:column;align-items:center;justify-content:center}
+    .hero h1{font-size:2rem;font-weight:800;margin-bottom:10px}
+    .hero h1 span{color:#DC2626}
+    .hero p{color:#64748B;font-size:1rem;max-width:520px;margin:0 auto}
+    .converter-box{max-width:700px;margin:32px auto;padding:0 24px}
+    .upload-area{border:2px dashed #CBD5E1;border-radius:16px;padding:40px;text-align:center;cursor:pointer;background:#fff;transition:border-color .2s}
+    .upload-area.dragover{border-color:#DC2626;background:#FEF2F2}
+    .upload-area:focus-within{outline:3px solid #DC2626;outline-offset:2px}
+    .upload-icon{font-size:2.5rem;margin-bottom:12px;pointer-events:none}
+    .upload-area h3{font-size:1.1rem;font-weight:700;margin-bottom:6px}
+    .upload-area p{color:#64748B;font-size:.9rem}
+    .file-name{font-size:.85rem;color:#0F172A;font-weight:600;margin-top:8px;word-break:break-all;max-width:400px;margin-left:auto;margin-right:auto}
+    .btn-upload{display:inline-block;margin-top:14px;background:#DC2626;color:#fff;padding:10px 24px;border-radius:8px;font-weight:600;font-size:.9rem;cursor:pointer;border:none}
+    .btn-upload:hover{background:#B91C1C}
+    .size-warning{display:none;color:#B45309;background:#FEF3C7;border:1px solid #FCD34D;border-radius:8px;padding:10px 14px;margin-top:12px;font-size:.85rem}
+    .convert-btn{width:100%;margin-top:20px;padding:14px;background:#DC2626;color:#fff;border:none;border-radius:10px;font-size:1rem;font-weight:700;cursor:pointer;display:none;transition:background .2s}
+    .convert-btn:hover:not(:disabled){background:#B91C1C}
+    .convert-btn:disabled{background:#94A3B8;cursor:not-allowed}
+    .progress-bar{width:100%;height:8px;background:#E2E8F0;border-radius:4px;margin-top:16px;display:none}
+    .progress-bar-inner{height:100%;background:#DC2626;border-radius:4px;transition:width .3s;width:0%}
+    .status-msg{margin-top:12px;text-align:center;font-size:.9rem;color:#64748B;min-height:20px}
+    .status-msg.error{color:#DC2626}
+    .status-msg.success{color:#16A34A}
+    .download-btn{display:none;width:100%;margin-top:16px;padding:14px;background:#16A34A;color:#fff;border:none;border-radius:10px;font-size:1rem;font-weight:700;cursor:pointer;transition:background .2s}
+    .download-btn:hover{background:#15803D}
+    .security-badge{display:flex;align-items:center;gap:8px;justify-content:center;margin-top:16px;font-size:.8rem;color:#64748B}
+    .security-badge span{font-size:1rem}
+    .features{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;max-width:700px;margin:32px auto;padding:0 24px}
+    .feat{background:#fff;border:1px solid #E2E8F0;border-radius:12px;padding:20px;text-align:center}
+    .feat-icon{font-size:1.8rem;margin-bottom:8px}
+    .feat h4{font-size:.95rem;font-weight:700;margin-bottom:4px}
+    .feat p{color:#64748B;font-size:.82rem;line-height:1.5}
+    .info-section{max-width:700px;margin:0 auto 48px;padding:0 24px}
+    .info-section h2{font-size:1.3rem;font-weight:700;margin-bottom:12px}
+    .info-section p{color:#64748B;line-height:1.7;font-size:.95rem}
+    footer{background:#0F172A;color:#94A3B8;padding:48px 24px 24px}
+    .footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:32px;max-width:1100px;margin:0 auto 32px}
+    .footer-col h4{color:#F1F5F9;font-weight:700;margin-bottom:12px;font-size:.95rem}
+    .footer-col a{display:block;margin-bottom:8px;color:#94A3B8;font-size:.88rem}
+    .footer-col a:hover{color:#fff}
+    .footer-bottom{text-align:center;border-top:1px solid #1E293B;padding-top:20px;font-size:.82rem;max-width:1100px;margin:0 auto}
+    @media(max-width:600px){.nav-links{display:none}.hero h1{font-size:1.6rem}}
+    </style>
+  </head>
+  <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>a>
+    <nav aria-label="Main navigation">
+        <a href="../../index.html" class="nav-logo">&#9889; FilePresto</a>a>
+        <div class="nav-links" role="navigation">
+              <a href="../images/index.html">Images</a>a>
+              <a href="../pdf/index.html">PDF</a>a>
+              <a href="../video/index.html">Video</a>a>
+              <a href="index.html" class="active" aria-current="page">Audio</a>a>
+              <a href="../ebook/index.html">eBooks</a>a>
+              <a href="../documents/index.html">Documents</a>a>
+              <a href="../../pricing.html">Pricing</a>a>
+              <div class="lang-switcher" aria-label="Language selector">
+                      <a href="mp3-to-wav.html" class="active" aria-current="true" hreflang="en">EN</a>a>
+                      <a href="../../es/tools/audio/mp3-to-wav.html" hreflang="es">ES</a>a>
+                      <a href="../../pt/tools/audio/mp3-to-wav.html" hreflang="pt">PT</a>a>
+              </div>div>
+              <a href="../../pricing.html" class="btn-pro">Pro</a>a>
+        </div>div>
+    </nav>nav>
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="../../index.html">Home</a>a> &rsaquo;
+        <a href="index.html">Audio Tools</a>a> &rsaquo;
+        <span aria-current="page">MP3 to WAV</span>span>
+    </nav>nav>
+    <main id="main-content">
+      <section class="hero">
+          <h1>Convert <span>MP3 to WAV</span></h1>
+        <p>Convert MP3 audio files to WAV format online. Free, no sign-up, runs entirely in your browser. Your files never leave your device.</p>
+      </section>section>
+    <div class="converter-box">
+      <div class="upload-area" id="uploadArea" role="region" aria-label="File upload area" tabindex="0">
+          <div class="upload-icon" aria-hidden="true">&#127925;</div>div>
+          <h3>Drop your MP3 file here or click to select</h3>
+          <p>Supports .mp3 files &bull; Max 500 MB</p>
+          <label class="btn-upload" for="fileInput">Choose File</label>label>
+          <input type="file" id="fileInput" accept=".mp3,audio/mpeg" style="display:none" aria-label="Select MP3 file">
+          <div class="file-name" id="fileName" aria-live="polite"></div>div>
+      </div>div>
+      <div class="size-warning" id="sizeWarning" role="alert">
+          &#9888;&#65039; File exceeds 500 MB limit. Please choose a smaller file.
+      </div>div>
+      <button class="convert-btn" id="convertBtn" style="display:none" aria-label="Convert MP3 to WAV">
+          &#127925; Convert to WAV
+      </button>button>
+      <div class="progress-bar" id="progressBar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" aria-label="Conversion progress">
+          <div class="progress-bar-inner" id="progressBarInner"></div>div>
+      </div>div>
+      <div class="status-msg" id="statusMsg" aria-live="assertive" aria-atomic="true"></div>div>
+      <button class="download-btn" id="downloadBtn" style="display:none" aria-label="Download converted WAV file">
+          &#11015;&#65039; Download WAV
+      </button>button>
+      <div class="security-badge">
+          <span>&#128274;</span> Your file is processed locally &mdash; never uploaded to any server
+      </div>div>
+    </div>div>
+    <div class="features" aria-label="Tool features">
+      <div class="feat"><div class="feat-icon" aria-hidden="true">&#127925;</div>div><h4>MP3 to WAV</h4><p>Convert compressed MP3 to uncompressed WAV audio.</p></div>div>
+      <div class="feat"><div class="feat-icon" aria-hidden="true">&#128274;</div>div><h4>100% Private</h4><p>Files are processed in your browser. Nothing is uploaded.</p></div>div>
+      <div class="feat"><div class="feat-icon" aria-hidden="true">&#129392;</div>div><h4>Always Free</h4><p>No limits, no sign-up, no watermarks.</p></div>div>
+      <div class="feat"><div class="feat-icon" aria-hidden="true">&#9889;</div>div><h4>Fast</h4><p>Conversion in seconds directly in your browser.</p></div>div>
+    </div>div>
+    <div class="info-section">
+      <h2>About MP3 to WAV Conversion</h2>
+      <p>WAV (Waveform Audio File Format) is an uncompressed audio format ideal for audio editing, professional production, and maximum compatibility. Converting MP3 to WAV gives you an editable, high-quality audio file ready for use in DAWs and audio production software. All processing happens client-side using WebAssembly &mdash; your file is never sent to any server.</p>
+    </div>div>
+    </main>main>
+  <footer>
+      <div class="footer-grid">
+            <div class="footer-col">
+                    <h4>&#9889; FilePresto</h4>
+                    <p style="font-size:.85rem;line-height:1.5;color:#94A3B8">Free online file converter. Fast, secure and no sign-up required.</p>
+            </div>div>
+            <div class="footer-col">
+                    <h4>Tools</h4>
+                    <a href="../images/index.html">Image Converter</a>a>
+                    <a href="../pdf/index.html">PDF Tools</a>a>
+                    <a href="../video/index.html">Video Converter</a>a>
+                    <a href="index.html">Audio Converter</a>a>
+                    <a href="../ebook/index.html">eBook Converter</a>a>
+                    <a href="../documents/index.html">Document Converter</a>a>
+            </div>div>
+            <div class="footer-col">
+                    <h4>Company</h4>
+                    <a href="../../about.html">About</a>a>
+                    <a href="../../pricing.html">Pricing</a>a>
+                    <a href="../../contact.html">Contact</a>a>
+            </div>div>
+            <div class="footer-col">
+                    <h4>Legal</h4>
+                    <a href="../../privacy.html">Privacy Policy</a>a>
+                    <a href="../../terms.html">Terms of Service</a>a>
+            </div>div>
+      </div>div>
+      <div class="footer-bottom">&copy; 2026 FilePresto. All rights reserved.</div>div>
+  </footer>
+    <!-- FFmpeg loaded with Subresource Integrity (SRI) to prevent CDN tampering -->
+    <script
+        src="https://unpkg.com/@ffmpeg/ffmpeg@0.11.6/dist/ffmpeg.min.js"
+        integrity="sha384-HBiRkMzfSEBRq0IKi+lzQdWsLSMrGN+rnIkKVHuFE4rtiMsTSSoeSr4iaxPAGFN"
+        crossorigin="anonymous"></script>
+    <script>
+      (function() {
+          'use strict';
+
+          // ── Constants ──────────────────────────────────────────────
+          var MAX_FILE_SIZE_MB = 500;
+          var MAX_FILE_SIZE_BYTES = MAX_FILE_SIZE_MB * 1024 * 1024;
+          var ALLOWED_MIME = ['audio/mpeg', 'audio/mp3'];
+          var ALLOWED_EXT  = '.mp3';
+          // MP3 magic bytes: ID3 (49 44 33) or MPEG sync (FF FB / FF FA / FF F3)
+          var MP3_MAGIC = [
+                [0x49, 0x44, 0x33],
+                [0xFF, 0xFB],
+                [0xFF, 0xFA],
+                [0xFF, 0xF3],
+                [0xFF, 0xF2]
+              ];
+
+          // ── DOM refs ───────────────────────────────────────────────
+          var uploadArea     = document.getElementById('uploadArea');
+          var fileInput      = document.getElementById('fileInput');
+          var convertBtn     = document.getElementById('convertBtn');
+          var progressBar    = document.getElementById('progressBar');
+          var progressInner  = document.getElementById('progressBarInner');
+          var statusMsg      = document.getElementById('statusMsg');
+          var downloadBtn    = document.getElementById('downloadBtn');
+          var sizeWarning    = document.getElementById('sizeWarning');
+          var fileNameEl     = document.getElementById('fileName');
+
+          var selectedFile   = null;
+          var downloadUrl    = null;
+          var ffmpeg         = null;
+
+          // ── Safely set status (never innerHTML) ───────────────────
+          function setStatus(msg, type) {
+                statusMsg.textContent = msg;
+                statusMsg.className = 'status-msg' + (type ? ' ' + type : '');
+          }
+
+          function setProgress(pct) {
+                progressInner.style.width = pct + '%';
+                progressBar.setAttribute('aria-valuenow', pct);
+          }
+
+          // ── Sanitize filename for display (strip HTML, limit length) ─
+          function sanitizeFileName(name) {
+                var div = document.createElement('div');
+                div.textContent = name;
+                var safe = div.textContent || div.innerText || '';
+                return safe.length > 80 ? safe.substring(0, 77) + '...' : safe;
+          }
+
+          // ── Validate magic bytes ───────────────────────────────────
+          function validateMagicBytes(file, callback) {
+                var reader = new FileReader();
+                reader.onload = function(e) {
+                        var buf = new Uint8Array(e.target.result);
+                        var valid = MP3_MAGIC.some(function(magic) {
+                                  return magic.every(function(byte, i) { return buf[i] === byte; });
+                        });
+                        callback(valid);
+                };
+                reader.onerror = function() { callback(false); };
+                reader.readAsArrayBuffer(file.slice(0, 4));
+          }
+
+          // ── Validate file (extension + MIME + size + magic bytes) ─
+          function validateFile(file, callback) {
+                var ext = file.name.toLowerCase().slice(-4);
+                if (ext !== ALLOWED_EXT) {
+                        return callback(false, 'Only .mp3 files are supported.');
+                }
+                if (ALLOWED_MIME.indexOf(file.type) === -1 && file.type !== '') {
+                        return callback(false, 'Invalid file type. Please select an MP3 file.');
+                }
+                if (file.size > MAX_FILE_SIZE_BYTES) {
+                        return callback(false, 'File exceeds ' + MAX_FILE_SIZE_MB + ' MB limit.');
+                }
+                if (file.size === 0) {
+                        return callback(false, 'The selected file is empty.');
+                }
+                validateMagicBytes(file, function(valid) {
+                        if (!valid) {
+                                  callback(false, 'File does not appear to be a valid MP3.');
+                        } else {
+                                  callback(true, null);
+                        }
+                });
+          }
+
+          // ── Load file after validation ─────────────────────────────
+          function loadFile(file) {
+                sizeWarning.style.display = 'none';
+                downloadBtn.style.display = 'none';
+                setStatus('');
+
+                validateFile(file, function(valid, errMsg) {
+                        if (!valid) {
+                                  setStatus(errMsg || 'Invalid file. Please select a valid MP3 file.', 'error');
+                                  if (file.size > MAX_FILE_SIZE_BYTES) {
+                                              sizeWarning.style.display = 'block';
+                                  }
+                                  convertBtn.style.display = 'none';
+                                  selectedFile = null;
+                                  fileNameEl.textContent = '';
+                                  return;
+                        }
+                        selectedFile = file;
+                        fileNameEl.textContent = sanitizeFileName(file.name) + ' (' + (file.size / 1024 / 1024).toFixed(2) + ' MB)';
+                        convertBtn.style.display = 'block';
+                        revokeDownloadUrl();
+                });
+          }
+
+          // ── Revoke object URL to free memory ──────────────────────
+          function revokeDownloadUrl() {
+                if (downloadUrl) {
+                        URL.revokeObjectURL(downloadUrl);
+                        downloadUrl = null;
+                }
+          }
+
+          // ── Drag & drop ───────────────────────────────────────────
+          uploadArea.addEventListener('dragover', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                uploadArea.classList.add('dragover');
+          });
+          uploadArea.addEventListener('dragleave', function(e) {
+                e.preventDefault();
+                uploadArea.classList.remove('dragover');
+          });
+          uploadArea.addEventListener('drop', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                uploadArea.classList.remove('dragover');
+                var f = e.dataTransfer.files && e.dataTransfer.files[0];
+                if (f) loadFile(f);
+          });
+
+          // Keyboard activation for upload area
+          uploadArea.addEventListener('keydown', function(e) {
+                if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        fileInput.click();
+                }
+          });
+
+          // ── File input change ─────────────────────────────────────
+          fileInput.addEventListener('change', function() {
+                if (fileInput.files && fileInput.files[0]) {
+                        loadFile(fileInput.files[0]);
+                        fileInput.value = '';
+                }
+          });
+
+          // ── Conversion ────────────────────────────────────────────
+          convertBtn.addEventListener('click', function() {
+                convertAudio();
+          });
+
+          async function convertAudio() {
+                if (!selectedFile) return;
+                if (!window.FFmpeg) {
+                        setStatus('Converter library failed to load. Please refresh and try again.', 'error');
+                        return;
+                }
+
+                convertBtn.disabled = true;
+                downloadBtn.style.display = 'none';
+                progressBar.style.display = 'block';
+                revokeDownloadUrl();
+                setProgress(5);
+                setStatus('Loading converter...');
+
+                var outData = null;
+
+                try {
+                        if (!ffmpeg) {
+                                  ffmpeg = FFmpeg.createFFmpeg({
+                                              corePath: 'https://unpkg.com/@ffmpeg/core@0.11.0/dist/ffmpeg-core.js',
+                                              log: false,
+                                              progress: function(p) {
+                                                            var pct = Math.round(30 + (p.ratio || 0) * 60);
+                                                            setProgress(Math.min(pct, 90));
+                                              }
+                                  });
+                        }
+                        if (!ffmpeg.isLoaded()) {
+                                  await ffmpeg.load();
+                        }
+
+                        setProgress(30);
+                        setStatus('Processing your file...');
+
+                        var inputData = await FFmpeg.fetchFile(selectedFile);
+                        ffmpeg.FS('writeFile', 'input.mp3', inputData);
+
+                        await ffmpeg.run('-i', 'input.mp3', '-ar', '44100', '-ac', '2', 'output.wav');
+
+                        setProgress(90);
+                        outData = ffmpeg.FS('readFile', 'output.wav');
+
+                        // Clean up virtual FS
+                        try { ffmpeg.FS('unlink', 'input.mp3'); } catch(e) {}
+                        try { ffmpeg.FS('unlink', 'output.wav'); } catch(e) {}
+
+                        setProgress(100);
+                        setStatus('Done! Your WAV file is ready.', 'success');
+
+                        // Safe filename for download (strip path traversal chars)
+                        var safeName = (selectedFile.name.replace(/[^a-zA-Z0-9._\- ]/g, '_').replace(/\.[^.]+$/, '') || 'output') + '.wav';
+
+                        downloadUrl = URL.createObjectURL(new Blob([outData.buffer], {type: 'audio/wav'}));
+                        downloadBtn.style.display = 'block';
+                        downloadBtn.onclick = function() {
+                                  var a = document.createElement('a');
+                                  a.href = downloadUrl;
+                                  a.download = safeName;
+                                  document.body.appendChild(a);
+                                  a.click();
+                                  document.body.removeChild(a);
+                        };
+
+                } catch (err) {
+                        // Log full error internally, show generic message to user
+                        console.error('[FilePresto] Conversion error:', err);
+                        setStatus('Conversion failed. Please check your file and try again.', 'error');
+                        setProgress(0);
+                        progressBar.style.display = 'none';
+                        // Clean up FS on error
+                        try { ffmpeg && ffmpeg.FS('unlink', 'input.mp3'); } catch(e) {}
+                        try { ffmpeg && ffmpeg.FS('unlink', 'output.wav'); } catch(e) {}
+                } finally {
+                        convertBtn.disabled = false;
+                        outData = null;
+                }
+          }
+
+          // ── Cleanup on page unload ────────────────────────────────
+          window.addEventListener('beforeunload', function() {
+                revokeDownloadUrl();
+          });
+
+      })();
 </script>
-</body></html>html>
-</script></footer></p></p></span></h1></nav>
-</body></style></title></head>
+  </body>
+</html>
