@@ -1,314 +1,322 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"/>
+<meta charset="UTF-8">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
-<meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>FilePresto – Free Online File Converter</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FilePresto – Free Online File Converter | Images, PDF, Video, Audio</title>
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://jaordenes.github.io/filepresto/">
 <meta property="og:title" content="FilePresto – Free Online File Converter">
 <meta property="og:description" content="Convert images, PDFs, videos, audio and eBooks online for free. No installation required. Fast, secure and easy to use.">
 <meta property="og:image" content="https://jaordenes.github.io/filepresto/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="https://jaordenes.github.io/filepresto/og-image.png">
-<meta name="twitter:title" content="FilePresto – Free Online File Converter">
-<meta name="twitter:description" content="Convert images, PDFs, videos, audio and eBooks online for free. No installation required.">
+<meta name="twitter:image" content="https://jaordenes.github.io/filepresto/og-image.png">
 <link rel="canonical" href="https://jaordenes.github.io/filepresto/">
-<meta name="description" content="Convert images, PDFs, videos, audio and eBooks online for free. No installation required. Fast, secure and easy to use."/>
-<link rel="alternate" hreflang="en" href="https://jaordenes.github.io/filepresto/"/>
-<link rel="alternate" hreflang="es" href="https://jaordenes.github.io/filepresto/es/"/>
-<link rel="alternate" hreflang="pt" href="https://jaordenes.github.io/filepresto/pt/"/>
-<link rel="alternate" hreflang="x-default" href="https://jaordenes.github.io/filepresto/"/>
+<meta name="description" content="FilePresto: convert images, PDF, video, audio and eBooks online for free. JPG to PNG, PDF to Word, MP4 to MP3 and 50+ conversion tools. No installation.">
+<link rel="alternate" hreflang="en" href="https://jaordenes.github.io/filepresto/">
+<link rel="alternate" hreflang="es" href="https://jaordenes.github.io/filepresto/es/">
+<link rel="alternate" hreflang="pt" href="https://jaordenes.github.io/filepresto/pt/">
+<link rel="alternate" hreflang="x-default" href="https://jaordenes.github.io/filepresto/">
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:'Segoe UI',sans-serif;background:#F8FAFC;color:#0F172A}
-a{text-decoration:none;color:inherit}
-nav{background:#fff;border-bottom:1px solid #E2E8F0;padding:0 24px;height:64px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}
-.nav-logo{font-size:1.4rem;font-weight:800;color:#2563EB}
-.nav-links{display:flex;gap:24px;align-items:center;font-size:.95rem}
-.nav-links a{color:#64748B;font-weight:500}
-.nav-links a:hover{color:#2563EB}
-.lang-switcher{display:flex;gap:6px;align-items:center;font-size:.85rem;border-left:1px solid #E2E8F0;padding-left:16px;margin-left:8px}
-.lang-switcher a{color:#64748B;font-weight:600;padding:2px 6px;border-radius:4px}
-.lang-switcher a.active{background:#2563EB;color:#fff}
-.lang-switcher a:hover{background:#F1F5F9}
-.btn-pro{background:#2563EB;color:#fff!important;padding:8px 18px;border-radius:8px;font-weight:600;font-size:.9rem}
-.btn-pro:hover{background:#1D4ED8!important}
-.hero{text-align:center;padding:80px 24px 60px;background:linear-gradient(135deg,#EFF6FF 0%,#F8FAFC 100%)}
-.hero h1{font-size:2.8rem;font-weight:800;color:#0F172A;margin-bottom:16px;line-height:1.2}
-.hero h1 span{color:#2563EB}
-.hero p{font-size:1.15rem;color:#64748B;max-width:600px;margin:0 auto 36px}
-.search-bar{max-width:520px;margin:0 auto;display:flex;gap:0;background:#fff;border:2px solid #E2E8F0;border-radius:12px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,.06)}
-.search-bar input{flex:1;padding:14px 18px;border:none;outline:none;font-size:1rem;color:#0F172A}
-.search-bar button{background:#2563EB;color:#fff;border:none;padding:14px 24px;cursor:pointer;font-weight:600;font-size:.95rem}
-.search-bar button:hover{background:#1D4ED8}
-.stats{display:flex;justify-content:center;gap:40px;margin-top:40px;flex-wrap:wrap}
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--primary:#2563EB;--primary-dark:#1D4ED8;--primary-light:#EFF6FF;--text:#1F2937;--text-light:#6B7280;--bg:#F9FAFB;--white:#FFFFFF;--border:#E5E7EB;--radius:12px}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;color:var(--text);background:var(--bg);line-height:1.6}
+a{color:inherit;text-decoration:none}
+nav{background:var(--white);border-bottom:1px solid var(--border);padding:0 24px;position:sticky;top:0;z-index:100;box-shadow:0 1px 3px rgba(0,0,0,.06)}
+.nav-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-size:1.5rem;font-weight:800;color:var(--primary)}
+.logo span{color:var(--text)}
+.nav-links{display:flex;gap:28px;align-items:center;font-size:.95rem;font-weight:500}
+.nav-links a:hover{color:var(--primary)}
+.lang-switcher{display:flex;gap:8px;font-size:.85rem}
+.lang-switcher a{padding:4px 10px;border-radius:6px;border:1px solid var(--border);color:var(--text-light);transition:.2s}
+.lang-switcher a.active,.lang-switcher a:hover{background:var(--primary);color:#fff;border-color:var(--primary)}
+.btn-pro{background:var(--primary);color:#fff!important;padding:8px 20px;border-radius:8px;font-weight:700;font-size:.9rem;border:none;transition:.2s}
+.btn-pro:hover{background:var(--primary-dark)!important}
+.hero{background:linear-gradient(135deg,#1E3A8A 0%,#2563EB 50%,#3B82F6 100%);color:#fff;padding:80px 24px;text-align:center;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.3);padding:8px 20px;border-radius:999px;font-size:.875rem;margin-bottom:24px;backdrop-filter:blur(8px)}
+.hero h1{font-size:3rem;font-weight:900;margin-bottom:16px;letter-spacing:-.02em;line-height:1.1}
+.hero h1 span{background:linear-gradient(135deg,#93C5FD,#BFDBFE);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.hero p{font-size:1.2rem;opacity:.9;max-width:600px;margin:0 auto 36px}
+.hero-cta{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.btn-white{background:#fff;color:var(--primary);padding:14px 32px;border-radius:10px;font-weight:700;font-size:1rem;transition:.2s;box-shadow:0 4px 14px rgba(0,0,0,.15)}
+.btn-white:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(0,0,0,.2)}
+.btn-outline{border:2px solid rgba(255,255,255,.6);color:#fff;padding:12px 28px;border-radius:10px;font-weight:600;font-size:.95rem;transition:.2s}
+.btn-outline:hover{background:rgba(255,255,255,.1);border-color:#fff}
+.stats{display:flex;gap:40px;justify-content:center;margin-top:48px;flex-wrap:wrap}
 .stat{text-align:center}
-.stat-num{font-size:1.8rem;font-weight:800;color:#2563EB}
-.stat-label{font-size:.85rem;color:#64748B;margin-top:4px}
-.section{padding:60px 24px}
-.section-title{font-size:1.8rem;font-weight:700;text-align:center;margin-bottom:8px}
-.section-sub{color:#64748B;text-align:center;margin-bottom:40px;font-size:1rem}
-.categories{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;max-width:1100px;margin:0 auto}
-.cat-card{background:#fff;border:1px solid #E2E8F0;border-radius:16px;padding:28px;transition:.2s;cursor:pointer}
-.cat-card:hover{transform:translateY(-4px);box-shadow:0 8px 32px rgba(0,0,0,.08);border-color:var(--c)}
-.cat-icon{width:52px;height:52px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.6rem;margin-bottom:16px;background:var(--bg)}
-.cat-card h3{font-size:1.15rem;font-weight:700;margin-bottom:8px}
-.cat-card p{color:#64748B;font-size:.9rem;line-height:1.5;margin-bottom:16px}
+.stat strong{display:block;font-size:2rem;font-weight:800}
+.stat span{font-size:.875rem;opacity:.8}
+.container{max-width:1200px;margin:0 auto;padding:64px 24px}
+.section-header{text-align:center;margin-bottom:48px}
+.section-header h2{font-size:2rem;font-weight:800;margin-bottom:12px}
+.section-header p{color:var(--text-light);font-size:1.05rem;max-width:540px;margin:0 auto}
+.categories{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
+.cat-card{background:var(--white);border-radius:var(--radius);padding:32px;border:2px solid transparent;transition:.3s;box-shadow:0 2px 12px rgba(0,0,0,.06);cursor:pointer}
+.cat-card:hover{border-color:var(--cat-color);transform:translateY(-4px);box-shadow:0 8px 32px rgba(0,0,0,.12)}
+.cat-icon{width:56px;height:56px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:1.6rem;margin-bottom:20px}
+.cat-card h3{font-size:1.2rem;font-weight:700;margin-bottom:8px}
+.cat-card p{color:var(--text-light);font-size:.9rem;margin-bottom:20px}
 .cat-tools{display:flex;flex-wrap:wrap;gap:6px}
-.cat-tool{background:#F1F5F9;color:#475569;padding:4px 10px;border-radius:6px;font-size:.8rem;font-weight:500}
-.features{background:#fff;padding:60px 24px}
-.feat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px;max-width:960px;margin:0 auto}
-.feat{text-align:center;padding:24px}
-.feat-icon{font-size:2.4rem;margin-bottom:12px}
-.feat h4{font-size:1rem;font-weight:700;margin-bottom:8px}
-.feat p{color:#64748B;font-size:.88rem;line-height:1.5}
-.cta{background:linear-gradient(135deg,#2563EB,#7C3AED);color:#fff;text-align:center;padding:70px 24px}
-.cta h2{font-size:2rem;font-weight:800;margin-bottom:12px}
-.cta p{font-size:1.05rem;opacity:.9;margin-bottom:32px}
-.cta-btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
-.btn-white{background:#fff;color:#2563EB;padding:14px 32px;border-radius:10px;font-weight:700;font-size:1rem}
-.btn-outline{border:2px solid rgba(255,255,255,.6);color:#fff;padding:14px 32px;border-radius:10px;font-weight:700;font-size:1rem}
-footer{background:#0F172A;color:#94A3B8;padding:48px 24px 24px}
-.footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:32px;max-width:1100px;margin:0 auto 32px}
-.footer-col h4{color:#F1F5F9;font-weight:700;margin-bottom:12px;font-size:.95rem}
-.footer-col a{display:block;margin-bottom:8px;color:#94A3B8;font-size:.88rem}
+.cat-tool{font-size:.75rem;padding:4px 10px;border-radius:999px;font-weight:500}
+.features{background:var(--white);padding:80px 24px}
+.features-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:32px}
+.feature{text-align:center;padding:24px}
+.feature-icon{width:64px;height:64px;background:var(--primary-light);border-radius:16px;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;font-size:1.8rem}
+.feature h3{font-size:1.1rem;font-weight:700;margin-bottom:8px}
+.feature p{color:var(--text-light);font-size:.9rem}
+.tools-preview{padding:80px 24px;background:var(--bg)}
+.tools-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
+.tool-chip{background:var(--white);border:1px solid var(--border);border-radius:10px;padding:16px 20px;display:flex;align-items:center;gap:12px;transition:.2s;font-size:.9rem;font-weight:500}
+.tool-chip:hover{border-color:var(--primary);color:var(--primary);box-shadow:0 4px 12px rgba(37,99,235,.1)}
+.tool-chip span{font-size:1.2rem}
+.cta-section{background:linear-gradient(135deg,#1E3A8A,#2563EB);color:#fff;padding:80px 24px;text-align:center}
+.cta-section h2{font-size:2.2rem;font-weight:800;margin-bottom:16px}
+.cta-section p{opacity:.9;margin-bottom:32px;font-size:1.05rem;max-width:500px;margin-left:auto;margin-right:auto}
+footer{background:#111827;color:#9CA3AF;padding:48px 24px}
+.footer-inner{max-width:1200px;margin:0 auto}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:40px}
+.footer-brand .logo{font-size:1.3rem;margin-bottom:12px;display:block}
+.footer-brand p{font-size:.875rem;line-height:1.7}
+.footer-col h4{font-size:.875rem;font-weight:700;color:#fff;margin-bottom:16px;text-transform:uppercase;letter-spacing:.05em}
+.footer-col a{display:block;font-size:.875rem;margin-bottom:8px;transition:.2s}
 .footer-col a:hover{color:#fff}
-.footer-bottom{text-align:center;border-top:1px solid #1E293B;padding-top:20px;font-size:.82rem}
-
-.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}
-.skip-link{position:absolute;top:-40px;left:0;background:#2563EB;color:#fff;padding:8px 16px;z-index:200;border-radius:0 0 8px 0;font-weight:600;transition:top .2s}
-.skip-link:focus{top:0}
-.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
-.hamburger span{display:block;width:24px;height:2px;background:#0F172A;border-radius:2px;transition:.3s}
-@media(max-width:768px){
-  .nav-links{display:none;position:absolute;top:64px;left:0;right:0;background:#fff;flex-direction:column;padding:16px 24px;gap:12px;border-bottom:1px solid #E2E8F0;box-shadow:0 4px 16px rgba(0,0,0,.08)}
-  .nav-links.open{display:flex}
-  .hamburger{display:flex}
-  .hero h1{font-size:2rem}
-  .cat-grid{grid-template-columns:1fr}
-  .stats{gap:20px}
-  .stat-num{font-size:1.8rem}
-  .feat-grid{grid-template-columns:1fr 1fr}
-  .cta-btns{flex-direction:column;align-items:center}
-}
-@media(max-width:480px){
-  .feat-grid{grid-template-columns:1fr}
-  nav{padding:0 16px}
-}</style>
+.footer-bottom{border-top:1px solid #374151;padding-top:24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;font-size:.8rem}
+.skip-link{position:absolute;top:-40px;left:0;background:var(--primary);color:#fff;padding:8px 16px;z-index:999;transition:top 0.3s}.skip-link:focus{top:0}
+.hamburger{display:none;background:none;border:none;font-size:1.5rem;cursor:pointer;color:var(--primary)}
+@media(max-width:768px){.hero h1{font-size:2rem}.footer-grid{grid-template-columns:1fr 1fr}.nav-links{gap:12px}.stats{gap:24px}.hamburger{display:block}.nav-links{display:none;flex-direction:column;position:absolute;top:64px;left:0;right:0;background:var(--white);padding:16px;box-shadow:0 4px 12px rgba(0,0,0,.1)}.nav-links.open{display:flex}}
+@media(max-width:480px){.footer-grid{grid-template-columns:1fr}}
+</style>
 </head>
 <body>
 <a href="#main-content" class="skip-link">Skip to main content</a>
 <nav>
-  <a href="index.html" class="nav-logo">⚡ FilePresto</a>
-  <div class="nav-links">
-    <a href="tools/images/index.html">Images</a>
-    <a href="tools/pdf/index.html">PDF</a>
-    <a href="tools/video/index.html">Video</a>
-    <a href="tools/audio/index.html">Audio</a>
-    <a href="tools/ebook/index.html">eBooks</a>
-    <a href="tools/documents/index.html">Documents</a>
-    <a href="pricing.html">Pricing</a>
-    <div class="lang-switcher">
-      <a href="index.html" class="active">EN</a>
-      <a href="es/index.html">ES</a>
-      <a href="pt/index.html">PT</a>
-    </div>
-    <a href="pricing.html" class="btn-pro">Pro</a>
-  </div>
-
-  <button class="hamburger" onclick="toggleMenu()" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button></nav>
+<div class="nav-inner">
+<a href="index.html" class="logo">File<span>Presto</span></a>
+<div class="nav-links">
+<a href="tools/images/index.html">Images</a>
+<a href="tools/pdf/index.html">PDF</a>
+<a href="tools/video/index.html">Video</a>
+<a href="tools/audio/index.html">Audio</a>
+<a href="tools/ebook/index.html">eBooks</a>
+<a href="tools/documents/index.html">Documents</a>
+<a href="pricing.html">Pricing</a>
+<div class="lang-switcher">
+<a href="index.html" class="active">EN</a>
+<a href="es/index.html">ES</a>
+<a href="pt/index.html">PT</a>
+</div>
+<a href="pricing.html" class="btn-pro">Pro</a>
+</div>
+<button class="hamburger" onclick="toggleMenu()" aria-label="Toggle navigation" aria-expanded="false">&#9776;</button>
+</div>
+</nav>
 <main id="main-content">
 
 <section class="hero">
-  <h1>Convert Any File,<br/><span>Instantly & Free</span></h1>
-  <p>Images, PDFs, videos, audio, eBooks and documents. No sign-up required. Works in your browser.</p>
-  <div class="search-bar">
-    <input id="search-input" type="text" placeholder="Search converter, e.g. JPG to PNG..." aria-label="Search converter"/>
-    <button type="button" onclick="handleSearch()">Search</button>
-  </div>
-  <div class="stats">
-    <div class="stat"><div class="stat-num">50+</div><div class="stat-label">Free Tools</div></div>
-    <div class="stat"><div class="stat-num">6</div><div class="stat-label">Categories</div></div>
-    <div class="stat"><div class="stat-num">100%</div><div class="stat-label">Free & Secure</div></div>
-    <div class="stat"><div class="stat-num">0</div><div class="stat-label">Sign-up Required</div></div>
-  </div>
+<div class="hero-badge">&#9889; 50+ free conversion tools</div>
+<h1>Convert any file<br><span>online and free</span></h1>
+<p>Images, PDF, video, audio and eBooks. No installation. No sign-up. Instant results directly in your browser.</p>
+<div class="hero-cta">
+<a href="tools/images/index.html" class="btn-white">&#128247; Convert Images</a>
+<a href="tools/pdf/index.html" class="btn-outline">&#128196; PDF Tools</a>
+</div>
+<div class="stats">
+<div class="stat"><strong>50+</strong><span>Tools</span></div>
+<div class="stat"><strong>100%</strong><span>Free</span></div>
+<div class="stat"><strong>0</strong><span>Installations</span></div>
+<div class="stat"><strong>&#128274;</strong><span>Private &amp; Secure</span></div>
+</div>
 </section>
 
-<section class="section">
-  <h2 class="section-title">Choose a Category</h2>
-  <p class="section-sub">Select the type of file you want to convert</p>
-  <div class="categories">
-    <a href="tools/images/index.html" class="cat-card" style="--c:#2563EB;--bg:#EFF6FF">
-      <div class="cat-icon" style="--bg:#EFF6FF">🖼️</div>
-      <h3>Image Converter</h3>
-      <p>Convert between JPG, PNG, WebP, HEIC, SVG and more formats quickly.</p>
-      <div class="cat-tools">
-        <span class="cat-tool">JPG to PNG</span>
-        <span class="cat-tool">PNG to WebP</span>
-        <span class="cat-tool">HEIC to JPG</span>
-        <span class="cat-tool">+6 more</span>
-      </div>
-    </a>
-    <a href="tools/pdf/index.html" class="cat-card" style="--c:#DC2626;--bg:#FEF2F2">
-      <div class="cat-icon" style="--bg:#FEF2F2">📄</div>
-      <h3>PDF Tools</h3>
-      <p>Convert, compress and manipulate PDF files with ease.</p>
-      <div class="cat-tools">
-        <span class="cat-tool">PDF to Word</span>
-        <span class="cat-tool">Image to PDF</span>
-        <span class="cat-tool">Compress PDF</span>
-        <span class="cat-tool">+6 more</span>
-      </div>
-    </a>
-    <a href="tools/video/index.html" class="cat-card" style="--c:#16A34A;--bg:#F0FDF4">
-      <div class="cat-icon" style="--bg:#F0FDF4">🎬</div>
-      <h3>Video Converter</h3>
-      <p>Convert video files between MP4, AVI, MOV, MKV and other formats.</p>
-      <div class="cat-tools">
-        <span class="cat-tool">MP4 to AVI</span>
-        <span class="cat-tool">MOV to MP4</span>
-        <span class="cat-tool">MKV to MP4</span>
-        <span class="cat-tool">+3 more</span>
-      </div>
-    </a>
-    <a href="tools/audio/index.html" class="cat-card" style="--c:#C2410C;--bg:#FFF7ED">
-      <div class="cat-icon" style="--bg:#FFF7ED">🎵</div>
-      <h3>Audio Converter</h3>
-      <p>Convert audio between MP3, WAV, OGG, FLAC and AAC formats.</p>
-      <div class="cat-tools">
-        <span class="cat-tool">MP3 to WAV</span>
-        <span class="cat-tool">OGG to MP3</span>
-        <span class="cat-tool">WAV to FLAC</span>
-        <span class="cat-tool">+2 more</span>
-      </div>
-    </a>
-    <a href="tools/ebook/index.html" class="cat-card" style="--c:#6D28D9;--bg:#F5F3FF">
-      <div class="cat-icon" style="--bg:#F5F3FF">📚</div>
-      <h3>eBook Converter</h3>
-      <p>Convert eBooks between EPUB, MOBI, AZW3, PDF and other formats.</p>
-      <div class="cat-tools">
-        <span class="cat-tool">PDF to EPUB</span>
-        <span class="cat-tool">EPUB to MOBI</span>
-        <span class="cat-tool">AZW3 to EPUB</span>
-        <span class="cat-tool">+7 more</span>
-      </div>
-    </a>
-    <a href="tools/documents/index.html" class="cat-card" style="--c:#6D28D9;--bg:#F5F3FF">
-      <div class="cat-icon" style="--bg:#F5F3FF">📝</div>
-      <h3>Document Converter</h3>
-      <p>Convert Word, Excel, PowerPoint and other document formats.</p>
-      <div class="cat-tools">
-        <span class="cat-tool">DOCX to PDF</span>
-        <span class="cat-tool">XLSX to CSV</span>
-        <span class="cat-tool">PPTX to PDF</span>
-        <span class="cat-tool">+more</span>
-      </div>
-    </a>
-  </div>
-</section>
+<div class="container">
+<div class="section-header">
+<h2>Choose your category</h2>
+<p>Convert any type of file with our specialized tools</p>
+</div>
+<div class="categories">
+<a href="tools/images/index.html" class="cat-card" style="--cat-color:#2563EB">
+<div class="cat-icon" style="background:#EFF6FF">&#128247;</div>
+<h3>Images</h3>
+<p>Convert, compress and resize images in any format</p>
+<div class="cat-tools">
+<span class="cat-tool" style="background:#EFF6FF;color:#2563EB">JPG&#8594;PNG</span>
+<span class="cat-tool" style="background:#EFF6FF;color:#2563EB">PNG&#8594;WebP</span>
+<span class="cat-tool" style="background:#EFF6FF;color:#2563EB">Compress</span>
+<span class="cat-tool" style="background:#EFF6FF;color:#2563EB">+6 more</span>
+</div>
+</a>
+<a href="tools/pdf/index.html" class="cat-card" style="--cat-color:#DC2626">
+<div class="cat-icon" style="background:#FEF2F2">&#128196;</div>
+<h3>PDF</h3>
+<p>Convert, compress, merge and split PDF files easily</p>
+<div class="cat-tools">
+<span class="cat-tool" style="background:#FEF2F2;color:#DC2626">PDF&#8594;Word</span>
+<span class="cat-tool" style="background:#FEF2F2;color:#DC2626">JPG&#8594;PDF</span>
+<span class="cat-tool" style="background:#FEF2F2;color:#DC2626">Compress</span>
+<span class="cat-tool" style="background:#FEF2F2;color:#DC2626">+10 more</span>
+</div>
+</a>
+<a href="tools/video/index.html" class="cat-card" style="--cat-color:#16A34A">
+<div class="cat-icon" style="background:#F0FDF4">&#127909;</div>
+<h3>Video</h3>
+<p>Convert and compress videos between all popular formats</p>
+<div class="cat-tools">
+<span class="cat-tool" style="background:#F0FDF4;color:#16A34A">MP4&#8594;AVI</span>
+<span class="cat-tool" style="background:#F0FDF4;color:#16A34A">MOV&#8594;MP4</span>
+<span class="cat-tool" style="background:#F0FDF4;color:#16A34A">&#8594;MP3</span>
+<span class="cat-tool" style="background:#F0FDF4;color:#16A34A">+5 more</span>
+</div>
+</a>
+<a href="tools/audio/index.html" class="cat-card" style="--cat-color:#C2410C">
+<div class="cat-icon" style="background:#FFF7ED">&#127925;</div>
+<h3>Audio</h3>
+<p>Convert audio files between MP3, WAV, FLAC, AAC and more</p>
+<div class="cat-tools">
+<span class="cat-tool" style="background:#FFF7ED;color:#C2410C">MP3&#8594;WAV</span>
+<span class="cat-tool" style="background:#FFF7ED;color:#C2410C">FLAC&#8594;MP3</span>
+<span class="cat-tool" style="background:#FFF7ED;color:#C2410C">OGG&#8594;MP3</span>
+<span class="cat-tool" style="background:#FFF7ED;color:#C2410C">+3 more</span>
+</div>
+</a>
+<a href="tools/ebook/index.html" class="cat-card" style="--cat-color:#6D28D9">
+<div class="cat-icon" style="background:#F5F3FF">&#128218;</div>
+<h3>eBooks</h3>
+<p>Convert between EPUB, MOBI, AZW3, PDF and more book formats</p>
+<div class="cat-tools">
+<span class="cat-tool" style="background:#F5F3FF;color:#6D28D9">PDF&#8594;EPUB</span>
+<span class="cat-tool" style="background:#F5F3FF;color:#6D28D9">MOBI&#8594;EPUB</span>
+<span class="cat-tool" style="background:#F5F3FF;color:#6D28D9">DOCX&#8594;EPUB</span>
+<span class="cat-tool" style="background:#F5F3FF;color:#6D28D9">+7 more</span>
+</div>
+</a>
+<a href="tools/documents/index.html" class="cat-card" style="--cat-color:#6D28D9">
+<div class="cat-icon" style="background:#F5F3FF">&#128196;</div>
+<h3>Documents</h3>
+<p>Convert Office documents and other text formats</p>
+<div class="cat-tools">
+<span class="cat-tool" style="background:#F5F3FF;color:#6D28D9">Word&#8594;PDF</span>
+<span class="cat-tool" style="background:#F5F3FF;color:#6D28D9">Excel&#8594;PDF</span>
+<span class="cat-tool" style="background:#F5F3FF;color:#6D28D9">Coming soon</span>
+</div>
+</a>
+</div>
+</div>
 
 <section class="features">
-  <h2 class="section-title">Why FilePresto?</h2>
-  <p class="section-sub">The fastest and most secure way to convert your files</p>
-  <div class="feat-grid">
-    <div class="feat">
-      <div class="feat-icon">⚡</div>
-      <h4>Lightning Fast</h4>
-      <p>Conversions done in seconds directly in your browser. No waiting, no queues.</p>
-    </div>
-    <div class="feat">
-      <div class="feat-icon">🔒</div>
-      <h4>100% Secure</h4>
-      <p>Your files never leave your device. All processing happens locally in your browser.</p>
-    </div>
-    <div class="feat">
-      <div class="feat-icon">🆓</div>
-      <h4>Always Free</h4>
-      <p>No sign-up, no credit card, no limits on basic conversions. Free forever.</p>
-    </div>
-    <div class="feat">
-      <div class="feat-icon">📱</div>
-      <h4>Works Everywhere</h4>
-      <p>Compatible with desktop, tablet and mobile. Any browser, any operating system.</p>
-    </div>
-  </div>
+<div class="section-header">
+<h2>Why FilePresto?</h2>
+<p>The fastest and most secure way to convert your files</p>
+</div>
+<div class="features-grid">
+<div class="feature">
+<div class="feature-icon">&#9889;</div>
+<h3>Ultra Fast</h3>
+<p>Conversions in seconds. No waiting, no queues. Your file ready instantly.</p>
+</div>
+<div class="feature">
+<div class="feature-icon">&#128274;</div>
+<h3>100% Private</h3>
+<p>Many tools work directly in your browser. Your files never leave your device.</p>
+</div>
+<div class="feature">
+<div class="feature-icon">&#127760;</div>
+<h3>No Installation</h3>
+<p>Works in any browser, on any device. No downloads or plugins required.</p>
+</div>
+<div class="feature">
+<div class="feature-icon">&#127775;</div>
+<h3>Always Free</h3>
+<p>Basic tools are free forever. No hidden limits on the free version.</p>
+</div>
+</div>
 </section>
 
-<section class="cta">
-  <h2>Ready to Convert?</h2>
-  <p>Join thousands of users who trust FilePresto every day</p>
-  <div class="cta-btns">
-    <a href="tools/images/index.html" class="btn-white">Start Converting Free</a>
-    <a href="pricing.html" class="btn-outline">View Pro Plan</a>
-  </div>
+<section class="tools-preview">
+<div class="section-header">
+<h2>All our tools</h2>
+<p>50+ converters available, with more in development</p>
+</div>
+<div class="tools-grid">
+<a href="tools/images/jpg-to-png.html" class="tool-chip"><span>&#128247;</span> JPG to PNG</a>
+<a href="tools/images/png-to-jpg.html" class="tool-chip"><span>&#128247;</span> PNG to JPG</a>
+<a href="tools/images/jpg-to-webp.html" class="tool-chip"><span>&#128247;</span> JPG to WebP</a>
+<a href="tools/images/webp-to-jpg.html" class="tool-chip"><span>&#128247;</span> WebP to JPG</a>
+<a href="tools/images/heic-to-jpg.html" class="tool-chip"><span>&#128247;</span> HEIC to JPG</a>
+<a href="tools/images/compress-image.html" class="tool-chip"><span>&#128247;</span> Compress Image</a>
+<a href="tools/images/resize-image.html" class="tool-chip"><span>&#128247;</span> Resize Image</a>
+<a href="tools/images/svg-to-png.html" class="tool-chip"><span>&#128247;</span> SVG to PNG</a>
+<a href="tools/pdf/pdf-to-word.html" class="tool-chip"><span>&#128196;</span> PDF to Word</a>
+<a href="tools/pdf/word-to-pdf.html" class="tool-chip"><span>&#128196;</span> Word to PDF</a>
+<a href="tools/pdf/jpg-to-pdf.html" class="tool-chip"><span>&#128196;</span> JPG to PDF</a>
+<a href="tools/pdf/pdf-to-jpg.html" class="tool-chip"><span>&#128196;</span> PDF to JPG</a>
+<a href="tools/pdf/compress-pdf.html" class="tool-chip"><span>&#128196;</span> Compress PDF</a>
+<a href="tools/pdf/merge-pdf.html" class="tool-chip"><span>&#128196;</span> Merge PDF</a>
+<a href="tools/pdf/split-pdf.html" class="tool-chip"><span>&#128196;</span> Split PDF</a>
+<a href="tools/video/mp4-to-avi.html" class="tool-chip"><span>&#127909;</span> MP4 to AVI</a>
+<a href="tools/video/mov-to-mp4.html" class="tool-chip"><span>&#127909;</span> MOV to MP4</a>
+<a href="tools/video/mp4-to-mp3.html" class="tool-chip"><span>&#127909;</span> MP4 to MP3</a>
+<a href="tools/video/compress-video.html" class="tool-chip"><span>&#127909;</span> Compress Video</a>
+<a href="tools/audio/mp3-to-wav.html" class="tool-chip"><span>&#127925;</span> MP3 to WAV</a>
+<a href="tools/audio/flac-to-mp3.html" class="tool-chip"><span>&#127925;</span> FLAC to MP3</a>
+<a href="tools/audio/ogg-to-mp3.html" class="tool-chip"><span>&#127925;</span> OGG to MP3</a>
+<a href="tools/ebook/pdf-to-epub.html" class="tool-chip"><span>&#128218;</span> PDF to EPUB</a>
+<a href="tools/ebook/epub-to-pdf.html" class="tool-chip"><span>&#128218;</span> EPUB to PDF</a>
+<a href="tools/ebook/docx-to-epub.html" class="tool-chip"><span>&#128218;</span> DOCX to EPUB</a>
+</div>
+</section>
+
+<section class="cta-section">
+<h2>Ready to convert?</h2>
+<p>Join thousands of users who trust FilePresto every day</p>
+<a href="tools/images/index.html" class="btn-white">Start for free &#8594;</a>
 </section>
 
 </main>
 <footer>
-  <div class="footer-grid">
-    <div class="footer-col">
-      <h4>⚡ FilePresto</h4>
-      <p style="font-size:.85rem;line-height:1.5">Free online file converter. Fast, secure and no sign-up required.</p>
-    </div>
-    <div class="footer-col">
-      <h4>Tools</h4>
-      <a href="tools/images/index.html">Image Converter</a>
-      <a href="tools/pdf/index.html">PDF Tools</a>
-      <a href="tools/video/index.html">Video Converter</a>
-      <a href="tools/audio/index.html">Audio Converter</a>
-      <a href="tools/ebook/index.html">eBook Converter</a>
-      <a href="tools/documents/index.html">Document Converter</a>
-    </div>
-    <div class="footer-col">
-      <h4>Company</h4>
-      <a href="about.html">About</a>
-      <a href="pricing.html">Pricing</a>
-      <a href="contact.html">Contact</a>
-    </div>
-    <div class="footer-col">
-      <h4>Legal</h4>
-      <a href="privacy.html">Privacy Policy</a>
-      <a href="terms.html">Terms of Service</a>
-    </div>
-  </div>
-  <div class="footer-bottom">© 2026 FilePresto. All rights reserved.</div>
+<div class="footer-inner">
+<div class="footer-grid">
+<div class="footer-brand">
+<span class="logo" style="color:#3B82F6">File<span style="color:#9CA3AF">Presto</span></span>
+<p>The fastest way to convert your files online. Free, secure and no installation required.</p>
+</div>
+<div class="footer-col">
+<h4>Tools</h4>
+<a href="tools/images/index.html">Images</a>
+<a href="tools/pdf/index.html">PDF</a>
+<a href="tools/video/index.html">Video</a>
+<a href="tools/audio/index.html">Audio</a>
+<a href="tools/ebook/index.html">eBooks</a>
+<a href="tools/documents/index.html">Documents</a>
+</div>
+<div class="footer-col">
+<h4>Company</h4>
+<a href="about.html">About</a>
+<a href="pricing.html">Pricing</a>
+<a href="contact.html">Contact</a>
+</div>
+<div class="footer-col">
+<h4>Legal</h4>
+<a href="privacy.html">Privacy Policy</a>
+<a href="terms.html">Terms of Service</a>
+</div>
+</div>
+<div class="footer-bottom">
+<span>&copy; 2026 FilePresto. All rights reserved.</span>
+<div class="lang-switcher" style="display:flex;gap:8px;font-size:.8rem">
+<a href="index.html" style="padding:4px 10px;border-radius:6px;background:#2563EB;color:#fff;border:1px solid #2563EB">EN</a>
+<a href="es/index.html" style="padding:4px 10px;border-radius:6px;border:1px solid #374151;color:#9CA3AF">ES</a>
+<a href="pt/index.html" style="padding:4px 10px;border-radius:6px;border:1px solid #374151;color:#9CA3AF">PT</a>
+</div>
+</div>
+</div>
 </footer>
-
 <script>
-function handleSearch(){
-  var q=document.getElementById('search-input').value.trim();
-  if(!q)return;
-  var tools=[
-    {name:'JPG to PNG',path:'tools/images/jpg-to-png.html'},
-    {name:'PNG to JPG',path:'tools/images/png-to-jpg.html'},
-    {name:'WebP to JPG',path:'tools/images/webp-to-jpg.html'},
-    {name:'JPG to WebP',path:'tools/images/jpg-to-webp.html'},
-    {name:'PNG to WebP',path:'tools/images/png-to-webp.html'},
-    {name:'HEIC to JPG',path:'tools/images/heic-to-jpg.html'},
-    {name:'SVG to PNG',path:'tools/images/svg-to-png.html'},
-    {name:'Compress Image',path:'tools/images/compress-image.html'},
-    {name:'Resize Image',path:'tools/images/resize-image.html'},
-    {name:'Crop Image',path:'tools/images/crop-image.html'},
-    {name:'GIF to PNG',path:'tools/images/gif-to-png.html'},
-    {name:'PDF Tools',path:'tools/pdf/index.html'},
-    {name:'Video Converter',path:'tools/video/index.html'},
-    {name:'Audio Converter',path:'tools/audio/index.html'},
-    {name:'eBook Converter',path:'tools/ebook/index.html'},
-    {name:'Document Converter',path:'tools/documents/index.html'}
-  ];
-  var ql=q.toLowerCase();
-  var match=tools.find(function(t){return t.name.toLowerCase().includes(ql);});
-  if(match){window.location.href=match.path;}
-  else{window.location.href='tools/images/index.html';}
-}
-document.getElementById('search-input').addEventListener('keydown',function(e){if(e.key==='Enter')handleSearch();});
 function toggleMenu(){
-  var nav=document.querySelector('.nav-links');
-  var btn=document.querySelector('.hamburger');
-  var isOpen=nav.classList.toggle('open');
-  btn.setAttribute('aria-expanded',isOpen);
+var nav=document.querySelector(".nav-links");
+if(nav) nav.classList.toggle("open");
 }
 </script>
 </body>
