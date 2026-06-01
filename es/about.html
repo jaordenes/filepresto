@@ -2,6 +2,11 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+<meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+<meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+<meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), payment=()">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https: blob:; font-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self' mailto:; frame-ancestors 'none';">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Sobre Nosotros - FilePresto | Conversor de Archivos Online</title>
@@ -24,15 +29,17 @@
 :root{--primary:#2563EB;--primary-dark:#1D4ED8;--primary-light:#EFF6FF;--text:#1F2937;--text-light:#6B7280;--bg:#F9FAFB;--white:#FFFFFF;--border:#E5E7EB;--radius:12px;--shadow:0 4px 24px rgba(37,99,235,.08)}
 body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;color:var(--text);background:var(--bg);line-height:1.6}
 a{color:inherit;text-decoration:none}
+.skip-link{position:absolute;top:-40px;left:0;background:var(--primary);color:#fff;padding:8px 16px;z-index:999;transition:.2s}
+.skip-link:focus{top:0}
 nav{background:var(--white);border-bottom:1px solid var(--border);padding:0 24px;position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;height:64px}
-.nav-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:64px}
-.logo{font-size:1.4rem;font-weight:800;color:var(--primary)}
-.logo span{color:var(--text)}
+.nav-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:64px;width:100%}
+.nav-logo{font-size:1.4rem;font-weight:800;color:#2563EB;text-decoration:none}
 .nav-links{display:flex;gap:28px;align-items:center;font-size:.95rem;font-weight:500}
 .nav-links a:hover{color:var(--primary)}
 .lang-switcher{display:flex;gap:8px;font-size:.85rem}
 .lang-switcher a{padding:4px 10px;border-radius:6px;border:1px solid var(--border);color:var(--text-light);transition:.2s}
 .lang-switcher a.active,.lang-switcher a:hover{background:var(--primary);color:#fff;border-color:var(--primary)}
+.hamburger{display:none;background:none;border:none;cursor:pointer;padding:8px;color:var(--text);font-size:1.5rem}
 .hero{background:linear-gradient(135deg,#2563EB 0%,#1E3A8A 100%);color:#fff;padding:48px 24px;text-align:center;min-height:220px;display:flex;flex-direction:column;align-items:center;justify-content:center}
 .hero h1{font-size:2.5rem;font-weight:800;margin-bottom:16px}
 .hero p{font-size:1.1rem;opacity:.9;max-width:600px;margin:0 auto}
@@ -46,46 +53,95 @@ nav{background:var(--white);border-bottom:1px solid var(--border);padding:0 24px
 .value-icon{font-size:2.5rem;margin-bottom:12px}
 .value h3{font-size:1rem;font-weight:700;margin-bottom:8px}
 .value p{font-size:.875rem;color:var(--text-light);margin:0}
-footer{background:#1F2937;color:#9CA3AF;padding:40px 24px;text-align:center;font-size:.875rem}
-.footer-inner{max-width:1200px;margin:0 auto}
-.footer-links{display:flex;justify-content:center;flex-wrap:wrap;gap:16px;margin-bottom:16px}
-.footer-links a:hover{color:#fff}
-
+.security-badge{display:inline-flex;align-items:center;gap:8px;background:#dcfce7;color:#166534;border:1px solid #bbf7d0;border-radius:8px;padding:8px 14px;font-size:.875rem;font-weight:600;margin-top:12px}
+footer{background:#1F2937;color:#9CA3AF;padding:40px 24px;font-size:.875rem}
 .footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:32px;max-width:1100px;margin:0 auto 32px}
 .footer-col h4{color:#F1F5F9;font-weight:700;margin-bottom:12px;font-size:.95rem}
 .footer-col a{display:block;margin-bottom:8px;color:#94A3B8;font-size:.88rem}
 .footer-col a:hover{color:#fff}
-.footer-bottom{text-align:center;border-top:1px solid #334155;padding-top:20px;font-size:.82rem;color:#94A3B8}
-.nav-logo{font-size:1.4rem;font-weight:800;color:#2563EB;text-decoration:none}
+.footer-bottom{text-align:center;border-top:1px solid #334155;padding-top:20px;font-size:.82rem;color:#94A3B8;display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:12px}
+.footer-lang{display:flex;gap:8px;font-size:.82rem}
+.footer-lang a{color:#94A3B8;padding:2px 8px;border-radius:4px;border:1px solid #334155}
+.footer-lang a:hover,.footer-lang a.active{color:#fff;background:#2563EB;border-color:#2563EB}
+@media(max-width:768px){.nav-links{display:none;flex-direction:column;position:absolute;top:64px;left:0;right:0;background:#fff;padding:16px 24px;border-bottom:1px solid var(--border);gap:12px}.nav-links.open{display:flex}.hamburger{display:block}.hero h1{font-size:1.8rem}}
 </style>
 </head>
 <body>
-<nav><a href="../index.html" class="nav-logo">&#9889; FilePresto</a><div class="nav-links"><a href="../tools/images/index.html">Imágenes</a><a href="../tools/pdf/index.html">PDF</a><a href="../tools/video/index.html">Video</a><a href="../tools/audio/index.html">Audio</a><a href="../tools/ebook/index.html">eBooks</a><a href="../tools/documents/index.html">Documentos</a><a href="../pricing.html">Precios</a><div class="lang-switcher"><a href="../about.html">EN</a><a href="about.html" class="active">ES</a><a href="../pt/about.html">PT</a></div><a href="../pricing.html" class="btn-pro">Pro</a></div></nav>
+<a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+<nav>
+<div class="nav-inner">
+<a href="../index.html" class="nav-logo">&#9889; FilePresto</a>
+<button class="hamburger" aria-label="Abrir menú" aria-expanded="false" onclick="this.setAttribute('aria-expanded',this.getAttribute('aria-expanded')==='false'?'true':'false');document.querySelector('.nav-links').classList.toggle('open')">&#9776;</button>
+<div class="nav-links">
+<a href="../tools/images/index.html">Imágenes</a>
+<a href="../tools/pdf/index.html">PDF</a>
+<a href="../tools/video/index.html">Video</a>
+<a href="../tools/audio/index.html">Audio</a>
+<a href="../tools/ebook/index.html">eBooks</a>
+<a href="../tools/documents/index.html">Documentos</a>
+<a href="../pricing.html">Precios</a>
+<div class="lang-switcher">
+<a href="../about.html">EN</a>
+<a href="about.html" class="active">ES</a>
+<a href="../pt/about.html">PT</a>
+</div>
+<a href="../pricing.html" class="btn-pro">Pro</a>
+</div>
+</div>
+</nav>
+<main id="main-content">
 <section class="hero">
-  <h1>Sobre FilePresto</h1>
-  <p>Nuestra misión es hacer que la conversión de archivos sea simple, rápida y accesible para todos</p>
+<h1>Sobre FilePresto</h1>
+<p>Nuestra misión es hacer que la conversión de archivos sea simple, rápida y accesible para todos</p>
 </section>
 <div class="container">
-  <div class="card">
-    <h2>Nuestra Historia</h2>
-    <p>FilePresto nació de la frustración de tener que instalar software pesado, pagar suscripciones costosas o esperar minutos para convertir un simple archivo. Creemos que las herramientas de conversión básicas deben ser gratuitas, rápidas y accesibles desde cualquier dispositivo.</p>
-    <p>Desde nuestro lanzamiento, hemos construido más de 50 herramientas de conversión que funcionan directamente en el navegador, sin necesidad de instalar nada ni crear una cuenta.</p>
-  </div>
-  <div class="card">
-    <h2>Nuestra Misión</h2>
-    <p>Democratizar el acceso a herramientas de conversión de archivos de alta calidad. Ya sea que necesites convertir una imagen para tu sitio web, comprimir un PDF para enviarlo por email, o convertir un video para compartirlo en redes sociales, FilePresto está aquí para ayudarte.</p>
-    <p>Priorizamos la privacidad del usuario: muchas de nuestras herramientas procesan los archivos directamente en tu navegador, sin enviarlos a ningún servidor.</p>
-  </div>
-  <div class="card">
-    <h2>Nuestros Valores</h2>
-    <div class="values">
-      <div class="value"><div class="value-icon">&#9889;</div><h3>Velocidad</h3><p>Conversiones instantáneas sin esperas innecesarias</p></div>
-      <div class="value"><div class="value-icon">&#128274;</div><h3>Privacidad</h3><p>Tus archivos son tuyos. Procesamos en tu navegador cuando es posible</p></div>
-      <div class="value"><div class="value-icon">&#127775;</div><h3>Gratuidad</h3><p>Las funciones básicas siempre serán gratuitas para todos</p></div>
-      <div class="value"><div class="value-icon">&#127760;</div><h3>Accesibilidad</h3><p>Funciona en cualquier dispositivo con navegador web</p></div>
-    </div>
-  </div>
+<div class="card">
+<h2>Nuestra Historia</h2>
+<p>FilePresto nació de la frustración de tener que instalar software pesado, pagar suscripciones costosas o esperar minutos para convertir un simple archivo. Creemos que las herramientas de conversión básicas deben ser gratuitas, rápidas y accesibles desde cualquier dispositivo.</p>
+<p>Desde nuestro lanzamiento, hemos construido más de 50 herramientas de conversión que funcionan directamente en el navegador, sin necesidad de instalar nada ni crear una cuenta.</p>
 </div>
-<footer><div class="footer-grid"><div class="footer-col"><h4>&#9889; FilePresto</h4><p style="font-size:.85rem;line-height:1.5">Conversor de archivos online. Rápido, seguro y sin registro.</p></div><div class="footer-col"><h4>Herramientas</h4><a href="../tools/images/index.html">Conversor de Imágenes</a><a href="../tools/pdf/index.html">Herramientas PDF</a><a href="../tools/video/index.html">Conversor de Video</a><a href="../tools/audio/index.html">Conversor de Audio</a><a href="../tools/ebook/index.html">Conversor eBook</a><a href="../tools/documents/index.html">Conversor de Documentos</a></div><div class="footer-col"><h4>Empresa</h4><a href="../about.html">Acerca de</a><a href="../pricing.html">Precios</a><a href="../contact.html">Contacto</a></div><div class="footer-col"><h4>Legal</h4><a href="../privacy.html">Política de Privacidad</a><a href="../terms.html">Términos de Servicio</a></div></div><div class="footer-bottom">&copy; 2025 FilePresto. Todos los derechos reservados.</div></footer>
+<div class="card">
+<h2>Nuestra Misión</h2>
+<p>Democratizar el acceso a herramientas de conversión de archivos de alta calidad. Ya sea que necesites convertir una imagen para tu sitio web, comprimir un PDF para enviarlo por email, o convertir un video para compartirlo en redes sociales, FilePresto está aquí para ayudarte.</p>
+<p>Priorizamos la privacidad del usuario: muchas de nuestras herramientas procesan los archivos directamente en tu navegador, sin enviarlos a ningún servidor.</p>
+</div>
+<div class="card">
+<h2>Nuestros Valores</h2>
+<div class="values">
+<div class="value"><div class="value-icon">&#9889;</div><h3>Velocidad</h3><p>Conversiones instantáneas sin esperas innecesarias</p></div>
+<div class="value"><div class="value-icon">&#128274;</div><h3>Privacidad</h3><p>Tus archivos son tuyos. Procesamos en tu navegador cuando es posible</p></div>
+<div class="value"><div class="value-icon">&#127775;</div><h3>Gratuidad</h3><p>Las funciones básicas siempre serán gratuitas para todos</p></div>
+<div class="value"><div class="value-icon">&#127760;</div><h3>Accesibilidad</h3><p>Funciona en cualquier dispositivo con navegador web</p></div>
+</div>
+</div>
+<div class="card">
+<h2>&#128274; Seguridad y Privacidad</h2>
+<p>Tu seguridad es nuestra prioridad. FilePresto implementa múltiples capas de protección para mantener tus datos y archivos seguros:</p>
+<p>&#10003; Procesamiento local en el navegador — tus archivos nunca salen de tu dispositivo en las herramientas de imagen.<br>
+&#10003; Conexiones HTTPS cifradas en todo momento.<br>
+&#10003; Sin rastreo de usuario ni venta de datos a terceros.<br>
+&#10003; Archivos temporales eliminados automáticamente en menos de 24 horas.<br>
+&#10003; Cabeceras de seguridad HTTP activas (CSP, X-Frame-Options, HSTS).<br>
+&#10003; Sin cookies de seguimiento publicitario.</p>
+<div class="security-badge">&#9989; Sitio Seguro y Verificado</div>
+</div>
+</div>
+</main>
+<footer>
+<div class="footer-grid">
+<div class="footer-col"><h4>&#9889; FilePresto</h4><p style="font-size:.85rem;line-height:1.5;color:#94A3B8">Conversor de archivos online. Rápido, seguro y sin registro.</p></div>
+<div class="footer-col"><h4>Herramientas</h4><a href="../tools/images/index.html">Conversor de Imágenes</a><a href="../tools/pdf/index.html">Herramientas PDF</a><a href="../tools/video/index.html">Conversor de Video</a><a href="../tools/audio/index.html">Conversor de Audio</a><a href="../tools/ebook/index.html">Conversor eBook</a><a href="../tools/documents/index.html">Conversor de Documentos</a></div>
+<div class="footer-col"><h4>Empresa</h4><a href="about.html">Acerca de</a><a href="../pricing.html">Precios</a><a href="contact.html">Contacto</a></div>
+<div class="footer-col"><h4>Legal</h4><a href="privacy.html">Política de Privacidad</a><a href="terms.html">Términos de Servicio</a></div>
+</div>
+<div class="footer-bottom">
+<span>&copy; 2026 FilePresto. Todos los derechos reservados.</span>
+<div class="footer-lang">
+<a href="../about.html">EN</a>
+<a href="about.html" class="active">ES</a>
+<a href="../pt/about.html">PT</a>
+</div>
+</div>
+</footer>
 </body>
 </html>
