@@ -2,6 +2,12 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<!-- Security headers -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://unpkg.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self'; connect-src 'self' https://unpkg.com; worker-src blob:; child-src blob:; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests;">
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+<meta http-equiv="X-Frame-Options" content="DENY">
+<meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+<meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), payment=(), usb=(), bluetooth=(), serial=(), nfc=()">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Rotate PDF Online – Free | FilePresto</title>
@@ -15,6 +21,8 @@
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#f8fafc;color:#1e293b}
 header{background:#fff;border-bottom:1px solid #e2e8f0;padding:16px 24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
+
+
 
 
 .lang-switch{display:flex;gap:8px;margin-left:16px}
@@ -34,158 +42,3 @@ header{background:#fff;border-bottom:1px solid #e2e8f0;padding:16px 24px;display
 .rotation-btns{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:16px}
 .rot-btn{padding:12px 20px;border:2px solid #e2e8f0;border-radius:8px;cursor:pointer;font-size:15px;font-weight:600;background:#fff;transition:all 0.2s}
 .rot-btn:hover,.rot-btn.active{border-color:#DC2626;background:#DC2626;color:#fff}
-.btn{display:inline-block;padding:12px 24px;border-radius:8px;font-weight:600;font-size:16px;cursor:pointer;border:none;transition:all 0.2s}
-.btn-primary{background:#DC2626;color:#fff}
-.btn-primary:hover{background:#b91c1c}
-.btn-convert{width:100%;margin-top:16px;font-size:18px;padding:16px}
-.progress-wrap{margin-top:24px;display:none}
-.progress-bar{background:#e2e8f0;border-radius:8px;height:8px;overflow:hidden}
-.progress-fill{height:100%;background:#DC2626;width:0%;transition:width 0.3s}
-.status{margin-top:12px;font-size:14px;color:#64748b;text-align:center}
-.result{margin-top:24px;display:none;background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:24px;text-align:center}
-.result h3{font-size:18px;font-weight:600;margin-bottom:16px;color:#16A34A}
-.file-info{background:#f8fafc;border-radius:8px;padding:16px;margin-bottom:16px;text-align:left;font-size:14px}
-.features{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:16px;margin-top:40px}
-.feature{background:#fff;border-radius:8px;padding:16px;border:1px solid #e2e8f0;text-align:center}
-.feature-icon{font-size:24px;margin-bottom:8px}
-.feature h4{font-size:14px;font-weight:600;margin-bottom:4px}
-.feature p{font-size:12px;color:#64748b}
-footer{background:#1e293b;color:#94a3b8;padding:32px 24px;text-align:center;margin-top:60px}
-footer a{color:#94a3b8;text-decoration:none}
-.footer-links{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-bottom:12px}
-nav{background:#fff;border-bottom:1px solid #E2E8F0;padding:0 24px;height:64px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}.nav-logo{font-size:1.4rem;font-weight:800;color:#2563EB;text-decoration:none}.nav-links{display:flex;gap:24px;align-items:center;font-size:.95rem}.nav-links a{color:#64748B;font-weight:500}.nav-links a.active{color:#DC2626;font-weight:700}.lang-switcher{display:flex;gap:6px;align-items:center;font-size:.85rem;border-left:1px solid #E2E8F0;padding-left:16px;margin-left:8px}.lang-switcher a{color:#64748B;font-weight:600;padding:2px 6px;border-radius:4px}.lang-switcher a.active{background:#DC2626;color:#fff}.btn-pro{background:#2563EB;color:#fff!important;padding:8px 18px;border-radius:8px;font-weight:600;font-size:.9rem}
-</style>
-</head>
-<body>
-<nav><a href="../../index.html" class="nav-logo">&#9889; FilePresto</a><div class="nav-links"><a href="../images/index.html">Images</a><a href="index.html" class="active">PDF</a><a href="../video/index.html">Video</a><a href="../audio/index.html">Audio</a><a href="../ebook/index.html">eBooks</a><a href="../documents/index.html">Documents</a><a href="../../pricing.html">Pricing</a><div class="lang-switcher"><a href="rotate-pdf.html" class="active">EN</a><a href="../../es/tools/pdf/rotate-pdf.html">ES</a><a href="../../pt/tools/pdf/rotate-pdf.html">PT</a></div><a href="../../pricing.html" class="btn-pro">Pro</a></div></nav>
-<div class="hero">
-<h1>🔄 Rotate PDF</h1>
-<p>Rotate all PDF pages online for free. Fix portrait/landscape orientation instantly.</p>
-</div>
-<div class="container">
-<div class="upload-area" id="uploadArea">
-<div class="upload-icon">🔄</div>
-<h3>Drop your PDF file here</h3>
-<p>or click to select a file</p>
-<br>
-<input type="file" id="fileInput" accept=".pdf,application/pdf" style="display:none">
-<button class="btn btn-primary" onclick="document.getElementById('fileInput').click()">Choose PDF File</button>
-</div>
-<div id="optionsPanel" style="display:none">
-<div class="options">
-<h4>⚙️ Rotation Options</h4>
-<p style="font-size:14px;color:#64748b;margin-bottom:12px">Rotate all pages by:</p>
-<div class="rotation-btns">
-<button class="rot-btn" onclick="setRotation(90)">↻ 90° Right</button>
-<button class="rot-btn" onclick="setRotation(180)">↕ 180°</button>
-<button class="rot-btn" onclick="setRotation(270)">↺ 90° Left</button>
-</div>
-<div id="rotationDisplay" style="font-size:14px;color:#64748b;margin-bottom:12px">Selected: 90° clockwise</div>
-<button class="btn btn-primary btn-convert" id="convertBtn" onclick="rotatePDF()">🔄 Rotate PDF</button>
-</div>
-</div>
-<div class="progress-wrap" id="progressWrap">
-<div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
-<div class="status" id="status">Processing PDF...</div>
-</div>
-<div class="result" id="result">
-<h3>✅ PDF Rotated!</h3>
-<div class="file-info" id="fileInfo"></div>
-<a id="downloadLink" class="btn btn-primary" download>⬇️ Download Rotated PDF</a>
-<br><br>
-<button class="btn" style="background:#f1f5f9;color:#1e293b" onclick="resetTool()">Rotate Another</button>
-</div>
-<div class="features">
-<div class="feature"><div class="feature-icon">🔄</div><h4>Any Rotation</h4><p>Rotate 90°, 180° or 270° degrees</p></div>
-<div class="feature"><div class="feature-icon">🔒</div><h4>100% Private</h4><p>Files processed locally, never uploaded to any server</p></div>
-<div class="feature"><div class="feature-icon">🆓</div><h4>Completely Free</h4><p>No signup, no limits, no watermarks</p></div>
-<div class="feature"><div class="feature-icon">⚡</div><h4>Instant</h4><p>Rotate PDF pages in seconds</p></div>
-</div>
-</div>
-<footer><div class="footer-grid"><div class="footer-col"><h4>&#9889; FilePresto</h4><p style="font-size:.85rem;line-height:1.5">Free online file converter. Fast, secure and no sign-up required.</p></div><div class="footer-col"><h4>Tools</h4><a href="../images/index.html">Image Converter</a><a href="index.html">PDF Tools</a><a href="../video/index.html">Video Converter</a><a href="../audio/index.html">Audio Converter</a><a href="../ebook/index.html">eBook Converter</a><a href="../documents/index.html">Document Converter</a></div><div class="footer-col"><h4>Company</h4><a href="../../about.html">About</a><a href="../../pricing.html">Pricing</a><a href="../../contact.html">Contact</a></div><div class="footer-col"><h4>Legal</h4><a href="../../privacy.html">Privacy Policy</a><a href="../../terms.html">Terms of Service</a></div></div><div class="footer-bottom">&copy; 2025 FilePresto. All rights reserved.</div></footer>
-<script src="https://unpkg.com/pdf-lib@1.17.1/dist/pdf-lib.min.js"></script>
-<script>
-let selectedFile = null;
-let rotationDegrees = 90;
-const uploadArea = document.getElementById('uploadArea');
-const fileInput = document.getElementById('fileInput');
-const optionsPanel = document.getElementById('optionsPanel');
-const progressWrap = document.getElementById('progressWrap');
-const progressFill = document.getElementById('progressFill');
-const statusEl = document.getElementById('status');
-const resultEl = document.getElementById('result');
-const fileInfoEl = document.getElementById('fileInfo');
-const downloadLink = document.getElementById('downloadLink');
-
-uploadArea.addEventListener('dragover', e => { e.preventDefault(); uploadArea.classList.add('drag-over'); });
-uploadArea.addEventListener('dragleave', () => uploadArea.classList.remove('drag-over'));
-uploadArea.addEventListener('drop', e => { e.preventDefault(); uploadArea.classList.remove('drag-over'); const f = e.dataTransfer.files[0]; if(f) selectFile(f); });
-fileInput.addEventListener('change', e => { if(e.target.files[0]) selectFile(e.target.files[0]); });
-
-function selectFile(file) {
-  if (!file.name.toLowerCase().endsWith('.pdf')) { alert('Please select a PDF file.'); return; }
-  selectedFile = file;
-  uploadArea.style.display = 'none';
-  optionsPanel.style.display = 'block';
-  setRotation(90);
-}
-
-function setRotation(degrees) {
-  rotationDegrees = degrees;
-  document.querySelectorAll('.rot-btn').forEach(b => b.classList.remove('active'));
-  event.target.classList.add('active');
-  const labels = {90: '90° clockwise', 180: '180°', 270: '90° counter-clockwise'};
-  document.getElementById('rotationDisplay').textContent = 'Selected: ' + labels[degrees];
-}
-
-async function rotatePDF() {
-  if (!selectedFile) return;
-  optionsPanel.style.display = 'none';
-  progressWrap.style.display = 'block';
-  statusEl.textContent = 'Rotating PDF pages...';
-  progressFill.style.width = '30%';
-
-  try {
-    const arrayBuffer = await selectedFile.arrayBuffer();
-    const pdfDoc = await PDFLib.PDFDocument.load(arrayBuffer);
-    const pages = pdfDoc.getPages();
-    progressFill.style.width = '60%';
-    
-    pages.forEach(page => {
-      const currentRotation = page.getRotation().angle;
-      page.setRotation(PDFLib.degrees((currentRotation + rotationDegrees) % 360));
-    });
-    progressFill.style.width = '80%';
-    
-    const pdfBytes = await pdfDoc.save();
-    const blob = new Blob([pdfBytes], { type: 'application/pdf' });
-    const url = URL.createObjectURL(blob);
-    progressFill.style.width = '100%';
-    
-    const outputName = selectedFile.name.replace(/\.pdf$/i, '_rotated.pdf');
-    downloadLink.href = url;
-    downloadLink.download = outputName;
-    fileInfoEl.innerHTML = '<strong>File:</strong> ' + selectedFile.name + ' (' + pages.length + ' pages)<br><strong>Rotation applied:</strong> ' + rotationDegrees + ' degrees';
-    
-    setTimeout(() => {
-      progressWrap.style.display = 'none';
-      resultEl.style.display = 'block';
-    }, 500);
-  } catch(err) {
-    statusEl.textContent = 'Error: ' + err.message;
-    console.error(err);
-  }
-}
-
-function resetTool() {
-  uploadArea.style.display = 'block';
-  optionsPanel.style.display = 'none';
-  progressWrap.style.display = 'none';
-  resultEl.style.display = 'none';
-  progressFill.style.width = '0%';
-  fileInput.value = '';
-  selectedFile = null;
-}
-</script>
-</body>
-</html>
