@@ -2,167 +2,72 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>MP3 to AAC Converter – Free Online | FilePresto</title>
-<meta name="description" content="Convert MP3 audio files to AAC format online for free. Perfect for Apple devices. No signup required.">
-<link rel="canonical" href="https://filepresto.com/tools/audio/mp3-to-aac.html">
-<link rel="alternate" hreflang="en" href="https://filepresto.com/tools/audio/mp3-to-aac.html">
-<link rel="alternate" hreflang="es" href="https://filepresto.com/es/tools/audio/mp3-to-aac.html">
-<link rel="alternate" hreflang="pt" href="https://filepresto.com/pt/tools/audio/mp3-to-aac.html">
-<link rel="alternate" hreflang="x-default" href="https://filepresto.com/tools/audio/mp3-to-aac.html">
-<style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#f8fafc;color:#1e293b}
-header{background:#fff;border-bottom:1px solid #e2e8f0;padding:16px 24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
-
-
-.lang-switch{display:flex;gap:8px;margin-left:16px}
-.lang-switch a{padding:4px 10px;border-radius:6px;font-size:12px;font-weight:600;text-decoration:none;color:#64748b;border:1px solid #e2e8f0}
-.lang-switch a.active{background:#DC2626;color:#fff;border-color:#DC2626}
-.hero{background:linear-gradient(135deg,#DC2626,#b91c1c);color:#fff;padding:40px 24px;text-align:center;min-height:220px;display:flex;flex-direction:column;align-items:center;justify-content:center}
-.hero h1{font-size:32px;font-weight:800;margin-bottom:8px}
-.hero p{font-size:16px;opacity:0.9;max-width:600px;margin:0 auto}
-.container{max-width:700px;margin:0 auto;padding:40px 24px}
-.upload-area{border:2px dashed #cbd5e1;border-radius:12px;padding:48px 24px;text-align:center;cursor:pointer;transition:all 0.2s;background:#fff}
-.upload-area:hover,.upload-area.drag-over{border-color:#DC2626;background:#fff1f2}
-.upload-icon{font-size:48px;margin-bottom:12px}
-.upload-area h3{font-size:18px;font-weight:600;margin-bottom:8px}
-.upload-area p{color:#64748b;font-size:14px}
-.btn{display:inline-block;padding:12px 24px;border-radius:8px;font-weight:600;font-size:16px;cursor:pointer;border:none;transition:all 0.2s}
-.btn-primary{background:#DC2626;color:#fff}
-.btn-primary:hover{background:#b91c1c}
-.progress-wrap{margin-top:24px;display:none}
-.progress-bar{background:#e2e8f0;border-radius:8px;height:8px;overflow:hidden}
-.progress-fill{height:100%;background:#DC2626;width:0%;transition:width 0.3s}
-.status{margin-top:12px;font-size:14px;color:#64748b;text-align:center}
-.result{margin-top:24px;display:none;background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:24px;text-align:center}
-.result h3{font-size:18px;font-weight:600;margin-bottom:16px;color:#16A34A}
-.file-info{background:#f8fafc;border-radius:8px;padding:16px;margin-bottom:16px;text-align:left;font-size:14px}
-.features{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:16px;margin-top:40px}
-.feature{background:#fff;border-radius:8px;padding:16px;border:1px solid #e2e8f0;text-align:center}
-.feature-icon{font-size:24px;margin-bottom:8px}
-.feature h4{font-size:14px;font-weight:600;margin-bottom:4px}
-.feature p{font-size:12px;color:#64748b}
-footer{background:#1e293b;color:#94a3b8;padding:32px 24px;text-align:center;margin-top:60px}
-footer a{color:#94a3b8;text-decoration:none}
-.footer-links{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-bottom:12px}
-nav{background:#fff;border-bottom:1px solid #E2E8F0;padding:0 24px;height:64px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}.nav-logo{font-size:1.4rem;font-weight:800;color:#2563EB;text-decoration:none}.nav-links{display:flex;gap:24px;align-items:center;font-size:.95rem}.nav-links a{color:#64748B;font-weight:500}.nav-links a.active{color:#DC2626;font-weight:700}.lang-switcher{display:flex;gap:6px;align-items:center;font-size:.85rem;border-left:1px solid #E2E8F0;padding-left:16px;margin-left:8px}.lang-switcher a{color:#64748B;font-weight:600;padding:2px 6px;border-radius:4px}.lang-switcher a.active{background:#DC2626;color:#fff}.btn-pro{background:#2563EB;color:#fff!important;padding:8px 18px;border-radius:8px;font-weight:600;font-size:.9rem}
-</style>
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+<meta http-equiv="X-Frame-Options" content="DENY">
+<meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+<meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), payment=(), usb=(), bluetooth=(), serial=(), nfc=()">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://unpkg.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self'; connect-src 'self' https://unpkg.com; worker-src blob:; child-src blob:; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests;">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%26%239889%3B%3C/text%3E%3C/svg%3E">
+<title>MP3 to AAC - Free Online Audio Converter | FilePresto</title>
+<meta name="description" content="Convert MP3 audio to AAC format online. Free, fast, no sign-up. Runs entirely in your browser.">
+<link rel="canonical" href="https://jaordenes.github.io/filepresto/tools/audio/mp3-to-aac.html">
+<style>*{box-sizing:border-box;margin:0;padding:0}body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#F8FAFC;color:#0F172A}a{text-decoration:none;color:inherit}.skip-link{position:absolute;top:-40px;left:0;background:#2563EB;color:#fff;padding:8px 16px;z-index:999;transition:top .2s}.skip-link:focus{top:0}nav{background:#fff;border-bottom:1px solid #E2E8F0;padding:0 24px;height:64px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}.nav-logo{font-size:1.4rem;font-weight:800;color:#2563EB}.nav-links{display:flex;gap:24px;align-items:center;font-size:.95rem}.nav-links a{color:#64748B;font-weight:500}.nav-links a:hover,.nav-links a.active{color:#DC2626}.lang-switcher{display:flex;gap:6px;align-items:center;font-size:.85rem;border-left:1px solid #E2E8F0;padding-left:16px;margin-left:8px}.lang-switcher a{color:#64748B;font-weight:600;padding:2px 6px;border-radius:4px}.lang-switcher a.active{background:#DC2626;color:#fff}.btn-pro{background:#2563EB;color:#fff!important;padding:8px 18px;border-radius:8px;font-weight:600;font-size:.9rem}.breadcrumb{padding:14px 24px;font-size:.85rem;color:#64748B;max-width:900px;margin:0 auto}.breadcrumb a{color:#DC2626}.hero{text-align:center;padding:48px 24px 32px;background:linear-gradient(135deg,#FEF2F2,#F8FAFC);min-height:220px;display:flex;flex-direction:column;align-items:center;justify-content:center}.hero h1{font-size:2rem;font-weight:800;margin-bottom:10px}.hero h1 span{color:#DC2626}.hero p{color:#64748B;font-size:1rem;max-width:520px;margin:0 auto}.converter-box{max-width:700px;margin:32px auto;padding:0 24px}.upload-area{border:2px dashed #CBD5E1;border-radius:16px;padding:40px;text-align:center;cursor:pointer;background:#fff;transition:border-color .2s}.upload-area.dragover{border-color:#DC2626;background:#FEF2F2}.upload-area:focus-within{outline:3px solid #DC2626;outline-offset:2px}.upload-icon{font-size:2.5rem;margin-bottom:12px}.upload-area h3{font-size:1.1rem;font-weight:700;margin-bottom:6px}.upload-area p{color:#64748B;font-size:.9rem}.file-name{font-size:.85rem;color:#0F172A;font-weight:600;margin-top:8px;word-break:break-all}.btn-upload{display:inline-block;margin-top:14px;background:#DC2626;color:#fff;padding:10px 24px;border-radius:8px;font-weight:600;font-size:.9rem;cursor:pointer;border:none}.size-warning{display:none;color:#B45309;background:#FEF3C7;border:1px solid #FCD34D;border-radius:8px;padding:10px 14px;margin-top:12px;font-size:.85rem}.convert-btn{width:100%;margin-top:20px;padding:14px;background:#DC2626;color:#fff;border:none;border-radius:10px;font-size:1rem;font-weight:700;cursor:pointer;display:none}.convert-btn:disabled{background:#94A3B8;cursor:not-allowed}.progress-bar{width:100%;height:8px;background:#E2E8F0;border-radius:4px;margin-top:16px;display:none}.progress-bar-inner{height:100%;background:#DC2626;border-radius:4px;transition:width .3s;width:0%}.status-msg{margin-top:12px;text-align:center;font-size:.9rem;color:#64748B;min-height:20px}.status-msg.error{color:#DC2626}.status-msg.success{color:#16A34A}.download-btn{display:none;width:100%;margin-top:16px;padding:14px;background:#16A34A;color:#fff;border:none;border-radius:10px;font-size:1rem;font-weight:700;cursor:pointer}.security-badge{display:flex;align-items:center;gap:8px;justify-content:center;margin-top:16px;font-size:.8rem;color:#64748B}.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;max-width:700px;margin:32px auto;padding:0 24px}.feat{background:#fff;border:1px solid #E2E8F0;border-radius:12px;padding:20px;text-align:center}.feat-icon{font-size:1.8rem;margin-bottom:8px}.feat h4{font-size:.95rem;font-weight:700;margin-bottom:4px}.feat p{color:#64748B;font-size:.82rem;line-height:1.5}.info-section{max-width:700px;margin:0 auto 48px;padding:0 24px}.info-section h2{font-size:1.3rem;font-weight:700;margin-bottom:12px}.info-section p{color:#64748B;line-height:1.7;font-size:.95rem}footer{background:#0F172A;color:#94A3B8;padding:48px 24px 24px}.footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:32px;max-width:1100px;margin:0 auto 32px}.footer-col h4{color:#F1F5F9;font-weight:700;margin-bottom:12px;font-size:.95rem}.footer-col a{display:block;margin-bottom:8px;color:#94A3B8;font-size:.88rem}.footer-col a:hover{color:#fff}.footer-bottom{text-align:center;border-top:1px solid #1E293B;padding-top:20px;font-size:.82rem;max-width:1100px;margin:0 auto}</style>
 </head>
 <body>
-<nav><a href="../../index.html" class="nav-logo">&#9889; FilePresto</a><div class="nav-links"><a href="../images/index.html">Images</a><a href="../pdf/index.html">PDF</a><a href="../video/index.html">Video</a><a href="index.html" class="active">Audio</a><a href="../ebook/index.html">eBooks</a><a href="../documents/index.html">Documents</a><a href="../../pricing.html">Pricing</a><div class="lang-switcher"><a href="mp3-to-aac.html" class="active">EN</a><a href="../../es/tools/audio/mp3-to-aac.html">ES</a><a href="../../pt/tools/audio/mp3-to-aac.html">PT</a></div><a href="../../pricing.html" class="btn-pro">Pro</a></div></nav>
-<div class="hero">
-<h1>🎼 MP3 to AAC Converter</h1>
-<p>Convert MP3 audio files to AAC format online for free. Perfect for iPhone, iPad, and Mac.</p>
+<a href="#main-content" class="skip-link">Skip to main content</a>
+<nav aria-label="Main navigation"><a href="../../index.html" class="nav-logo">&#9889; FilePresto</a><div class="nav-links"><a href="../images/index.html">Images</a><a href="../pdf/index.html">PDF</a><a href="../video/index.html">Video</a><a href="index.html" class="active" aria-current="page">Audio</a><a href="../ebook/index.html">eBooks</a><a href="../documents/index.html">Documents</a><a href="../../pricing.html">Pricing</a><div class="lang-switcher"><a href="mp3-to-aac.html" class="active" hreflang="en">EN</a><a href="../../es/tools/audio/mp3-to-aac.html" hreflang="es">ES</a><a href="../../pt/tools/audio/mp3-to-aac.html" hreflang="pt">PT</a></div><a href="../../pricing.html" class="btn-pro">Pro</a></div></nav>
+<nav class="breadcrumb" aria-label="Breadcrumb"><a href="../../index.html">Home</a> &rsaquo; <a href="index.html">Audio Tools</a> &rsaquo; <span aria-current="page">MP3 to AAC</span></nav>
+<main id="main-content">
+<section class="hero"><h1>Convert <span>MP3 to AAC</span></h1><p>Convert MP3 audio files to AAC format online. Free, no sign-up, runs entirely in your browser. Your files never leave your device.</p></section>
+<div class="converter-box">
+<div class="upload-area" id="uploadArea" role="region" aria-label="File upload area" tabindex="0"><div class="upload-icon" aria-hidden="true">&#127932;</div><h3>Drop your MP3 file here or click to select</h3><p>Supports .mp3 files &bull; Max 500 MB</p><label class="btn-upload" for="fileInput">Choose File</label><input type="file" id="fileInput" accept=".mp3,audio/mpeg" style="display:none" aria-label="Select MP3 file"><div class="file-name" id="fileName" aria-live="polite"></div></div>
+<div class="size-warning" id="sizeWarning" role="alert">&#9888;&#65039; File exceeds 500 MB limit.</div>
+<button class="convert-btn" id="convertBtn" style="display:none">&#127932; Convert to AAC</button>
+<div class="progress-bar" id="progressBar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"><div class="progress-bar-inner" id="progressBarInner"></div></div>
+<div class="status-msg" id="statusMsg" aria-live="assertive" aria-atomic="true"></div>
+<button class="download-btn" id="downloadBtn" style="display:none">&#11015;&#65039; Download AAC</button>
+<div class="security-badge"><span>&#128274;</span> Processed locally - never uploaded to any server</div>
 </div>
-<div class="container">
-<div class="upload-area" id="uploadArea">
-<div class="upload-icon">🎼</div>
-<h3>Drop your MP3 file here</h3>
-<p>or click to select a file</p>
-<br>
-<input type="file" id="fileInput" accept=".mp3,audio/mpeg" style="display:none">
-<button class="btn btn-primary" onclick="document.getElementById('fileInput').click()">Choose MP3 File</button>
-</div>
-<div class="progress-wrap" id="progressWrap">
-<div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
-<div class="status" id="status">Loading FFmpeg...</div>
-</div>
-<div class="result" id="result">
-<h3>✅ Conversion Complete!</h3>
-<div class="file-info" id="fileInfo"></div>
-<a id="downloadLink" class="btn btn-primary" download>⬇️ Download AAC</a>
-<br><br>
-<button class="btn" style="background:#f1f5f9;color:#1e293b" onclick="resetTool()">Convert Another File</button>
-</div>
-<div class="features">
-<div class="feature"><div class="feature-icon">📱</div><h4>Apple Compatible</h4><p>AAC is the preferred format for all Apple devices</p></div>
-<div class="feature"><div class="feature-icon">🔒</div><h4>100% Private</h4><p>Files processed locally, never uploaded to any server</p></div>
-<div class="feature"><div class="feature-icon">🆓</div><h4>Completely Free</h4><p>No signup, no limits, no watermarks</p></div>
-<div class="feature"><div class="feature-icon">⚡</div><h4>Fast Conversion</h4><p>Convert MP3 to AAC in seconds</p></div>
-</div>
-</div>
-<footer><div class="footer-grid"><div class="footer-col"><h4>&#9889; FilePresto</h4><p style="font-size:.85rem;line-height:1.5">Free online file converter. Fast, secure and no sign-up required.</p></div><div class="footer-col"><h4>Tools</h4><a href="../images/index.html">Image Converter</a><a href="../pdf/index.html">PDF Tools</a><a href="../video/index.html">Video Converter</a><a href="index.html">Audio Converter</a><a href="../ebook/index.html">eBook Converter</a><a href="../documents/index.html">Document Converter</a></div><div class="footer-col"><h4>Company</h4><a href="../../about.html">About</a><a href="../../pricing.html">Pricing</a><a href="../../contact.html">Contact</a></div><div class="footer-col"><h4>Legal</h4><a href="../../privacy.html">Privacy Policy</a><a href="../../terms.html">Terms of Service</a></div></div><div class="footer-bottom">&copy; 2025 FilePresto. All rights reserved.</div></footer>
+<div class="features"><div class="feat"><div class="feat-icon" aria-hidden="true">&#127932;</div><h4>MP3 to AAC</h4><p>Convert MP3 to AAC for Apple devices and streaming.</p></div><div class="feat"><div class="feat-icon" aria-hidden="true">&#128274;</div><h4>100% Private</h4><p>Nothing is uploaded to any server.</p></div><div class="feat"><div class="feat-icon" aria-hidden="true">&#129392;</div><h4>Always Free</h4><p>No limits, no sign-up required.</p></div><div class="feat"><div class="feat-icon" aria-hidden="true">&#9889;</div><h4>Fast</h4><p>Conversion in seconds.</p></div></div>
+<div class="info-section"><h2>About MP3 to AAC Conversion</h2><p>AAC (Advanced Audio Coding) is the default audio format for Apple devices and offers better sound quality than MP3 at similar bitrates. Converting MP3 to AAC ensures compatibility with iOS, macOS, and Apple TV. Processing happens client-side via WebAssembly - your file is never sent to any server.</p></div>
+</main>
+<footer><div class="footer-grid"><div class="footer-col"><h4>&#9889; FilePresto</h4><p style="font-size:.85rem;line-height:1.5;color:#94A3B8">Free online file converter. Fast, secure, no sign-up.</p></div><div class="footer-col"><h4>Tools</h4><a href="../images/index.html">Images</a><a href="../pdf/index.html">PDF</a><a href="../video/index.html">Video</a><a href="index.html">Audio</a><a href="../ebook/index.html">eBooks</a></div><div class="footer-col"><h4>Company</h4><a href="../../about.html">About</a><a href="../../pricing.html">Pricing</a><a href="../../contact.html">Contact</a></div><div class="footer-col"><h4>Legal</h4><a href="../../privacy.html">Privacy Policy</a><a href="../../terms.html">Terms of Service</a></div></div><div class="footer-bottom">&copy; 2026 FilePresto. All rights reserved.</div></footer>
+<script src="https://unpkg.com/@ffmpeg/ffmpeg@0.11.6/dist/ffmpeg.min.js" integrity="sha384-HBiRkMzfSEBRq0IKi+lzQdWsLSMrGN+rnIkKVHuFE4rtiMsTSSoeSr4iaxPAGFN" crossorigin="anonymous"></script>
 <script>
-const uploadArea = document.getElementById('uploadArea');
-const fileInput = document.getElementById('fileInput');
-const progressWrap = document.getElementById('progressWrap');
-const progressFill = document.getElementById('progressFill');
-const statusEl = document.getElementById('status');
-const resultEl = document.getElementById('result');
-const fileInfoEl = document.getElementById('fileInfo');
-const downloadLink = document.getElementById('downloadLink');
-
-uploadArea.addEventListener('dragover', e => { e.preventDefault(); uploadArea.classList.add('drag-over'); });
-uploadArea.addEventListener('dragleave', () => uploadArea.classList.remove('drag-over'));
-uploadArea.addEventListener('drop', e => { e.preventDefault(); uploadArea.classList.remove('drag-over'); const f = e.dataTransfer.files[0]; if(f) handleFile(f); });
-fileInput.addEventListener('change', e => { if(e.target.files[0]) handleFile(e.target.files[0]); });
-
-async function handleFile(file) {
-  if (!file.name.toLowerCase().endsWith('.mp3') && !file.type.includes('mpeg')) {
-    alert('Please select an MP3 file.');
-    return;
-  }
-  uploadArea.style.display = 'none';
-  progressWrap.style.display = 'block';
-  statusEl.textContent = 'Loading FFmpeg (this may take a moment)...';
-  progressFill.style.width = '10%';
-
-  try {
-    const { createFFmpeg, fetchFile } = FFmpeg;
-    const ffmpeg = createFFmpeg({ 
-      log: false,
-      corePath: 'https://unpkg.com/@ffmpeg/core@0.11.0/dist/ffmpeg-core.js'
-    });
-    
-    statusEl.textContent = 'Loading audio processor...';
-    await ffmpeg.load();
-    progressFill.style.width = '30%';
-    
-    statusEl.textContent = 'Converting MP3 to AAC...';
-    ffmpeg.FS('writeFile', 'input.mp3', await fetchFile(file));
-    progressFill.style.width = '50%';
-    
-    await ffmpeg.run('-i', 'input.mp3', '-c:a', 'aac', '-b:a', '192k', 'output.m4a');
-    progressFill.style.width = '90%';
-    
-    const data = ffmpeg.FS('readFile', 'output.m4a');
-    const blob = new Blob([data.buffer], { type: 'audio/mp4' });
-    const url = URL.createObjectURL(blob);
-    
-    progressFill.style.width = '100%';
-    
-    const outputName = file.name.replace(/\.mp3$/i, '.m4a');
-    downloadLink.href = url;
-    downloadLink.download = outputName;
-    fileInfoEl.innerHTML = '<strong>Input:</strong> ' + file.name + ' (' + formatSize(file.size) + ')<br><strong>Output:</strong> ' + outputName + ' (' + formatSize(blob.size) + ')';
-    
-    setTimeout(() => {
-      progressWrap.style.display = 'none';
-      resultEl.style.display = 'block';
-    }, 500);
-    
-  } catch(err) {
-    statusEl.textContent = 'Error: ' + err.message;
-    console.error(err);
-  }
-}
-
-function formatSize(bytes) {
-  if (bytes < 1024) return bytes + ' B';
-  if (bytes < 1048576) return (bytes/1024).toFixed(1) + ' KB';
-  return (bytes/1048576).toFixed(1) + ' MB';
-}
-
-function resetTool() {
-  uploadArea.style.display = 'block';
-  progressWrap.style.display = 'none';
-  resultEl.style.display = 'none';
-  progressFill.style.width = '0%';
-  fileInput.value = '';
-}
+(function(){'use strict';
+var MB=500*1024*1024,EXT='.mp3',MIME=['audio/mpeg','audio/mp3'],MAGIC=[[0x49,0x44,0x33],[0xFF,0xFB],[0xFF,0xFA],[0xFF,0xF3]];
+var up=document.getElementById('uploadArea'),fi=document.getElementById('fileInput'),cb=document.getElementById('convertBtn'),pb=document.getElementById('progressBar'),pi=document.getElementById('progressBarInner'),sm=document.getElementById('statusMsg'),db=document.getElementById('downloadBtn'),sw=document.getElementById('sizeWarning'),fn=document.getElementById('fileName');
+var sel=null,url=null,ffm=null;
+function st(m,t){sm.textContent=m;sm.className='status-msg'+(t?' '+t:'');}
+function sp(p){pi.style.width=p+'%';pb.setAttribute('aria-valuenow',p);}
+function san(n){var d=document.createElement('div');d.textContent=n;var s=d.textContent||'';return s.length>80?s.slice(0,77)+'...':s;}
+function mag(f,c){var r=new FileReader();r.onload=function(e){var b=new Uint8Array(e.target.result);c(MAGIC.some(function(m){return m.every(function(v,i){return b[i]===v;});}));};r.onerror=function(){c(false);};r.readAsArrayBuffer(f.slice(0,4));}
+function val(f,c){var ext=f.name.toLowerCase().slice(-4);if(ext!==EXT)return c(false,'Only .mp3 files are supported.');if(MIME.indexOf(f.type)===-1&&f.type!=='')return c(false,'Invalid file type.');if(f.size>MB)return c(false,'File exceeds 500 MB.');if(f.size===0)return c(false,'File is empty.');mag(f,function(ok){c(ok,ok?null:'Not a valid MP3 file.');});}
+function rev(){if(url){URL.revokeObjectURL(url);url=null;}}
+function load(f){sw.style.display='none';db.style.display='none';st('');val(f,function(ok,err){if(!ok){st(err||'Invalid MP3 file.','error');if(f.size>MB)sw.style.display='block';cb.style.display='none';sel=null;fn.textContent='';return;}sel=f;fn.textContent=san(f.name)+' ('+(f.size/1024/1024).toFixed(2)+' MB)';cb.style.display='block';rev();});}
+up.addEventListener('dragover',function(e){e.preventDefault();e.stopPropagation();up.classList.add('dragover');});
+up.addEventListener('dragleave',function(e){e.preventDefault();up.classList.remove('dragover');});
+up.addEventListener('drop',function(e){e.preventDefault();e.stopPropagation();up.classList.remove('dragover');var f=e.dataTransfer.files&&e.dataTransfer.files[0];if(f)load(f);});
+up.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();fi.click();}});
+fi.addEventListener('change',function(){if(fi.files&&fi.files[0]){load(fi.files[0]);fi.value='';}});
+cb.addEventListener('click',conv);
+async function conv(){if(!sel||!window.FFmpeg)return;cb.disabled=true;db.style.display='none';pb.style.display='block';rev();sp(5);st('Loading converter...');var out=null;
+try{if(!ffm){ffm=FFmpeg.createFFmpeg({corePath:'https://unpkg.com/@ffmpeg/core@0.11.0/dist/ffmpeg-core.js',log:false,progress:function(p){sp(Math.min(Math.round(30+(p.ratio||0)*60),90));}});}
+if(!ffm.isLoaded())await ffm.load();sp(30);st('Processing...');
+ffm.FS('writeFile','i.mp3',await FFmpeg.fetchFile(sel));
+await ffm.run('-i','i.mp3','-c:a','aac','-b:a','192k','o.aac');
+sp(90);out=ffm.FS('readFile','o.aac');
+try{ffm.FS('unlink','i.mp3');}catch(e){}try{ffm.FS('unlink','o.aac');}catch(e){}
+sp(100);st('Done! Your AAC file is ready.','success');
+var sn=(sel.name.replace(/[^a-zA-Z0-9._\- ]/g,'_').replace(/\.[^.]+$/,'')||'output')+'.aac';
+url=URL.createObjectURL(new Blob([out.buffer],{type:'audio/aac'}));
+db.style.display='block';db.onclick=function(){var a=document.createElement('a');a.href=url;a.download=sn;document.body.appendChild(a);a.click();document.body.removeChild(a);};
+}catch(err){console.error('[FilePresto]',err);st('Conversion failed. Please try again.','error');sp(0);pb.style.display='none';
+try{ffm&&ffm.FS('unlink','i.mp3');}catch(e){}try{ffm&&ffm.FS('unlink','o.aac');}catch(e){}
+}finally{cb.disabled=false;out=null;}}
+window.addEventListener('beforeunload',rev);
+})();
 </script>
-<script src="https://unpkg.com/@ffmpeg/ffmpeg@0.11.6/dist/ffmpeg.min.js"></script>
 </body>
 </html>
