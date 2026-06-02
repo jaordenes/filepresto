@@ -2,6 +2,12 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
+<!-- Security headers -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://unpkg.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self'; connect-src 'self' https://unpkg.com; worker-src blob:; child-src blob:; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests;">
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+<meta http-equiv="X-Frame-Options" content="DENY">
+<meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+<meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), payment=(), usb=(), bluetooth=(), serial=(), nfc=()">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Recortar Imagem Online Grátis – FilePresto</title>
@@ -15,6 +21,8 @@
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:'Segoe UI',sans-serif;background:#f8fafc;color:#1e293b}
 header{background:#fff;border-bottom:1px solid #e2e8f0;padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}
+
+
 
 
 .lang-switcher{display:flex;gap:.5rem;margin-left:2rem}
@@ -34,69 +42,3 @@ header{background:#fff;border-bottom:1px solid #e2e8f0;padding:1rem 2rem;display
 .file-info{background:var(--primary-light);border-radius:.5rem;padding:.75rem 1rem;margin:.75rem 0;font-size:.875rem;color:#1e40af}
 .crop-grid{display:grid;grid-template-columns:1fr 1fr;gap:.75rem;margin:1rem 0}
 .crop-field label{font-size:.8rem;font-weight:600;color:#475569;display:block;margin-bottom:.25rem}
-.crop-field input{border:1px solid #e2e8f0;border-radius:.375rem;padding:.5rem .75rem;font-size:.875rem;width:100%}
-.btn{background:var(--primary);color:#fff;border:none;padding:.875rem 2rem;border-radius:.5rem;font-size:1rem;font-weight:600;cursor:pointer;width:100%;margin-top:.5rem;transition:.2s}
-#download-btn{display:none;background:#16A34A;color:#fff;border:none;padding:.875rem 2rem;border-radius:.5rem;font-size:1rem;font-weight:600;cursor:pointer;width:100%;margin-top:1rem}
-footer{background:#1e293b;color:#94a3b8;padding:2rem;text-align:center}
-footer a{color:#94a3b8;text-decoration:none;margin:0 .75rem}
-.footer-links{margin-bottom:1rem}
-nav{background:#fff;border-bottom:1px solid #E2E8F0;padding:0 24px;height:64px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}.nav-logo{font-size:1.4rem;font-weight:800;color:#2563EB;text-decoration:none}.nav-links{display:flex;gap:24px;align-items:center;font-size:.95rem}.nav-links a{color:#64748B;font-weight:500}.nav-links a.active{color:#DC2626;font-weight:700}.lang-switcher{display:flex;gap:6px;align-items:center;font-size:.85rem;border-left:1px solid #E2E8F0;padding-left:16px;margin-left:8px}.lang-switcher a{color:#64748B;font-weight:600;padding:2px 6px;border-radius:4px}.lang-switcher a.active{background:#DC2626;color:#fff}.btn-pro{background:#2563EB;color:#fff!important;padding:8px 18px;border-radius:8px;font-weight:600;font-size:.9rem}
-</style>
-</head>
-<body>
-<nav><a href="../../../es/index.html" class="nav-logo">&#9889; FilePresto</a><div class="nav-links"><a href="index.html" class="active">Imágenes</a><a href="../pdf/index.html">PDF</a><a href="../video/index.html">Video</a><a href="../audio/index.html">Audio</a><a href="../ebook/index.html">eBooks</a><a href="../documents/index.html">Documentos</a><a href="../../pricing.html">Precios</a><div class="lang-switcher"><a href="../../../tools/images/crop-image.html">EN</a><a href="crop-image.html" class="active">ES</a><a href="../../../pt/tools/images/crop-image.html">PT</a></div><a href="../../pricing.html" class="btn-pro">Pro</a></div></nav>
-<section class="hero">
-  <h1>✂️ Recortar Imagem</h1>
-  <p>Recorte suas imagens com precisão definindo as coordenadas.</p>
-</section>
-<div class="tool-container">
-  <div class="drop-zone" id="dropZone">
-    <div class="icon">✂️</div>
-    <h3>Arraste e solte sua imagem aqui</h3>
-    <p>ou clique para selecionar o arquivo</p>
-    <input type="file" id="fileInput" accept="image/*">
-  </div>
-  <div class="controls" id="controls">
-    <div class="file-info" id="fileInfo"></div>
-    <div class="crop-grid">
-      <div class="crop-field"><label>X (esquerda)</label><input type="number" id="cropX" value="0" min="0"></div>
-      <div class="crop-field"><label>Y (topo)</label><input type="number" id="cropY" value="0" min="0"></div>
-      <div class="crop-field"><label>Largura</label><input type="number" id="cropW" min="1"></div>
-      <div class="crop-field"><label>Altura</label><input type="number" id="cropH" min="1"></div>
-    </div>
-    <canvas id="canvas" style="display:none"></canvas>
-    <button class="btn" id="cropBtn">Recortar</button>
-    <button id="download-btn">⬇️ Baixar Imagem Recortada</button>
-  </div>
-</div>
-<footer><div class="footer-grid"><div class="footer-col"><h4>&#9889; FilePresto</h4><p style="font-size:.85rem;line-height:1.5">Conversor de archivos online. Rápido, seguro y sin registro.</p></div><div class="footer-col"><h4>Herramientas</h4><a href="index.html">Conversor de Imágenes</a><a href="../pdf/index.html">Herramientas PDF</a><a href="../video/index.html">Conversor de Video</a><a href="../audio/index.html">Conversor de Audio</a><a href="../ebook/index.html">Conversor eBook</a><a href="../documents/index.html">Conversor de Documentos</a></div><div class="footer-col"><h4>Empresa</h4><a href="../../about.html">Acerca de</a><a href="../../pricing.html">Precios</a><a href="../../contact.html">Contacto</a></div><div class="footer-col"><h4>Legal</h4><a href="../../privacy.html">Política de Privacidad</a><a href="../../terms.html">Términos de Servicio</a></div></div><div class="footer-bottom">&copy; 2025 FilePresto. Todos los derechos reservados.</div></footer>
-<script>
-const dropZone=document.getElementById('dropZone'),fileInput=document.getElementById('fileInput'),controls=document.getElementById('controls'),fileInfo=document.getElementById('fileInfo'),cropX=document.getElementById('cropX'),cropY=document.getElementById('cropY'),cropW=document.getElementById('cropW'),cropH=document.getElementById('cropH'),canvas=document.getElementById('canvas'),cropBtn=document.getElementById('cropBtn'),downloadBtn=document.getElementById('download-btn');
-let currentFile=null,origW=0,origH=0;
-dropZone.addEventListener('click',()=>fileInput.click());
-dropZone.addEventListener('dragover',e=>{e.preventDefault();dropZone.classList.add('dragover')});
-dropZone.addEventListener('dragleave',()=>dropZone.classList.remove('dragover'));
-dropZone.addEventListener('drop',e=>{e.preventDefault();dropZone.classList.remove('dragover');if(e.dataTransfer.files[0])loadFile(e.dataTransfer.files[0])});
-fileInput.addEventListener('change',e=>{if(e.target.files[0])loadFile(e.target.files[0])});
-function loadFile(f){
-  currentFile=f;
-  const img=new Image();
-  img.onload=()=>{origW=img.naturalWidth;origH=img.naturalHeight;cropW.value=origW;cropH.value=origH;fileInfo.textContent='Imagem: '+origW+'×'+origH+'px';controls.style.display='block';downloadBtn.style.display='none';};
-  img.src=URL.createObjectURL(f);
-}
-cropBtn.addEventListener('click',()=>{
-  if(!currentFile)return;
-  const x=parseInt(cropX.value)||0,y=parseInt(cropY.value)||0,w=parseInt(cropW.value)||origW,h=parseInt(cropH.value)||origH;
-  const img=new Image();
-  img.onload=()=>{
-    canvas.width=w;canvas.height=h;
-    const ctx=canvas.getContext('2d');
-    ctx.drawImage(img,x,y,w,h,0,0,w,h);
-    downloadBtn.style.display='block';
-    downloadBtn.onclick=()=>{const a=document.createElement('a');a.download='cropped-'+currentFile.name;a.href=canvas.toDataURL('image/png');a.click();};
-  };
-  img.src=URL.createObjectURL(currentFile);
-});
-</script>
-</body>
-</html>
