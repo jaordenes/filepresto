@@ -2,6 +2,12 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<!-- Security headers -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://unpkg.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self'; connect-src 'self' https://unpkg.com; worker-src blob:; child-src blob:; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests;">
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+<meta http-equiv="X-Frame-Options" content="DENY">
+<meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+<meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), payment=(), usb=(), bluetooth=(), serial=(), nfc=()">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>PDF to Excel - FilePresto</title>
@@ -34,100 +40,3 @@ nav{background:#fff;box-shadow:0 2px 8px rgba(0,0,0,.1);padding:1rem 2rem;displa
 .download-btn{background:#27ae60;color:#fff;border:none;padding:1rem 2rem;border-radius:8px;font-size:1.1rem;cursor:pointer;width:100%;margin-top:1rem;display:none;text-decoration:none;text-align:center;transition:background .3s}
 .download-btn:hover{background:#219a52}
 .features{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem}
-.feature{text-align:center;padding:1.5rem}
-.feature-icon{font-size:2rem;margin-bottom:.5rem}
-footer{background:#333;color:#ccc;text-align:center;padding:2rem;margin-top:3rem}
-footer a{color:#ccc;text-decoration:none}
-</style>
-</head>
-<body>
-<nav><a href="../../index.html" class="nav-logo">&#9889; FilePresto</a><div class="nav-links"><a href="../images/index.html">Images</a><a href="index.html" class="active">PDF</a><a href="../video/index.html">Video</a><a href="../audio/index.html">Audio</a><a href="../ebook/index.html">eBooks</a><a href="../documents/index.html">Documents</a><a href="../../pricing.html">Pricing</a><div class="lang-switcher"><a href="pdf-to-excel.html" class="active">EN</a><a href="../../es/tools/pdf/pdf-to-excel.html">ES</a><a href="../../pt/tools/pdf/pdf-to-excel.html">PT</a></div><a href="../../pricing.html" class="btn-pro">Pro</a></div></nav>
-<div class="hero">
-  <h1>PDF to Excel</h1>
-  <p>Extract text content from PDF and export as CSV compatible with Excel.</p>
-</div>
-<div class="container">
-  <div class="card">
-    <div class="upload-area" id="dropZone">
-      <input type="file" id="fileInput" accept="application/pdf">
-      <div class="upload-icon">📑</div>
-      <p><strong>Drop your PDF here</strong></p>
-      <p style="color:#888;margin-top:.5rem">or click to select</p>
-    </div>
-    <p id="fileName" style="margin-top:.5rem;color:#555;text-align:center"></p>
-    <div class="info-box">💡 This tool extracts text from the PDF organized by lines and exports it as CSV format, compatible with Excel, LibreOffice, and Google Sheets.</div>
-    <button class="convert-btn" id="convertBtn" disabled>Extract to CSV</button>
-    <div class="progress-wrap" id="progressWrap">
-      <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
-      <div class="progress-text" id="progressText">Processing...</div>
-    </div>
-    <a class="download-btn" id="downloadBtn">⬇️ Download CSV (Excel)</a>
-  </div>
-  <div class="card">
-    <h2 style="margin-bottom:1rem">Features</h2>
-    <div class="features">
-      <div class="feature"><div class="feature-icon">🔒</div><h3>100% Private</h3><p>Everything processed in your browser</p></div>
-      <div class="feature"><div class="feature-icon">📊</div><h3>Excel Compatible</h3><p>Open CSV directly in Excel</p></div>
-      <div class="feature"><div class="feature-icon">⚡</div><h3>Fast</h3><p>Instant extraction</p></div>
-    </div>
-  </div>
-</div>
-<footer><div class="footer-grid"><div class="footer-col"><h4>&#9889; FilePresto</h4><p style="font-size:.85rem;line-height:1.5">Free online file converter. Fast, secure and no sign-up required.</p></div><div class="footer-col"><h4>Tools</h4><a href="../images/index.html">Image Converter</a><a href="index.html">PDF Tools</a><a href="../video/index.html">Video Converter</a><a href="../audio/index.html">Audio Converter</a><a href="../ebook/index.html">eBook Converter</a><a href="../documents/index.html">Document Converter</a></div><div class="footer-col"><h4>Company</h4><a href="../../about.html">About</a><a href="../../pricing.html">Pricing</a><a href="../../contact.html">Contact</a></div><div class="footer-col"><h4>Legal</h4><a href="../../privacy.html">Privacy Policy</a><a href="../../terms.html">Terms of Service</a></div></div><div class="footer-bottom">&copy; 2025 FilePresto. All rights reserved.</div></footer>
-<script src="https://unpkg.com/pdfjs-dist@3.11.174/build/pdf.min.js"></script>
-<script>
-pdfjsLib.GlobalWorkerOptions.workerSrc='https://unpkg.com/pdfjs-dist@3.11.174/build/pdf.worker.min.js';
-const dropZone=document.getElementById('dropZone');
-const fileInput=document.getElementById('fileInput');
-const fileNameEl=document.getElementById('fileName');
-const convertBtn=document.getElementById('convertBtn');
-const progressWrap=document.getElementById('progressWrap');
-const progressFill=document.getElementById('progressFill');
-const progressText=document.getElementById('progressText');
-const downloadBtn=document.getElementById('downloadBtn');
-let pdfFile=null;
-dropZone.addEventListener('click',()=>fileInput.click());
-dropZone.addEventListener('dragover',e=>{e.preventDefault();dropZone.classList.add('dragover')});
-dropZone.addEventListener('dragleave',()=>dropZone.classList.remove('dragover'));
-dropZone.addEventListener('drop',e=>{e.preventDefault();dropZone.classList.remove('dragover');if(e.dataTransfer.files[0])setFile(e.dataTransfer.files[0])});
-fileInput.addEventListener('change',()=>{if(fileInput.files[0])setFile(fileInput.files[0])});
-function setFile(f){pdfFile=f;fileNameEl.textContent=f.name+' ('+(f.size/1024).toFixed(1)+' KB)';convertBtn.disabled=false}
-function escCsv(val){const s=String(val);return s.includes(',')||s.includes('"')||s.includes('
-')?'"'+s.replace(/"/g,'""')+'"':s}
-convertBtn.addEventListener('click',async()=>{
-  if(!pdfFile)return;
-  convertBtn.disabled=true;progressWrap.style.display='block';downloadBtn.style.display='none';
-  try{
-    const ab=await pdfFile.arrayBuffer();
-    const pdf=await pdfjsLib.getDocument({data:ab}).promise;
-    const total=pdf.numPages;
-    const rows=[['Page','Line','Text']];
-    for(let i=1;i<=total;i++){
-      progressFill.style.width=((i/total)*90)+'%';
-      progressText.textContent='Processing page '+i+' of '+total+'...';
-      const page=await pdf.getPage(i);
-      const tc=await page.getTextContent();
-      let lineNum=1,lastY=null,currentLine='';
-      for(const item of tc.items){
-        const y=item.transform[5];
-        if(lastY!==null&&Math.abs(y-lastY)>5){
-          if(currentLine.trim())rows.push([i,lineNum++,currentLine.trim()]);
-          currentLine=item.str;
-        }else currentLine+=(currentLine?' ':'')+item.str;
-        lastY=y;
-      }
-      if(currentLine.trim())rows.push([i,lineNum,currentLine.trim()]);
-    }
-    const csv=rows.map(r=>r.map(escCsv).join(',')).join('
-');
-    const blob=new Blob(['﻿'+csv],{type:'text/csv;charset=utf-8'});
-    downloadBtn.href=URL.createObjectURL(blob);
-    downloadBtn.download=pdfFile.name.replace('.pdf','.csv');
-    downloadBtn.style.display='block';
-    progressFill.style.width='100%';
-    progressText.textContent='Exported: '+(rows.length-1)+' text lines';
-  }catch(e){progressText.textContent='Error: '+e.message;console.error(e)}
-  convertBtn.disabled=false;
-});
-</script>
-</body>
-</html>
