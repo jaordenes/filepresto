@@ -2,6 +2,12 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
+<!-- Security headers -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://unpkg.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self'; connect-src 'self' https://unpkg.com; worker-src blob:; child-src blob:; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests;">
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+<meta http-equiv="X-Frame-Options" content="DENY">
+<meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+<meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), payment=(), usb=(), bluetooth=(), serial=(), nfc=()">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MP4 to AVI – Free Online Converter | FilePresto</title>
@@ -34,127 +40,3 @@
     .upload-area:hover,.upload-area.dragover{border-color:var(--primary);background:var(--primary-light)}
     .upload-icon{font-size:3rem;margin-bottom:12px}
     .upload-area h3{font-size:1.1rem;font-weight:600;margin-bottom:8px}
-    .upload-area p{color:var(--text-light);font-size:.9rem}
-    #fileInput{display:none}
-    .file-info{background:var(--bg);border-radius:8px;padding:12px 16px;margin-bottom:20px;font-size:.9rem;display:none}
-    .file-info strong{color:var(--primary)}
-    .btn{display:inline-flex;align-items:center;gap:8px;padding:14px 32px;border-radius:10px;font-size:1rem;font-weight:600;cursor:pointer;border:none;transition:.2s}
-    .btn-primary{background:var(--primary);color:#fff;width:100%;justify-content:center}
-    .btn-primary:hover:not(:disabled){background:var(--primary-dark)}
-    .btn-primary:disabled{opacity:.5;cursor:not-allowed}
-    .btn-download{background:#059669;color:#fff;width:100%;justify-content:center;margin-top:12px;display:none}
-    .btn-download:hover{background:#047857}
-    .progress-wrap{margin:20px 0;display:none}
-    .progress-bar{height:8px;background:var(--border);border-radius:4px;overflow:hidden}
-    .progress-fill{height:100%;background:var(--primary);border-radius:4px;transition:width .3s;width:0%}
-    .status{margin-top:10px;font-size:.9rem;color:var(--text-light);text-align:center}
-    .features{max-width:1200px;margin:0 auto;padding:48px 24px}
-    .features h2{font-size:1.75rem;font-weight:700;text-align:center;margin-bottom:32px}
-    .features-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px}
-    .feature-card{background:var(--white);border-radius:12px;padding:28px;box-shadow:0 2px 12px rgba(0,0,0,.05)}
-    .feature-icon{font-size:2rem;margin-bottom:12px}
-    .feature-card h3{font-weight:600;margin-bottom:8px}
-    .feature-card p{color:var(--text-light);font-size:.9rem}
-    footer{background:var(--text);color:#9CA3AF;padding:48px 24px 24px}
-    .footer-inner{max-width:1200px;margin:0 auto}
-    .footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:32px;margin-bottom:32px}
-    .footer-col h4{color:#fff;font-weight:600;margin-bottom:12px}
-    .footer-col a{display:block;margin-bottom:8px;font-size:.9rem;transition:.2s}
-    .footer-col a:hover{color:#fff}
-    .footer-bottom{border-top:1px solid #374151;padding-top:24px;text-align:center;font-size:.85rem}
-    </style>
-  </head>
-  <body>
-    <nav><a href="../../index.html" class="nav-logo">&#9889; FilePresto</a><div class="nav-links"><a href="../images/index.html">Images</a><a href="../pdf/index.html">PDF</a><a href="index.html" class="active">Video</a><a href="../audio/index.html">Audio</a><a href="../ebook/index.html">eBooks</a><a href="../documents/index.html">Documents</a><a href="../../pricing.html">Pricing</a><div class="lang-switcher"><a href="mp4-to-avi.html" class="active">EN</a><a href="../../es/tools/video/mp4-to-avi.html">ES</a><a href="../../pt/tools/video/mp4-to-avi.html">PT</a></div><a href="../../pricing.html" class="btn-pro">Pro</a></div></nav>
-  <div class="breadcrumb">
-    <a href="../../index.html">Home</a><span>›</span>
-    <a href="index.html">Video Tools</a><span>›</span>
-    <span>MP4 to AVI</span>
-  </div>
-  <section class="hero">
-    <h1>MP4 to <em>AVI</em> Converter</h1>
-    <p>Convert MP4 videos to AVI format for compatibility with legacy players and video editing software. 100% browser-based.</p>
-  </section>
-  <section class="converter-section">
-    <div class="converter-box">
-        <div class="upload-area" id="uploadArea">
-              <div class="upload-icon">🎥</div>
-              <h3>Drop your MP4 file here</h3>
-              <p>or click to browse — max 500 MB</p>
-              <input type="file" id="fileInput" accept=".mp4,video/mp4">
-        </div>
-        <div class="file-info" id="fileInfo">Selected: <strong id="fileName"></strong>strong></div>
-        <button class="btn btn-primary" id="convertBtn" disabled>Convert to AVI</button>
-        <div class="progress-wrap" id="progressWrap">
-              <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
-              <div class="status" id="statusMsg">Initializing…</div>
-        </div>
-        <a class="btn btn-download" id="downloadBtn" download="output.avi">⬇ Download AVI</a>
-    </div>
-  </section>
-  <section class="features">
-    <h2>Why Use FilePresto?</h2>
-    <div class="features-grid">
-        <div class="feature-card"><div class="feature-icon">🔒</div><h3>100% Private</h3><p>Your video never leaves your device. All conversion happens locally in your browser.</p></div>
-        <div class="feature-card"><div class="feature-icon">⚡</div><h3>Lightning Fast</h3><p>FFmpeg-powered conversion runs at native speed directly in your browser.</p></div>
-        <div class="feature-card"><div class="feature-icon">🎞️</div><h3>Legacy Compatible</h3><p>AVI format works with older media players, DVD authoring tools, and video editors.</p></div>
-        <div class="feature-card"><div class="feature-icon">🆓</div><h3>Always Free</h3><p>No subscriptions, no sign-up, no limits. Convert as many files as you need.</p></div>
-    </div>
-  </section>
-  <footer><div class="footer-grid"><div class="footer-col"><h4>&#9889; FilePresto</h4><p style="font-size:.85rem;line-height:1.5">Free online file converter. Fast, secure and no sign-up required.</p></div><div class="footer-col"><h4>Tools</h4><a href="../images/index.html">Image Converter</a><a href="../pdf/index.html">PDF Tools</a><a href="index.html">Video Converter</a><a href="../audio/index.html">Audio Converter</a><a href="../ebook/index.html">eBook Converter</a><a href="../documents/index.html">Document Converter</a></div><div class="footer-col"><h4>Company</h4><a href="../../about.html">About</a><a href="../../pricing.html">Pricing</a><a href="../../contact.html">Contact</a></div><div class="footer-col"><h4>Legal</h4><a href="../../privacy.html">Privacy Policy</a><a href="../../terms.html">Terms of Service</a></div></div><div class="footer-bottom">&copy; 2025 FilePresto. All rights reserved.</div></footer>
-    <script src="https://unpkg.com/@ffmpeg/ffmpeg@0.11.6/dist/ffmpeg.min.js"></script>
-    <script>
-      const {createFFmpeg,fetchFile}=FFmpeg;
-      const ffmpeg=createFFmpeg({log:false,corePath:'https://unpkg.com/@ffmpeg/core@0.11.0/dist/ffmpeg-core.js'});
-      let loaded=false;
-      const uploadArea=document.getElementById('uploadArea');
-      const fileInput=document.getElementById('fileInput');
-      const fileInfo=document.getElementById('fileInfo');
-      const fileName=document.getElementById('fileName');
-      const convertBtn=document.getElementById('convertBtn');
-      const progressWrap=document.getElementById('progressWrap');
-      const progressFill=document.getElementById('progressFill');
-      const statusMsg=document.getElementById('statusMsg');
-      const downloadBtn=document.getElementById('downloadBtn');
-      let selectedFile=null;
-      uploadArea.addEventListener('click',()=>fileInput.click());
-      uploadArea.addEventListener('dragover',e=>{e.preventDefault();uploadArea.classList.add('dragover')});
-      uploadArea.addEventListener('dragleave',()=>uploadArea.classList.remove('dragover'));
-      uploadArea.addEventListener('drop',e=>{e.preventDefault();uploadArea.classList.remove('dragover');const f=e.dataTransfer.files[0];if(f){setFile(f)}});
-      fileInput.addEventListener('change',()=>{if(fileInput.files[0])setFile(fileInput.files[0])});
-      function setFile(f){selectedFile=f;fileName.textContent=f.name+' ('+formatSize(f.size)+')';fileInfo.style.display='block';convertBtn.disabled=false;downloadBtn.style.display='none'}
-      function formatSize(b){return b>1048576?(b/1048576).toFixed(1)+' MB':(b/1024).toFixed(0)+' KB'}
-      convertBtn.addEventListener('click',async()=>{
-          if(!selectedFile)return;
-          convertBtn.disabled=true;
-          progressWrap.style.display='block';
-          downloadBtn.style.display='none';
-          setProgress(5,'Loading FFmpeg…');
-          try{
-                if(!loaded){await ffmpeg.load();loaded=true}
-                setProgress(20,'Reading file…');
-                ffmpeg.setProgress(({ratio})=>setProgress(20+Math.round(ratio*70),'Converting…'));
-                ffmpeg.FS('writeFile','input.mp4',await fetchFile(selectedFile));
-                setProgress(25,'Converting to AVI…');
-                await ffmpeg.run('-i','input.mp4','-c:v','mpeg4','-q:v','5','-c:a','mp3','-b:a','128k','output.avi');
-                const data=ffmpeg.FS('readFile','output.avi');
-                const blob=new Blob([data.buffer],{type:'video/x-msvideo'});
-                const url=URL.createObjectURL(blob);
-                const base=selectedFile.name.replace(/\.[^.]+$/,'');
-                downloadBtn.href=url;
-                downloadBtn.download=base+'.avi';
-                downloadBtn.style.display='flex';
-                setProgress(100,'Done! Your AVI is ready.');
-                ffmpeg.FS('unlink','input.mp4');ffmpeg.FS('unlink','output.avi');
-          }catch(e){setProgress(0,'Error: '+e.message);convertBtn.disabled=false}
-      });
-      function setProgress(pct,msg){progressFill.style.width=pct+'%';statusMsg.textContent=msg}
-    </script>
-  </body>
-</html>html>
-    </script>
-  </footer></p></p></em></h1></span></span>
-    </nav>
-  </body>
-  </style></title>
-  </head>
