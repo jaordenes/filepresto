@@ -2,6 +2,12 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<!-- Security headers -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://unpkg.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self'; connect-src 'self' https://unpkg.com; worker-src blob:; child-src blob:; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests;">
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+<meta http-equiv="X-Frame-Options" content="DENY">
+<meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+<meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), payment=(), usb=(), bluetooth=(), serial=(), nfc=()">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>EPUB to PDF - FilePresto</title>
@@ -34,110 +40,3 @@ nav{background:#fff;border-bottom:1px solid #E2E8F0;padding:0 24px;height:64px;d
 .download-btn:hover{background:#219a52}
 .features{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem}
 .feature{text-align:center;padding:1.5rem}
-.feature-icon{font-size:2rem;margin-bottom:.5rem}
-footer{background:#333;color:#ccc;text-align:center;padding:2rem;margin-top:3rem}
-footer a{color:#ccc;text-decoration:none}
-</style>
-</head>
-<body>
-<nav><a href="../../index.html" class="nav-logo">&#9889; FilePresto</a><div class="nav-links"><a href="../images/index.html">Images</a><a href="../pdf/index.html">PDF</a><a href="../video/index.html">Video</a><a href="../audio/index.html">Audio</a><a href="index.html" class="active">eBooks</a><a href="../documents/index.html">Documents</a><a href="../../pricing.html">Pricing</a><div class="lang-switcher"><a href="epub-to-pdf.html" class="active">EN</a><a href="../../es/tools/ebook/epub-to-pdf.html">ES</a><a href="../../pt/tools/ebook/epub-to-pdf.html">PT</a></div><a href="../../pricing.html" class="btn-pro">Pro</a></div></nav>
-<div class="hero">
-  <h1>EPUB to PDF</h1>
-  <p>Convert EPUB ebooks to PDF. Free, instant, private.</p>
-</div>
-<div class="container">
-  <div class="card">
-    <div class="upload-area" id="dropZone">
-      <input type="file" id="fileInput" accept=".epub">
-      <div class="upload-icon">📚</div>
-      <p><strong>Drop your EPUB file here</strong></p>
-      <p style="color:#888;margin-top:.5rem">or click to select</p>
-    </div>
-    <p id="fileName" style="margin-top:.5rem;color:#555;text-align:center"></p>
-    <button class="convert-btn" id="convertBtn" disabled>Convert to PDF</button>
-    <div class="progress-wrap" id="progressWrap">
-      <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
-      <div class="progress-text" id="progressText">Processing...</div>
-    </div>
-    <a class="download-btn" id="downloadBtn">⬇️ Download PDF</a>
-  </div>
-  <div class="card">
-    <h2 style="margin-bottom:1rem">Features</h2>
-    <div class="features">
-      <div class="feature"><div class="feature-icon">🔒</div><h3>100% Private</h3><p>Everything processed in your browser</p></div>
-      <div class="feature"><div class="feature-icon">📄</div><h3>High Quality</h3><p>PDF with all ebook text</p></div>
-      <div class="feature"><div class="feature-icon">⚡</div><h3>Fast</h3><p>Instant conversion</p></div>
-    </div>
-  </div>
-</div>
-<footer><div class="footer-grid"><div class="footer-col"><h4>&#9889; FilePresto</h4><p style="font-size:.85rem;line-height:1.5">Free online file converter. Fast, secure and no sign-up required.</p></div><div class="footer-col"><h4>Tools</h4><a href="../images/index.html">Image Converter</a><a href="../pdf/index.html">PDF Tools</a><a href="../video/index.html">Video Converter</a><a href="../audio/index.html">Audio Converter</a><a href="index.html">eBook Converter</a><a href="../documents/index.html">Document Converter</a></div><div class="footer-col"><h4>Company</h4><a href="../../about.html">About</a><a href="../../pricing.html">Pricing</a><a href="../../contact.html">Contact</a></div><div class="footer-col"><h4>Legal</h4><a href="../../privacy.html">Privacy Policy</a><a href="../../terms.html">Terms of Service</a></div></div><div class="footer-bottom">&copy; 2025 FilePresto. All rights reserved.</div></footer>
-<script src="https://unpkg.com/jszip@3.10.1/dist/jszip.min.js"></script>
-<script src="https://unpkg.com/pdf-lib@1.17.1/dist/pdf-lib.min.js"></script>
-<script>
-const dropZone=document.getElementById('dropZone');
-const fileInput=document.getElementById('fileInput');
-const fileNameEl=document.getElementById('fileName');
-const convertBtn=document.getElementById('convertBtn');
-const progressWrap=document.getElementById('progressWrap');
-const progressFill=document.getElementById('progressFill');
-const progressText=document.getElementById('progressText');
-const downloadBtn=document.getElementById('downloadBtn');
-let epubFile=null;
-dropZone.addEventListener('click',()=>fileInput.click());
-dropZone.addEventListener('dragover',e=>{e.preventDefault();dropZone.classList.add('dragover')});
-dropZone.addEventListener('dragleave',()=>dropZone.classList.remove('dragover'));
-dropZone.addEventListener('drop',e=>{e.preventDefault();dropZone.classList.remove('dragover');if(e.dataTransfer.files[0])setFile(e.dataTransfer.files[0])});
-fileInput.addEventListener('change',()=>{if(fileInput.files[0])setFile(fileInput.files[0])});
-function setFile(f){epubFile=f;fileNameEl.textContent=f.name+' ('+(f.size/1024).toFixed(1)+' KB)';convertBtn.disabled=false}
-function extractText(html){const d=document.createElement('div');d.innerHTML=html;return d.textContent||''}
-function wrapText(text,font,size,maxW){
-  const words=text.split(' ');const lines=[];let cur='';
-  for(const w of words){const t=cur?cur+' '+w:w;if(font.widthOfTextAtSize(t,size)>maxW&&cur){lines.push(cur);cur=w}else cur=t}
-  if(cur)lines.push(cur);return lines;
-}
-convertBtn.addEventListener('click',async()=>{
-  if(!epubFile)return;
-  convertBtn.disabled=true;progressWrap.style.display='block';downloadBtn.style.display='none';
-  try{
-    progressFill.style.width='20%';progressText.textContent='Reading EPUB...';
-    const ab=await epubFile.arrayBuffer();
-    const zip=await JSZip.loadAsync(ab);
-    const htmlFiles=Object.keys(zip.files).filter(n=>/\.x?html?$/.test(n));
-    progressFill.style.width='40%';progressText.textContent='Extracting content...';
-    let allText='';
-    for(const hf of htmlFiles){
-      const html=await zip.files[hf].async('text');
-      allText+=extractText(html)+'
-
-';
-    }
-    progressFill.style.width='60%';progressText.textContent='Generating PDF...';
-    const pdfDoc=await PDFLib.PDFDocument.create();
-    const font=await pdfDoc.embedFont(PDFLib.StandardFonts.Helvetica);
-    const margin=50,fontSize=11,lineH=16,pageW=595,pageH=842,maxW=pageW-margin*2;
-    let page=pdfDoc.addPage([pageW,pageH]);let y=pageH-margin;
-    const paragraphs=allText.split('
-');
-    for(const para of paragraphs){
-      if(!para.trim()){y-=lineH/2;continue}
-      const lines=wrapText(para,font,fontSize,maxW);
-      for(const line of lines){
-        if(y<margin+lineH){page=pdfDoc.addPage([pageW,pageH]);y=pageH-margin}
-        page.drawText(line,{x:margin,y,size:fontSize,font,color:PDFLib.rgb(0,0,0)});
-        y-=lineH;
-      }
-      y-=4;
-    }
-    progressFill.style.width='90%';
-    const pdfBytes=await pdfDoc.save();
-    const blob=new Blob([pdfBytes],{type:'application/pdf'});
-    downloadBtn.href=URL.createObjectURL(blob);
-    downloadBtn.download=epubFile.name.replace('.epub','.pdf');
-    downloadBtn.style.display='block';
-    progressFill.style.width='100%';progressText.textContent='PDF created successfully';
-  }catch(e){progressText.textContent='Error: '+e.message;console.error(e)}
-  convertBtn.disabled=false;
-});
-</script>
-</body>
-</html>
