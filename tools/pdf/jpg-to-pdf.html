@@ -2,6 +2,12 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
+<!-- Security headers -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://unpkg.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self'; connect-src 'self' https://unpkg.com; worker-src blob:; child-src blob:; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests;">
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+<meta http-equiv="X-Frame-Options" content="DENY">
+<meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+<meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), payment=(), usb=(), bluetooth=(), serial=(), nfc=()">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JPG to PDF – Free Online Converter | FilePresto</title>
   <meta name="description" content="Convert JPG images to PDF online for free. Combine multiple JPG/JPEG photos into a single PDF instantly in your browser.">
@@ -34,154 +40,3 @@
     .upload-icon{font-size:3rem;margin-bottom:12px}
     .upload-area h3{font-size:1.1rem;font-weight:600;margin-bottom:8px}
     .upload-area p{color:var(--text-light);font-size:.9rem}
-    #fileInput{display:none}
-    .preview-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(100px,1fr));gap:10px;margin-bottom:20px;display:none}
-    .preview-item{position:relative;border-radius:8px;overflow:hidden;aspect-ratio:1;background:var(--bg)}
-    .preview-item img{width:100%;height:100%;object-fit:cover}
-    .preview-item .remove-btn{position:absolute;top:4px;right:4px;background:rgba(0,0,0,.6);color:#fff;border:none;border-radius:50%;width:20px;height:20px;cursor:pointer;font-size:12px;display:flex;align-items:center;justify-content:center}
-    .file-count{font-size:.85rem;color:var(--text-light);margin-bottom:16px;display:none}
-    .btn{display:inline-flex;align-items:center;gap:8px;padding:14px 32px;border-radius:10px;font-size:1rem;font-weight:600;cursor:pointer;border:none;transition:.2s}
-    .btn-primary{background:var(--primary);color:#fff;width:100%;justify-content:center}
-    .btn-primary:hover:not(:disabled){background:var(--primary-dark)}
-    .btn-primary:disabled{opacity:.5;cursor:not-allowed}
-    .btn-download{background:#059669;color:#fff;width:100%;justify-content:center;margin-top:12px;display:none}
-    .btn-download:hover{background:#047857}
-    .progress-wrap{margin:20px 0;display:none}
-    .progress-bar{height:8px;background:var(--border);border-radius:4px;overflow:hidden}
-    .progress-fill{height:100%;background:var(--primary);border-radius:4px;transition:width .3s;width:0%}
-    .status{margin-top:10px;font-size:.9rem;color:var(--text-light);text-align:center}
-    .features{max-width:1200px;margin:0 auto;padding:48px 24px}
-    .features h2{font-size:1.75rem;font-weight:700;text-align:center;margin-bottom:32px}
-    .features-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px}
-    .feature-card{background:var(--white);border-radius:12px;padding:28px;box-shadow:0 2px 12px rgba(0,0,0,.05)}
-    .feature-icon{font-size:2rem;margin-bottom:12px}
-    .feature-card h3{font-weight:600;margin-bottom:8px}
-    .feature-card p{color:var(--text-light);font-size:.9rem}
-    footer{background:var(--text);color:#9CA3AF;padding:48px 24px 24px}
-    .footer-inner{max-width:1200px;margin:0 auto}
-    .footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:32px;margin-bottom:32px}
-    .footer-col h4{color:#fff;font-weight:600;margin-bottom:12px}
-    .footer-col a{display:block;margin-bottom:8px;font-size:.9rem;transition:.2s}
-    .footer-col a:hover{color:#fff}
-    .footer-bottom{border-top:1px solid #374151;padding-top:24px;text-align:center;font-size:.85rem}
-    </style>
-  </head>
-  <body>
-    <nav><a href="../../index.html" class="nav-logo">&#9889; FilePresto</a><div class="nav-links"><a href="../images/index.html">Images</a><a href="index.html" class="active">PDF</a><a href="../video/index.html">Video</a><a href="../audio/index.html">Audio</a><a href="../ebook/index.html">eBooks</a><a href="../documents/index.html">Documents</a><a href="../../pricing.html">Pricing</a><div class="lang-switcher"><a href="jpg-to-pdf.html" class="active">EN</a><a href="../../es/tools/pdf/jpg-to-pdf.html">ES</a><a href="../../pt/tools/pdf/jpg-to-pdf.html">PT</a></div><a href="../../pricing.html" class="btn-pro">Pro</a></div></nav>
-  <div class="breadcrumb">
-    <a href="../../index.html">Home</a><span>›</span>
-    <a href="index.html">PDF Tools</a><span>›</span>
-    <span>JPG to PDF</span>
-  </div>
-  <section class="hero">
-    <h1>JPG to <em>PDF</em> Converter</h1>
-    <p>Convert one or multiple JPG/JPEG images into a PDF document instantly in your browser. Free, private, no sign-up needed.</p>
-  </section>
-  <section class="converter-section">
-    <div class="converter-box">
-        <div class="upload-area" id="uploadArea">
-              <div class="upload-icon">🖼️</div>
-              <h3>Drop JPG images here</h3>
-              <p>or click to browse — JPG, JPEG files</p>
-              <input type="file" id="fileInput" accept=".jpg,.jpeg,image/jpeg" multiple>
-        </div>
-        <div class="preview-grid" id="previewGrid"></div>
-        <div class="file-count" id="fileCount"></div>
-        <button class="btn btn-primary" id="convertBtn" disabled>Convert to PDF</button>
-        <div class="progress-wrap" id="progressWrap">
-              <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
-              <div class="status" id="statusMsg">Converting…</div>
-        </div>
-        <a class="btn btn-download" id="downloadBtn" download="images.pdf">⬇ Download PDF</a>
-    </div>
-  </section>
-  <section class="features">
-    <h2>Why Use FilePresto?</h2>
-    <div class="features-grid">
-        <div class="feature-card"><div class="feature-icon">🔒</div><h3>100% Private</h3><p>Your images never leave your device. All conversion happens locally in your browser.</p></div>
-        <div class="feature-card"><div class="feature-icon">📄</div><h3>Multiple Images</h3><p>Combine multiple JPG photos into a single PDF document in the order you choose.</p></div>
-        <div class="feature-card"><div class="feature-icon">⚡</div><h3>Instant Results</h3><p>Powered by pdf-lib, conversion happens in seconds directly in your browser.</p></div>
-        <div class="feature-card"><div class="feature-icon">🆓</div><h3>Always Free</h3><p>No subscriptions, no sign-up, no limits. Convert as many images as you need.</p></div>
-    </div>
-  </section>
-  <footer><div class="footer-grid"><div class="footer-col"><h4>&#9889; FilePresto</h4><p style="font-size:.85rem;line-height:1.5">Free online file converter. Fast, secure and no sign-up required.</p></div><div class="footer-col"><h4>Tools</h4><a href="../images/index.html">Image Converter</a><a href="index.html">PDF Tools</a><a href="../video/index.html">Video Converter</a><a href="../audio/index.html">Audio Converter</a><a href="../ebook/index.html">eBook Converter</a><a href="../documents/index.html">Document Converter</a></div><div class="footer-col"><h4>Company</h4><a href="../../about.html">About</a><a href="../../pricing.html">Pricing</a><a href="../../contact.html">Contact</a></div><div class="footer-col"><h4>Legal</h4><a href="../../privacy.html">Privacy Policy</a><a href="../../terms.html">Terms of Service</a></div></div><div class="footer-bottom">&copy; 2025 FilePresto. All rights reserved.</div></footer>
-    <script src="https://unpkg.com/pdf-lib@1.17.1/dist/pdf-lib.min.js"></script>
-    <script>
-      const uploadArea=document.getElementById('uploadArea');
-      const fileInput=document.getElementById('fileInput');
-      const previewGrid=document.getElementById('previewGrid');
-      const fileCount=document.getElementById('fileCount');
-      const convertBtn=document.getElementById('convertBtn');
-      const progressWrap=document.getElementById('progressWrap');
-      const progressFill=document.getElementById('progressFill');
-      const statusMsg=document.getElementById('statusMsg');
-      const downloadBtn=document.getElementById('downloadBtn');
-      let selectedFiles=[];
-      uploadArea.addEventListener('click',()=>fileInput.click());
-      uploadArea.addEventListener('dragover',e=>{e.preventDefault();uploadArea.classList.add('dragover')});
-      uploadArea.addEventListener('dragleave',()=>uploadArea.classList.remove('dragover'));
-      uploadArea.addEventListener('drop',e=>{e.preventDefault();uploadArea.classList.remove('dragover');addFiles(Array.from(e.dataTransfer.files).filter(f=>f.type==='image/jpeg'))});
-      fileInput.addEventListener('change',()=>{addFiles(Array.from(fileInput.files));fileInput.value=''});
-      function addFiles(newFiles){
-          newFiles.forEach(f=>{if(!selectedFiles.find(x=>x.name===f.name&&x.size===f.size))selectedFiles.push(f)});
-          renderPreviews();
-      }
-      function renderPreviews(){
-          previewGrid.innerHTML='';
-          selectedFiles.forEach((f,i)=>{
-                const reader=new FileReader();
-                reader.onload=e=>{
-                        const div=document.createElement('div');
-                        div.className='preview-item';
-                        div.innerHTML='<img src="'+e.target.result+'" alt="'+f.name+'"><button class="remove-btn" data-i="'+i+'">✕</button>';
-                        previewGrid.appendChild(div);
-                };
-                reader.readAsDataURL(f);
-          });
-          previewGrid.style.display=selectedFiles.length>0?'grid':'none';
-          fileCount.textContent=selectedFiles.length+' image'+(selectedFiles.length!==1?'s':'')+' selected';
-          fileCount.style.display=selectedFiles.length>0?'block':'none';
-          convertBtn.disabled=selectedFiles.length===0;
-          downloadBtn.style.display='none';
-      }
-      previewGrid.addEventListener('click',e=>{
-          const btn=e.target.closest('[data-i]');
-          if(btn){selectedFiles.splice(parseInt(btn.dataset.i),1);renderPreviews()}
-      });
-      convertBtn.addEventListener('click',async()=>{
-          if(selectedFiles.length===0)return;
-          convertBtn.disabled=true;
-          progressWrap.style.display='block';
-          downloadBtn.style.display='none';
-          setProgress(5,'Creating PDF…');
-          try{
-                const {PDFDocument}=PDFLib;
-                const pdfDoc=await PDFDocument.create();
-                for(let i=0;i<selectedFiles.length;i++){
-                        setProgress(10+Math.round((i/selectedFiles.length)*80),'Adding image '+(i+1)+' of '+selectedFiles.length+'…');
-                        const imgBytes=await selectedFiles[i].arrayBuffer();
-                        const img=await pdfDoc.embedJpg(imgBytes);
-                        const page=pdfDoc.addPage([img.width,img.height]);
-                        page.drawImage(img,{x:0,y:0,width:img.width,height:img.height});
-                }
-                setProgress(95,'Saving PDF…');
-                const pdfBytes=await pdfDoc.save();
-                const blob=new Blob([pdfBytes],{type:'application/pdf'});
-                const url=URL.createObjectURL(blob);
-                downloadBtn.href=url;
-                downloadBtn.download='images.pdf';
-                downloadBtn.style.display='flex';
-                setProgress(100,'Done! Your PDF is ready.');
-                convertBtn.disabled=false;
-          }catch(e){setProgress(0,'Error: '+e.message);convertBtn.disabled=false}
-      });
-      function setProgress(pct,msg){progressFill.style.width=pct+'%';statusMsg.textContent=msg}
-    </script>
-  </body>
-</html>html>
-    </script>
-  </footer></p></p></em></h1></span></span>
-    </nav>
-  </body>
-  </style></title>
-  </head>
