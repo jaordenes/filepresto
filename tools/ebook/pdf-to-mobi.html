@@ -2,6 +2,12 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<!-- Security headers -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://unpkg.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self'; connect-src 'self' https://unpkg.com; worker-src blob:; child-src blob:; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests;">
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+<meta http-equiv="X-Frame-Options" content="DENY">
+<meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+<meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), payment=(), usb=(), bluetooth=(), serial=(), nfc=()">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>PDF to MOBI Converter - FilePresto</title>
@@ -34,133 +40,3 @@ nav{background:#fff;border-bottom:1px solid #E2E8F0;padding:0 24px;height:64px;d
 .btn-primary:hover:not(:disabled){transform:translateY(-2px);box-shadow:0 8px 25px rgba(139,92,246,.4)}
 .btn-primary:disabled{opacity:.5;cursor:not-allowed;transform:none}
 .btn-download{background:linear-gradient(135deg,#059669,#047857);color:#fff;width:100%;justify-content:center;margin-top:1rem;display:none}
-.btn-download:hover{transform:translateY(-2px);box-shadow:0 8px 25px rgba(5,150,105,.4)}
-.progress-wrap{margin-top:1.5rem;display:none}
-.progress-bar{height:8px;background:var(--border);border-radius:4px;overflow:hidden}
-.progress-fill{height:100%;background:linear-gradient(90deg,var(--primary),#a78bfa);width:0%;transition:width .4s}
-.progress-text{font-size:.85rem;color:var(--text-muted);margin-top:.5rem;text-align:center}
-.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;margin-top:2rem}
-.feature-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.5rem;text-align:center}
-.feature-icon{font-size:2rem;margin-bottom:.8rem}
-.feature-card h4{font-size:1rem;margin-bottom:.5rem}
-.feature-card p{font-size:.85rem;color:var(--text-muted)}
-footer{background:var(--card);border-top:1px solid var(--border);padding:2rem;text-align:center;color:var(--text-muted);font-size:.9rem;margin-top:3rem}
-footer a{color:var(--primary);text-decoration:none}
-</style>
-</head>
-<body>
-<nav><a href="../../index.html" class="nav-logo">&#9889; FilePresto</a><div class="nav-links"><a href="../images/index.html">Images</a><a href="../pdf/index.html">PDF</a><a href="../video/index.html">Video</a><a href="../audio/index.html">Audio</a><a href="index.html" class="active">eBooks</a><a href="../documents/index.html">Documents</a><a href="../../pricing.html">Pricing</a><div class="lang-switcher"><a href="pdf-to-mobi.html" class="active">EN</a><a href="../../es/tools/ebook/pdf-to-mobi.html">ES</a><a href="../../pt/tools/ebook/pdf-to-mobi.html">PT</a></div><a href="../../pricing.html" class="btn-pro">Pro</a></div></nav>
-
-<div class="hero">
-  <h1>📄 PDF to MOBI</h1>
-  <p>Convert PDF documents to MOBI format for Kindle and other e-readers. Fast, free, and works entirely in your browser.</p>
-</div>
-
-<div class="container">
-  <div class="converter-card">
-    <div class="upload-area" id="uploadArea">
-      <div class="upload-icon">📂</div>
-      <h3>Drop your PDF here</h3>
-      <p>or click to browse your files</p>
-      <input type="file" id="fileInput" accept=".pdf">
-    </div>
-    <div class="file-info" id="fileInfo"></div>
-    <div class="progress-wrap" id="progressWrap">
-      <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
-      <div class="progress-text" id="progressText">Processing...</div>
-    </div>
-    <button class="btn btn-primary" id="convertBtn" disabled>Convert to MOBI</button>
-    <a class="btn btn-download" id="downloadBtn" download>⬇ Download MOBI</a>
-  </div>
-
-  <div class="features">
-    <div class="feature-card"><div class="feature-icon">🔒</div><h4>100% Private</h4><p>Files never leave your device — all processing happens locally in the browser.</p></div>
-    <div class="feature-card"><div class="feature-icon">⚡</div><h4>Fast Conversion</h4><p>Powered by PDF.js for reliable PDF text extraction and Kindle-compatible output.</p></div>
-    <div class="feature-card"><div class="feature-icon">📚</div><h4>Kindle Ready</h4><p>Produces MOBI-compatible output ready for Kindle and other e-reader devices.</p></div>
-    <div class="feature-card"><div class="feature-icon">🆓</div><h4>Always Free</h4><p>No subscriptions, no sign-up, no limits — use it as many times as you need.</p></div>
-  </div>
-</div>
-
-<footer><div class="footer-grid"><div class="footer-col"><h4>&#9889; FilePresto</h4><p style="font-size:.85rem;line-height:1.5">Free online file converter. Fast, secure and no sign-up required.</p></div><div class="footer-col"><h4>Tools</h4><a href="../images/index.html">Image Converter</a><a href="../pdf/index.html">PDF Tools</a><a href="../video/index.html">Video Converter</a><a href="../audio/index.html">Audio Converter</a><a href="index.html">eBook Converter</a><a href="../documents/index.html">Document Converter</a></div><div class="footer-col"><h4>Company</h4><a href="../../about.html">About</a><a href="../../pricing.html">Pricing</a><a href="../../contact.html">Contact</a></div><div class="footer-col"><h4>Legal</h4><a href="../../privacy.html">Privacy Policy</a><a href="../../terms.html">Terms of Service</a></div></div><div class="footer-bottom">&copy; 2025 FilePresto. All rights reserved.</div></footer>
-
-<script src="https://unpkg.com/pdfjs-dist@3.11.174/build/pdf.min.js"></script>
-<script>
-pdfjsLib.GlobalWorkerOptions.workerSrc='https://unpkg.com/pdfjs-dist@3.11.174/build/pdf.worker.min.js';
-let pdfFile=null;
-const uploadArea=document.getElementById('uploadArea');
-const fileInput=document.getElementById('fileInput');
-const fileInfo=document.getElementById('fileInfo');
-const convertBtn=document.getElementById('convertBtn');
-const downloadBtn=document.getElementById('downloadBtn');
-const progressWrap=document.getElementById('progressWrap');
-const progressFill=document.getElementById('progressFill');
-const progressText=document.getElementById('progressText');
-
-uploadArea.addEventListener('click',()=>fileInput.click());
-uploadArea.addEventListener('dragover',e=>{e.preventDefault();uploadArea.classList.add('dragover')});
-uploadArea.addEventListener('dragleave',()=>uploadArea.classList.remove('dragover'));
-uploadArea.addEventListener('drop',e=>{e.preventDefault();uploadArea.classList.remove('dragover');const f=e.dataTransfer.files[0];if(f&&f.name.endsWith('.pdf'))handleFile(f)});
-fileInput.addEventListener('change',()=>{if(fileInput.files[0])handleFile(fileInput.files[0])});
-
-function handleFile(f){
-  pdfFile=f;
-  fileInfo.textContent='Selected: '+f.name+' ('+Math.round(f.size/1024)+' KB)';
-  fileInfo.style.display='block';
-  convertBtn.disabled=false;
-  downloadBtn.style.display='none';
-}
-
-function escXml(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&apos;')}
-
-function createMobiHtml(title,chapters){
-  const chapHtml=chapters.map((c,i)=>'<div class="chapter"><h2>Chapter '+(i+1)+'</h2>'+c.map(p=>'<p>'+escXml(p)+'</p>').join('')+'</div>').join('');
-  return '<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml"><head><meta charset="utf-8"/><title>'+escXml(title)+'</title><style>body{font-family:Georgia,serif;font-size:1em;margin:2em;line-height:1.6}h1{text-align:center;margin-bottom:2em}h2{margin-top:2em;color:#333}.chapter{page-break-before:always}p{margin:.8em 0;text-indent:1.5em}</style></head><body><h1>'+escXml(title)+'</h1>'+chapHtml+'</body></html>';
-}
-
-convertBtn.addEventListener('click',async()=>{
-  if(!pdfFile)return;
-  convertBtn.disabled=true;progressWrap.style.display='block';downloadBtn.style.display='none';
-  try{
-    progressFill.style.width='20%';progressText.textContent='Loading PDF...';
-    const ab=await pdfFile.arrayBuffer();
-    const pdf=await pdfjsLib.getDocument({data:ab}).promise;
-    const totalPages=pdf.numPages;
-    const allParas=[];
-    for(let i=1;i<=totalPages;i++){
-      progressFill.style.width=(20+Math.round(60*i/totalPages))+'%';
-      progressText.textContent='Extracting page '+i+' of '+totalPages+'...';
-      const page=await pdf.getPage(i);
-      const tc=await page.getTextContent();
-      let txt=tc.items.map(it=>it.str).join(' ').replace(/s+/g,' ').trim();
-      if(txt.length>0)allParas.push(txt);
-    }
-    progressFill.style.width='85%';progressText.textContent='Building MOBI structure...';
-    const title=pdfFile.name.replace(/.pdf$/i,'');
-    const chunkSize=50;
-    const chapters=[];
-    for(let i=0;i<allParas.length;i+=chunkSize){
-      const chunk=allParas.slice(i,i+chunkSize);
-      const expanded=[];
-      chunk.forEach(p=>{
-        const sentences=p.split(/(?<=[.!?])s+/);
-        let cur='';
-        sentences.forEach(s=>{
-          cur+=(cur?' ':'')+s;
-          if(cur.length>400){expanded.push(cur);cur='';}
-        });
-        if(cur)expanded.push(cur);
-      });
-      chapters.push(expanded);
-    }
-    const htmlContent=createMobiHtml(title,chapters);
-    const blob=new Blob([htmlContent],{type:'text/html'});
-    progressFill.style.width='100%';progressText.textContent='Conversion complete!';
-    downloadBtn.href=URL.createObjectURL(blob);
-    downloadBtn.download=title+'.mobi.html';
-    downloadBtn.style.display='flex';
-  }catch(e){progressText.textContent='Error: '+e.message;console.error(e)}
-  convertBtn.disabled=false;
-});
-</script>
-</body>
-</html>
