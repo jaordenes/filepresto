@@ -2,6 +2,12 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
+<!-- Security headers -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://unpkg.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self'; connect-src 'self' https://unpkg.com; worker-src blob:; child-src blob:; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests;">
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+<meta http-equiv="X-Frame-Options" content="DENY">
+<meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+<meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), payment=(), usb=(), bluetooth=(), serial=(), nfc=()">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Excel a PDF - FilePresto</title>
@@ -34,108 +40,3 @@ nav{background:#fff;box-shadow:0 2px 8px rgba(0,0,0,.1);padding:1rem 2rem;displa
 .download-btn:hover{background:#219a52}
 .features{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem}
 .feature{text-align:center;padding:1.5rem}
-.feature-icon{font-size:2rem;margin-bottom:.5rem}
-footer{background:#333;color:#ccc;text-align:center;padding:2rem;margin-top:3rem}
-footer a{color:#ccc;text-decoration:none}
-</style>
-</head>
-<body>
-<nav><a href="../../../es/index.html" class="nav-logo">&#9889; FilePresto</a><div class="nav-links"><a href="../images/index.html">Imágenes</a><a href="index.html" class="active">PDF</a><a href="../video/index.html">Video</a><a href="../audio/index.html">Audio</a><a href="../ebook/index.html">eBooks</a><a href="../documents/index.html">Documentos</a><a href="../../pricing.html">Precios</a><div class="lang-switcher"><a href="../../../tools/pdf/excel-to-pdf.html">EN</a><a href="excel-to-pdf.html" class="active">ES</a><a href="../../../pt/tools/pdf/excel-to-pdf.html">PT</a></div><a href="../../pricing.html" class="btn-pro">Pro</a></div></nav>
-<div class="hero">
-  <h1>Excel a PDF</h1>
-  <p>Convierte hojas de cálculo Excel a PDF. Gratis y sin registro.</p>
-</div>
-<div class="container">
-  <div class="card">
-    <div class="upload-area" id="dropZone">
-      <input type="file" id="fileInput" accept=".xlsx,.xls,.csv">
-      <div class="upload-icon">ð</div>
-      <p><strong>Arrastra tu archivo Excel aquí</strong></p>
-      <p style="color:#888;margin-top:.5rem">o haz clic para seleccionar (XLSX, XLS, CSV)</p>
-    </div>
-    <p id="fileName" style="margin-top:.5rem;color:#555;text-align:center"></p>
-    <button class="convert-btn" id="convertBtn" disabled>Convertir a PDF</button>
-    <div class="progress-wrap" id="progressWrap">
-      <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
-      <div class="progress-text" id="progressText">Procesando...</div>
-    </div>
-    <a class="download-btn" id="downloadBtn">â¬ï¸ Descargar PDF</a>
-  </div>
-  <div class="card">
-    <h2 style="margin-bottom:1rem">Características</h2>
-    <div class="features">
-      <div class="feature"><div class="feature-icon">ð</div><h3>100% Privado</h3><p>Todo se procesa en tu navegador</p></div>
-      <div class="feature"><div class="feature-icon">ð</div><h3>XLSX, XLS, CSV</h3><p>Compatible con todos los formatos</p></div>
-      <div class="feature"><div class="feature-icon">â¡</div><h3>Rápido</h3><p>Conversión instantánea</p></div>
-    </div>
-  </div>
-</div>
-<footer><div class="footer-grid"><div class="footer-col"><h4>&#9889; FilePresto</h4><p style="font-size:.85rem;line-height:1.5">Conversor de archivos online. Rápido, seguro y sin registro.</p></div><div class="footer-col"><h4>Herramientas</h4><a href="../images/index.html">Conversor de Imágenes</a><a href="index.html">Herramientas PDF</a><a href="../video/index.html">Conversor de Video</a><a href="../audio/index.html">Conversor de Audio</a><a href="../ebook/index.html">Conversor eBook</a><a href="../documents/index.html">Conversor de Documentos</a></div><div class="footer-col"><h4>Empresa</h4><a href="../../about.html">Acerca de</a><a href="../../pricing.html">Precios</a><a href="../../contact.html">Contacto</a></div><div class="footer-col"><h4>Legal</h4><a href="../../privacy.html">Política de Privacidad</a><a href="../../terms.html">Términos de Servicio</a></div></div><div class="footer-bottom">&copy; 2025 FilePresto. Todos los derechos reservados.</div></footer>
-<script src="https://unpkg.com/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
-<script src="https://unpkg.com/pdf-lib@1.17.1/dist/pdf-lib.min.js"></script>
-<script>
-const dropZone=document.getElementById('dropZone');
-const fileInput=document.getElementById('fileInput');
-const fileNameEl=document.getElementById('fileName');
-const convertBtn=document.getElementById('convertBtn');
-const progressWrap=document.getElementById('progressWrap');
-const progressFill=document.getElementById('progressFill');
-const progressText=document.getElementById('progressText');
-const downloadBtn=document.getElementById('downloadBtn');
-let xlFile=null;
-dropZone.addEventListener('click',()=>fileInput.click());
-dropZone.addEventListener('dragover',e=>{e.preventDefault();dropZone.classList.add('dragover')});
-dropZone.addEventListener('dragleave',()=>dropZone.classList.remove('dragover'));
-dropZone.addEventListener('drop',e=>{e.preventDefault();dropZone.classList.remove('dragover');if(e.dataTransfer.files[0])setFile(e.dataTransfer.files[0])});
-fileInput.addEventListener('change',()=>{if(fileInput.files[0])setFile(fileInput.files[0])});
-function setFile(f){xlFile=f;fileNameEl.textContent=f.name+' ('+(f.size/1024).toFixed(1)+' KB)';convertBtn.disabled=false}
-convertBtn.addEventListener('click',async()=>{
-  if(!xlFile)return;
-  convertBtn.disabled=true;
-  progressWrap.style.display='block';
-  downloadBtn.style.display='none';
-  try{
-    progressText.textContent='Leyendo archivo Excel...';
-    progressFill.style.width='20%';
-    const ab=await xlFile.arrayBuffer();
-    const wb=XLSX.read(ab,{type:'array'});
-    const sheetName=wb.SheetNames[0];
-    const ws=wb.Sheets[sheetName];
-    const data=XLSX.utils.sheet_to_json(ws,{header:1,defval:''});
-    progressFill.style.width='40%';
-    progressText.textContent='Generando PDF...';
-    const pdfDoc=await PDFLib.PDFDocument.create();
-    const font=await pdfDoc.embedFont(PDFLib.StandardFonts.Helvetica);
-    const boldFont=await pdfDoc.embedFont(PDFLib.StandardFonts.HelveticaBold);
-    const rowH=16,colW=90,margin=30,fontSize=8;
-    const pageW=595,pageH=842;
-    const usableCols=Math.floor((pageW-margin*2)/colW);
-    let page=pdfDoc.addPage([pageW,pageH]);
-    let y=pageH-margin;
-    for(let r=0;r<data.length;r++){
-      if(y<margin+rowH){page=pdfDoc.addPage([pageW,pageH]);y=pageH-margin}
-      const row=data[r];
-      const isHeader=r===0;
-      if(isHeader){page.drawRectangle({x:margin,y:y-rowH,width:pageW-margin*2,height:rowH,color:PDFLib.rgb(0.86,0.15,0.15)})}
-      for(let c=0;c<Math.min(row.length,usableCols);c++){
-        const cell=String(row[c]||'');
-        const x=margin+c*colW;
-        page.drawText(cell.substring(0,12),{x:x+2,y:y-rowH+4,size:fontSize,font:isHeader?boldFont:font,color:isHeader?PDFLib.rgb(1,1,1):PDFLib.rgb(0,0,0),maxWidth:colW-4});
-        page.drawRectangle({x,y:y-rowH,width:colW,height:rowH,borderColor:PDFLib.rgb(0.8,0.8,0.8),borderWidth:0.5});
-      }
-      y-=rowH;
-    }
-    progressFill.style.width='90%';
-    const pdfBytes=await pdfDoc.save();
-    const blob=new Blob([pdfBytes],{type:'application/pdf'});
-    downloadBtn.href=URL.createObjectURL(blob);
-    downloadBtn.download=xlFile.name.replace(/\.xlsx?$|.csv$/,'')+'.pdf';
-    downloadBtn.style.display='block';
-    progressFill.style.width='100%';
-    progressText.textContent='PDF generado correctamente';
-  }catch(e){progressText.textContent='Error: '+e.message;console.error(e)}
-  convertBtn.disabled=false;
-});
-</script>
-</body>
-</html>
