@@ -2,6 +2,12 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<!-- Security headers -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://unpkg.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self'; connect-src 'self' https://unpkg.com; worker-src blob:; child-src blob:; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests;">
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+<meta http-equiv="X-Frame-Options" content="DENY">
+<meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+<meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), payment=(), usb=(), bluetooth=(), serial=(), nfc=()">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Free Online eBook Converter | FilePresto</title>
@@ -26,6 +32,8 @@
 body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#f8fafc;color:#1e293b}
 
 
+
+
 .hero{background:linear-gradient(135deg,#2563EB 0%,#1d4ed8 100%);color:#fff;padding:48px 24px;text-align:center;min-height:220px;display:flex;flex-direction:column;align-items:center;justify-content:center}
 .hero h1{font-size:36px;font-weight:800;margin-bottom:12px}
 .hero p{font-size:18px;opacity:0.9;max-width:600px;margin:0 auto}
@@ -34,92 +42,3 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 .tool-card{background:#fff;border-radius:12px;padding:24px;box-shadow:0 1px 3px rgba(0,0,0,0.08);border:1px solid #e2e8f0;text-decoration:none;color:inherit;transition:all 0.2s;display:block}
 .tool-card:hover{transform:translateY(-2px);box-shadow:0 8px 25px rgba(124,58,237,0.12);border-color:#7C3AED}
 .tool-icon{font-size:32px;margin-bottom:12px}
-.tool-title{font-size:18px;font-weight:700;color:#1e293b;margin-bottom:6px}
-.tool-desc{font-size:14px;color:#64748b;line-height:1.5}
-.badge{display:inline-block;padding:2px 8px;border-radius:4px;font-size:11px;font-weight:700;margin-top:8px;background:#ede9fe;color:#7C3AED}
-footer{background:#1e293b;color:#94a3b8;padding:32px 24px;text-align:center;margin-top:60px}
-footer a{color:#94a3b8;text-decoration:none}
-footer a:hover{color:#fff}
-.footer-links{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-bottom:12px}</style>
-</head>
-<body>
-<nav><a href="../../index.html" class="nav-logo">⚡ FilePresto</a><div class="nav-links"><a href="../images/index.html">Images</a><a href="../pdf/index.html">PDF</a><a href="../video/index.html">Video</a><a href="../audio/index.html">Audio</a><a href="index.html" class="active">eBooks</a><a href="../documents/index.html">Documents</a><a href="../../pricing.html">Pricing</a><div class="lang-switcher"><a href="index.html" class="active">EN</a><a href="../../es/tools/ebook/index.html">ES</a><a href="../../pt/tools/ebook/index.html">PT</a></div><a href="../../pricing.html" class="btn-pro">Pro</a></div></nav>
-<div class="hero">
-<h1>📚 eBook Tools</h1>
-<p>Convert eBooks online for free. Compatible with Kindle, Kobo, iPad and more.</p>
-</div>
-<div class="container">
-<div class="tools-grid">
-<a href="epub-to-pdf.html" class="tool-card">
-<div class="tool-icon">📚</div>
-<div class="tool-title">EPUB to PDF</div>
-<div class="tool-desc">Convert EPUB eBooks to PDF format for reading on any device.</div>
-<span class="badge">FREE</span>
-</a>
-<a href="pdf-to-epub.html" class="tool-card">
-<div class="tool-icon">📄</div>
-<div class="tool-title">PDF to EPUB</div>
-<div class="tool-desc">Convert PDF documents to EPUB format for e-readers.</div>
-<span class="badge">FREE</span>
-</a>
-<a href="epub-to-mobi.html" class="tool-card">
-<div class="tool-icon">📖</div>
-<div class="tool-title">EPUB to MOBI</div>
-<div class="tool-desc">Convert EPUB to MOBI format compatible with Kindle.</div>
-<span class="badge">FREE</span>
-</a>
-<a href="mobi-to-epub.html" class="tool-card">
-<div class="tool-icon">🔄</div>
-<div class="tool-title">MOBI to EPUB</div>
-<div class="tool-desc">Convert Kindle MOBI eBooks to universal EPUB format.</div>
-<span class="badge">FREE</span>
-</a>
-<a href="epub-to-azw3.html" class="tool-card">
-<div class="tool-icon">📱</div>
-<div class="tool-title">EPUB to AZW3</div>
-<div class="tool-desc">Convert EPUB to Kindle AZW3 format.</div>
-<span class="badge">FREE</span>
-</a>
-<a href="azw3-to-epub.html" class="tool-card">
-<div class="tool-icon">🔁</div>
-<div class="tool-title">AZW3 to EPUB</div>
-<div class="tool-desc">Convert Kindle AZW3 eBooks to EPUB format.</div>
-<span class="badge">FREE</span>
-</a>
-<a href="pdf-to-mobi.html" class="tool-card">
-<div class="tool-icon">📕</div>
-<div class="tool-title">PDF to MOBI</div>
-<div class="tool-desc">Convert PDF files to MOBI format compatible with Kindle.</div>
-<span class="badge">FREE</span>
-</a>
-<a href="docx-to-epub.html" class="tool-card">
-<div class="tool-icon">📝</div>
-<div class="tool-title">DOCX to EPUB</div>
-<div class="tool-desc">Convert Word documents to EPUB eBook format.</div>
-<span class="badge">FREE</span>
-</a>
-<a href="html-to-epub.html" class="tool-card">
-<div class="tool-icon">🌐</div>
-<div class="tool-title">HTML to EPUB</div>
-<div class="tool-desc">Convert HTML web pages to EPUB eBook format.</div>
-<span class="badge">FREE</span>
-</a>
-<a href="txt-to-epub.html" class="tool-card">
-<div class="tool-icon">📃</div>
-<div class="tool-title">TXT to EPUB</div>
-<div class="tool-desc">Convert plain text files to EPUB eBook format.</div>
-<span class="badge">FREE</span>
-</a>
-</div>
-</div>
-<footer>
-<div class="footer-links">
-<a href="../../privacy.html">Privacy</a>
-<a href="../../terms.html">Terms</a>
-<a href="../../about.html">About</a>
-<a href="../../contact.html">Contact</a>
-</div>
-<div class="footer-bottom">&copy; 2026 FilePresto. All rights reserved.</div>
-</footer>
-</body>
-</html>
